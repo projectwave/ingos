@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  background: #f9f9fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $link-color;
+}
+
+// Sticky Footer
+.page-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+}

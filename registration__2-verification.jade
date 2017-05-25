@@ -1,0 +1,76 @@
+extends assets/jade/layouts/signing-in/index
+
+block head_end
+	link(rel='stylesheet' href='assets/css/style.css')
+
+block content
+	section.page-section
+		.page-section__inner
+			.section-title
+				| Подключить личный кабинет
+
+			.section-subtitle
+				| Подтвердите телефон
+
+			form(method='' action='').form-cabinet-connection-verification
+				.form-row.form-row--user-agreements
+					.form-list
+						.form-list__item
+							input(type='checkbox' id='form-ccv-esignature-check')
+
+							label(for='form-ccv-esignature-check')
+								| Я ознакомился и принимаю соглашение&nbsp;
+								a(href='#')
+									| об использовании электронной подписи
+
+						.form-list__item
+							input(type='checkbox' id='form-ccv-personal-data-check')
+
+							label(for='form-ccv-personal-data-check')
+								| Я согласен на обработку&nbsp;
+								a(href='#')
+									| моих персональных данных
+
+						.form-list__item
+							input(type='checkbox' id='form-ccv-communication-check')
+
+							label(for='form-ccv-communication-check')
+								| Подтверждаю свое&nbsp;
+								a(href='#')
+									| согласие на коммуникацию
+
+				.form-row.form-row--sms-verification
+					.section-subtitle
+						| На ваш мобильный телефон +7 (937) xxx-xx-19
+						span.line-break
+							| выслано SMS-сообщение с кодом.
+
+					label(for='verification-sms-code').form-row__title
+						| Введите код:
+
+					.form-item.form-item--input
+						input(type='password'
+									placeholder='••••'
+									id='verification-sms-code').form-control
+
+					.form-item.form-item--submit
+						input(type='submit' value='Отправить').form-submit
+
+				.form-row.form-row--verification-troubleshooting
+					.links-group
+						.links-group__item.text-right
+							a(href='#').tooltip-link
+								| Отправить еще раз
+
+						.links-group__item.text-left
+							a(href='#').tooltip-link
+								| СМС не приходит?
+
+block body_end
+	script(type='text/javascript' src='assets/js/vendors/parsley.js')
+	script(type='text/javascript' src='assets/js/vendors/bootstrap-modal.js')
+	script(type='text/javascript' src='assets/js/main.js')
+	script(type='text/javascript').
+		$(function(){
+			commonActions.init();
+		})

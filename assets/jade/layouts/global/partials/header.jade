@@ -1,0 +1,59 @@
+header.page-header
+	.header-row
+		.header-row__inner
+			.header__logo
+				.brand-logo
+					img(src='assets/img/logo.png' width='100' height='75' alt='ИНГОССТРАХ Инвестиции')
+
+			.header__greeting
+				.header-greeting
+					| Добрый день,&nbsp;
+					span#header-greering-username
+						| Сергей Алексеевич
+					| !
+
+			.header__profile-menu
+				.profile-menu
+					a(href='#').nav-figure.nav-figure--reports
+						| Отчёты
+
+					.profile-menu__separator
+
+					a(href='#').nav-figure.nav-figure--notifications
+						| Уведомления
+
+					.profile-menu__separator
+
+					span.is-active.nav-figure.nav-figure--settings
+						a(href='#')
+							| Профиль
+							span.line-break
+								| и настройки
+
+						.dropdown-list
+							.dropdown-list__item
+								a(href='#').dropdown-list__link
+									| Пользователь
+
+							.dropdown-list__item
+								a(href='#').dropdown-list__link
+									| Правила пользования
+
+							.dropdown-list__item
+								a(href='#').dropdown-list__link
+									| Ваш персональный менеджер
+
+							.dropdown-list__item
+								a(href='#').dropdown-list__link
+									| FAQ
+
+							.dropdown-list__item
+								a(href='#').dropdown-list__link
+									| Настройки
+
+					.profile-menu__separator
+
+					a(href='#').nav-figure.nav-figure--exit
+						| Выход
+
+	//.header-row.header-row--decoration

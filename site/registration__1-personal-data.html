@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="assets/css/user-autorization.css">
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="page-header">
+        <div class="header-row">
+          <div class="header-row__inner">
+            <div class="header__logo">
+              <div class="brand-logo"><img src="assets/img/logo.png" width="100" height="75" alt="ИНГОССТРАХ Инвестиции"></div>
+            </div>
+            <div class="header__navigation">
+              <div class="header-nav">
+                <div class="header-nav__item"><a href="#" class="header-nav__link">Возможности</a></div>
+                <div class="header-nav__item"><a href="#" class="header-nav__link">Соглашения</a></div>
+                <div class="header-nav__item is-active"><a href="#" class="header-nav__link">Подключить</a></div>
+              </div>
+            </div>
+            <div class="header__feedback">
+              <div class="feedback">
+                <div class="feedback__number">8 800 100-48-98</div>
+                <div class="feedback__link"><a href="#">Заказать звонок</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="page-content">
+        <div class="page-section">
+          <div class="page-section__inner">
+            <div class="section-title">Подключить личный кабинет</div>
+            <div class="section-subtitle">Укажите свои данные</div>
+            <form method="" action="" class="form-cabinet-connection-data">
+              <div class="form-row">
+                <label for="cabinet-connection-data-first-name" class="form-row__title">Ваше Ф.И.О:</label>
+                <div class="form-controls-group">
+                  <div class="form-controls-group__item">
+                    <input type="text" value="Ковалев" id="cabinet-connection-data-first-name" class="form-control">
+                  </div>
+                  <div class="form-controls-group__item">
+                    <input type="text" value="Сергей" id="cabinet-connection-data-last-name" class="form-control">
+                  </div>
+                  <div class="form-controls-group__item">
+                    <input type="text" placeholder="Введите отчество" id="cabinet-connection-data-patronymic" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="form-row form-row--phone">
+                <div class="form-item form-item--number">
+                  <p class="form-item__title">Номер мобильного телефона:</p>
+                  <p>В формате&nbsp;<span class="form-item__note">+Х ХХХ ХХХХ-ХХХ-ХХ</span></p>
+                </div>
+                <div class="form-item">
+                  <input type="text" placeholder="+7 (937) 524-54-19" class="form-control">
+                </div>
+              </div>
+              <div class="form-row form-row--submit">
+                <input type="submit" value="Отправить" class="form-submit">
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <script type="text/javascript" src="assets/js/libs/jquery-3.2.1.js"></script>
+      <script type="text/javascript" src="assets/js/vendors/parsley.js"></script>
+      <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
+      <script type="text/javascript" src="assets/js/main.js"></script>
+      <script type="text/javascript">
+        $(function(){
+        	commonActions.init();
+        })
+      </script>
+      <footer class="page-footer"></footer>
+    </div>
+  </body>
+</html>

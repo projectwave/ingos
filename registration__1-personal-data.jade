@@ -1,0 +1,55 @@
+extends assets/jade/layouts/signing-in/index
+
+block content
+	.page-section
+		.page-section__inner
+			.section-title
+				| Подключить личный кабинет
+
+			.section-subtitle
+				| Укажите свои данные
+
+			form(method='' action='').form-cabinet-connection-data
+				.form-row
+					label(for='cabinet-connection-data-first-name').form-row__title
+						| Ваше Ф.И.О:
+
+					.form-controls-group
+						.form-controls-group__item
+							input(type='text'
+										value='Ковалев'
+										id='cabinet-connection-data-first-name').form-control
+
+						.form-controls-group__item
+							input(type='text'
+										value='Сергей'
+										id='cabinet-connection-data-last-name').form-control
+
+						.form-controls-group__item
+							input(type='text'
+										placeholder='Введите отчество'
+										id='cabinet-connection-data-patronymic').form-control
+
+				.form-row.form-row--phone
+					.form-item.form-item--number
+						p.form-item__title
+							| Номер мобильного телефона:
+
+						p В формате&nbsp;
+							span.form-item__note
+								| +Х ХХХ ХХХХ-ХХХ-ХХ
+
+					.form-item
+						input(type='text' placeholder='+7 (937) 524-54-19').form-control
+
+				.form-row.form-row--submit
+					input(type='submit' value='Отправить').form-submit
+
+block body_end
+	script(type='text/javascript' src='assets/js/vendors/parsley.js')
+	script(type='text/javascript' src='assets/js/vendors/bootstrap-modal.js')
+	script(type='text/javascript' src='assets/js/main.js')
+	script(type='text/javascript').
+		$(function(){
+			commonActions.init();
+		})

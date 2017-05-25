@@ -1,0 +1,78 @@
+$table-font-size: 13px;
+
+.table {
+  width: 100%;
+  @extend .table-decorated;
+  font-size: 13px;
+  th {
+    font-family: $base-font-family-light;
+  }
+
+  th, td {
+    padding: 11px 14px;
+    empty-cells: show;
+    border: 1px solid $border-color;
+  }
+}
+
+.table-decorated {
+  th, td {
+    border-right: 0;
+    &:nth-child(even) {
+      border-left: 0;
+      border-right: 1px solid $border-color;
+      background: #f9f9fa;
+    }
+  }
+
+  td {
+    border-right: 0;
+  }
+}
+
+.table--incoming-coupons {
+  th, td {
+    &:nth-child(2n) {
+      width: 45%;
+      text-align: center;
+    }
+  }
+}
+
+.table-heading {
+  display: table;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.table-heading__title {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.table-heading__actions {
+  display: table-cell;
+  vertical-align: top;
+  font-size: 0;
+  text-align: right;
+}
+
+.table-unstyled {
+  $table-unstyled-padding: 10px;
+  margin-bottom: $content-section-margin - $table-unstyled-padding;
+  line-height: 1.4;
+  th, td {
+    border: 0;
+    padding: $table-unstyled-padding;
+  }
+}
+
+.table-client-details {
+  td {
+    &:first-child {
+      width: 165px;
+      padding-left: 0;
+      padding-right: 40px;
+    }
+  }
+}

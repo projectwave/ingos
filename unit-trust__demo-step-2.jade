@@ -1,0 +1,35 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+
+			.section-title Документы по ПИФ-ам
+
+			.links-list
+				.links-list__item
+					.get-pdf-link
+						a(href='#') Анкета Управляющей компании
+						| &nbsp;
+						a(href='#') скачать
+
+				.links-list__item
+					.get-pdf-link
+						a(href='#') Заявление об открытии лицевого счета (для физического лица)
+						| &nbsp;
+						a(href='#') скачать
+
+				.links-list__item
+					.get-pdf-link
+						a(href='#') Распоряжение на списание/зачисление инвестиционных паев с участием лицевого счета номинального держателя Центрального депозитария
+						| &nbsp;
+						a(href='#') скачать
+
+				.links-list__item
+					.get-pdf-link
+						a(href='#') Сводный отчет за период
+						| &nbsp;
+						a(href='#') скачать
+
+block body_end
+	script(type="text/javascript" src="assets/js/script.js")

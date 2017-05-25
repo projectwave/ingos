@@ -1,0 +1,89 @@
+.cards-list {
+  display: table;
+  width: 100%;
+  @extend .cards-list--blue-icon;
+  font-size: 0;
+  text-align: center;
+  background: $main-bg-color;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+}
+
+.cards-list__item {
+  display: table-cell;
+  vertical-align: top;
+  font-size: $base-font-size;
+  border-right: 1px solid $border-color;
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.cards-list--call-to-action {
+  .cards-list__item {
+    width: 33.33%;
+  }
+}
+
+.cards-list--blue-icon {
+  .card__icon {
+    position: relative;
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: lightblue;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-size: cover;
+    }
+  }
+}
+
+.card {
+  padding: 25px 25px 35px;
+  a {
+    color: $link-accent;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.card__footer {
+  margin-top: 25px;
+}
+
+.card__icon--investment-fund {
+  &::before {
+    height: 37px;
+    width: 45px;
+    margin-top: -18px;
+    margin-left: -22px;
+    background: url(../img/icons/icon-1.png);
+  }
+}
+
+.card__icon--trust-management {
+  &::before {
+    height: 44px;
+    width: 53px;
+    margin-top: -22px;
+    margin-left: -26px;
+    background: url(../img/icons/icon-2.png);
+  }
+}
+
+.card__icon--investment-accs {
+  &::before {
+    height: 50px;
+    width: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+    background: url(../img/icons/icon-3.png);
+  }
+}

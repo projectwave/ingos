@@ -1,0 +1,43 @@
+.page-header {
+  margin-bottom: 30px;
+  //background: url(../img/bg-signature-image.jpg) bottom center no-repeat $main-bg-color;
+}
+
+
+.header-row__inner {
+  @extend %container;
+  display: table;
+  width: 100%;
+  background: $main-bg-color;
+}
+
+.header-row--decoration {
+  height: 350px;
+  background-size: cover;
+}
+
+.header__logo {
+  display: table-cell;
+  vertical-align: top;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.header__greeting {
+  display: table-cell;
+  vertical-align: top;
+  padding: 20px 63px;
+}
+
+.header__profile-menu {
+  display: table-cell;
+  vertical-align: top;
+  padding-top: 12px;
+  width: 520px;
+  text-align: right
+}
+
+.header-greeting {
+  font-size: $note-font-size;
+}
+

@@ -1,0 +1,308 @@
+extends assets/jade/layouts/signing-in/index
+
+block head_end
+	link(rel='stylesheet' href='assets/css/style.css')
+
+block content
+	section.page-section
+		.page-section__inner
+			form#ui-kit-form
+				.form-row
+					.form-item
+						.form-item__title
+							| Label:
+
+						input(type='text'
+									placeholder='Placeholder'
+									data-parsley-required-message='Введите ваше имя'
+									required).form-control
+
+					.form-item
+						input(type='submit'
+									value='Button Normal').form-control
+
+				.form-row
+					.form-row__title
+						| Password:
+
+					.form-controls-group
+						.form-controls-group__item
+							input(type='password'
+										required).form-control
+
+						.form-controls-group__item
+							input(type='password'
+										required).form-control
+
+				.form-row--password-strength
+					.form-item
+						| Password strength:
+						span
+							| Good
+
+					.form-item
+						.password-strength-scale
+							.password-strength-scale__division
+
+				.form-row
+					a(href='#').js-show-modal.btn
+						| Show modal
+
+				.form-row
+					.form-item
+						input(type='text'
+									placeholder='Placeholder').form-control--datepicker.form-control
+
+					.form-item
+						input(type='text' value='250 000.00')
+
+				.form-row
+					.form-item
+						input(type='text' value='250 000.00').form-control--datepicker-range.form-control
+
+				.form-row
+					select.custom-select
+
+				.form-row
+					.form-item
+						.value-toggler.is-active
+
+					.form-item
+						label Включено
+
+				.form-row
+					.form-item
+						.custom-checkbox
+							input(name='checkbox')#checkbox-example
+
+					.form-item
+						label(for='checkbox-example') Checkbox
+
+				.form-row
+					.form-item
+						.custom-radio
+							input(type='radio')#radio-example
+
+					.form-item
+						label(for='radio-example') Radiobutton
+
+					.form-item
+						label
+
+				.form-row
+					.form-item.form-item--triple
+						.cards-list
+							.cards-list__item
+								.card
+									.card__icon
+										.icon--choose-fund.icon
+
+									.card__info
+										p
+											a(href='') Choose a Fund
+											|  on the website of SC MC "Ingosstrakh"
+
+							.cards-list__item
+								.card
+									.card__icon
+										.icon--office-pointer.icon
+
+									.card__info
+										p
+											| Make a request at any convenient
+											a(href='') office
+											|  for you
+
+							.cards-list__item
+								.card
+									.card__icon
+										.icon--unite-trust.icon
+
+									.card__info
+										p
+											| Or send request to open
+											br
+											| Unite&nbsp;Trust&nbsp;
+											a(href='') online
+
+					.form-item
+						p
+							span.tooltip-link(data-tooltip='Если после повторно высланного сообщения, SMS так и не пришло, обратитесь в службу поддержки по телефону: 8 800 100-48-98')
+								| СМС не приходит?
+
+	section.page-section.page-section--sidebar-left
+		.page-section__inner
+			.page-section__aside
+				.sliding-nav.has-dropdown-menu
+					.sliding-nav__section.is-open
+						.sliding-nav__section-title
+							| Портфель
+
+					.sliding-nav__section
+						.link-menu
+							.link-menu__item
+								a(href='')
+									| Оценка портфеля
+
+							.link-menu__item
+								a(href='')
+									| Анализ портфеля
+
+							.link-menu__item
+								a(href='')
+									| История
+
+			.page-section__main-content
+				.assessments-graph
+					.categories-graph__diagramm-round
+						img(src='' alt='')
+
+					.categories-graph__assessment
+
+		section.page-section
+			.page-section__inner
+				.breadcrumbs
+					.breadcrumbs__item
+						a(href='')
+							| Главная
+
+					.breadcrumbs__item
+						a(href='')
+							| Услуги
+
+					.breadcrumbs__item
+						a(href='')
+							| Физическим лицам
+
+					.breadcrumbs__item
+						| ПИФЫ
+
+				h1.h1.section-title H1 Connect my account
+
+				h4.h4 Enter your personal information
+
+				h2.h2 Portfolio
+
+				h3.h3 Portfolio overall assessment
+
+				p
+					| Paragraph
+
+		section.page-section
+			.page-section__inner
+				.pagination
+					.pagination__prev
+						.link-prev Предыдущая
+
+					.pagination__numbers
+						.pagination-numbers
+							.pagination__item
+								a(href='') 7
+
+							.pagination__item.is-current
+								a(href='') 8
+
+							.pagination__item
+								a(href='') 9
+
+					.pagination__next
+						.link-next Следующая
+
+			section.page-section
+				.page-section__inner
+					.page-section__column
+						.title Маркированный список
+
+						ul
+							li
+								| Пункт №1
+								ul
+									li
+										| Пункт №1
+										ul
+											li
+												| Пункт №1
+											li
+												| Пункт №2
+									li
+										| Пункт №2
+									li
+										| Пункт №3
+
+							li
+								| Пункт №2
+
+							li
+								| Пункт №3
+
+							li
+								| Пункт №4
+
+
+					.page-section__column
+						ol
+							li
+								| Пункт №1
+								ol
+									li
+										| Пункт №1
+										ol
+											li
+												| Пункт №1
+											li
+												| Пункт №2
+									li
+										| Пункт №2
+									li
+										| Пункт №3
+
+							li
+								| Пункт №2
+
+							li
+								| Пункт №3
+
+							li
+								| Пункт №4
+
+
+
+			section.page-section
+				.page-section__inner
+					.slider
+
+			section.page-section
+				.page-section__inner
+					.decoration-background
+						.section-title Подключить личный кабинет
+
+			section.page-section
+				.page-section__inner
+					.carousel-slider
+
+			section.page-section
+				.page-section__inner
+					.icons-list
+						.icons-list__item
+							span.icon
+
+			section.page-section
+				.page-section__inner
+					.contacts-map
+						iframe
+
+						.icons-list__item
+
+	include assets/jade/partials/modal-popups/change-personal-manager
+
+	include assets/jade/partials/modal-popups/alert-wrong
+
+block body_end
+	script(type='text/javascript' src='assets/js/libs/jquery-3.2.1.js')
+	script(type='text/javascript' src='assets/js/vendors/parsley.js')
+	script(type='text/javascript' src='assets/js/vendors/bootstrap-modal.js')
+	script(type='text/javascript' src='assets/js/main.js')
+	script(type='text/javascript').
+		$(function(){
+			commonActions.init();
+		})

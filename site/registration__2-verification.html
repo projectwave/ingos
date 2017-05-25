@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="assets/css/user-autorization.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="page-header">
+        <div class="header-row">
+          <div class="header-row__inner">
+            <div class="header__logo">
+              <div class="brand-logo"><img src="assets/img/logo.png" width="100" height="75" alt="ИНГОССТРАХ Инвестиции"></div>
+            </div>
+            <div class="header__navigation">
+              <div class="header-nav">
+                <div class="header-nav__item"><a href="#" class="header-nav__link">Возможности</a></div>
+                <div class="header-nav__item"><a href="#" class="header-nav__link">Соглашения</a></div>
+                <div class="header-nav__item is-active"><a href="#" class="header-nav__link">Подключить</a></div>
+              </div>
+            </div>
+            <div class="header__feedback">
+              <div class="feedback">
+                <div class="feedback__number">8 800 100-48-98</div>
+                <div class="feedback__link"><a href="#">Заказать звонок</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="page-content">
+        <section class="page-section">
+          <div class="page-section__inner">
+            <div class="section-title">Подключить личный кабинет</div>
+            <div class="section-subtitle">Подтвердите телефон</div>
+            <form method="" action="" class="form-cabinet-connection-verification">
+              <div class="form-row form-row--user-agreements">
+                <div class="form-list">
+                  <div class="form-list__item">
+                    <input type="checkbox" id="form-ccv-esignature-check">
+                    <label for="form-ccv-esignature-check">Я ознакомился и принимаю соглашение&nbsp;<a href="#">об использовании электронной подписи</a></label>
+                  </div>
+                  <div class="form-list__item">
+                    <input type="checkbox" id="form-ccv-personal-data-check">
+                    <label for="form-ccv-personal-data-check">Я согласен на обработку&nbsp;<a href="#">моих персональных данных</a></label>
+                  </div>
+                  <div class="form-list__item">
+                    <input type="checkbox" id="form-ccv-communication-check">
+                    <label for="form-ccv-communication-check">Подтверждаю свое&nbsp;<a href="#">согласие на коммуникацию</a></label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row form-row--sms-verification">
+                <div class="section-subtitle">На ваш мобильный телефон +7 (937) xxx-xx-19<span class="line-break">выслано SMS-сообщение с кодом.</span></div>
+                <label for="verification-sms-code" class="form-row__title">Введите код:</label>
+                <div class="form-item form-item--input">
+                  <input type="password" placeholder="••••" id="verification-sms-code" class="form-control">
+                </div>
+                <div class="form-item form-item--submit">
+                  <input type="submit" value="Отправить" class="form-submit">
+                </div>
+              </div>
+              <div class="form-row form-row--verification-troubleshooting">
+                <div class="links-group">
+                  <div class="links-group__item text-right"><a href="#" class="tooltip-link">Отправить еще раз</a></div>
+                  <div class="links-group__item text-left"><a href="#" class="tooltip-link">СМС не приходит?</a></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      <script type="text/javascript" src="assets/js/libs/jquery-3.2.1.js"></script>
+      <script type="text/javascript" src="assets/js/vendors/parsley.js"></script>
+      <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
+      <script type="text/javascript" src="assets/js/main.js"></script>
+      <script type="text/javascript">
+        $(function(){
+        	commonActions.init();
+        })
+      </script>
+      <footer class="page-footer"></footer>
+    </div>
+  </body>
+</html>

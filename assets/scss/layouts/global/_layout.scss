@@ -1,0 +1,37 @@
+.page-content {
+  @extend %clearfix;
+}
+
+.page-content__inner {
+  @extend %container;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 26px;
+}
+
+.main-content-area {
+  float: right;
+  width: 862px;
+}
+
+.main-content-section {
+  padding: 30px 30px 45px;
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.page-sidebar {
+  float: left;
+  width: 306px;
+  padding-right: 30px;
+}
+
+.sidebar-section {
+  @include section-decorated;
+  margin-bottom: $sidebar-section-margin;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,11 @@
+.page-section {
+  position: relative;
+}
+
+.page-section__inner {
+  @extend %container;
+}
+
+.main-content-section {
+  @include section-decorated();
+}

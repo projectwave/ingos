@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="header-row">
+        <div class="header-row__inner">
+          <div class="header__logo">
+            <div class="brand-logo"><img src="assets/img/logo.png" width="100" height="75" alt="ИНГОССТРАХ Инвестиции"></div>
+          </div>
+          <div class="header__greeting">
+            <div class="header-greeting">Добрый день,&nbsp;<span id="header-greering-username">Сергей Алексеевич</span>!</div>
+          </div>
+          <div class="header__profile-menu">
+            <div class="profile-menu"><a href="#" class="nav-figure nav-figure--reports">Отчёты</a>
+              <div class="profile-menu__separator"></div><a href="#" class="nav-figure nav-figure--notifications">Уведомления</a>
+              <div class="profile-menu__separator"></div><span class="is-active nav-figure nav-figure--settings"><a href="#">Профиль<span class="line-break">и настройки</span></a>
+                <div class="dropdown-list">
+                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Пользователь</a></div>
+                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Правила пользования</a></div>
+                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Ваш персональный менеджер</a></div>
+                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">FAQ</a></div>
+                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Настройки</a></div>
+                </div></span>
+              <div class="profile-menu__separator"></div><a href="#" class="nav-figure nav-figure--exit">Выход</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--.header-row.header-row--decoration-->
+    </header>
+    <main class="page-content">
+      <div class="page-content__inner">
+        <div class="main-content-area">
+          <div class="tabs">
+            <div class="tabs__nav"><a href="#user" class="tabs__nav-item">Пользователь</a><a href="#terms-of-use" class="tabs__nav-item">Правила пользования</a><a href="#chat-with-manager" class="tabs__nav-item">Ваш персональный&nbsp;<span class="line-break"></span>менеджер</a><a href="#faq" class="tabs__nav-item">FAQ</a><a href="#settings" class="tabs__nav-item is-active">Настройки</a></div>
+            <div id="user" class="tab-container">
+              <div class="tab-container__section-inner">
+                <div class="section-title">Реквизиты клиента</div>
+                <table class="table-unstyled table-client-details">
+                  <tr>
+                    <td>ФИО:</td>
+                    <td>Ковалев Сергей Алексеевич</td>
+                  </tr>
+                  <tr>
+                    <td>к/с:</td>
+                    <td>30101810145250000411 в отделении 1 Главного управления Центрального банка Российской Федерации по Центральному федеральному округу г. Москва</td>
+                  </tr>
+                  <tr>
+                    <td>БИК:</td>
+                    <td>044525411</td>
+                  </tr>
+                  <tr>
+                    <td>ИНН:</td>
+                    <td>7702070139</td>
+                  </tr>
+                  <tr>
+                    <td>КПП:</td>
+                    <td>77093002</td>
+                  </tr>
+                  <tr>
+                    <td>р/с:</td>
+                    <td>№ 430232810700002000004</td>
+                  </tr>
+                </table>
+                <div class="change-personal-data-request"><a href="#" class="btn-bordered">Запрос на смену регистрационных данных</a></div>
+              </div>
+            </div>
+            <div id="terms-of-use" class="tab-container">
+              <div class="tab-container__section-inner">
+                <div class="section-title">Правила пользования</div>
+                <div class="icon-links-list">
+                  <div class="icon-links-list__item"><span class="action-link action-link--get-pdf">Соглашение об использовании личных данных</span></div>
+                  <div class="icon-links-list__item"><span class="action-link action-link--get-pdf">Заявление на компплексное обслуживание на рынке ценных бумаг</span></div>
+                  <div class="icon-links-list__item"><span class="action-link action-link--get-pdf">Форма W-8BEN</span></div>
+                  <div class="icon-links-list__item"><span class="action-link action-link--get-pdf">Соглашение о защите инвестиций</span></div>
+                </div>
+              </div>
+            </div>
+            <div id="chat-with-manager" class="is-visible tab-container">
+              <div class="tab-container__header">
+                <div class="tab-container__header-title">
+                  <div class="section-title">Ваш персональный менеджер</div>
+                </div>
+                <div class="tab-container__header-actions">
+                  <div class="switcher-panel"><a href="#" class="switcher-panel__item">Чат с менеджером</a><a href="#" class="switcher-panel__item">Мои вопросы</a></div>
+                </div>
+              </div>
+              <div class="chat-manager">
+                <div class="chat-manager__preview">
+                  <div class="person-preview">
+                    <div class="person-preview__image"><img alt="" src=""></div>
+                    <div class="person-preview__info">
+                      <div class="person-preview__name">Анна Орлова</div>
+                      <div class="person-preview__contacts">
+                        <div class="person-preview__contacts-item">skype:&nbsp;<span class="underline">anna.ingosinvest</span>
+                          <!--.person-preview__actions
+                          //span.btn-bordered
+                          	| Начать чат с менеджером
+                          
+                          -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat-title">Чат с менеджером:</div>
+                </div>
+                <div class="chat-manager__actions"><span class="link-change">поменять менеджера</span></div>
+              </div>
+              <form class="chat">
+                <div id="chat-thread" class="chat__messages-tread">
+                  <div data-post-time="08.12" class="chat__post--companion chat__post"><img src="" alt="chat companion avatar" class="chat__post-companion-avatar">
+                    <div class="chat__post-message">Доброе утро, меня зовут Анна. Я ваш персональный менеджер.</div>
+                  </div>
+                  <div data-post-time="08.13" class="chat__post--companion chat__post">
+                    <div class="chat__post-message">Сергей Алексеевич, если у вас есть вопрос, спросите меня или посмотрите ответы на странице&nbsp;<a href="">Часто Задаваемых Вопросов</a>.</div>
+                  </div>
+                  <div data-post-time="10.34" class="is-answer chat__post">
+                    <div class="chat__post-message">Здравствуйте, Анна. Спасибо, сначала я посмотрю FAQ.</div>
+                  </div>
+                  <div data-post-time="11.01" class="chat__post">
+                    <div class="chat__post-message">Анна, я посмотрел FAQ и не нашел ответа, скажите пожалуйста, как я могу изменить свой рассчетный счет?</div>
+                  </div>
+                  <div data-post-time="11.02" class="chat__post--companion chat__post"><img src="" alt="chat companion avatar" class="chat__post-companion-avatar">
+                    <div class="chat__post-message">Сергей Алексеевич, по вашему вопросу&nbsp;<a href="#">создана заявка.</a><br>Вы получите ответ на вопрос в ближайшее время.</div>
+                  </div>
+                </div>
+                <div class="chat__input-area">
+                  <textarea class="chat__textarea">Спасибо, Анна!</textarea>
+                  <input type="submit" value="Отправить" class="js-chat-submit chat__submit-message btn-flat btn-sm">
+                </div>
+              </form>
+            </div>
+            <div id="faq" class="tab-container">
+              <div class="tab-container__section-inner">
+                <div class="section-title">Часто задаваемые вопросы</div>
+                <div class="accordion">
+                  <div class="accordion__section-title js-toggle-next-el">Портфель</div>
+                  <div class="accordion__section">
+                    <div class="links-list">
+                      <div class="links-list__item"><span class="answer-link js-toggle-next-el">Что такое паевой инвестиционный фонд?</span>
+                        <div class="faq-answer">Стоимость чистых активов паевого инвестиционного фонда (СЧА) определяется как разница между стоимостью активов этого фонда (денежные средства на счетах и в банках, ценные бумаги, накопленный купонный доход и иные разрешенные активы) и величиной обязательств, подлежащих исполнению за счет указанных активов, на момент определения стоимости чистых активов.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion__section-title js-toggle-next-el">Паевые Инвестиционные Фонды</div>
+                  <div class="accordion__section">
+                    <div class="links-list">
+                      <div class="links-list__item"><span class="answer-link js-toggle-next-el">Что такое инвестиционный пай?</span>
+                        <div class="faq-answer">Стоимость чистых активов паевого инвестиционного фонда (СЧА) определяется как разница между стоимостью активов этого фонда (денежные средства на счетах и в банках, ценные бумаги, накопленный купонный доход и иные разрешенные активы) и величиной обязательств, подлежащих исполнению за счет указанных активов, на момент определения стоимости чистых активов.</div>
+                      </div>
+                      <div class="links-list__item"><span class="answer-link js-toggle-next-el">Что такое СЧА?</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="settings" class="tab-container">
+              <div class="tab-container__section-inner">
+                <div class="section-title">Настройки</div>
+                <div class="change-personal-data-request"><a href="#" class="btn-bordered">Запрос на смену регистрационных данных</a></div>
+                <form class="form-update-personal-user-data">
+                  <div class="form-row form-row--email">
+                    <label for="cabinet-data-user-login" class="form-row__title">Логин (ваш email):</label>
+                    <div class="form-item">
+                      <input type="text" placeholder="Введите ваш email" id="cabinet-data-user-login" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-row form-row--password">
+                    <label for="cabinet-data-user-password" class="form-row__title">Пароль:</label>
+                    <div class="form-item form-item--password-create">
+                      <div class="form-controls-group">
+                        <div class="form-controls-group__item">
+                          <input type="password" placeholder="••••••" id="cabinet-data-user-password" class="form-control">
+                        </div>
+                        <div class="form-controls-group__item">
+                          <input type="password" placeholder="Повторите пароль" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-item form-item--password-note">
+                      <div class="form-note">Пароль должен содержать не менее 8 символов.<span class="line-break">Используйте хотя бы одну цифру и прописную букву.</span></div>
+                    </div>
+                  </div>
+                  <div class="form-row form-row--password-strength">
+                    <div class="form-item form-item--password-strength-title">Сложность пароля:</div>
+                    <div class="form-item">
+                      <div id="password-strength-scale" class="password-strength-scale">
+                        <div class="password-strength-scale__degree is-0"></div>
+                        <div class="password-strength-scale__degree"></div>
+                        <div class="password-strength-scale__degree"></div>
+                        <div class="password-strength-scale__degree"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <label for="cabinet-data-user-phone" class="form-row__title">Номер мобильного телефона:</label>
+                    <div class="form-item">
+                      <input type="text" placeholder="+7 (937) 542-54-19" id="cabinet-data-user-phone" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-row form-row--submit">
+                    <input type="submit" value="Сохранить" class="form-submit">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="cards-list cards-list--call-to-action">
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--investment-fund"></div>
+                <div class="card__caption">Паевые Инвестиционные&nbsp;Фонды</div>
+                <div class="card__footer"><a href="#">Купить сейчас</a></div>
+              </div>
+            </div>
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--trust-management"></div>
+                <div class="card__caption">Доверительное<span class="line-break"></span>Управление</div>
+                <div class="card__footer"><a href="#">Купить сейчас</a></div>
+              </div>
+            </div>
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--investment-accs"></div>
+                <div class="card__caption">Индивидуальные Инвестиционные Счета</div>
+                <div class="card__footer"><a href="#">Купить сейчас</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="page-sidebar">
+          <!-- TODO make mixin for smooth look (optional)-->
+          <div class="sliding-menu">
+            <div class="sliding-menu__item">
+              <div class="sliding-menu__item-title js-sliding-menu-title">Портфель
+                <div class="sliding-menu__item-number">№ 134384/20845-1</div>
+              </div>
+              <div class="sliding-menu__list">
+                <div class="sliding-menu__list-item is-active"><a href="#" class="sliding-menu__list-link">Оценка портфеля</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Анализ портфеля</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">История</a></div>
+              </div>
+            </div>
+            <div class="sliding-menu__item">
+              <div class="sliding-menu__item-title js-sliding-menu-title">ПИФы</div>
+              <div class="sliding-menu__list">
+                <div class="sliding-menu__list-item is-active"><a href="#" class="sliding-menu__list-link">Структура и оценка</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Заявки на приобретение</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Операции по ПИФам</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Свободный отчёт</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Документы по ПИФам</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Демо ПИФ</a></div>
+              </div>
+            </div>
+            <div class="sliding-menu__item">
+              <div class="sliding-menu__item-title js-sliding-menu-title">ДУ</div>
+              <div class="sliding-menu__list">
+                <div class="sliding-menu__list-item is-active"><a href="#" class="sliding-menu__list-link">Структура и оценка</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Динамика портфеля</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о купонах</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о вводах/выводах</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о начисленных комиссиях</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация по сделкам</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Документы по ДУ</a></div>
+              </div>
+            </div>
+            <div class="sliding-menu__item">
+              <div class="sliding-menu__item-title js-sliding-menu-title">ИИС</div>
+              <div class="sliding-menu__list">
+                <div class="sliding-menu__list-item is-active"><a href="#" class="sliding-menu__list-link">Структура и оценка</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Динамика портфеля</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о купонах</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о вводах/выводах</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о начисленных комиссиях</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация по сделкам</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Документы по ИИС</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-section"><img alt=""></div>
+        </aside>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="footer-row">
+        <div class="footer-row__inner">
+          <div class="footer__nav-area">
+            <div class="footer-nav-section">
+              <div class="footer-nav-title">Профиль</div>
+              <div class="footer-nav">
+                <div class="footer-nav__item"><a href="#">Отчёты</a></div>
+                <div class="footer-nav__item"><a href="#">Уведомления</a></div>
+                <div class="footer-nav__item"><a href="#">Пользователь</a></div>
+                <div class="footer-nav__item"><a href="#">Правила пользования</a></div>
+              </div>
+              <div class="footer-nav">
+                <div class="footer-nav__item"><a href="#">Ваш персональный менеджер</a></div>
+                <div class="footer-nav__item"><a href="#">FAQ</a></div>
+                <div class="footer-nav__item"><a href="#">Контакты</a></div>
+              </div>
+            </div>
+            <div class="footer-nav-section">
+              <div class="footer-nav-title">Инвестиции</div>
+              <div class="footer-nav">
+                <div class="footer-nav__item"><a href="#">Портфель</a></div>
+                <div class="footer-nav__item"><a href="#">ПИФы</a></div>
+                <div class="footer-nav__item"><a href="#">ДУ</a></div>
+                <div class="footer-nav__item"><a href="#">ИИС</a></div>
+                <div class="footer-nav__item"><a href="#"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__feedback-area">
+            <div class="feedback">
+              <div class="feedback__number">8 800 100-48-98</div>
+              <div class="feedback__link"><a href="#">Заказать звонок</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-row">
+        <div class="footer-row__inner">
+          <div class="footer-copy">АО УК "Ингосстрах-Инвестиции" &copy; 2011-2017, официальный сайт&nbsp;<a href="https://www.ingosinvest.ru/">ingosinvest.ru</a></div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="assets/js/libs/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/parsley.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript">
+      $(function () {
+      		commonActions.init();
+      })
+      
+    </script>
+  </body>
+</html>

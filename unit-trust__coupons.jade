@@ -1,0 +1,20 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			include assets/jade/partials/filter-panel
+
+			.table-heading
+				.table-heading__title
+					.title
+						| Информация о пришедших купонах, RUB
+
+				.table-heading__actions
+					.fullscreen-link
+						| таблицу на весь экран
+
+			include assets/jade/partials/tables/unit-trust-bids
+
+block body_end
+	script(type="text/javascript" src="assets/js/script.js")
