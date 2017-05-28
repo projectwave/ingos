@@ -33,7 +33,7 @@ form {
   }
 
   .form-row--password {
-    overflow: hidden;
+    @include clearfix();
   }
 
   .form-item--password-create,
@@ -67,5 +67,30 @@ form {
   .form-row--submit {
     margin-top: 30px;
     text-align: left;
+  }
+}
+
+.form-reason-to-change-manager {
+  margin-bottom: 0;
+  .form-row:last-child {
+    margin-bottom: 0;
+  }
+
+  textarea.form-control {
+    min-height: 106px;
+  }
+
+  .form-submit {
+    padding-left: 18px;
+    padding-right: 20px;
+  }
+
+  .icon-change {
+    @include icon();
+    margin-right: 10px;
+    width: 16px;
+    height: 18px;
+    background: url(../img/icons/icon-mini-change.png);
+    background-size: cover;
   }
 }

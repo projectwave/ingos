@@ -5,6 +5,7 @@ $input-font-size: 14px;
 // TODO separate modifiers
 
 .form-row {
+  position: relative;
   margin-bottom: $form-row-margin;
 }
 
@@ -90,6 +91,15 @@ $input-font-size: 14px;
     outline: none;
     border-color: #00adeb;
   }
+}
+
+.form-control.parsley-error:focus {
+  border-color: $brand-color;
+}
+
+textarea.form-control {
+  padding: 7px 13px;
+  resize: none;
 }
 
 .form-controls-group {
@@ -258,7 +268,12 @@ $input-font-size: 14px;
       color: #aaa;
     }
   }
-  //&:checked:focus + label:before, &:not(:checked):focus + label:before {
-  //  border: 2px dotted blue;
-  //}
+}
+
+.parsley-errors-list {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  color: $brand-color;
+  font-size: $note-font-size;
 }

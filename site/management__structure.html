@@ -38,53 +38,199 @@
       <div class="page-content__inner">
         <div class="main-content-area">
           <div class="main-content-section">
-            <div class="filter">
-              <div class="filter__column">
-                <div class="period-range">
-                  <div class="period-range__title">Период</div>
-                  <div class="period-range__input">
-                    <div class="data-range-input">
-                      <div class="data-range-input__value">
-                        1 сентября 2016
-                        -
-                        31 сентября 2016
-                      </div>
-                      <div class="data-range-input__icon"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filter__column">
-                <div class="switcher-panel"><a href="#" class="switcher-panel__item">День</a><a href="#" class="switcher-panel__item">Неделя</a><a href="#" class="switcher-panel__item">Месяц</a><a href="#" class="switcher-panel__item">Квартал</a><a href="#" class="switcher-panel__item">Год</a></div>
-              </div>
-            </div>
-            <div class="section-title">Информация о вводах и выводах</div>
             <div class="table-heading">
               <div class="table-heading__title"></div>
               <div class="table-heading__actions">
                 <div class="fullscreen-link">таблицу на весь экран</div>
               </div>
             </div>
-            <table class="table table--trust-management-inputs-outputs">
-              <tr>
-                <th>Дата операции</th>
-                <th>Тип</th>
-                <th>Валюта</th>
-                <th>Сумма операции</th>
-              </tr>
-              <tr>
-                <td colspan="4">ПИФ:&nbsp;<strong>«Ингосстрах. Облигации»</strong></td>
-              </tr>
-              <tr>
-                <td>01.06.2015</td>
-                <td>22.45.01.0438.00.0200</td>
-                <td>910555552</td>
-                <td><span class="link-print">Распечатать</span></td>
-              </tr>
-              <tr>
-                <td colspan="4">ПИФ:&nbsp;<strong>«Ингосстрах. Сбалансированный»</strong></td>
-              </tr>
-            </table>
+            <div class="table-wrapper">
+              <table class="table table-management-structure">
+                <thead>
+                  <tr>
+                    <th>Финансовый инструмент</th>
+                    <th>ISIN</th>
+                    <th>Код финансового инструмента</th>
+                    <th>Тип вложения</th>
+                    <th>Количество</th>
+                    <th>Балансовая стоимость, руб.<span class="asterisk"> *</span></th>
+                    <th>в том числе переоценка, руб.</th>
+                    <th>Процент от всего по бал. ст-ти</th>
+                    <th>Дата котировки</th>
+                    <th>Текущая оценка 1 бумаги RUR<span class="asterisk"> **</span></th>
+                    <th>Текущая оценка RUR<span class="asterisk"> **</span></th>
+                    <th>Процент от всего по оценке</th>
+                    <th>Дата погашения (оферты)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="title">4В021103255В Зенит БО-11</td>
+                    <td>RU000A0JUGY0</td>
+                    <td>Зенит БО-11</td>
+                    <td>Облигация</td>
+                    <td>980</td>
+                    <td class="title">987 059.<span class="fraction">36</span></td>
+                    <td>–</td>
+                    <td>40.94%</td>
+                    <td>19.07.2016</td>
+                    <td>1 002.<span class="fraction fraction_gray">00</span></td>
+                    <td>981 960.<span class="fraction fraction_gray">00</span></td>
+                    <td>40.45%</td>
+                    <td class="title">05.09.2016</td>
+                  </tr>
+                  <tr>
+                    <td class="title">4В021103255В Зенит БО-11; НКД</td>
+                    <td>RU000A0JUGY0</td>
+                    <td>Зенит БО-11</td>
+                    <td>Купон</td>
+                    <td>–</td>
+                    <td class="title">–</td>
+                    <td>–</td>
+                    <td>0.00%</td>
+                    <td>20.07.2016</td>
+                    <td>49.<span class="fraction fraction_gray">51</span></td>
+                    <td>48 519.<span class="fraction fraction_gray">80</span></td>
+                    <td>2.00%</td>
+                    <td class="title">01.09.2016</td>
+                  </tr>
+                  <tr>
+                    <td colspan="5" class="sum sum_left-border">
+                      по всем облигациям предприятий и организаций (кроме
+                      ипотечных)
+                    </td>
+                    <td class="sum">987 059.<span class="fraction">36</span></td>
+                    <td class="sum"></td>
+                    <td class="sum">40.94%</td>
+                    <td class="sum"></td>
+                    <td class="sum"></td>
+                    <td class="sum">1 030 479.<span class="fraction fraction_gray">80</span></td>
+                    <td class="sum">42.45%</td>
+                    <td class="sum sum_right-border"></td>
+                  </tr>
+                  <tr>
+                    <td class="title">Деньги у брокера, р/с 30601810100001016021 (RUB)</td>
+                    <td></td>
+                    <td></td>
+                    <td>Деньги</td>
+                    <td>209.<span class="fraction fraction_gray">34</span></td>
+                    <td class="title">209.<span class="fraction">34</span></td>
+                    <td></td>
+                    <td>0.01%</td>
+                    <td></td>
+                    <td></td>
+                    <td>209.<span class="fraction fraction_gray">34</span></td>
+                    <td>0.01%</td>
+                    <td class="title"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="5" class="sum sum_left-border">по всем денежным стредствам у брокера</td>
+                    <td class="sum">209.<span class="fraction">34</span></td>
+                    <td class="sum"></td>
+                    <td class="sum">0.01%</td>
+                    <td class="sum"></td>
+                    <td class="sum"></td>
+                    <td class="sum">209.<span class="fraction fraction_gray">34</span></td>
+                    <td class="sum">0.01%</td>
+                    <td class="sum sum_right-border"></td>
+                  </tr>
+                  <tr>
+                    <td class="title">р/с 407018108000000028886 (RUB) в Банк ГПБ (АО)</td>
+                    <td></td>
+                    <td></td>
+                    <td>Деньги</td>
+                    <td>62 229.<span class="fraction fraction_gray">67</span></td>
+                    <td class="title">62 229.<span class="fraction">67</span></td>
+                    <td></td>
+                    <td>2.58%</td>
+                    <td></td>
+                    <td></td>
+                    <td>62 229.<span class="fraction fraction_gray">67</span></td>
+                    <td>2.56%</td>
+                    <td class="title"></td>
+                  </tr>
+                  <tr>
+                    <td class="title">р/с 407018106000100000025 (RUB) в Банк СОЮЗ (АО)</td>
+                    <td></td>
+                    <td></td>
+                    <td>Деньги</td>
+                    <td>11 606.<span class="fraction fraction_gray">63</span></td>
+                    <td class="title">11 606.<span class="fraction">63</span></td>
+                    <td></td>
+                    <td>0.48%</td>
+                    <td></td>
+                    <td></td>
+                    <td>11 606.<span class="fraction fraction_gray">63</span></td>
+                    <td>2.56%</td>
+                    <td class="title"></td>
+                  </tr>
+                  <tr>
+                    <td class="title">р/с 407018409000100000025 (RUB) в Банк СОЮЗ (АО)</td>
+                    <td></td>
+                    <td></td>
+                    <td>Деньги</td>
+                    <td>21 004.<span class="fraction fraction_gray">13</span></td>
+                    <td class="title">21 004.<span class="fraction">13</span></td>
+                    <td></td>
+                    <td>55.98%</td>
+                    <td>20.07.2016</td>
+                    <td></td>
+                    <td>1 323 031.<span class="fraction fraction_gray">24</span></td>
+                    <td>54.50%</td>
+                    <td class="title"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="5" class="sum sum_left-border">по всем прочим вложениям</td>
+                    <td class="sum">1 423 509.<span class="fraction">18</span></td>
+                    <td class="sum"></td>
+                    <td class="sum">59.05%</td>
+                    <td class="sum"></td>
+                    <td class="sum"></td>
+                    <td class="sum">1 396 887.<span class="fraction">54</span></td>
+                    <td class="sum">57.54%</td>
+                    <td class="sum sum_right-border"></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td class="sum sum_left-border sum_top-bottom-border"></td>
+                    <td colspan="2" class="sum sum_top-bottom-border total">по всем вложениям:</td>
+                    <td colspan="2" class="sum sum_top-bottom-border total"></td>
+                    <td class="sum sum_top-bottom-border">2 410 777.<span class="fraction">88</span></td>
+                    <td class="sum sum_top-bottom-border"></td>
+                    <td class="sum sum_top-bottom-border">100.00%</td>
+                    <td class="sum sum_top-bottom-border"></td>
+                    <td class="sum sum_top-bottom-border"></td>
+                    <td class="sum sum_top-bottom-border">2 427 556.<span class="fraction">68</span></td>
+                    <td class="sum sum_top-bottom-border">100.00%</td>
+                    <td class="sum sum_right-border sum_top-bottom-border"></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <div class="cards-list cards-list--call-to-action">
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--investment-fund"></div>
+                <div class="card__caption">Паевые Инвестиционные&nbsp;Фонды</div>
+                <div class="card__footer"><a href="#">Купить сейчас</a></div>
+              </div>
+            </div>
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--trust-management"></div>
+                <div class="card__caption">Доверительное<span class="line-break"></span>Управление</div>
+                <div class="card__footer"><a href="#">Купить сейчас</a></div>
+              </div>
+            </div>
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--investment-accs"></div>
+                <div class="card__caption">Индивидуальные Инвестиционные Счета</div>
+                <div class="card__footer"><a href="#">Купить сейчас</a></div>
+              </div>
+            </div>
           </div>
         </div>
         <aside class="page-sidebar">

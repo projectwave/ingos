@@ -1,9 +1,13 @@
 $table-font-size: 13px;
 
+.table-wrapper {
+  overflow-x: auto;
+}
+
 .table {
   width: 100%;
   @extend .table-decorated;
-  font-size: 13px;
+  font-size: $table-font-size;
   th {
     font-family: $base-font-family-light;
   }
@@ -74,5 +78,92 @@ $table-font-size: 13px;
       padding-left: 0;
       padding-right: 40px;
     }
+  }
+}
+
+.table-iia-opening-selected-data-summary {
+
+}
+
+.table-management-structure {
+  display: block;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: $table-font-size;
+
+  th, td {
+    border: 1px solid $border-color;
+    text-align: center;
+  }
+
+  th {
+    font-size: 12px;
+    padding-bottom: 30px;
+    padding-top: 17px;
+    vertical-align: top;
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  td {
+    padding-left: 7px;
+    padding-right: 7px;
+    white-space: nowrap;
+    &:first-child {
+      text-align: left;
+      padding-left: 17px;
+      padding-right: 17px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      white-space: nowrap;
+    }
+  }
+
+  .title {
+    color: #0ca462;
+  }
+
+  .total {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  th, td:nth-child(even) {
+    background-color: #f3f4f4;
+  }
+
+  .sum {
+    border: none;
+    background-color: #f3f4f4;
+  }
+
+  .sum_left-border {
+    border-left: 1px solid #dcdedf;
+  }
+
+  .sum_right-border {
+    border-right: 1px solid #dcdedf;
+  }
+
+  .sum_top-bottom-border {
+    border-bottom: 1px solid #dcdedf;
+    border-top: 1px solid #dcdedf;
+  }
+
+  .asterisk {
+    color: #e21e4b;
+  }
+
+  .fraction {
+    font-size: 11px;
+  }
+
+  .fraction_gray {
+    font-size: 11px;
+    color: #8c9196;
   }
 }

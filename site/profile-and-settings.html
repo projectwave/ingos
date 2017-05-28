@@ -82,7 +82,7 @@
                 </div>
               </div>
             </div>
-            <div id="chat-with-manager" class="is-visible tab-container">
+            <div id="chat-with-manager" class="tab-container">
               <div class="tab-container__header">
                 <div class="tab-container__header-title">
                   <div class="section-title">Ваш персональный менеджер</div>
@@ -91,7 +91,7 @@
                   <div class="switcher-panel"><a href="#" class="switcher-panel__item">Чат с менеджером</a><a href="#" class="switcher-panel__item">Мои вопросы</a></div>
                 </div>
               </div>
-              <div class="chat-manager">
+              <div id="chat-manager-area" class="chat-manager">
                 <div class="chat-manager__preview">
                   <div class="person-preview">
                     <div class="person-preview__image"><img alt="" src=""></div>
@@ -110,7 +110,7 @@
                   </div>
                   <div class="chat-title">Чат с менеджером:</div>
                 </div>
-                <div class="chat-manager__actions"><span class="link-change">поменять менеджера</span></div>
+                <div class="chat-manager__actions"><span data-target-id="modal-change-personal-manager" class="link-change js-open-modal">поменять менеджера</span></div>
               </div>
               <form class="chat">
                 <div id="chat-thread" class="chat__messages-tread">
@@ -131,7 +131,7 @@
                   </div>
                 </div>
                 <div class="chat__input-area">
-                  <textarea class="chat__textarea">Спасибо, Анна!</textarea>
+                  <textarea id="chat-textarea" class="chat__textarea">Спасибо, Анна!</textarea>
                   <input type="submit" value="Отправить" class="js-chat-submit chat__submit-message btn-flat btn-sm">
                 </div>
               </form>
@@ -160,15 +160,15 @@
                 </div>
               </div>
             </div>
-            <div id="settings" class="tab-container">
+            <div id="settings" class="is-visible tab-container">
               <div class="tab-container__section-inner">
                 <div class="section-title">Настройки</div>
                 <div class="change-personal-data-request"><a href="#" class="btn-bordered">Запрос на смену регистрационных данных</a></div>
-                <form class="form-update-personal-user-data">
+                <form class="js-form-validate form-update-personal-user-data">
                   <div class="form-row form-row--email">
                     <label for="cabinet-data-user-login" class="form-row__title">Логин (ваш email):</label>
                     <div class="form-item">
-                      <input type="text" placeholder="Введите ваш email" id="cabinet-data-user-login" class="form-control">
+                      <input type="text" required data-parsley-required-message="Это поле нужно заполнить" placeholder="Введите ваш email" id="cabinet-data-user-login" class="form-control">
                     </div>
                   </div>
                   <div class="form-row form-row--password">
@@ -176,10 +176,10 @@
                     <div class="form-item form-item--password-create">
                       <div class="form-controls-group">
                         <div class="form-controls-group__item">
-                          <input type="password" placeholder="••••••" id="cabinet-data-user-password" class="form-control">
+                          <input type="password" placeholder="••••••" required data-parsley-required-message="Это поле нужно заполнить" id="cabinet-data-user-password" class="form-control">
                         </div>
                         <div class="form-controls-group__item">
-                          <input type="password" placeholder="Повторите пароль" class="form-control">
+                          <input type="password" required data-parsley-required-message="Это поле нужно заполнить" placeholder="Повторите пароль" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -201,7 +201,7 @@
                   <div class="form-row">
                     <label for="cabinet-data-user-phone" class="form-row__title">Номер мобильного телефона:</label>
                     <div class="form-item">
-                      <input type="text" placeholder="+7 (937) 542-54-19" id="cabinet-data-user-phone" class="form-control">
+                      <input type="text" required data-parsley-error-message="Это поле нужно заполнить" placeholder="+7 (937) 542-54-19" id="cabinet-data-user-phone" class="form-control">
                     </div>
                   </div>
                   <div class="form-row form-row--submit">
@@ -233,6 +233,39 @@
                 <div class="card__footer"><a href="#">Купить сейчас</a></div>
               </div>
             </div>
+          </div>
+        </div>
+        <div id="modal-change-personal-manager" class="modal">
+          <div class="modal-dialog">
+            <div class="modal__title">Сменить персонального менеджера</div>
+            <div class="modal__subtitle">Пожалуйста, подробно опишите причину смены менеджера.<br>Тогда наша служба контроля за качеством обслуживания сможет принять меры.</div>
+            <form id="form-reason-to-change-manager" class="form-reason-to-change-manager js-form-validate">
+              <div class="form-row">
+                <textarea required data-parsley-error-message="Это поле нужно заполнить" placeholder="Опишите причину смены менеджера" class="form-control"></textarea>
+              </div>
+              <div class="form-row">
+                <button type="submit" value="" class="form-submit"><span class="icon-change"></span>Сменить менеджера</button>
+              </div>
+            </form>
+            <div data-dismiss="modal" class="modal-close"></div>
+          </div>
+        </div>
+        <div id="modal-new-personal-manager" class="modal">
+          <div class="modal-dialog">
+            <div class="modal__title">Спасибо! Ваша заявка принята</div>
+            <div class="modal__subtitle">Ваш новый персональный менеджер &mdash;</div>
+            <div class="person-preview">
+              <div class="person-preview__image"><img alt="" src=""></div>
+              <div class="person-preview__info">
+                <div class="person-preview__name">Анна Орлова</div>
+                <div class="person-preview__contacts">
+                  <div class="person-preview__contacts-item">skype:&nbsp;<span class="underline">anna.ingosinvest</span>
+                    <div class="person-preview__actions"><span class="js-start-manager-chat btn-bordered btn-sm">Начать чат с менеджером</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-dismiss="modal" class="modal-close"></div>
           </div>
         </div>
         <aside class="page-sidebar">
@@ -320,17 +353,18 @@
           <div class="footer__feedback-area">
             <div class="feedback">
               <div class="feedback__number">8 800 100-48-98</div>
-              <div class="feedback__link"><a href="#">Заказать звонок</a></div>
+              <div class="feedback__link"><a href="#" class="js-modal-open-feedback">Заказать звонок</a></div>
             </div>
           </div>
         </div>
       </div>
       <div class="footer-row">
         <div class="footer-row__inner">
-          <div class="footer-copy">АО УК "Ингосстрах-Инвестиции" &copy; 2011-2017, официальный сайт&nbsp;<a href="https://www.ingosinvest.ru/">ingosinvest.ru</a></div>
+          <div class="footer-copy">АО УК «Ингосстрах-Инвестиции» &copy; 2011-2017, официальный сайт&nbsp;<a href="https://www.ingosinvest.ru/">ingosinvest.ru</a></div>
         </div>
       </div>
     </footer>
+    <!--include ../../partials/modal-popups/-->
     <script type="text/javascript" src="assets/js/libs/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="assets/js/vendors/parsley.js"></script>
     <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>

@@ -287,16 +287,19 @@
           </section>
         </section>
         <div id="modal-change-personal-manager" class="modal">
-          <div class="modal__title">Сменить персонального менеджера</div>
-          <div class="modal__subtitle">Пожалуйста, подробно опишите причину смены менеджера.<br>Тогда наша служба контроля за качеством обслуживания сможет принять меры.</div>
-          <form class="form-reason-to-change-manager">
-            <div class="form-row">
-              <textarea placeholder="Опишите причину смены менеджера"></textarea>
-            </div>
-            <div class="form-row">
-              <input type="submit" value="Сменить менеджера">
-            </div>
-          </form>
+          <div class="modal-dialog">
+            <div class="modal__title">Сменить персонального менеджера</div>
+            <div class="modal__subtitle">Пожалуйста, подробно опишите причину смены менеджера.<br>Тогда наша служба контроля за качеством обслуживания сможет принять меры.</div>
+            <form id="form-reason-to-change-manager" class="form-reason-to-change-manager js-form-validate">
+              <div class="form-row">
+                <textarea required data-parsley-error-message="Это поле нужно заполнить" placeholder="Опишите причину смены менеджера" class="form-control"></textarea>
+              </div>
+              <div class="form-row">
+                <button type="submit" value="" class="form-submit"><span class="icon-change"></span>Сменить менеджера</button>
+              </div>
+            </form>
+            <div data-dismiss="modal" class="modal-close"></div>
+          </div>
         </div>
         <div id="modal-alert-wrong" class="modal">
           <div class="modal__title">Ой...</div>

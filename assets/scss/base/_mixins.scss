@@ -39,6 +39,13 @@
   cursor: pointer;
   text-decoration: none;
   border-radius: $border-radius;
+  user-select: none;
+}
+
+@mixin icon() {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
 }
 
 %clearfix {
