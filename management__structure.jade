@@ -1,0 +1,17 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.table-heading
+				.table-heading__title
+
+				.table-heading__actions
+					.fullscreen-link
+						| таблицу на весь экран
+
+			.table-wrapper
+				include assets/jade/partials/tables/management-structure
+
+
+		include assets/jade/partials/cards-list

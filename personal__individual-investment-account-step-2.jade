@@ -1,0 +1,54 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.section-title
+				| Открытие индивидуального инвестиционного счета
+
+			form.form-opening-iia-step-2
+				.form-list
+					.form-list__item
+						input(type='checkbox' id='form-iia-agreement-1')
+
+						label(for='form-iia-agreement-1')
+							| Подтверждаю, что ознакомлен с&nbsp;
+							a(href='#')
+								| правилами дополнительного упражения
+							|  ОПИФ Фондов.
+
+					.form-list__item
+						input(type='checkbox' id='form-iia-agreement-2')
+
+						label(for='form-iia-agreement-2')
+							| Подтверждаю достоверность предоставленных данных и подтверждаю свое желание приобрести паи на указанных в&nbsp;
+							a(href='#')
+								| заявке
+							|  условиях.
+
+					.form-list__item
+						input(type='checkbox' id='form-iia-agreement-3')
+
+						label(for='form-iia-agreement-3')
+							| Прошу открыть мне лицевой счет в реестре на основании&nbsp;
+							a(href='#')
+								| заявления
+							|  и&nbsp;
+							a(href='#')
+								| анкеты
+							| .
+
+				include assets/jade/partials/forms/sms-verification
+
+		.main-content-section
+			include assets/jade/partials/cards-list
+
+
+block body_end
+	script(type='text/javascript' src='assets/js/vendors/parsley.js')
+	script(type='text/javascript' src='assets/js/vendors/bootstrap-modal.js')
+	script(type='text/javascript' src='assets/js/main.js')
+	script(type='text/javascript').
+		$(function () {
+				commonActions.init();
+		})
