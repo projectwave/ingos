@@ -44,10 +44,13 @@ form {
 
   .form-row--password-strength {
     width: 50%;
+    display: table;
+    overflow: hidden;
   }
 
   .form-row--password-strength .form-item {
     width: 50%;
+    display: table-cell;
   }
 
   .form-item--password-strength-title {

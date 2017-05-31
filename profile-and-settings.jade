@@ -144,6 +144,7 @@ block content
 										input(type='password'
 													placeholder='••••••'
 													required
+													data-validate-strength
 													data-parsley-required-message='Это поле нужно заполнить'
 													id='cabinet-data-user-password').form-control
 
@@ -164,13 +165,11 @@ block content
 								| Сложность пароля:
 
 							.form-item
-								#password-strength-scale.password-strength-scale
-									.password-strength-scale__degree.is-0
-
+								#password-strength-scale.password-strength-scale.is-0
 									.password-strength-scale__degree
-
 									.password-strength-scale__degree
-
+									.password-strength-scale__degree
+									.password-strength-scale__degree
 									.password-strength-scale__degree
 
 						.form-row

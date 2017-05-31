@@ -164,15 +164,7 @@ var commonActions = (function (document, $) {
 
         _slidingMenu();
 
-        // $.fn.passwordStrength.defaults = {
-        //     classes : Array('is10','is20','is30','is40','is50','is60','is70','is80','is90','is100'),
-        //     targetDiv : '#password-strength-scale',
-        //     cache : {}
-        // }
-
-        //$('input[name="password"]').passwordStrength();
-        //$('input[name="password2"]').passwordStrength({targetDiv: '#password-strength-scale',classes : Array('is10','is20','is30','is40')});
-
+        $('input[data-validate-strength]').passwordStrength();
     }
 
     function init() {
