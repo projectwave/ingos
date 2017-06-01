@@ -79,6 +79,7 @@ form {
 
   .form-note {
     text-align: left;
+    line-height: 1.4;
     padding-left: $form-item-padding;
   }
 
@@ -109,6 +110,13 @@ form {
     width: 16px;
     height: 18px;
     background: url(../img/icons/icon-mini-change.png);
+    background-size: cover;
+  }
+
+  .icon-change--white {
+    background: url(../img/icons/icon-mini-popup-change.png);
+    width: 18px;
+    height: 18px;
     background-size: cover;
   }
 }

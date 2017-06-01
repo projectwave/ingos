@@ -127,6 +127,17 @@ $sliding-menu-padding: 30px;
     opacity: 1;
   }
 }
+.nav-figure--reports {
+  padding-left: 28px;
+  &::before {
+    width: 18px;
+    height: 24px;
+    top: 50%;
+    margin-top: -12px;
+    background: url(../img/icons/icon-mini-reports.png) no-repeat top center;
+    background-size: cover;
+  }
+}
 
 .nav-figure--notifications {
   padding-left: 28px;
@@ -197,6 +208,7 @@ $sliding-menu-padding: 30px;
 
 .dropdown-list {
   position: absolute;
+  margin-top: 15px;
   z-index: 4;
   opacity: 0;
   will-change: opacity;
@@ -207,6 +219,17 @@ $sliding-menu-padding: 30px;
   box-shadow: $box-shadow;
   transition: opacity 0.1s linear;
 
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(../../assets/img/arrow-dropdown-menu.png) no-repeat top center;
+    background-size: cover;
+    background-color: #fff;
+    height: 9px;
+    width: 18px;
+    left: 13px;
+    top: -8px;
+  }
   .nav-figure--settings & {
     width: 151px;
   }

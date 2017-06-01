@@ -99,12 +99,13 @@ $chat-message-font-size: 14px;
 }
 
 .chat__post {
+  position: relative;
   width: 464px;
   margin-left: 92px;
   margin-bottom: 15px;
   padding: 15px 18px;
   line-height: 1.4;
-  background-color: lightblue;
+  background-color: #bfeeff;
   border-radius: $border-radius;
   &::before {
     content: attr(data-post-time);
@@ -114,6 +115,17 @@ $chat-message-font-size: 14px;
     top: 10px;
     right: -112px;
   }
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../../assets/img/arrow-message-client.png) no-repeat top center;
+    background-size: cover;
+    float: right;
+    height: 8px;
+    width: 4px;
+    top: 43%;
+    right: -4px;
+  }
 }
 
 .chat__post-message {
@@ -122,17 +134,36 @@ $chat-message-font-size: 14px;
 
 .chat__post--companion {
   margin-left: 62px;
-  background: lightgray;
+  background: #f3f4f4;
+  position: relative;
   &::before {
     right: -142px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../../assets/img/arrow-message-manager.png) no-repeat top center;
+    background-size: cover;
+    float: left;
+    height: 8px;
+    width: 4px;
+    top: 43%;
+    left: -4px;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: -60px;
+    width: 40px;
+    height: 40px;
   }
 }
 
 .chat__post.is-answer {
+
 }
 
 .chat__post--companion.is-answer {
-
 }
 
 .chat__input-area {

@@ -4,9 +4,9 @@
   "description": "A Jade and Sass starter project using gulp for task automation.",
   "main": "gulpfile.js",
   "author": {
-    "name": "Budasov Konstantin",
-    "email": "kbudasov@projectwave.ru",
-    "url": "https://github.com/projectwave"
+    "name": "Joshua Azemoh",
+    "email": "buzzme46@gmail.com",
+    "url": "https://github.com/azemoh"
   },
   "scripts": {
     "start": "gulp",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/projectwave/ingos.git"
+    "url": "https://github.com/azemoh/gulp-jade-sass-starter.git"
   },
   "keywords": [
     "jade",

@@ -34,4 +34,10 @@
   &:last-child {
     margin-bottom: 0;
   }
+  img {
+    display: block;
+    padding: 19px;
+    box-sizing: content-box;
+  }
 }
+

@@ -56,6 +56,15 @@
   padding: 7px 0 7px 38px;
   text-decoration: none;
   cursor: default;
+  &:hover {
+    &::before {
+      display: block;
+      width: 25px;
+      height: 30px;
+      background: url(../img/icons/icon-mini-pdf-hover.png) no-repeat top center;
+      background-size: cover;
+    }
+  }
   &::before {
     content: "";
     position: absolute;
@@ -86,7 +95,7 @@
     background: url(../img/icons/icon-mini-folder.png) no-repeat top center;
     background-size: cover;
   }
-  
+
   &:hover {
     text-decoration: underline;
   }
