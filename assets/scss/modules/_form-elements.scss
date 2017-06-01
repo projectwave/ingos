@@ -111,9 +111,12 @@ textarea.form-control {
   display: table-cell;
   .form-control {
     border-radius: 0;
+    position: relative;
+    left: -1px;
   }
   &:first-child {
     .form-control {
+      left: 0;
       border-radius: $border-radius 0 0 $border-radius;
     }
   }
@@ -123,6 +126,11 @@ textarea.form-control {
       border-radius: 0 $border-radius $border-radius 0;
     }
   }
+}
+
+.form-controls-group__item.is-active {
+  position: relative;
+  z-index: 2;
 }
 
 .form-row--user-agreements {

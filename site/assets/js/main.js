@@ -151,7 +151,28 @@ var commonActions = (function (document, $) {
 
     }
 
+    function _formControlHacks() {
+        var $parentEl = $('.form-controls-group__item');
+        var $formControl = $('.form-control');
+        var $currentEl;
+
+        $parentEl.on('mouseover', function(){
+           $(this).addClass(className.hover);
+           $currentEl = $(this);
+        }).on('mouseout', function(){
+            $currentEl.removeClass(className.hover);
+        });
+
+        $formControl.on('focus', function(){
+            $(this).parent().addClass(className.active);
+        }).on('blur', function() {
+            $(this).parent().removeClass(className.active);
+        });
+    }
+
     function bind() {
+        _formControlHacks();
+
         _bindModals();
 
         _startManagerChat();
