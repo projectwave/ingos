@@ -38,15 +38,61 @@
       <div class="page-content__inner">
         <div class="main-content-area">
           <div class="main-content-section">
+            <div class="filter">
+              <div class="filter__column">
+                <div class="period-range">
+                  <div class="period-range__title">Период</div>
+                  <div class="period-range__input">
+                    <div class="data-range-input">
+                      <div class="data-range-input__value">
+                        1 сентября 2016
+                        -
+                        31 сентября 2016
+                      </div>
+                      <div class="data-range-input__icon"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter__column">
+                <div class="switcher-panel"><a href="#" class="switcher-panel__item">День</a><a href="#" class="switcher-panel__item">Неделя</a><a href="#" class="switcher-panel__item">Месяц</a><a href="#" class="switcher-panel__item">Квартал</a><a href="#" class="switcher-panel__item">Год</a></div>
+              </div>
+            </div>
             <div class="table-heading">
               <div class="table-heading__title">
-                <div class="title"></div>
+                <div class="section-title">Операции по ПИФ-ам</div>
               </div>
               <div class="table-heading__actions">
                 <div class="fullscreen-link">таблицу на весь экран</div>
               </div>
             </div>
-            <table class="table"></table>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Дата проведения операции</th>
+                  <th>Тип операции</th>
+                  <th>Количество<span class="line-break">паев, шт.</span></th>
+                  <th>Цена одного<span class="line-break">пая, руб.</span></th>
+                  <th>Сумма&nbsp;операции,<span class="line-break"> руб.</span></th>
+                  <th>Фонд на паи которого произведен обмен</th>
+                  <th>Количество паев при&nbsp;операции обмена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="7" class="table-row-title">Наименование ПИФа:&nbsp;<strong>«Ингосстрах. Облигации»</strong></td>
+                </tr>
+                <tr>
+                  <td>10.08.2014</td>
+                  <td>Приобретение</td>
+                  <td><span class="price-inline">177<span class="price-inline__dot-value">6593382</span></span></td>
+                  <td><span class="price-inline">1 125<span class="price-inline__dot-value">75</span></span></td>
+                  <td><span class="price-inline">-200 000<span class="price-inline__dot-value">00</span></span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div class="cards-list cards-list--call-to-action">
             <div class="cards-list__item">
@@ -180,6 +226,5 @@
       })
       
     </script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
   </body>
 </html>

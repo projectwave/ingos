@@ -4,16 +4,14 @@ block content
 	.main-content-area
 		.main-content-section
 			.table-heading
-				.table-heading__title
-					.title
+				.section-title Информация по сделкам
 
 				.table-heading__actions
 					.fullscreen-link
 						| таблицу на весь экран
 
-			include assets/jade/partials/tables/unit-trust-structure
+			.table-wrapper
+				include assets/jade/partials/tables/management-dealings
+
 
 		include assets/jade/partials/cards-list
-
-block body_end
-	script(type="text/javascript" src="assets/js/script.js")

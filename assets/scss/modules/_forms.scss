@@ -12,6 +12,18 @@ form {
   margin: 33px auto 72px;
 }
 
+.form-sms-verification {
+  margin-top: 30px;
+  .form-title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .form-row--sms-verification {
+    margin-bottom: 14px;
+  }
+}
+
 .form-cabinet-connection-password {
   max-width: 556px;
   margin: 31px auto;

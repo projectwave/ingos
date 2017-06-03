@@ -1,0 +1,35 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.section-title Динамика портфеля
+
+			.title График доходности. Динамика портфеля с учетом вводов и выводов
+
+			.table-heading
+				.table-heading__title
+					.title
+						| Доходность рублевой части портфеля (RUB)
+
+				.table-heading__actions
+					.fullscreen-link
+						| таблицу на весь экран
+
+			.table-wrapper
+				include assets/jade/partials/tables/management-yeld-of-currency-part-rub
+
+			.table-heading
+				.table-heading__title
+					.title
+						| Доходность рублевой части портфеля (USD)
+
+				.table-heading__actions
+					.fullscreen-link
+						| таблицу на весь экран
+
+			.table-wrapper
+				include assets/jade/partials/tables/management-yeld-of-currency-part-usd
+
+
+		include assets/jade/partials/cards-list

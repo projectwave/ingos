@@ -1,17 +1,16 @@
 .form-sms-verification
 	.form-title
-		| На ваш мобильный телефон +7 (937) xxx-xx-19
-		span.line-break
-			| выслано SMS-сообщение с кодом.
+		| На ваш мобильный телефон +7 (937) xxx-xx-19 выслано SMS-сообщение с кодом.
 
-	.form-row
+	.form-row.form-row--sms-verification
+
 		label(for='verification-sms-code').form-row__title
 			| Введите код:
 
 		.form-item.form-item--input
 			input(type='password'
-						placeholder='••••'
-						id='verification-sms-code').form-control
+			placeholder='••••'
+			id='verification-sms-code').form-control
 
 		.form-item.form-item--submit
 			input(type='submit' value='Отправить').form-submit

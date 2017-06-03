@@ -44,15 +44,17 @@ var commonActions = (function (document, $) {
             .on('form:submit', _onFormSubmit);
     });
 
-    $(selector.form.changeManager).parsley().on('form:submit', function(){
-        $(selector.modal.changeManager).modal('hide');
+    if($(selector.form.changeManager).length) {
+        $(selector.form.changeManager).parsley().on('form:submit', function(){
+            $(selector.modal.changeManager).modal('hide');
 
-        setTimeout(function(){
-            $(selector.modal.newManager).modal('show');
-        }, 200);
+            setTimeout(function(){
+                $(selector.modal.newManager).modal('show');
+            }, 200);
 
-        return false;
-    });
+            return false;
+        });
+    }
 
     function _startManagerChat() {
         $(selector.chat.startManagerChat).on('click', function(){
@@ -175,7 +177,9 @@ var commonActions = (function (document, $) {
 
         _bindModals();
 
-        _startManagerChat();
+        if($(selector.chat.managerArea).length) {
+            _startManagerChat();
+        }
 
         _toggleNextEl();
 

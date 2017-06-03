@@ -38,15 +38,72 @@
       <div class="page-content__inner">
         <div class="main-content-area">
           <div class="main-content-section">
+            <div class="section-title">Динамика портфеля</div>
+            <div class="title">График доходности. Динамика портфеля с учетом вводов и выводов</div>
             <div class="table-heading">
               <div class="table-heading__title">
-                <div class="title"></div>
+                <div class="title">Доходность рублевой части портфеля (RUB)</div>
               </div>
               <div class="table-heading__actions">
                 <div class="fullscreen-link">таблицу на весь экран</div>
               </div>
             </div>
-            <table class="table"></table>
+            <div class="table-wrapper">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Тип ЦБ</th>
+                    <th>Наименование</th>
+                    <th>ISIN</th>
+                    <th>Средне&mdash;инвестированная сумма</th>
+                    <th>Текущая оценка</th>
+                    <th>Доход, RUB</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Облигация</td>
+                    <td>ОФЗ 26207</td>
+                    <td>RU000AOJS3W6</td>
+                    <td><span class="price-inline">379 423<span class="price-inline__dot-value">17</span></span></td>
+                    <td><span class="price-inline">423 300<span class="price-inline__dot-value">41</span></span></td>
+                    <td><span class="price-inline">51 406<span class="price-inline__dot-value">24</span></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-heading">
+              <div class="table-heading__title">
+                <div class="title">Доходность рублевой части портфеля (USD)</div>
+              </div>
+              <div class="table-heading__actions">
+                <div class="fullscreen-link">таблицу на весь экран</div>
+              </div>
+            </div>
+            <div class="table-wrapper">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Тип ЦБ</th>
+                    <th>Наименование</th>
+                    <th>ISIN</th>
+                    <th>Средне&mdash;инвестированная сумма</th>
+                    <th>Текущая оценка</th>
+                    <th>Доход, RUB</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Облигация</td>
+                    <td>PSB Finance S.A.-5-2016-euro</td>
+                    <td>XS0542658852</td>
+                    <td><span class="price-inline">104 227<span class="price-inline__dot-value">51</span></span></td>
+                    <td><span class="price-inline">105 857<span class="price-inline__dot-value">75</span></span></td>
+                    <td><span class="price-inline">2 107<span class="price-inline__dot-value">75</span></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <div class="cards-list cards-list--call-to-action">
             <div class="cards-list__item">
@@ -180,6 +237,5 @@
       })
       
     </script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
   </body>
 </html>

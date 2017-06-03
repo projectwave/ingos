@@ -6,7 +6,7 @@
 
 ### Folders structure
 - site: contain compiled html files
-- assets: source files. scss/base contain core files - variables, typography, describing tags, etc.
+- assets: source files. ./scss/base contain core files - variables, typography, describing tags, etc.
 - data: a place for files with data for containers
 
 
