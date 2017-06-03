@@ -10,7 +10,7 @@ $input-font-size: 14px;
 }
 
 .form-item {
-
+  position: relative;
 }
 
 .form-row--phone {
@@ -33,7 +33,7 @@ $input-font-size: 14px;
 
   .form-item--submit {
     text-align: right;
-    padding-left: 6%;
+    padding-left: $form-item-padding;
   }
 
   .form-submit {
@@ -93,7 +93,7 @@ $input-font-size: 14px;
   }
 }
 
-.form-control.parsley-error:focus {
+.form-control.parsley-error {
   border-color: $brand-color;
 }
 
@@ -109,6 +109,7 @@ textarea.form-control {
 
 .form-controls-group__item {
   display: table-cell;
+  position: relative;
   .form-control {
     border-radius: 0;
     position: relative;
@@ -212,6 +213,7 @@ textarea.form-control {
 }
 
 .form-note {
+  line-height: 1.4;
   text-align: center;
 } 
 
@@ -333,4 +335,21 @@ textarea.form-control {
       background: cadetblue;
     }
   }
+}
+
+.form-row--items {
+  .form-item {
+    display: table-cell;
+    vertical-align: bottom;
+    padding-right: $form-item-padding;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.form-item__title {
+  display: inline-block;
+  font-size: 15px;
+  padding-bottom: 4px;
 }

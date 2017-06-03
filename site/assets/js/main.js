@@ -24,8 +24,9 @@ var commonActions = (function (document, $) {
         slidingMenuTitle: '.js-sliding-menu-title',
         nextElToggler: '.js-toggle-next-el',
         openModal: '.js-open-modal',
-        closeModal: '.js-close-modal'
-
+        closeModal: '.js-close-modal',
+        datepickerIcon: 'data-range-input__icon',
+        datepickerValue: 'data-range-input__value'
     };
 
     var className = {
@@ -56,6 +57,17 @@ var commonActions = (function (document, $) {
         });
     }
 
+    function _activateDatepicker() {
+        $('input[name="daterange"]').daterangepicker({
+            timePicker: true,
+            locale: {
+                format: 'DD-MM-YYYY'
+            },
+            startDate: '2013-01-01',
+            endDate: '2013-12-31'
+        });
+    }
+
     function _startManagerChat() {
         $(selector.chat.startManagerChat).on('click', function(){
             $(selector.modal.newManager).modal('hide');
@@ -82,8 +94,6 @@ var commonActions = (function (document, $) {
         var $form = this.$element;
         var $firstInvalidField = $form.find('.parsley-error:first');
         var errors = $firstInvalidField.parsley().getErrorsMessages().join(';');
-
-        //if (!!errors) _showError(errors, $firstInvalidField);
     }
 
     function _bindModals() {
@@ -169,10 +179,14 @@ var commonActions = (function (document, $) {
             $(this).parent().addClass(className.active);
         }).on('blur', function() {
             $(this).parent().removeClass(className.active);
+        }).on('keydown', function(){
+            $(this).removeClass('parsley-error');
         });
     }
 
     function bind() {
+        //_activateDatepicker();
+
         _formControlHacks();
 
         _bindModals();
@@ -189,7 +203,10 @@ var commonActions = (function (document, $) {
 
         _slidingMenu();
 
-        $('input[data-validate-strength]').passwordStrength();
+        if($('input[data-validate-strength]').length) {
+            $('input[data-validate-strength]').passwordStrength();
+        }
+
     }
 
     function init() {

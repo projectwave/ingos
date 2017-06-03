@@ -34,39 +34,23 @@
       <main class="page-content">
         <section class="page-section">
           <div class="page-section__inner">
-            <div class="section-title">Подключить личный кабинет</div>
-            <div class="section-subtitle">Введите email и придумайте пароль</div>
-            <form method="" action="" class="form-cabinet-connection-password js-form-validate">
-              <div class="form-row form-row--login">
-                <label for="ccd-email" class="form-row__title">Логин (ваш email):</label>
+            <div class="section-title">Вход в личный кабинет</div>
+            <form method="" action="" class="form-autorisation js-form-validate">
+              <div class="form-row form-row--items">
                 <div class="form-item">
-                  <input type="text" required placeholder="Введите ваш email" id="ccd-email" class="form-control">
+                  <label for="autorisation-login" class="form-item__title">Логин:</label>
+                  <input type="text" required placeholder="Введите логин" id="autorisation-login" class="form-control">
                 </div>
-              </div>
-              <div class="form-row form-row--cabinet-connection-login">
-                <label for="ccd-password" class="form-row__title">Пароль:</label>
-                <div class="form-item form-item--password-create">
-                  <div class="form-controls-group">
-                    <div class="form-controls-group__item">
-                      <input type="password" required placeholder="•••••" data-parsley-required-message="Введите пароль" name="ccd-password" id="ccd-password" class="form-control">
-                    </div>
-                    <div class="form-controls-group__item">
-                      <input type="password" required data-parsley-equalto="#ccd-password" data-parsley-required-message="Подтвердите пароль" placeholder="Повторите пароль" name="ccd-password-check" id="ccd-password-check" class="form-control">
-                    </div>
-                  </div>
+                <div class="form-item form-item--password">
+                  <label for="autorisation-login" class="form-item__title">Пароль:<a href="#" class="link-remind-pass">Забыли пароль?</a></label>
+                  <input type="password" required placeholder="•••••" id="autorisation-password" class="form-control">
                 </div>
                 <div class="form-item form-item--submit">
                   <input type="submit" value="Войти" class="form-submit">
                 </div>
               </div>
-              <div class="form-row form-row--password-strength">
-                <div class="form-item">Сложность пароля:</div>
-                <div class="form-item">
-                  <div id="password-strength-scale"></div>
-                </div>
-              </div>
-              <div class="form-row form-row--password-note">
-                <div class="form-note">Пароль должен содержать не менее 8 символов.<span class="line-break">Используйте хотя бы одну цифру и прописную букву.</span></div>
+              <div class="form-row form-row--note">
+                <div class="form-note">Если вы клиент АО УК «Ингосстрах-Инвестиции», введите логин (обычно это ваш email) и пароль.<span class="line-break">Если вы еще не зарегестрированы &mdash;&nbsp;<a href="#">подключите личный кабинет</a>.</span></div>
               </div>
             </form>
           </div>

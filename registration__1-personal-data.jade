@@ -9,7 +9,7 @@ block content
 			.section-subtitle
 				| Укажите свои данные
 
-			form(method='' action='').form-cabinet-connection-data
+			form(method='' action='').form-cabinet-connection-data.js-form-validate
 				.form-row
 					label(for='cabinet-connection-data-first-name').form-row__title
 						| Ваше Ф.И.О:
@@ -18,16 +18,19 @@ block content
 						.form-controls-group__item
 							input(type='text'
 										value='Ковалев'
+										required,
 										id='cabinet-connection-data-first-name').form-control
 
 						.form-controls-group__item
 							input(type='text'
 										value='Сергей'
+										required,
 										id='cabinet-connection-data-last-name').form-control
 
 						.form-controls-group__item
 							input(type='text'
 										placeholder='Введите отчество'
+										required,
 										id='cabinet-connection-data-patronymic').form-control
 
 				.form-row.form-row--phone
@@ -40,7 +43,7 @@ block content
 								| +Х ХХХ ХХХХ-ХХХ-ХХ
 
 					.form-item
-						input(type='text' placeholder='+7 (937) 524-54-19').form-control
+						input(type='text' required placeholder='+7 (937) 524-54-19').form-control
 
 				.form-row.form-row--submit
 					input(type='submit' value='Отправить').form-submit

@@ -1,0 +1,68 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.section-header
+				.section-header__column
+					.section-title Медиа
+
+				.section-header__column
+					form.form-years-archive-filter
+						.form-row
+							.form-row__title Архив по годам:
+
+							select
+								option 2016
+								option 2015
+								option 2014
+								option 2013
+
+			.media-list
+				.media-list__item
+					.media-preview
+						.media-preview__viewport
+							img(src='' alt='')
+
+							.media-preview__video-length-label 08:20
+
+						.media-preview__caption
+							| Личные финансы с Натальей Смирновой. Выпуск 18.
+							span.line-break
+								| Паевый инвестиционный фонд (ПИФ)
+
+				.media-list__item
+					.media-preview
+						.media-preview__viewport
+							img(src='' alt='')
+
+							.media-preview__video-length-label 09:15
+
+						.media-preview__caption
+							| Личные финансы с Натальей Смирновой. Выпуск 17.
+							span.line-break
+								| Пожизненный источник дохода
+
+				.media-list__item
+					.media-preview
+						.media-preview__viewport
+							img(src='' alt='')
+
+							.media-preview__video-length-label 08:20
+
+						.media-preview__caption
+							| Личные финансы с Натальей Смирновой. Выпуск 18. Паевый инвестиционный фонд (ПИФ)
+
+				.media-list__item
+					.media-preview
+						.media-preview__viewport
+							img(src='' alt='')
+
+							.media-preview__video-length-label 09:15
+
+						.media-preview__caption
+							| Личные финансы с Натальей Смирновой. Выпуск 17.
+							span.line-break
+								| Пожизненный источник доходаы
+
+		include assets/jade/partials/cards-list

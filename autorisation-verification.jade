@@ -1,0 +1,22 @@
+extends assets/jade/layouts/signing-in/index
+
+block head_end
+	link(rel='stylesheet' href='assets/css/style.css')
+
+block content
+	section.page-section
+		.page-section__inner
+			.section-title
+				| Вход в личный кабинет
+
+			form(method='' action='').js-form-validate
+				include assets/jade/partials/forms/sms-verification
+
+block body_end
+	script(type='text/javascript' src='assets/js/vendors/parsley.js')
+	script(type='text/javascript' src='assets/js/vendors/bootstrap-modal.js')
+	script(type='text/javascript' src='assets/js/main.js')
+	script(type='text/javascript').
+		$(function(){
+			commonActions.init();
+		})

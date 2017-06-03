@@ -34,35 +34,24 @@
       <main class="page-content">
         <section class="page-section">
           <div class="page-section__inner">
-            <div class="section-title">Подключить личный кабинет</div>
-            <div class="section-subtitle">Подтвердите телефон</div>
-            <form method="" action="" class="form-cabinet-connection-verification js-form-validate">
-              <div class="form-row form-row--user-agreements">
-                <div class="form-list">
-                  <div class="form-list__item">
-                    <input type="checkbox" id="form-ccv-esignature-check">
-                    <label for="form-ccv-esignature-check">Я ознакомился и принимаю соглашение&nbsp;<a href="#">об использовании электронной подписи</a></label>
+            <div class="section-title">Вход в личный кабинет</div>
+            <form method="" action="" class="js-form-validate">
+              <div class="form-sms-verification">
+                <div class="form-title">На ваш мобильный телефон +7 (937) xxx-xx-19 выслано SMS-сообщение с кодом.</div>
+                <div class="form-row form-row--sms-verification">
+                  <label for="verification-sms-code" class="form-row__title">Введите код:</label>
+                  <div class="form-item form-item--input">
+                    <input type="password" required placeholder="•••••" id="verification-sms-code" class="form-control">
                   </div>
-                  <div class="form-list__item">
-                    <input type="checkbox" id="form-ccv-communication-check">
-                    <label for="form-ccv-communication-check">Подтверждаю свое&nbsp;<a href="#">согласие на коммуникацию</a></label>
+                  <div class="form-item form-item--submit">
+                    <input type="submit" value="Отправить" class="form-submit">
                   </div>
                 </div>
-              </div>
-              <div class="form-row form-row--sms-verification">
-                <div class="section-subtitle">На ваш мобильный телефон +7 (937) xxx-xx-19<span class="line-break">выслано SMS-сообщение с кодом.</span></div>
-                <label for="verification-sms-code" class="form-row__title">Введите код:</label>
-                <div class="form-item form-item--input">
-                  <input type="password" required placeholder="•••••" id="verification-sms-code" class="form-control">
-                </div>
-                <div class="form-item form-item--submit">
-                  <input type="submit" value="Отправить" class="form-submit">
-                </div>
-              </div>
-              <div class="form-row form-row--verification-troubleshooting">
-                <div class="links-group">
-                  <div class="links-group__item text-right"><a href="#" class="tooltip-link">Отправить еще раз</a></div>
-                  <div class="links-group__item text-left"><a href="#" class="tooltip-link">СМС не приходит?</a></div>
+                <div class="form-row form-row--verification-troubleshooting">
+                  <div class="links-group">
+                    <div class="links-group__item text-right"><a href="#" class="tooltip-link">Отправить еще раз</a></div>
+                    <div class="links-group__item text-left"><a href="#" class="tooltip-link">СМС не приходит?</a></div>
+                  </div>
                 </div>
               </div>
             </form>

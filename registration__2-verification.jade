@@ -12,7 +12,7 @@ block content
 			.section-subtitle
 				| Подтвердите телефон
 
-			form(method='' action='').form-cabinet-connection-verification
+			form(method='' action='').form-cabinet-connection-verification.js-form-validate
 				.form-row.form-row--user-agreements
 					.form-list
 						.form-list__item
@@ -22,14 +22,6 @@ block content
 								| Я ознакомился и принимаю соглашение&nbsp;
 								a(href='#')
 									| об использовании электронной подписи
-
-						.form-list__item
-							input(type='checkbox' id='form-ccv-personal-data-check')
-
-							label(for='form-ccv-personal-data-check')
-								| Я согласен на обработку&nbsp;
-								a(href='#')
-									| моих персональных данных
 
 						.form-list__item
 							input(type='checkbox' id='form-ccv-communication-check')
@@ -50,7 +42,8 @@ block content
 
 					.form-item.form-item--input
 						input(type='password'
-									placeholder='••••'
+									required
+									placeholder='•••••'
 									id='verification-sms-code').form-control
 
 					.form-item.form-item--submit
