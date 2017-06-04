@@ -7,27 +7,40 @@ block content
 				| Паевые инвестиционные фонды
 
 			.section-subtitle
-				| Сергей Алекссевич, к сожалению, на данный момент у вас отстутсвуют паи фондов. Для того, чтобы начать инвестировать, вам необходимо:
+				| Сергей Алекссевич, к сожалению, на данный момент у вас отсутствуют паи фондов. Для того, чтобы начать инвестировать, вам необходимо:
 
-			.cards-list
+			.cards-list.cards-list--ordering-steps
 				.cards-list__item
 					.card
-						.card__icon
+						.card__icon.card__icon--browse
 
 						.card__caption
 							a(href='#') Выбрать фонд
-							| &nbsp;на сайте АО УК "Ингосстрах Инвестиции"
+							| &nbsp;на сайте АО&nbsp;УК&nbsp;«Ингосстрах&nbsp;Инвестиции»
 
 				.cards-list__item
 					.card
-						.card__icon
+						.card__icon.card__icon--ordering
 
 						.card__caption
-							| Оформить завяку в любом удобном для вас&nbsp;
+							| Или оформить завяку, в&nbsp;любом&nbsp;удобном&nbsp;для&nbsp;вас&nbsp;
 							a(href='#')
 								| офисе
 
-				include assets/jade/partials/get-detailed-info
+			p
+				| Более подробную информацию вы можете получить по телефону:&nbsp;
+				span.phone-number 8 800 100-48-98
 
-		.main-content-section
-			include assets/jade/partials/cards-list
+			.advantages
+				.advantages__title Преимущества
+
+				.advantages-list
+					.advantages-list__item
+						.advantage
+							.advantage__header
+								.advantage__icon
+									img(src='' alt='')
+
+								.advantage__title Доступность
+
+							.advantage__caption При минимальной сумме от 5 тысяч рублей вы можете инвестировать свои средства

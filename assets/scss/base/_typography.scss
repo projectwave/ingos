@@ -4,7 +4,7 @@
   margin-bottom: 10px;
 
   .main-content-section & {
-    font-size: 25;
+    font-size: 25px;
     text-align: left;
   }
 
@@ -15,7 +15,14 @@
   }
 }
 
+.section-title + .links-list,
+.section-header + .links-list{
+  margin-top: $content-section-margin;
+}
+
 .section-subtitle {
+  font-size: 16px;
+  line-height: 1.2;
   text-align: center;
 
   .main-content-section & {
@@ -47,6 +54,8 @@
 .action-link--get-pdf {
   position: relative;
   padding: 7px 0 7px 38px;
+  text-decoration: none;
+  cursor: default;
   &::before {
     content: "";
     position: absolute;
@@ -60,6 +69,45 @@
     background-size: cover;
   }
 }
+
+.action-link--folder {
+  position: relative;
+  padding: 7px 0 7px 44px;
+  text-decoration: none;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 30px;
+    height: 24px;
+    top: 50%;
+    margin-top: -14px;
+    background: url(../img/icons/icon-mini-folder.png) no-repeat top center;
+    background-size: cover;
+  }
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+//.action-link--get-excel {
+//  position: relative;
+//  padding: 7px 0 7px 38px;
+//  &::before {
+//    content: "";
+//    position: absolute;
+//    left: 0;
+//    display: block;
+//    width: 25px;
+//    height: 30px;
+//    top: 50%;
+//    margin-top: -15px;
+//    background: url(../img/icons/icon-mini-pdf.png) no-repeat top center;
+//    background-size: cover;
+//  }
+//}
 
 .fullscreen-link {
   @include action-link();
@@ -93,6 +141,11 @@
     background: url(../img/icons/icon-mini-change.png) no-repeat;
     background-size: cover;
   }
+}
+
+.link-download {
+  font-size: $note-font-size;
+  color: $link-accent;
 }
 
 .answer-link {

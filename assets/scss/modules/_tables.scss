@@ -91,7 +91,17 @@ $table-font-size: 13px;
 }
 
 .table-client-details {
+  margin-bottom: 0;
+  tr {
+    &:last-child {
+      td {
+        border-bottom: 0;
+      }
+    }
+  }
   td {
+    padding : 14px 10px;
+    border-bottom: 1px solid $border-color;
     &:first-child {
       width: 165px;
       padding-left: 0;

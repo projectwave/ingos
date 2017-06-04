@@ -1,4 +1,8 @@
 // Hacks and helper classes
+.phone-number {
+  @include phone-number();
+}
+
 .line-break {
   display: block;
 }

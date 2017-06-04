@@ -3,31 +3,41 @@ extends assets/jade/layouts/global/index
 block content
 	.main-content-area
 		.main-content-section
-			include assets/jade/partials/filter-panel
+			.section-header
+				.section-header__column
+					.section-title Документы по ПИФ-ам
 
-			.section-title Документы по ПИФ-ам
+				.section-header__column
+					span.content-nav
+						| 2017
+
+						a(href='#').content-nav__prev
+
+						a(href='#').content-nav__next
 
 			.links-list
 				.links-list__item
-					.get-pdf-link
+					.action-link.action-link--get-pdf
 						a(href='#') Анкета Управляющей компании
 						| &nbsp;
-						a(href='#') скачать
+						a(href='#').link-download скачать
 
 				.links-list__item
-					.get-pdf-link
+					.action-link.action-link--get-pdf
 						a(href='#') Заявление об открытии лицевого счета (для физического лица)
 						| &nbsp;
-						a(href='#') скачать
+						a(href='#').link-download скачать
 
 				.links-list__item
-					.get-pdf-link
+					.action-link.action-link--get-pdf
 						a(href='#') Распоряжение на списание/зачисление инвестиционных паев с участием лицевого счета номинального держателя Центрального депозитария
 						| &nbsp;
-						a(href='#') скачать
+						a(href='#').link-download скачать
 
 				.links-list__item
-					.get-pdf-link
+					.action-link.action-link--get-pdf
 						a(href='#') Сводный отчет за период
 						| &nbsp;
-						a(href='#') скачать
+						a(href='#').link-download скачать
+
+		include assets/jade/partials/cards-list
