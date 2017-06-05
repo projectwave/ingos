@@ -14,7 +14,29 @@ block content
 					.fullscreen-link
 						| таблицу на весь экран
 
-			include assets/jade/partials/tables/unit-trust-coupons
+			include assets/jade/partials/tables/unit-trust-coupons-rub
+
+			.table-heading
+				.table-heading__title
+					.title
+						| Информация о пришедших купонах, USD
+
+				.table-heading__actions
+					.fullscreen-link
+						| таблицу на весь экран
+
+			include assets/jade/partials/tables/unit-trust-coupons-usd
+
+			.table-heading
+				.table-heading__title
+					.title
+						| График выплаты купонов
+
+				.table-heading__actions
+					.fullscreen-link
+						| таблицу на весь экран
+
+			include assets/jade/partials/tables/unit-trust-coupons-payment-schedule
 
 		.main-content-section
 			include assets/jade/partials/cards-list

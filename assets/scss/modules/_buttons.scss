@@ -27,3 +27,7 @@
   padding: 8px;
   font-size: $note-font-size;
 }
+
+.btn-primary {
+  @extend %btn-primary
+}
