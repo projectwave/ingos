@@ -102,6 +102,7 @@
   }
 
   .card {
+    width: 382px;
     border: 1px solid $border-color;
     border-radius: $border-radius;
   }
@@ -109,4 +110,64 @@
 
 .card__caption {
   line-height: 1.2;
+}
+
+.card__icon--browse {
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -23px;
+    margin-top: -18px;
+    width: 50px;
+    height: 37px;
+    background: url(../img/icons/icon-4.png);
+  }
+}
+
+.card__icon--ordering {
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+    background: url(../img/icons/icon-5.png);
+  }
+}
+
+.card__icon--bill {
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -20px;
+    margin-top: -24px;
+    width: 41px;
+    height: 48px;
+    background: url(../img/icons/icon-6.png);
+  }
+}
+
+.cards-list--iia-opening {
+  margin: 25px 0;
+  box-shadow: none;
+  .cards-list__item {
+    border-right: 0;
+    padding-right: $content-section-margin / 2;
+    border-radius: $border-radius;
+    &:nth-child(3n) {
+      padding-left: $content-section-margin / 2;
+      padding-right: 0;
+    }
+  }
+
+  .card {
+    width: 252px;
+    padding: 25px 20px 35px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+  }
 }

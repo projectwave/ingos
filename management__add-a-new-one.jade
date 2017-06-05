@@ -9,35 +9,24 @@ block content
 			.section-subtitle
 				| Сергей Алекссевич, к сожалению, на данный момент у вас отстутсвует доверительное управление. Для того, чтобы заключить договор ДУ, вам необходимо:
 
-			.cards-list
+			.cards-list.cards-list--ordering-steps
 				.cards-list__item
 					.card
-						.card__icon
+						.card__icon.card__icon--browse
 
 						.card__caption
 							a(href='#') Выбрать стратегию
-							| &nbsp;на сайте АО УК "Ингосстрах Инвестиции"
+							| &nbsp;на сайте АО&nbsp;УК&nbsp;«Ингосстрах&nbsp;Инвестиции»
 
 				.cards-list__item
 					.card
-						.card__icon
+						.card__icon.card__icon--ordering
 
 						.card__caption
-							| Заключить договор Доверительного управления в любом удобном для вас&nbsp;
+							| Или оформить заключить договор Доверительного управления, в любом удобном для вас&nbsp;
 							a(href='#')
-								| Офисе
+								| офисе
 
-				include assets/jade/partials/get-detailed-info
+			include assets/jade/partials/detailed-info
 
-		.main-content-section
-			include assets/jade/partials/cards-list
-
-
-block body_end
-	script(type='text/javascript' src='assets/js/vendors/parsley.js')
-	script(type='text/javascript' src='assets/js/vendors/bootstrap-modal.js')
-	script(type='text/javascript' src='assets/js/main.js')
-	script(type='text/javascript').
-		$(function(){
-			commonActions.init();
-		})
+			include assets/jade/partials/advantages

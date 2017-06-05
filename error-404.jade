@@ -1,0 +1,29 @@
+extends assets/jade/layouts/signing-in/index
+
+block content
+	.page-section
+		.page-section__inner
+			.error-page-404
+				.section-title Ошибка 404. Страница не найдена
+
+				.section-subtitle
+					| Извините, запрашиваемый адрес страницы не существует.
+					br
+					br
+					| Пожалуйста, проверьте правильность введенного адреса страницы, или перейдите по одной из ссылок ниже:
+
+				.links-list-unstyled
+					.links-list__item
+						a(href='#') Портфель
+
+					.links-list__item
+						a(href='#') Паевые инвестиционные Cчета
+
+					.links-list__item
+						a(href='#') Доверительное Управление
+
+					.links-list__item
+						a(href='#') Индивидуальный Инвестиционный Счет
+
+					.links-list__item
+						a(href='#') Ваш профиль и настройки

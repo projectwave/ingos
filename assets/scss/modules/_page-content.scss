@@ -151,6 +151,13 @@
   }
 }
 
+.links-list-unstyled {
+  .links-list__item {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
 .faq-answer {
   display: none;
   margin-top: 15px;
@@ -178,6 +185,10 @@
       text-decoration: none;
     }
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .download-file-list {
@@ -188,4 +199,78 @@
   display: inline-block;
   vertical-align: top;
   margin-left: 22px;
+}
+
+.detailed-info {
+  margin-bottom: $content-section-margin;
+  font-size: 16px;
+  .phone-number {
+    font-size: 18px;
+  }
+}
+
+$adventage-bottom-margin: 35px;
+
+.advantages-list {
+  margin-bottom: -$adventage-bottom-margin;
+}
+
+.advantage__header {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 9px;
+}
+
+.advantage__icon,
+.advantage__title {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.advantage__title {
+  padding-left: 15px;
+  font-size: 16px;
+}
+
+.advantage__icon {
+  width: 42px;
+}
+
+.advantages-list__item {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 64px;
+  margin-bottom: $adventage-bottom-margin;
+}
+
+.advantage {
+  width: 335px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.advantages__title {
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: $bolder;
+}
+
+.error-page-404 {
+  width: 493px;
+  margin: 30px 0 0 187px;
+  .section-title {
+    text-align: left;
+  }
+
+  .section-subtitle {
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 34px;
+  }
+
+  .links-list-unstyled {
+    padding-left: 35px;
+    margin-bottom: 15px;
+  }
 }

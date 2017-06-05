@@ -1,0 +1,41 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.section-title
+				| Индивидуальный инвестиционный счет
+
+			.section-subtitle
+				| Сергей Алекссевич, к сожалению, на данный момент у вас отсутствует Индивидуальный Инвестиционный Счет. Для того, чтобы заключить договор ДУ на открытие счета ИИС, вам необходимо:
+
+			.cards-list.cards-list--iia-opening
+				.cards-list__item
+					.card
+						.card__icon.card__icon--browse
+
+						.card__caption
+							a(href='#') Выбрать стратегию
+							|  на сайте АО&nbsp;УК&nbsp;«Ингосстрах Инвестиции»
+
+				.cards-list__item
+					.card
+						.card__icon.card__icon--ordering
+
+						.card__caption
+							| Или заключить договор Доверительного управления на открытие ИИС, в любом удобном для вас&nbsp;
+							a(href='#')
+								| офисе
+
+				.cards-list__item
+					.card
+						.card__icon.card__icon--bill
+
+						.card__caption
+							| Или открыть счет ИИС
+							a(href='#')
+								| онлайн
+
+			include assets/jade/partials/detailed-info
+
+			include assets/jade/partials/advantages

@@ -1,0 +1,41 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.section-header
+				.section-header__column
+					.section-title Документы по ИИС
+
+				.section-header__column
+					span.content-nav
+						| 2017
+
+						a(href='#').content-nav__prev
+
+						a(href='#').content-nav__next
+
+			.links-list
+				.links-list__item
+					.action-link.action-link--get-pdf
+						a(href='#') Анкета Управляющей компании
+						| &nbsp;
+						a(href='#').link-download скачать
+
+				.links-list__item
+					.action-link.action-link--get-pdf
+						a(href='#') Заявление об открытии лицевого счета (для физического лица)
+						| &nbsp;
+						a(href='#').link-download скачать
+
+				.links-list__item
+					.action-link.action-link--get-pdf
+						a(href='#') Распоряжение на списание/зачисление инвестиционных паев с участием лицевого счета номинального держателя центрального депозитария
+						| &nbsp;
+						a(href='#').link-download скачать
+
+				.links-list__item
+					.action-link.action-link--get-pdf
+						a(href='#') Сводный отчет за период
+						| &nbsp;
+						a(href='#').link-download скачать
