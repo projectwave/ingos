@@ -35,6 +35,7 @@
 .tab-container {
   display: none;
   margin-bottom: $content-section-margin;
+  background: $main-bg-color;
 }
 
 .tab-container.is-visible {
@@ -58,6 +59,7 @@
 .tab-container__header-actions {
   display: table-cell;
   vertical-align: middle;
+  text-align: right;
 }
 
 .tab-container__section-inner {

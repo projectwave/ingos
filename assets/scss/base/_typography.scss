@@ -3,7 +3,8 @@
   text-align: center;
   margin-bottom: 10px;
 
-  .main-content-section & {
+  .main-content-section &,
+  .tab-container & {
     font-size: 25px;
     text-align: left;
   }
@@ -56,15 +57,6 @@
   padding: 7px 0 7px 38px;
   text-decoration: none;
   cursor: default;
-  &:hover {
-    &::before {
-      display: block;
-      width: 25px;
-      height: 30px;
-      background: url(../img/icons/icon-mini-pdf-hover.png) no-repeat top center;
-      background-size: cover;
-    }
-  }
   &::before {
     content: "";
     position: absolute;
@@ -74,7 +66,7 @@
     height: 30px;
     top: 50%;
     margin-top: -15px;
-    background: url(../img/icons/icon-mini-pdf.png) no-repeat top center;
+    background: url(../img/icons/icon-mini-pdf-hover.png) no-repeat top center;
     background-size: cover;
   }
 }
@@ -101,22 +93,22 @@
   }
 }
 
-//.action-link--get-excel {
-//  position: relative;
-//  padding: 7px 0 7px 38px;
-//  &::before {
-//    content: "";
-//    position: absolute;
-//    left: 0;
-//    display: block;
-//    width: 25px;
-//    height: 30px;
-//    top: 50%;
-//    margin-top: -15px;
-//    background: url(../img/icons/icon-mini-pdf.png) no-repeat top center;
-//    background-size: cover;
-//  }
-//}
+.action-link--get-excel {
+  position: relative;
+  padding: 7px 0 7px 38px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 27px;
+    height: 30px;
+    top: 50%;
+    margin-top: -15px;
+    background: url(../img/icons/icon-mini-excel.png) no-repeat top center;
+    background-size: cover;
+  }
+}
 
 .fullscreen-link {
   @include action-link();

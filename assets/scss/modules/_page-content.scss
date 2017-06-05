@@ -23,6 +23,11 @@
 .section-header {
   display: table;
   width: 100%;
+  margin-bottom: 18px;
+}
+
+.section-header + .section-title {
+  margin-top: $content-section-margin;
 }
 
 .section-header__column {
@@ -83,8 +88,9 @@
 }
 
 .period-range {
-  display: table;
-  width: 100%;
+  display: inline-table;
+  vertical-align: top;
+  width: auto;
 }
 
 .period-range__title {
@@ -160,4 +166,25 @@
 
 .faq-answer.is-visible {
   display: block;
+}
+
+.download-area {
+  margin-top: 14px;
+  .action-link--get-pdf {
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.download-file-list {
+  text-align: right;
+}
+
+.download-file-list__item {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 22px;
 }

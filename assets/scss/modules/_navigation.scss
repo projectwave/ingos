@@ -174,8 +174,8 @@ $sliding-menu-padding: 30px;
 
 // Switcher panel
 .switcher-panel {
-  display: table;
-  width: 100%;
+  display: inline-table;
+  width: auto;
 }
 
 .switcher-panel__item {

@@ -37,32 +37,35 @@
     <main class="page-content">
       <div class="page-content__inner">
         <div class="main-content-area">
-          <div class="main-content-section">
-            <div class="table-heading">
-              <div class="section-title">Информация по сделкам</div>
-              <div class="table-heading__actions">
-                <div class="fullscreen-link">таблицу на весь экран</div>
-              </div>
+          <div class="tabs">
+            <div class="tabs__nav"><a href="#geography" class="tabs__nav-item is-active">География</a><a href="#industry" class="tabs__nav-item">Отрасли</a><a href="#asset-classes" class="tabs__nav-item">Классы активов</a><a href="#issuers" class="tabs__nav-item">Эмитеты</a><a href="#currency" class="tabs__nav-item">Валюта</a></div>
+          </div>
+          <div id="geography" class="tab-container is-visible">
+            <div class="tab-container__section-inner">
+              <div class="section-title">Диверсификация портфеля по географии</div>
+              <div class="section-subtitle">На карте показано географическое распределение ценных бумаг (производных финансовых инструментов) изменение рыночной ценности которых, оказывает влияние на стоимость Вашего портфеля.</div>
             </div>
-            <div class="table-wrapper">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Номер&nbsp;<span class="line-break">и дата сделки</span></th>
-                    <th>Эмитент (выпуск),<span class="line-break">номер гос. рег.</span></th>
-                    <th>Вид сделки<span class="line-break">(род сделки)</span></th>
-                    <th>Вид сделки<span class="line-break">Контрагент</span></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+          </div>
+          <div id="industry" class="tab-container">
+            <div class="tab-container__section-inner">
+              <div class="section-title">Диверсификация портфеля по отраслям</div>
+            </div>
+          </div>
+          <div id="asset-classes" class="tab-container">
+            <div class="tab-container__section-inner">
+              <div class="section-title">Диверсификация портфеля по классам активов</div>
+            </div>
+          </div>
+          <div id="issuers" class="tab-container">
+            <div class="tab-container__section-inner">
+              <div class="section-title">Диверсификация портфеля по эмитентам</div>
+              <div class="section-subtitle">На графике показаны 10 наиболее крупных по объему позиций.<br>Объем позиции указан в выбранной вами валюте.</div>
+            </div>
+          </div>
+          <div id="currency" class="tab-container">
+            <div class="tab-container__section-inner">
+              <div class="section-title">Диверсификация портфеля по валютам</div>
+              <div class="section-subtitle">На графике показан Ваш портфель в разрезе валют открытых позиций.<br>Суммы приведены к выбранной Вами валюте.</div>
             </div>
           </div>
           <div class="cards-list cards-list--call-to-action">
