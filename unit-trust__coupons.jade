@@ -14,7 +14,8 @@ block content
 					.fullscreen-link
 						| таблицу на весь экран
 
-			include assets/jade/partials/tables/unit-trust-coupons-rub
+			.table-wrapper
+				include assets/jade/partials/tables/unit-trust-coupons-rub
 
 			.table-heading
 				.table-heading__title
@@ -40,6 +41,3 @@ block content
 
 		.main-content-section
 			include assets/jade/partials/cards-list
-
-block body_end
-	script(type="text/javascript" src="assets/js/script.js")

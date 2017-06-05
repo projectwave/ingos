@@ -196,3 +196,18 @@ $table-font-size: 13px;
     color: #8c9196;
   }
 }
+
+.table--unit-trust-coupons {
+  table-layout: fixed;
+  th:nth-child(-n+1) {
+    width: 200px;
+  }
+
+  th:nth-child(-n+2) {
+    width: 50px;
+  }
+
+  th:nth-child(-n+4) {
+    width: 310px;
+  }
+}
