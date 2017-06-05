@@ -38,52 +38,81 @@
       <div class="page-content__inner">
         <div class="main-content-area">
           <div class="main-content-section">
-            <div class="filter">
-              <div class="filter__column">
+            <div class="section-header">
+              <div class="section-header__column">Дата оценки</div>
+              <div class="section-header__column">
                 <div class="period-range">
-                  <div class="period-range__title">Период</div>
-                  <div class="period-range__input">
-                    <div class="data-range-input">
-                      <div class="data-range-input__value">
-                        1 сентября 2016
-                        -
-                        31 сентября 2016
-                      </div>
-                      <div class="data-range-input__icon"></div>
-                    </div>
+                  <div class="data-range-input">
+                    <div class="data-range-input__value">16 октября 2016</div>
+                    <div class="data-range-input__icon"></div>
                   </div>
                 </div>
-              </div>
-              <div class="filter__column">
-                <div class="switcher-panel"><a href="#" class="switcher-panel__item">День</a><a href="#" class="switcher-panel__item">Неделя</a><a href="#" class="switcher-panel__item">Месяц</a><a href="#" class="switcher-panel__item">Квартал</a><a href="#" class="switcher-panel__item">Год</a></div>
               </div>
             </div>
             <div class="table-heading">
               <div class="table-heading__title">
-                <div class="title">Заявки на приобритение</div>
+                <div class="title">Детализация по фонду</div>
               </div>
               <div class="table-heading__actions">
                 <div class="fullscreen-link">таблицу на весь экран</div>
               </div>
             </div>
-            <table class="table table--unit-trust-bids">
+            <table class="table table--unit-trust-coupons">
               <tr>
-                <th>Дата заявки</th>
-                <th>№ заявки</th>
-                <th>№ лицевого счета</th>
-                <th>Реквизиты для перечисления денежных средств в оплату паев</th>
+                <th>Дата приобретения</th>
+                <th>Стоимость паев приобретения, руб.</th>
+                <th>Количество приобретенных паев, шт.</th>
+                <th>Цена приобретения одного пая, руб.</th>
+                <th>Количество бумаг</th>
+                <th>Сумма выплаты, RUB</th>
               </tr>
               <tr>
-                <td colspan="4">ПИФ:&nbsp;<strong>«Ингосстрах. Облигации»</strong></td>
+                <td>ДВМП (FESCO), БО 2</td>
+                <td>08.06.2017</td>
+                <td><span class="price-inline">12<span class="price-inline__dot-value">00</span></span></td>
+                <td><span class="price-inline">59<span class="price-inline__dot-value">84</span></span></td>
+                <td><span class="price-inline">500<span class="price-inline__dot-value">00</span></span></td>
+                <td><span class="price-inline">29 920<span class="price-inline__dot-value">00</span></span></td>
               </tr>
               <tr>
-                <td>01.06.2015</td>
-                <td>22.45.01.0438.00.0200</td>
-                <td>910555552</td>
-                <td><span class="link-print">Распечатать</span></td>
+                <td colspan="5">Итого</td>
+                <td><span class="price-inline">575 129<span class="price-inline__dot-value">74</span></span></td>
+              </tr>
+            </table>
+            <div class="download-area">
+              <div class="download-file-list">
+                <div class="download-file-list__item"><span class="action-link action-link--get-pdf">Скачать в PDF формате</span></div>
+                <div class="download-file-list__item"><span class="action-link action-link--get-excel">Скачать в формате Excel</span></div>
+              </div>
+            </div>
+            <div class="table-heading">
+              <div class="table-heading__title">
+                <div class="title">Совершенные операции по фонду</div>
+              </div>
+              <div class="table-heading__actions">
+                <div class="fullscreen-link">таблицу на весь экран</div>
+              </div>
+            </div>
+            <table class="table table--unit-trust-coupons">
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
               </tr>
               <tr>
-                <td colspan="4">ПИФ:&nbsp;<strong>«Ингосстрах. Сбалансированный»</strong></td>
+                <td>ДВМП (FESCO), БО 2</td>
+                <td>08.06.2017</td>
+                <td><span class="price-inline">12<span class="price-inline__dot-value">00</span></span></td>
+                <td><span class="price-inline">59<span class="price-inline__dot-value">84</span></span></td>
+                <td><span class="price-inline">500<span class="price-inline__dot-value">00</span></span></td>
+                <td><span class="price-inline">29 920<span class="price-inline__dot-value">00</span></span></td>
+              </tr>
+              <tr>
+                <td colspan="5">Итого</td>
+                <td><span class="price-inline">575 129<span class="price-inline__dot-value">74</span></span></td>
               </tr>
             </table>
             <div class="download-area">
@@ -229,5 +258,6 @@
       })
       
     </script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
   </body>
 </html>
