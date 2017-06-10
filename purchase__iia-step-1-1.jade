@@ -1,0 +1,58 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.section-title
+				| Открытие индивидуального инвестиционного счета
+
+			form.form-strategy-planning
+				.form-row.form-row--risks
+					.accordion-panel
+						.accordion-panel__heading.js-toggle-next-el
+							.title Определите свой риск-портфель&nbsp;
+								span.title__note
+									| (не является обязательным)
+
+							p Определение оптимального соотношения риска и доходности для размещаемых Вами средств с учетом Вашей склонности к риску, инвестиционных целей, а также возможных планов и сроков
+
+						.accordion-panel__body
+							|  Укажите ваш возраст
+
+				.form-row.form-row--contains-selects
+					.form-fieldset
+						.form-row
+							label(for='fsp-strategy-select').form-row__title Выберите стратегию:
+
+							select#fsp-strategy-select
+								option Сбалансированная
+
+								option Обычная
+
+						.form-row
+							.form-row__title Укажите сумму (руб.):
+
+							input(type='text').form-control
+
+					.form-fieldset
+						p Рекомендовано при инвестировании от 250 000&nbsp;руб. в&nbsp;год. При использовании данной стратегии, лучше воспользоваться освобождением от налога на полученный доход.
+
+						p.form-outgoing-link
+							a(href='#') Подробнее о стратегиях
+
+				.form-row
+					.form-list
+						.form-list__item
+							input(type='radio' checked='checked' name='iia-opening-agreement-status' id='iia-opening-agreement-status-1')
+
+							label(for='iia-opening-agreement-status-1')
+								| На дату подачи настоящего заяления у меня отстутствует договор с другим профессиональным участником рынка ценных бумаг на ведение индивидуального инвестиционного счета.
+
+						.form-list__item
+							input(type='radio' name='iia-opening-agreement-status' id='iia-opening-agreement-status-2')
+
+							label(for='iia-opening-agreement-status-2')
+								| На дату подачи настоящего заявления у меня действует договор на ведение индивидуального инвестиционного счета.
+
+				.form-row
+					input(type='submit' value='Далее').form-submit

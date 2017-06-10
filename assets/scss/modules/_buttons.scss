@@ -17,6 +17,7 @@
   border: 2px solid $brand-color;
 }
 
+.btn-secondary,
 .btn-flat {
   @include button();
   color: white;

@@ -65,3 +65,11 @@
 .tab-container__section-inner {
   padding: 30px;
 }
+
+.inner-tab-container {
+  display: none;
+}
+
+.inner-tab-container.is-visible {
+  display: block;
+}

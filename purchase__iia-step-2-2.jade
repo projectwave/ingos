@@ -1,0 +1,123 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.section-title
+				| Открытие индивидуального инвестиционного счета
+
+			include assets/jade/partials/tables/iis-opening-strategy-data
+
+			form.iis-opening-user-data
+				.form-row
+					.form-item
+						.form-row__title
+							| Фамилия&nbsp;
+							span.compulsory
+							| :
+
+					.form-item
+						input(type='text' value='Ковалев').form-control
+
+				.form-row
+					.form-item
+						.form-row__title
+							| Имя&nbsp;
+							span.compulsory
+							| :
+
+					.form-item
+						input(type='text' value='Сергей').form-control
+
+				.form-row
+					.form-item
+						.form-row__title
+							| Отчество (при наличии):
+
+					.form-item
+						input(type='text' placeholder='Введите ваше отчество').form-control
+
+				.form-row
+					.form-item
+						.form-row__title
+							| Email
+							span.compulsory
+							| :
+
+					.form-item
+						input(type='email' placeholder='Введите ваш email').form-control
+
+				.form-row
+					.form-item
+						.form-row__title
+							| Номер мобильного телефона
+							span.compulsory
+							| :
+
+					.form-item
+						input(type='text' placeholder='Введите ваш номер телефона').form-control
+
+				.form-row
+					.form-item
+						.form-row__title
+							| Серия и № паспорта
+							span.compulsory
+							| :
+
+					.form-item
+						input(type='text' placeholder='Введите серию и номер паспорта').form-control
+
+				.form-row
+					.form-item
+						.form-row__title
+							| Кем выдан паспорт
+							span.compulsory
+							| :
+
+					.form-item
+						textarea(placeholder='Введите так, как это указано в паспорте').form-control
+
+				.form-row
+					.form-item
+						.form-row__title
+							| Дата выдачи
+							span.compulsory
+							| :
+
+					.form-item
+						.form-controls-group
+							.form-controls-group__item
+								select
+									option 1
+									option 2
+									option 3
+									option 4
+									option 21
+
+							.form-controls-group__item
+								select
+									option 05
+									option 06
+									option 07
+									option 08
+									option 09
+
+							.form-controls-group__item
+								select
+									option 1999
+									option 1998
+									option 1997
+
+				.form-row
+					.form-item
+						.form-row__title
+							| Код подразделения:
+
+					.form-item
+						input(type='text' placeholder='__-__').form-control
+
+				.form-row
+					input(type='submit' value='Далее')
+
+		.main-content-section
+			include assets/jade/partials/cards-list

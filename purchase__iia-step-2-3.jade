@@ -1,0 +1,37 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.section-title
+				| Открытие индивидуального инвестиционного счета
+
+			include assets/jade/partials/tables/iis-opening-strategy-data
+
+			form.iis-opening-user-registration-address
+				.form-preamble
+					| Заполните информацию о своем адресе регистрации
+
+				.form-row
+					.form-item
+						.form-row__title
+							| Адрес регистрации:
+
+					.form-item
+						textarea(placeholder='Введите адрес прописки').form-control
+
+				.form-row
+					.form-item
+						.form-row__title
+							| Адрес проживания:
+
+					.form-item
+						textarea(placeholder='Введите фактическое место проживания').form-control
+
+				.form-row
+					a(href='#').btn-bordered Назад
+
+					a(href='#').form-submit Далее
+
+		.main-content-section
+			include assets/jade/partials/cards-list

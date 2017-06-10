@@ -143,6 +143,24 @@ var commonActions = (function (document, $) {
         });
     }
 
+    function _tabsInlined() {
+        $('.js-inner-tab-link').on("click", function(e) {
+            e.preventDefault();
+
+            $('.js-inner-tab-link').removeClass(className.active);
+            $('.inner-tab-container').removeClass(className.visible);
+            $(this).addClass(className.active);
+            $($(this).attr('href')).addClass(className.visible);
+
+            if($(this).attr('data-target-title')) {
+                var $textForTitle = $(this).attr('data-target-title');
+                var $titleToReplace = $('.js-title-to-replace');
+
+                $titleToReplace.html($textForTitle);
+            }
+        });
+    }
+
     function _slidingMenu() {
         $(selector.slidingMenuTitle).on('click', function(){
             var $activeTitleSelector = selector.slidingMenuItem + '.' +className.active;
@@ -184,8 +202,14 @@ var commonActions = (function (document, $) {
         });
     }
 
+    function _initCustomFormElements() {
+        $('select').selectric();
+    }
+
     function bind() {
         //_activateDatepicker();
+
+        _initCustomFormElements();
 
         _formControlHacks();
 
@@ -200,6 +224,8 @@ var commonActions = (function (document, $) {
         _addHoverState();
 
         _tabs();
+
+        _tabsInlined();
 
         _slidingMenu();
 

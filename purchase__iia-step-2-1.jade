@@ -1,0 +1,19 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.section-title
+				| Открытие индивидуального инвестиционного счета
+
+			include assets/jade/partials/tables/iis-opening-strategy-data
+
+			.iis-opening-submit-actions
+				a(href='#').btn-primary Отправить заявку
+
+				a(href='#').btn-bordered Открыть онлайн
+
+				//include assets/jade/partials/forms/sms-verification
+
+		.main-content-section
+			include assets/jade/partials/cards-list

@@ -1,0 +1,82 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.section-title
+				| Открытие индивидуального инвестиционного счета
+
+			include assets/jade/partials/tables/iis-opening-strategy-data
+
+			form.iis-opening-payment
+				.form-row.form-row--heading
+					.form-item
+						| Выберите способ оплаты:
+
+					.form-item
+						.switcher-panel.is-active
+							a(href='#payment-bank-card').switcher-panel__item.js-inner-tab-link.is-active
+								| Оплата банковской картой
+
+							a(href='#payment-bank-transfer').switcher-panel__item.js-inner-tab-link
+								| Банковский перевод
+
+				.form-row
+					.inner-tab-container#payment-bank-card.is-visible
+						.form-row
+							img(src='' alt='')
+
+						.form-row
+							.form-item
+								.form-row__title Номер банковской карты
+
+								input(type='text').form-control
+
+							.form-item
+								| Введите 16 или 18 цифр с лицевой стороны Вашей карты.
+
+						.form-row
+							.form-item
+								.form-row__title Имя и фамилия держателя карты:
+
+								input(type='text').form-control
+
+							.form-item
+								| Введите имя и фамилию транслитом, как указано на карте.
+
+						.form-row
+							.form-item
+								.form-row__title Срок действия карты:
+
+								.form-controls-group
+									.form-controls-group__item
+										select
+											option 10
+											option 11
+											option 12
+
+									.form-controls-group__item
+										select
+											option 2017
+											option 2018
+
+							.form-item
+								| Введите последние три цифры с обратной стороны карты, находящиеся под магнитной полосой.
+
+						.form-row
+							input(type='submit' value='Далее').form-submit
+
+
+					.inner-tab-container#payment-bank-transfer
+						.form-row
+							| Уважаемый Ковалев Сергей Алексеевич.
+							br
+							| Благодарим Вас за оформление заявки на приобретение ивестиционных паев.
+							br
+							| Для приобретения инвестиционных паев Вам необходимо перечислить денежные средства на их оплату.
+
+						.form-row
+							include assets/jade/partials/tables/iis-opening-purpose-of-payment
+
+						.form-row
+							a(href='#').btn-secondary Печать

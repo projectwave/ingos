@@ -190,6 +190,7 @@ $sliding-menu-padding: 30px;
   border: 1px solid $border-color;
   border-right: 0;
   background: $main-bg-color;
+  &.is-active,
   &:hover {
     color: #fff;
     background: gray;

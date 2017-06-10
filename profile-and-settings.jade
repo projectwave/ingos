@@ -10,12 +10,13 @@ block content
 				a(href='#terms-of-use').tabs__nav-item
 					| Правила пользования
 
-				a(href='#chat-with-manager').tabs__nav-item
+				a(href='#chat-with-manager').tabs__nav-item.is-active
 					| Ваш персональный&nbsp;менеджер
+
 				a(href='#faq').tabs__nav-item
 					| FAQ
 
-				a(href='#settings').tabs__nav-item.is-active
+				a(href='#settings').tabs__nav-item
 					| Настройки
 
 			.tab-container#user
@@ -30,49 +31,88 @@ block content
 
 					include assets/jade/partials/icon-links-list
 
-			.tab-container#chat-with-manager
+			.tab-container#chat-with-manager.is-visible
 				.tab-container__header
 					.tab-container__header-title
-						.section-title
+						.section-title.js-title-to-replace
 							| Ваш персональный менеджер
 
 					.tab-container__header-actions
 						.switcher-panel
-							a(href='#').switcher-panel__item
+							a(href='#manager-chat' data-target-title='Ваш персональный менеджер').switcher-panel__item.js-inner-tab-link.is-active
 								| Чат с менеджером
 
-							a(href='#').switcher-panel__item
+							a(href='#user-question' data-target-title='Мои вопросы').switcher-panel__item.js-inner-tab-link
 								| Мои вопросы
 
-				.chat-manager#chat-manager-area
-					.chat-manager__preview
-						.person-preview
-							.person-preview__image
-								img(src='assets/img/arrow-down.png' alt='')
+				.inner-tab-container#manager-chat.is-visible
+					.chat-manager#chat-manager-area
+						.chat-manager__preview
+							.person-preview
+								.person-preview__image
+									img(src='assets/img/arrow-down.png' alt='')
 
-							.person-preview__info
-								.person-preview__name Анна Орлова
+								.person-preview__info
+									.person-preview__name Анна Орлова
 
-								.person-preview__contacts
-									.person-preview__contacts-item
-										| skype:&nbsp;
-										span.underline
-											| anna.ingosinvest
+									.person-preview__contacts
+										.person-preview__contacts-item
+											| skype:&nbsp;
+											span.underline
+												| anna.ingosinvest
 
-										//.person-preview__actions
-											//span.btn-bordered
-												| Начать чат с менеджером
+											//.person-preview__actions
+												//span.btn-bordered
+													| Начать чат с менеджером
 
-						.chat-title
-							| Чат с менеджером:
+							.chat-title
+								| Чат с менеджером:
 
+						.chat-manager__actions
+							span(data-target-id='modal-change-personal-manager').link-change.js-open-modal
+								| поменять менеджера
 
-					.chat-manager__actions
-						span(data-target-id='modal-change-personal-manager').link-change.js-open-modal
-							| поменять менеджера
+					include assets/jade/partials/chat
 
-				include assets/jade/partials/chat
+				.inner-tab-container#user-question
+					.user-questions-list
+						.user-questions-list__item
+							.user-question.is-solved
+								.user-question__info
+									.user-question__name
+										| Изменение рассчетного счета
 
+									.user-question__status
+
+								.user-question__manager
+									.user-question__manager-icon
+										img(src='' alt='')
+
+									.user-question__manager-info
+										.user-question__manager-name
+											| Анна Орлова
+
+										.user-question__manager-date
+											| 15.11.2016 в 15.12
+
+						.user-questions-list__item
+							.user-question
+								.user-question__info
+									.user-question__name
+										| Как продать ПИФ?
+
+									.user-question__status
+
+								.user-question__manager
+									.user-question__manager-icon
+										img(src='' alt='')
+
+									.user-question__manager-info
+										.user-question__manager-name
+											| Иван Эстонский
+
+										.user-question__manager-date
+											| 15.11.2016 в 15.12
 
 			.tab-container#faq
 				.tab-container__section-inner
@@ -106,7 +146,7 @@ block content
 									span.answer-link.js-toggle-next-el
 										| Что такое СЧА?
 
-			.is-visible.tab-container#settings
+			.tab-container#settings
 				.tab-container__section-inner
 					.section-title
 						| Настройки
@@ -172,7 +212,6 @@ block content
 							.form-item
 								input(type='text'
 											required
-											data-parsley-error-message='Это поле нужно заполнить'
 											placeholder='+7 (937) 542-54-19'
 											id='cabinet-data-user-phone').form-control
 

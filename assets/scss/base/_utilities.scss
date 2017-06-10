@@ -40,3 +40,11 @@
   display: inline-block;
   width: $inline-item-spacer;
 }
+
+.compulsory {
+  color: $brand-color;
+}
+
+.hidden-container {
+  display: none;
+}
