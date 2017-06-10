@@ -47,6 +47,40 @@ $table-font-size: 13px;
   td {
     border-right: 0;
   }
+
+  th {
+    &:first-child {
+      text-align: left;
+      padding-left: 10px;
+    }
+    &:nth-child(6) {
+      span::after {
+        content: "*";
+        color: #e21e4b;
+      }
+    }
+    &:nth-child(10) {
+      span::after {
+        content: "**";
+        color: #e21e4b;
+      }
+    }
+    &:nth-child(11) {
+      span::after {
+        content: "**";
+        color: #e21e4b;
+      }
+    }
+  }
+}
+
+.price-inline__dot-value--percent {
+  font-size: 13px;
+  color: black;
+}
+
+.price-inline__dot-value--sum {
+  color: black;
 }
 
 .table--incoming-coupons {
@@ -100,7 +134,7 @@ $table-font-size: 13px;
     }
   }
   td {
-    padding : 14px 10px;
+    padding: 14px 10px;
     border-bottom: 1px solid $border-color;
     &:first-child {
       width: 165px;
@@ -115,7 +149,6 @@ $table-font-size: 13px;
 }
 
 .table-management-structure {
-  display: block;
   border-spacing: 0;
   border-collapse: collapse;
   font-size: $table-font-size;
@@ -132,6 +165,45 @@ $table-font-size: 13px;
     vertical-align: top;
     padding-left: 7px;
     padding-right: 7px;
+    &:first-child {
+      width: 306px;
+    }
+    &:nth-child(2) {
+      width: 106px;
+    }
+    &:nth-child(3) {
+      width: 130px;
+    }
+    &:nth-child(4) {
+      width: 98px;
+    }
+    &:nth-child(5) {
+      width: 85px;
+    }
+    &:nth-child(6) {
+      width: 116px;
+    }
+    &:nth-child(7) {
+      width: 88px;
+    }
+    &:nth-child(8) {
+      width: 85px;
+    }
+    &:nth-child(9) {
+      width: 81px;
+    }
+    &:nth-child(10) {
+      width: 116px;
+    }
+    &:nth-child(11) {
+      width: 110px;
+    }
+    &:nth-child(12) {
+      width: 77px;
+    }
+    &:nth-child(13) {
+      width: 84px;
+    }
   }
 
   td {
@@ -140,16 +212,34 @@ $table-font-size: 13px;
     white-space: nowrap;
     &:first-child {
       text-align: left;
-      padding-left: 17px;
-      padding-right: 17px;
+      padding-left: 10px;
+      padding-right: 10px;
       padding-top: 13px;
       padding-bottom: 13px;
       white-space: nowrap;
     }
   }
 
+  tr {
+    &:nth-child(11) {
+      td:first-child {
+        padding-left: 15px;
+      }
+    }
+    &:nth-child(13) {
+      td:first-child {
+        padding-left: 15px;
+      }
+    }
+    &:nth-child(17) {
+      td:first-child {
+        padding-left: 15px;
+      }
+    }
+  }
   .title {
     color: #0ca462;
+    font-family: inherit;
   }
 
   .total {
@@ -161,13 +251,9 @@ $table-font-size: 13px;
     padding-bottom: 13px;
   }
 
-  th, td:nth-child(even) {
-    background-color: #f3f4f4;
-  }
-
   .sum {
     border: none;
-    background-color: #f3f4f4;
+    background-color: #f9f9fa;
   }
 
   .sum_left-border {
@@ -182,32 +268,192 @@ $table-font-size: 13px;
     border-bottom: 1px solid #dcdedf;
     border-top: 1px solid #dcdedf;
   }
-
-  .asterisk {
-    color: #e21e4b;
-  }
-
-  .fraction {
-    font-size: 11px;
-  }
-
-  .fraction_gray {
-    font-size: 11px;
-    color: #8c9196;
-  }
 }
 
 .table--unit-trust-coupons {
   table-layout: fixed;
-  th:nth-child(-n+1) {
-    width: 200px;
+  th:nth-child(n+2) {
+    width: 115px;
+  }
+  th:first-child {
+    text-align: left;
+  }
+  td:nth-child(n+2) {
+    text-align: center;
+  }
+  .total {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .subtitle {
+    font-size: 11px;
+    color: #8c9196;
+    padding-top: 3px;
+  }
+}
+
+.table--unit-trust-coupons-payment-schedule {
+  td:nth-child(n+1):nth-child(-n+1) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    vertical-align: middle;
+  }
+}
+
+.table--iia-management-dealings {
+  table-layout: fixed;
+  th {
+    padding-bottom: 30px;
+    font-size: 12px;
+    &:nth-child(-n+2) {
+      text-align: left;
+    }
+    &:first-child {
+      width: 115px;
+    }
+    &:nth-child(2) {
+      width: 175px;
+    }
+    &:nth-child(3) {
+      width: 150px;
+    }
+    &:nth-child(n+4) {
+      width: 115px;
+    }
+  }
+  td:nth-child(n+3) {
+    text-align: center;
   }
 
-  th:nth-child(-n+2) {
-    width: 50px;
+  .title-second-line {
+    margin-top: 20px;
   }
+}
 
-  th:nth-child(-n+4) {
-    width: 310px;
+.table--trust-management-inputs-outputs {
+  table-layout: fixed;
+  th {
+    padding-bottom: 20px;
+    &:nth-child(even) {
+      width: 228px;
+    }
+    &:first-child {
+      width: 228px;
+    }
+    &:nth-child(3) {
+      width: 115px;
+    }
+  }
+  td {
+    text-align: center;
+  }
+}
+
+.table--management-yeld-of-currency-part {
+  table-layout: fixed;
+  td {
+    text-align: center;
+    &:nth-child(2) {
+      text-align: left;
+    }
+    &:nth-child(3) {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+  }
+  .total {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+  }
+  th {
+    font-size: 12px;
+    &:nth-child(2) {
+      text-align: left;
+      width: 228px;
+    }
+    &:nth-child(n+3) {
+      width: 115px;
+    }
+    &:nth-child(4) {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
+  tr:last-child {
+    td:nth-child(2) {
+      text-align: center;
+    }
+  }
+}
+
+.table--fund-details {
+  table-layout: fixed;
+  th {
+    text-align: center;
+    font-size: 12px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  td {
+    text-align: center;
+    width: 115px;
+  }
+}
+
+.table--unit-trust-bids {
+  table-layout: fixed;
+  td {
+    text-align: center;
+    &:last-child {
+      position: relative;
+    }
+  }
+  th {
+    padding: 17px;
+    &:first-child {
+      width: 113px;
+      &:nth-child(n+2) {
+        width: 230px;
+      }
+    }
+  }
+}
+
+.link-print {
+  display: block;
+  font-size: 13px;
+  &::before {
+    position: absolute;
+    left: 35px;
+    bottom: -4px;
+    content: "";
+    display: block;
+    background: url(../img/icons/icon-mini-print.png) no-repeat top center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.table--unit-trust-coupons-payment-further {
+  td:first-child {
+    font-weight: bold;
+  }
+}
+
+.table--management-flow-of-funds {
+  @extend .table--trust-management-inputs-outputs;
+  .total {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  tr:last-child {
+    td:nth-child(2) {
+      background-color: #fff;
+    }
+    td:nth-child(3) {
+      background-color: #f9f9fa;
+    }
   }
 }

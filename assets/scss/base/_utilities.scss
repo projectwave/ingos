@@ -17,7 +17,8 @@
 
 .price-inline__dot-value {
   font-family: $base-font-family-light;
-  font-size: 12px;
+  font-size: 11px;
+  color: #8c9196;
   &::before {
     content: ".";
     font-size: $base-font-size;
