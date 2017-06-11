@@ -27,6 +27,14 @@
   &:hover {
     text-decoration: none;
   }
+
+  a {
+    color: $text-color;
+  }
+
+  .link-download {
+    color: $link-accent;
+  }
 }
 
 @mixin button() {

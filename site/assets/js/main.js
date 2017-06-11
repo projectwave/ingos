@@ -203,11 +203,24 @@ var commonActions = (function (document, $) {
     }
 
     function _initCustomFormElements() {
-        $('select').selectric();
+        if($('select').length){
+            $('select').selectric();
+        }
+    }
+
+    function _maximizeTable() {
+        $('.fullscreen-link').on('click', function(){
+            var $currentLink = $(this);
+            var $closestTable = $currentLink.parent().parent().next().find('table');
+
+            console.log($closestTable);
+        });
     }
 
     function bind() {
         //_activateDatepicker();
+
+        _maximizeTable();
 
         _initCustomFormElements();
 

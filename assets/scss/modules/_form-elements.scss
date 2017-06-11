@@ -282,8 +282,7 @@ textarea.form-control {
 }
 
 .parsley-errors-list {
-  position: absolute;
-  bottom: -15px;
+  position: relative;
   left: 0;
   color: $brand-color;
   font-size: $note-font-size;
@@ -340,11 +339,15 @@ textarea.form-control {
 .form-row--items {
   .form-item {
     display: table-cell;
-    vertical-align: bottom;
+    vertical-align: top;
     padding-right: $form-item-padding;
     &:last-child {
       padding-right: 0;
     }
+  }
+
+  .form-item--submit {
+    padding-top: 21px;
   }
 }
 

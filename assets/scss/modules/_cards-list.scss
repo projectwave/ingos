@@ -1,5 +1,5 @@
 .cards-list {
-  display: table;
+  display: flex;
   width: 100%;
   @extend .cards-list--blue-icon;
   font-size: 0;
@@ -10,18 +10,11 @@
 }
 
 .cards-list__item {
-  display: table-cell;
-  vertical-align: top;
+  flex: 1;
   font-size: $base-font-size;
   border-right: 1px solid $border-color;
   &:last-child {
     border-right: 0;
-  }
-}
-
-.cards-list--call-to-action {
-  .cards-list__item {
-    width: 33.33%;
   }
 }
 
@@ -153,21 +146,23 @@
 
 .cards-list--iia-opening {
   margin: 25px 0;
+  display: flex;
   box-shadow: none;
   .cards-list__item {
-    border-right: 0;
-    padding-right: $content-section-margin / 2;
+    flex: 1;
+    border: 1px solid $border-color;
     border-radius: $border-radius;
-    &:nth-child(3n) {
-      padding-left: $content-section-margin / 2;
-      padding-right: 0;
+    margin: 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 
   .card {
-    width: 252px;
     padding: 25px 20px 35px;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
   }
 }
