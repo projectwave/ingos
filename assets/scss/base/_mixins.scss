@@ -24,6 +24,7 @@
   font-family: $base-font-family-light;
   cursor: pointer;
   text-decoration: underline;
+  user-select: none;
   &:hover {
     text-decoration: none;
   }

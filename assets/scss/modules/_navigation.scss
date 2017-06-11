@@ -84,7 +84,7 @@ $sliding-menu-padding: 30px;
 
 .profile-menu__separator {
   display: table-cell;
-  padding-right: 30px;
+  padding-right: 22px;
 }
 
 .profile-menu__item {
@@ -93,14 +93,14 @@ $sliding-menu-padding: 30px;
   text-align: left;
 }
 
-.nav-figure {
+.profile-menu__link {
   display: table-cell;
   vertical-align: middle;
   overflow: hidden;
   text-decoration: none;
   height: 24px;
   position: relative;
-  padding-left: 25px;
+  padding-left: 28px;
   color: $text-color;
   font-size: 13px;
   text-align: left;
@@ -113,6 +113,13 @@ $sliding-menu-padding: 30px;
 
   &.is-active {
     color: $link-accent;
+    a {
+      color: $link-accent;
+    }
+  }
+
+  &:hover {
+    color: $link-accent;
   }
 
   a {
@@ -121,13 +128,13 @@ $sliding-menu-padding: 30px;
   }
 }
 
-.nav-figure.is-hover {
+.profile-menu__link.is-hover {
   overflow: visible;
   .dropdown-list {
     opacity: 1;
   }
 }
-.nav-figure--reports {
+.profile-menu__link--reports {
   padding-left: 28px;
   &::before {
     width: 18px;
@@ -139,8 +146,25 @@ $sliding-menu-padding: 30px;
   }
 }
 
-.nav-figure--notifications {
+.profile-menu__link--notifications {
   padding-left: 28px;
+  &::after {
+    content: attr(data-notifications-counter);
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    padding: 3px 4px;
+    top: 0;
+    right: 86px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    min-width: 10px;
+    border-radius: 50px;
+    background: $brand-color;
+  }
+
   &::before {
     width: 22px;
     height: 24px;
@@ -151,7 +175,7 @@ $sliding-menu-padding: 30px;
   }
 }
 
-.nav-figure--settings {
+.profile-menu__link--settings {
   padding-left: 32px;
   &::before {
     width: 24px;
@@ -163,13 +187,49 @@ $sliding-menu-padding: 30px;
   }
 }
 
-.nav-figure--exit::before {
+.profile-menu__link--exit::before {
   width: 19px;
   height: 24px;
   top: 50%;
   margin-top: -12px;
   background: url(../img/icons/icon-mini-logout.png) no-repeat top center;
   background-size: cover;
+}
+
+.profile-menu__link--media {
+  padding-left: 33px;
+  &::before {
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    margin-top: -12px;
+    background: url(../img/icons/icon-mini-media.png) no-repeat top center;
+    background-size: cover;
+  }
+}
+
+.profile-menu__link--faq {
+  padding-left: 33px;
+  &::before {
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    margin-top: -12px;
+    background: url(../img/icons/icon-mini-faq.png) no-repeat top center;
+    background-size: cover;
+  }
+}
+
+.profile-menu__link--chat {
+  padding-left: 33px;
+  &::before {
+    width: 26px;
+    height: 24px;
+    top: 50%;
+    margin-top: -12px;
+    background: url(../img/icons/icon-mini-chat.png) no-repeat top center;
+    background-size: cover;
+  }
 }
 
 // Switcher panel
@@ -209,39 +269,41 @@ $sliding-menu-padding: 30px;
 
 .dropdown-list {
   position: absolute;
-  margin-top: 15px;
+  padding-top: 15px;
   z-index: 4;
   opacity: 0;
   will-change: opacity;
   left: 0;
-  border: 1px solid $border-color;
   background: $main-bg-color;
   border-radius: $border-radius;
-  box-shadow: $box-shadow;
   transition: opacity 0.1s linear;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background: url(../../assets/img/arrow-dropdown-menu.png) no-repeat top center;
-    background-size: cover;
-    background-color: #fff;
-    height: 9px;
-    width: 18px;
-    left: 13px;
-    top: -8px;
-  }
-  .nav-figure--settings & {
+  .profile-menu__link--settings & {
     width: 151px;
   }
 }
 
 .dropdown-list__item {
+  position: relative;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
   &:first-child {
+    border-top: 1px solid $border-color;
     border-radius: $border-radius $border-radius 0 0;
+    &::before {
+      content: "";
+      position: absolute;
+      background: url(../../assets/img/arrow-dropdown-menu.png) no-repeat top center;
+      background-size: cover;
+      background-color: #fff;
+      height: 9px;
+      width: 18px;
+      left: 13px;
+      top: -9px;
+    }
   }
 
   &:last-child {
+    border-bottom: 1px solid $border-color;
     border-radius: 0 0 $border-radius $border-radius;
   }
 

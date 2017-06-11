@@ -8,23 +8,34 @@ header.page-header
 			.header__greeting
 				.header-greeting
 					| Добрый день,&nbsp;
-					span#header-greering-username
-						| Сергей Алексеевич
-					| !
+					span#header-greering-username.line-break
+						| Сергей Алексеевич!
 
 			.header__profile-menu
 				.profile-menu
-					a(href='#').nav-figure.nav-figure--reports
-						| Отчёты
+					a(href='#').profile-menu__link.profile-menu__link--media
+						| Медиа
 
 					.profile-menu__separator
 
-					a(href='#').nav-figure.nav-figure--notifications
+					a(href='#').profile-menu__link.profile-menu__link--faq
+						| FAQ
+
+					.profile-menu__separator
+
+					a(href='#').profile-menu__link.profile-menu__link--chat
+						| Онлайн-чат&nbsp;
+						span.line-break
+							| с&nbsp;менеджером
+
+					.profile-menu__separator
+
+					a(href='#' data-notifications-counter='3').profile-menu__link.profile-menu__link--notifications
 						| Уведомления
 
 					.profile-menu__separator
 
-					span.is-active.nav-figure.nav-figure--settings
+					span.is-active.profile-menu__link.profile-menu__link--settings
 						a(href='#')
 							| Профиль
 							span.line-break
@@ -53,7 +64,7 @@ header.page-header
 
 					.profile-menu__separator
 
-					a(href='#').nav-figure.nav-figure--exit
+					a(href='#').profile-menu__link.profile-menu__link--exit
 						| Выход
 
 	//.header-row.header-row--decoration
