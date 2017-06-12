@@ -113,7 +113,7 @@ $chat-message-font-size: 14px;
     float: right;
     font-size: $chat-message-font-size;
     top: 10px;
-    right: -112px;
+    right: -81px;
   }
   &::after {
     content: "";
@@ -137,7 +137,7 @@ $chat-message-font-size: 14px;
   background: #f3f4f4;
   position: relative;
   &::before {
-    right: -142px;
+    right: -112px;
   }
   &::after {
     content: "";
@@ -180,6 +180,9 @@ $chat-message-font-size: 14px;
   border: 1px solid $border-color;
   border-radius: $border-radius;
   resize: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 .chat__submit-message {
@@ -190,4 +193,7 @@ $chat-message-font-size: 14px;
   position: absolute;
   top: 10px;
   right: 10px;
+  &:focus {
+    outline: none;
+  }
 }
