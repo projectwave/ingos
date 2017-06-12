@@ -10,13 +10,13 @@ block content
 				a(href='#terms-of-use').tabs__nav-item
 					| Правила пользования
 
-				a(href='#chat-with-manager').tabs__nav-item
-					| Ваш персональный&nbsp; менеджер
+				a(href='#chat-with-manager').tabs__nav-item.is-active
+					| Ваш персональный&nbsp;менеджер
 
 				a(href='#faq').tabs__nav-item
 					| FAQ
 
-				a(href='#settings').tabs__nav-item.is-active
+				a(href='#settings').tabs__nav-item
 					| Настройки
 
 			.tab-container#user
@@ -25,58 +25,94 @@ block content
 
 					include assets/jade/partials/tables/profile-client-details
 
-					.change-personal-data-request
-						a(href='#').btn-bordered
-							| Запрос на смену регистрационных данных
-
 			.tab-container#terms-of-use
 				.tab-container__section-inner
 					.section-title Правила пользования
 
 					include assets/jade/partials/icon-links-list
 
-			.is-visible.tab-container#chat-with-manager
+			.tab-container#chat-with-manager.is-visible
 				.tab-container__header
 					.tab-container__header-title
-						.section-title
+						.section-title.js-title-to-replace
 							| Ваш персональный менеджер
 
 					.tab-container__header-actions
 						.switcher-panel
-							a(href='#').switcher-panel__item
+							a(href='#manager-chat' data-target-title='Ваш персональный менеджер').switcher-panel__item.js-inner-tab-link.is-active
 								| Чат с менеджером
 
-							a(href='#').switcher-panel__item
+							a(href='#user-question' data-target-title='Мои вопросы').switcher-panel__item.js-inner-tab-link
 								| Мои вопросы
 
-				.chat-manager
-					.chat-manager__preview
-						.person-preview
-							.person-preview__image
-								img(alt='' src='')
+				.inner-tab-container#manager-chat.is-visible
+					.chat-manager#chat-manager-area
+						.chat-manager__preview
+							.person-preview
+								.person-preview__image
+									img(src='assets/img/icon-manager.png' alt='')
 
-							.person-preview__info
-								.person-preview__name Анна Орлова
+								.person-preview__info
+									.person-preview__name Анна Орлова
 
-								.person-preview__contacts
-									.person-preview__contacts-item
-										| skype:&nbsp;
-										span.underline
-											| anna.ingosinvest
+									.person-preview__contacts
+										.person-preview__contacts-item
+											| skype:&nbsp;
+											span.underline
+												| anna.ingosinvest
 
-										//.person-preview__actions
-											//span.btn-bordered
-												| Начать чат с менеджером
+											//.person-preview__actions
+												//span.btn-bordered
+													| Начать чат с менеджером
 
-						.chat-title
-							| Чат с менеджером:
+							.chat-title
+								| Чат с менеджером:
 
+						.chat-manager__actions
+							span(data-target-id='modal-change-personal-manager').link-change.js-open-modal
+								| поменять менеджера
 
-					.chat-manager__actions
-						span.link-change поменять менеджера
+					include assets/jade/partials/chat
 
-				include assets/jade/partials/chat
+				.inner-tab-container#user-question
+					.user-questions-list
+						.user-questions-list__item
+							.user-question.is-solved
+								.user-question__info
+									.user-question__name
+										| Изменение рассчетного счета
 
+									.user-question__status
+
+								.user-question__manager
+									.user-question__manager-icon
+										img(src='' alt='')
+
+									.user-question__manager-info
+										.user-question__manager-name
+											| Анна Орлова
+
+										.user-question__manager-date
+											| 15.11.2016 в 15.12
+
+						.user-questions-list__item
+							.user-question
+								.user-question__info
+									.user-question__name
+										| Как продать ПИФ?
+
+									.user-question__status
+
+								.user-question__manager
+									.user-question__manager-icon
+										img(src='' alt='')
+
+									.user-question__manager-info
+										.user-question__manager-name
+											| Иван Эстонский
+
+										.user-question__manager-date
+											| 15.11.2016 в 15.12
 
 			.tab-container#faq
 				.tab-container__section-inner
@@ -119,13 +155,15 @@ block content
 						a(href='#').btn-bordered
 							| Запрос на смену регистрационных данных
 
-					form.form-update-personal-user-data
+					form.js-form-validate.form-update-personal-user-data
 						.form-row.form-row--email
 							label(for='cabinet-data-user-login').form-row__title
 								| Логин (ваш email):
 
 							.form-item
 								input(type='text'
+								required
+								data-parsley-required-message='Это поле нужно заполнить'
 								placeholder='Введите ваш email'
 								id='cabinet-data-user-login').form-control
 
@@ -138,10 +176,15 @@ block content
 									.form-controls-group__item
 										input(type='password'
 										placeholder='••••••'
+										required
+										data-validate-strength
+										data-parsley-required-message='Это поле нужно заполнить'
 										id='cabinet-data-user-password').form-control
 
 									.form-controls-group__item
 										input(type='password'
+										required
+										data-parsley-required-message='Это поле нужно заполнить'
 										placeholder='Повторите пароль').form-control
 
 							.form-item.form-item--password-note
@@ -155,13 +198,11 @@ block content
 								| Сложность пароля:
 
 							.form-item
-								#password-strength-scale.password-strength-scale
-									.password-strength-scale__degree.is-0
-
+								#password-strength-scale.password-strength-scale.is-0
 									.password-strength-scale__degree
-
 									.password-strength-scale__degree
-
+									.password-strength-scale__degree
+									.password-strength-scale__degree
 									.password-strength-scale__degree
 
 						.form-row
@@ -170,6 +211,7 @@ block content
 
 							.form-item
 								input(type='text'
+								required
 								placeholder='+7 (937) 542-54-19'
 								id='cabinet-data-user-phone').form-control
 
@@ -178,3 +220,7 @@ block content
 
 
 		include assets/jade/partials/cards-list
+
+	include assets/jade/partials/modal-popups/change-personal-manager
+
+	include assets/jade/partials/modal-popups/change-personal-mananger-accepted

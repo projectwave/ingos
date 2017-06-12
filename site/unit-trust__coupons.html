@@ -20,7 +20,7 @@
             <div class="profile-menu"><a href="#" class="profile-menu__link profile-menu__link--media">Медиа</a>
               <div class="profile-menu__separator"></div><a href="#" class="profile-menu__link profile-menu__link--faq">FAQ</a>
               <div class="profile-menu__separator"></div><a href="#" class="profile-menu__link profile-menu__link--chat">Онлайн-чат&nbsp;<span class="line-break">с&nbsp;менеджером</span></a>
-              <div class="profile-menu__separator"></div><a href="#" data-notifications-counter="3" class="profile-menu__link profile-menu__link--notifications"><span class="profile-menu__notifications-counter"></span>Уведомления</a>
+              <div class="profile-menu__separator"></div><a href="#" data-notifications-counter="3" class="profile-menu__link profile-menu__link--notifications">Уведомления</a>
               <div class="profile-menu__separator"></div><span class="is-active profile-menu__link profile-menu__link--settings"><a href="#">Профиль<span class="line-break">и настройки</span></a>
                 <div class="dropdown-list">
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Пользователь</a></div>
@@ -151,7 +151,7 @@
                   <td><span class="price-inline">100 121<span class="price-inline__dot-value">04</span></span></td>
                 </tr>
                 <tr>
-                  <td colspan="5">Итого</td>
+                  <td colspan="5"><span class="total">Итого:</span></td>
                   <td><span class="price-inline">575 129<span class="price-inline__dot-value">74</span></span></td>
                 </tr>
               </table>
@@ -164,36 +164,38 @@
                 <div class="fullscreen-link">таблицу на весь экран</div>
               </div>
             </div>
-            <table class="table table--unit-trust-coupons">
-              <tr>
-                <th>Ценная бумага</th>
-                <th>Дата выплаты</th>
-                <th>Ставка купона,&nbsp;<span class="line-break">% годовых</span></th>
-                <th>Сумма купона</th>
-                <th>Количество бумаг</th>
-                <th>Сумма выплаты, USD</th>
-              </tr>
-              <tr>
-                <td>PSB Finance S.A.-5-2016-евро</td>
-                <td>13.01.2016</td>
-                <td><span class="price-inline">11<span class="price-inline__dot-value">25</span></span></td>
-                <td><span class="price-inline">56<span class="price-inline__dot-value">25</span></span></td>
-                <td><span class="price-inline">100<span class="price-inline__dot-value">00</span></span></td>
-                <td><span class="price-inline">5 625<span class="price-inline__dot-value">00</span></span></td>
-              </tr>
-              <tr>
-                <td>VTB Eurasia Limited</td>
-                <td>07.06.2016</td>
-                <td><span class="price-inline">9<span class="price-inline__dot-value">50</span></span></td>
-                <td><span class="price-inline">47<span class="price-inline__dot-value">50</span></span></td>
-                <td><span class="price-inline">13<span class="price-inline__dot-value">00</span></span></td>
-                <td><span class="price-inline">617<span class="price-inline__dot-value">50</span></span></td>
-              </tr>
-              <tr>
-                <td colspan="5">Итого</td>
-                <td><span class="price-inline">6 242<span class="price-inline__dot-value">50</span></span></td>
-              </tr>
-            </table>
+            <div class="table-wrapper">
+              <table class="table table--unit-trust-coupons">
+                <tr>
+                  <th>Ценная бумага</th>
+                  <th>Дата выплаты</th>
+                  <th>Ставка купона,&nbsp;<span class="line-break">% годовых</span></th>
+                  <th>Сумма купона</th>
+                  <th>Количество бумаг</th>
+                  <th>Сумма выплаты, USD</th>
+                </tr>
+                <tr>
+                  <td>PSB Finance S.A.-5-2016-евро</td>
+                  <td>13.01.2016</td>
+                  <td><span class="price-inline">11<span class="price-inline__dot-value">25</span></span></td>
+                  <td><span class="price-inline">56<span class="price-inline__dot-value">25</span></span></td>
+                  <td><span class="price-inline">100<span class="price-inline__dot-value">00</span></span></td>
+                  <td><span class="price-inline">5 625<span class="price-inline__dot-value">00</span></span></td>
+                </tr>
+                <tr>
+                  <td>VTB Eurasia Limited</td>
+                  <td>07.06.2016</td>
+                  <td><span class="price-inline">9<span class="price-inline__dot-value">50</span></span></td>
+                  <td><span class="price-inline">47<span class="price-inline__dot-value">50</span></span></td>
+                  <td><span class="price-inline">13<span class="price-inline__dot-value">00</span></span></td>
+                  <td><span class="price-inline">617<span class="price-inline__dot-value">50</span></span></td>
+                </tr>
+                <tr>
+                  <td colspan="5"><span class="total">Итого:</span></td>
+                  <td><span class="price-inline">6 242<span class="price-inline__dot-value">50</span></span></td>
+                </tr>
+              </table>
+            </div>
             <div class="table-heading">
               <div class="table-heading__title">
                 <div class="title">График выплаты купонов</div>
@@ -202,7 +204,7 @@
                 <div class="fullscreen-link">таблицу на весь экран</div>
               </div>
             </div>
-            <table class="table table--unit-trust-coupons">
+            <table class="table table--unit-trust-coupons table--unit-trust-coupons-payment-schedule">
               <tr>
                 <th>Актив</th>
                 <th>Валюта</th>
@@ -212,7 +214,7 @@
                 <th>Сумма выплаты, USD</th>
               </tr>
               <tr>
-                <td>Номос-Банк<span class="line-break">XS0776121062</span></td>
+                <td>Номос-Банк<span class="line-break subtitle">XS0776121062</span></td>
                 <td>13.01.2016</td>
                 <td><span class="price-inline">11<span class="price-inline__dot-value">25</span></span></td>
                 <td><span class="price-inline">56<span class="price-inline__dot-value">25</span></span></td>
@@ -220,7 +222,7 @@
                 <td><span class="price-inline">5 625<span class="price-inline__dot-value">00</span></span></td>
               </tr>
               <tr>
-                <td>ВТБ<span class="line-break">XS0810596832</span></td>
+                <td>ВТБ<span class="line-break subtitle">XS0810596832</span></td>
                 <td>07.06.2016</td>
                 <td><span class="price-inline">9<span class="price-inline__dot-value">50</span></span></td>
                 <td><span class="price-inline">47<span class="price-inline__dot-value">50</span></span></td>
@@ -228,7 +230,7 @@
                 <td><span class="price-inline">617<span class="price-inline__dot-value">50</span></span></td>
               </tr>
               <tr>
-                <td colspan="5">Итого</td>
+                <td colspan="5"><span class="total">Итого:</span></td>
                 <td><span class="price-inline">6 242<span class="price-inline__dot-value">50</span></span></td>
               </tr>
             </table>

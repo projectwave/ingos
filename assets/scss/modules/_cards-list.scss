@@ -85,18 +85,16 @@
   margin: 25px 0;
   box-shadow: none;
   .cards-list__item {
-    border-right: 0;
-    padding-right: $content-section-margin / 2;
+    border: 1px solid $border-color;
+    margin-right: $content-section-margin / 2;
     border-radius: $border-radius;
     &:nth-child(2n) {
-      padding-left: $content-section-margin / 2;
-      padding-right: 0;
+      margin-left: $content-section-margin / 2;
+      margin-right: 0;
     }
   }
 
   .card {
-    width: 382px;
-    border: 1px solid $border-color;
     border-radius: $border-radius;
   }
 }

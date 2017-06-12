@@ -20,7 +20,7 @@
             <div class="profile-menu"><a href="#" class="profile-menu__link profile-menu__link--media">Медиа</a>
               <div class="profile-menu__separator"></div><a href="#" class="profile-menu__link profile-menu__link--faq">FAQ</a>
               <div class="profile-menu__separator"></div><a href="#" class="profile-menu__link profile-menu__link--chat">Онлайн-чат&nbsp;<span class="line-break">с&nbsp;менеджером</span></a>
-              <div class="profile-menu__separator"></div><a href="#" data-notifications-counter="3" class="profile-menu__link profile-menu__link--notifications"><span class="profile-menu__notifications-counter"></span>Уведомления</a>
+              <div class="profile-menu__separator"></div><a href="#" data-notifications-counter="3" class="profile-menu__link profile-menu__link--notifications">Уведомления</a>
               <div class="profile-menu__separator"></div><span class="is-active profile-menu__link profile-menu__link--settings"><a href="#">Профиль<span class="line-break">и настройки</span></a>
                 <div class="dropdown-list">
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Пользователь</a></div>
@@ -59,28 +59,55 @@
                 <div class="fullscreen-link">таблицу на весь экран</div>
               </div>
             </div>
-            <table class="table table--unit-trust-coupons">
-              <tr>
-                <th>Дата приобретения</th>
-                <th>Стоимость паев приобретения, руб.</th>
-                <th>Количество приобретенных паев, шт.</th>
-                <th>Цена приобретения одного пая, руб.</th>
-                <th>Количество бумаг</th>
-                <th>Сумма выплаты, RUB</th>
-              </tr>
-              <tr>
-                <td>ДВМП (FESCO), БО 2</td>
-                <td>08.06.2017</td>
-                <td><span class="price-inline">12<span class="price-inline__dot-value">00</span></span></td>
-                <td><span class="price-inline">59<span class="price-inline__dot-value">84</span></span></td>
-                <td><span class="price-inline">500<span class="price-inline__dot-value">00</span></span></td>
-                <td><span class="price-inline">29 920<span class="price-inline__dot-value">00</span></span></td>
-              </tr>
-              <tr>
-                <td colspan="5">Итого</td>
-                <td><span class="price-inline">575 129<span class="price-inline__dot-value">74</span></span></td>
-              </tr>
-            </table>
+            <div class="table-wrapper">
+              <table class="table table--fund-details">
+                <tr>
+                  <th>Дата приобретения</th>
+                  <th>Стоимость паев приобретения, руб.</th>
+                  <th>Количество приобретенных паев, шт.</th>
+                  <th>Цена приобретения 1 пая, руб.</th>
+                  <th>Текущая оценка, руб.</th>
+                  <th>Кол-во дней владения</th>
+                  <th>Прирост активов, руб.</th>
+                </tr>
+                <tr>
+                  <td>16.12.2014</td>
+                  <td><span class="price-inline">40 000<span class="price-inline__dot-value">00</span></span></td>
+                  <td><span class="price-inline">35<span class="price-inline__dot-value">3331920</span></span></td>
+                  <td><span class="price-inline">1 132<span class="price-inline__dot-value">08</span></span></td>
+                  <td><span class="price-inline">61 818<span class="price-inline__dot-value">25</span></span></td>
+                  <td><span class="price-inline">770</span></td>
+                  <td><span class="price-inline">21 818<span class="price-inline__dot-value">25</span></span></td>
+                </tr>
+                <tr>
+                  <td>27.01.2015</td>
+                  <td><span class="price-inline">40 000<span class="price-inline__dot-value">00</span></span></td>
+                  <td><span class="price-inline">29<span class="price-inline__dot-value">0320005</span></span></td>
+                  <td><span class="price-inline">1 377<span class="price-inline__dot-value">79</span></span></td>
+                  <td><span class="price-inline">50 793<span class="price-inline__dot-value">81</span></span></td>
+                  <td><span class="price-inline">728</span></td>
+                  <td><span class="price-inline">10 793<span class="price-inline__dot-value">81</span></span></td>
+                </tr>
+                <tr>
+                  <td>27.10.2015</td>
+                  <td><span class="price-inline">40 000<span class="price-inline__dot-value">00</span></span></td>
+                  <td><span class="price-inline">24<span class="price-inline__dot-value">5650452</span></span></td>
+                  <td><span class="price-inline">1 628<span class="price-inline__dot-value">33</span></span></td>
+                  <td><span class="price-inline">42 978<span class="price-inline__dot-value">51</span></span></td>
+                  <td><span class="price-inline">455</span></td>
+                  <td><span class="price-inline">2 978<span class="price-inline__dot-value">51</span></span></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td><span class="price-inline">120 000<span class="price-inline__dot-value">00</span></span></td>
+                  <td></td>
+                  <td></td>
+                  <td><span class="price-inline">155 590<span class="price-inline__dot-value">57</span></span></td>
+                  <td></td>
+                  <td><span class="price-inline">35 590<span class="price-inline__dot-value">57</span></span></td>
+                </tr>
+              </table>
+            </div>
             <div class="download-area">
               <div class="download-file-list">
                 <div class="download-file-list__item"><span class="action-link action-link--get-pdf">Скачать в PDF формате</span></div>
@@ -95,28 +122,55 @@
                 <div class="fullscreen-link">таблицу на весь экран</div>
               </div>
             </div>
-            <table class="table table--unit-trust-coupons">
-              <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-              </tr>
-              <tr>
-                <td>ДВМП (FESCO), БО 2</td>
-                <td>08.06.2017</td>
-                <td><span class="price-inline">12<span class="price-inline__dot-value">00</span></span></td>
-                <td><span class="price-inline">59<span class="price-inline__dot-value">84</span></span></td>
-                <td><span class="price-inline">500<span class="price-inline__dot-value">00</span></span></td>
-                <td><span class="price-inline">29 920<span class="price-inline__dot-value">00</span></span></td>
-              </tr>
-              <tr>
-                <td colspan="5">Итого</td>
-                <td><span class="price-inline">575 129<span class="price-inline__dot-value">74</span></span></td>
-              </tr>
-            </table>
+            <div class="table-wrapper">
+              <table class="table table--fund-details">
+                <tr>
+                  <th>Дата проведения операции</th>
+                  <th>Тип операции</th>
+                  <th>Количество паев, шт.</th>
+                  <th>Цена одного пая, руб.</th>
+                  <th>Сумма операции, руб.</th>
+                  <th>Фонд на паи которого произведен обмен</th>
+                  <th>Количество паев при операции обмена</th>
+                </tr>
+                <tr>
+                  <td>10.07.2013</td>
+                  <td>Приобретение</td>
+                  <td><span class="price-inline">177<span class="price-inline__dot-value">6593382</span></span></td>
+                  <td><span class="price-inline">1 125<span class="price-inline__dot-value">75</span></span></td>
+                  <td><span class="price-inline">- 200 000<span class="price-inline__dot-value">00</span></span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.08.2013</td>
+                  <td>Приобретение</td>
+                  <td><span class="price-inline">50<span class="price-inline__dot-value">0000000</span></span></td>
+                  <td><span class="price-inline">2 000<span class="price-inline__dot-value">00</span></span></td>
+                  <td><span class="price-inline">- 100 000<span class="price-inline__dot-value">00</span></span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>10.03.2013</td>
+                  <td>Обмен</td>
+                  <td><span class="price-inline">-177<span class="price-inline__dot-value">6593382</span></span></td>
+                  <td><span class="price-inline">1 200<span class="price-inline__dot-value">00</span></span></td>
+                  <td><span class="price-inline">213 191<span class="price-inline__dot-value">21</span></span></td>
+                  <td>Ингосстрах акции</td>
+                  <td><span class="price-inline">194<span class="price-inline__dot-value">4767119</span></span></td>
+                </tr>
+                <tr>
+                  <td>10.07.2015</td>
+                  <td>Погашение</td>
+                  <td><span class="price-inline">-50<span class="price-inline__dot-value">0000000</span></span></td>
+                  <td><span class="price-inline">3 000<span class="price-inline__dot-value">00</span></span></td>
+                  <td><span class="price-inline">150 000<span class="price-inline__dot-value">00</span></span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
             <div class="download-area">
               <div class="download-file-list">
                 <div class="download-file-list__item"><span class="action-link action-link--get-pdf">Скачать в PDF формате</span></div>

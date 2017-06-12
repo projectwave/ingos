@@ -20,7 +20,7 @@
             <div class="profile-menu"><a href="#" class="profile-menu__link profile-menu__link--media">Медиа</a>
               <div class="profile-menu__separator"></div><a href="#" class="profile-menu__link profile-menu__link--faq">FAQ</a>
               <div class="profile-menu__separator"></div><a href="#" class="profile-menu__link profile-menu__link--chat">Онлайн-чат&nbsp;<span class="line-break">с&nbsp;менеджером</span></a>
-              <div class="profile-menu__separator"></div><a href="#" data-notifications-counter="3" class="profile-menu__link profile-menu__link--notifications"><span class="profile-menu__notifications-counter"></span>Уведомления</a>
+              <div class="profile-menu__separator"></div><a href="#" data-notifications-counter="3" class="profile-menu__link profile-menu__link--notifications">Уведомления</a>
               <div class="profile-menu__separator"></div><span class="is-active profile-menu__link profile-menu__link--settings"><a href="#">Профиль<span class="line-break">и настройки</span></a>
                 <div class="dropdown-list">
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Пользователь</a></div>
@@ -40,7 +40,7 @@
       <div class="page-content__inner">
         <div class="main-content-area">
           <div class="tabs">
-            <div class="tabs__nav"><a href="#user" class="tabs__nav-item">Пользователь</a><a href="#terms-of-use" class="tabs__nav-item">Правила пользования</a><a href="#chat-with-manager" class="tabs__nav-item">Ваш персональный&nbsp; менеджер</a><a href="#faq" class="tabs__nav-item">FAQ</a><a href="#settings" class="tabs__nav-item is-active">Настройки</a></div>
+            <div class="tabs__nav"><a href="#user" class="tabs__nav-item">Пользователь</a><a href="#terms-of-use" class="tabs__nav-item">Правила пользования</a><a href="#chat-with-manager" class="tabs__nav-item is-active">Ваш персональный&nbsp;менеджер</a><a href="#faq" class="tabs__nav-item">FAQ</a><a href="#settings" class="tabs__nav-item">Настройки</a></div>
             <div id="user" class="tab-container">
               <div class="tab-container__section-inner">
                 <div class="section-title">Реквизиты клиента</div>
@@ -86,7 +86,6 @@
                     <td>№ 430232810700002000004</td>
                   </tr>
                 </table>
-                <div class="change-personal-data-request"><a href="#" class="btn-bordered">Запрос на смену регистрационных данных</a></div>
               </div>
             </div>
             <div id="terms-of-use" class="tab-container">
@@ -100,59 +99,95 @@
                 </div>
               </div>
             </div>
-            <div id="chat-with-manager" class="is-visible tab-container">
+            <div id="chat-with-manager" class="tab-container is-visible">
               <div class="tab-container__header">
                 <div class="tab-container__header-title">
-                  <div class="section-title">Ваш персональный менеджер</div>
+                  <div class="section-title js-title-to-replace">Ваш персональный менеджер</div>
                 </div>
                 <div class="tab-container__header-actions">
-                  <div class="switcher-panel"><a href="#" class="switcher-panel__item">Чат с менеджером</a><a href="#" class="switcher-panel__item">Мои вопросы</a></div>
+                  <div class="switcher-panel"><a href="#manager-chat" data-target-title="Ваш персональный менеджер" class="switcher-panel__item js-inner-tab-link is-active">Чат с менеджером</a><a href="#user-question" data-target-title="Мои вопросы" class="switcher-panel__item js-inner-tab-link">Мои вопросы</a></div>
                 </div>
               </div>
-              <div class="chat-manager">
-                <div class="chat-manager__preview">
-                  <div class="person-preview">
-                    <div class="person-preview__image"><img alt="" src=""></div>
-                    <div class="person-preview__info">
-                      <div class="person-preview__name">Анна Орлова</div>
-                      <div class="person-preview__contacts">
-                        <div class="person-preview__contacts-item">skype:&nbsp;<span class="underline">anna.ingosinvest</span>
-                          <!--.person-preview__actions
-                          //span.btn-bordered
-                          	| Начать чат с менеджером
-                          
-                          -->
+              <div id="manager-chat" class="inner-tab-container is-visible">
+                <div id="chat-manager-area" class="chat-manager">
+                  <div class="chat-manager__preview">
+                    <div class="person-preview">
+                      <div class="person-preview__image"><img src="assets/img/icon-manager.png" alt=""></div>
+                      <div class="person-preview__info">
+                        <div class="person-preview__name">Анна Орлова</div>
+                        <div class="person-preview__contacts">
+                          <div class="person-preview__contacts-item">skype:&nbsp;<span class="underline">anna.ingosinvest</span>
+                            <!--.person-preview__actions
+                            //span.btn-bordered
+                            	| Начать чат с менеджером
+                            
+                            -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-title">Чат с менеджером:</div>
+                  </div>
+                  <div class="chat-manager__actions"><span data-target-id="modal-change-personal-manager" class="link-change js-open-modal">поменять менеджера</span></div>
+                </div>
+                <form class="chat">
+                  <div id="chat-thread" class="chat__messages-tread">
+                    <div data-post-time="08.12" class="chat__post--companion chat__post"><img src="assets/img/icons/icon-mini-manager.png" alt="" class="chat__post-companion-avatar">
+                      <div class="chat__post-message">Доброе утро, меня зовут Анна. Я ваш персональный менеджер.</div>
+                    </div>
+                    <div data-post-time="08.13" class="chat__post--companion chat__post">
+                      <div class="chat__post-message">Сергей Алексеевич, если у вас есть вопрос, спросите меня или посмотрите ответы на странице&nbsp;<a href="">Часто Задаваемых Вопросов</a>.</div>
+                    </div>
+                    <div data-post-time="10.34" class="is-answer chat__post">
+                      <div class="chat__post-message">Здравствуйте, Анна. Спасибо, сначала я посмотрю FAQ.</div>
+                    </div>
+                    <div data-post-time="11.01" class="chat__post">
+                      <div class="chat__post-message">Анна, я посмотрел FAQ и не нашел ответа, скажите пожалуйста, как я могу изменить свой рассчетный счет?</div>
+                    </div>
+                    <div data-post-time="11.02" class="chat__post--companion chat__post"><img src="assets/img/icons/icon-mini-manager.png" alt="" class="chat__post-companion-avatar">
+                      <div class="chat__post-message">Сергей Алексеевич, по вашему вопросу&nbsp;<a href="#">создана заявка.</a><br>Вы получите ответ на вопрос в ближайшее время.</div>
+                    </div>
+                  </div>
+                  <div class="chat__input-area">
+                    <textarea id="chat-textarea" class="chat__textarea">Спасибо, Анна!</textarea>
+                    <input type="submit" value="Отправить" class="js-chat-submit chat__submit-message btn-flat btn-sm">
+                  </div>
+                </form>
+              </div>
+              <div id="user-question" class="inner-tab-container">
+                <div class="user-questions-list">
+                  <div class="user-questions-list__item">
+                    <div class="user-question is-solved">
+                      <div class="user-question__info">
+                        <div class="user-question__name">Изменение рассчетного счета</div>
+                        <div class="user-question__status"></div>
+                      </div>
+                      <div class="user-question__manager">
+                        <div class="user-question__manager-icon"><img src="" alt=""></div>
+                        <div class="user-question__manager-info">
+                          <div class="user-question__manager-name">Анна Орлова</div>
+                          <div class="user-question__manager-date">15.11.2016 в 15.12</div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="chat-title">Чат с менеджером:</div>
+                  <div class="user-questions-list__item">
+                    <div class="user-question">
+                      <div class="user-question__info">
+                        <div class="user-question__name">Как продать ПИФ?</div>
+                        <div class="user-question__status"></div>
+                      </div>
+                      <div class="user-question__manager">
+                        <div class="user-question__manager-icon"><img src="" alt=""></div>
+                        <div class="user-question__manager-info">
+                          <div class="user-question__manager-name">Иван Эстонский</div>
+                          <div class="user-question__manager-date">15.11.2016 в 15.12</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="chat-manager__actions"><span class="link-change">поменять менеджера</span></div>
               </div>
-              <form class="chat">
-                <div id="chat-thread" class="chat__messages-tread">
-                  <div data-post-time="08.12" class="chat__post--companion chat__post"><img src="assets/img/icons/icon-mini-manager.png" alt="" class="chat__post-companion-avatar">
-                    <div class="chat__post-message">Доброе утро, меня зовут Анна. Я ваш персональный менеджер.</div>
-                  </div>
-                  <div data-post-time="08.13" class="chat__post--companion chat__post">
-                    <div class="chat__post-message">Сергей Алексеевич, если у вас есть вопрос, спросите меня или посмотрите ответы на странице&nbsp;<a href="">Часто Задаваемых Вопросов</a>.</div>
-                  </div>
-                  <div data-post-time="10.34" class="is-answer chat__post">
-                    <div class="chat__post-message">Здравствуйте, Анна. Спасибо, сначала я посмотрю FAQ.</div>
-                  </div>
-                  <div data-post-time="11.01" class="chat__post">
-                    <div class="chat__post-message">Анна, я посмотрел FAQ и не нашел ответа, скажите пожалуйста, как я могу изменить свой рассчетный счет?</div>
-                  </div>
-                  <div data-post-time="11.02" class="chat__post--companion chat__post"><img src="assets/img/icons/icon-mini-manager.png" alt="" class="chat__post-companion-avatar">
-                    <div class="chat__post-message">Сергей Алексеевич, по вашему вопросу&nbsp;<a href="#">создана заявка.</a><br>Вы получите ответ на вопрос в ближайшее время.</div>
-                  </div>
-                </div>
-                <div class="chat__input-area">
-                  <textarea id="chat-textarea" class="chat__textarea">Спасибо, Анна!</textarea>
-                  <input type="submit" value="Отправить" class="js-chat-submit chat__submit-message btn-flat btn-sm">
-                </div>
-              </form>
             </div>
             <div id="faq" class="tab-container">
               <div class="tab-container__section-inner">
@@ -182,11 +217,11 @@
               <div class="tab-container__section-inner">
                 <div class="section-title">Настройки</div>
                 <div class="change-personal-data-request"><a href="#" class="btn-bordered">Запрос на смену регистрационных данных</a></div>
-                <form class="form-update-personal-user-data">
+                <form class="js-form-validate form-update-personal-user-data">
                   <div class="form-row form-row--email">
                     <label for="cabinet-data-user-login" class="form-row__title">Логин (ваш email):</label>
                     <div class="form-item">
-                      <input type="text" placeholder="Введите ваш email" id="cabinet-data-user-login" class="form-control">
+                      <input type="text" required data-parsley-required-message="Это поле нужно заполнить" placeholder="Введите ваш email" id="cabinet-data-user-login" class="form-control">
                     </div>
                   </div>
                   <div class="form-row form-row--password">
@@ -194,10 +229,10 @@
                     <div class="form-item form-item--password-create">
                       <div class="form-controls-group">
                         <div class="form-controls-group__item">
-                          <input type="password" placeholder="••••••" id="cabinet-data-user-password" class="form-control">
+                          <input type="password" placeholder="••••••" required data-validate-strength data-parsley-required-message="Это поле нужно заполнить" id="cabinet-data-user-password" class="form-control">
                         </div>
                         <div class="form-controls-group__item">
-                          <input type="password" placeholder="Повторите пароль" class="form-control">
+                          <input type="password" required data-parsley-required-message="Это поле нужно заполнить" placeholder="Повторите пароль" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -208,8 +243,9 @@
                   <div class="form-row form-row--password-strength">
                     <div class="form-item form-item--password-strength-title">Сложность пароля:</div>
                     <div class="form-item">
-                      <div id="password-strength-scale" class="password-strength-scale">
-                        <div class="password-strength-scale__degree is-0"></div>
+                      <div id="password-strength-scale" class="password-strength-scale is-0">
+                        <div class="password-strength-scale__degree"></div>
+                        <div class="password-strength-scale__degree"></div>
                         <div class="password-strength-scale__degree"></div>
                         <div class="password-strength-scale__degree"></div>
                         <div class="password-strength-scale__degree"></div>
@@ -219,7 +255,7 @@
                   <div class="form-row">
                     <label for="cabinet-data-user-phone" class="form-row__title">Номер мобильного телефона:</label>
                     <div class="form-item">
-                      <input type="text" placeholder="+7 (937) 542-54-19" id="cabinet-data-user-phone" class="form-control">
+                      <input type="text" required placeholder="+7 (937) 542-54-19" id="cabinet-data-user-phone" class="form-control">
                     </div>
                   </div>
                   <div class="form-row form-row--submit">
@@ -251,6 +287,39 @@
                 <div class="card__footer"><a href="#">Отправить заявку</a></div>
               </div>
             </div>
+          </div>
+        </div>
+        <div id="modal-change-personal-manager" class="modal">
+          <div class="modal-dialog">
+            <div class="modal__title">Сменить персонального менеджера</div>
+            <div class="modal__subtitle">Пожалуйста, подробно опишите причину смены менеджера.<br>Тогда наша служба контроля за качеством обслуживания сможет принять меры.</div>
+            <form id="form-reason-to-change-manager" class="form-reason-to-change-manager js-form-validate">
+              <div class="form-row">
+                <textarea required data-parsley-error-message="Это поле нужно заполнить" placeholder="Опишите причину смены менеджера" class="form-control"></textarea>
+              </div>
+              <div class="form-row">
+                <button type="submit" value="" class="form-submit"><span class="icon-change icon-change--white"></span>Сменить менеджера</button>
+              </div>
+            </form>
+            <div data-dismiss="modal" class="modal-close"></div>
+          </div>
+        </div>
+        <div id="modal-new-personal-manager" class="modal">
+          <div class="modal-dialog">
+            <div class="modal__title">Спасибо! Ваша заявка принята</div>
+            <div class="modal__subtitle">Ваш новый персональный менеджер &mdash;</div>
+            <div class="person-preview">
+              <div class="person-preview__image"><img src="assets/img/icon-manager.png" alt=""></div>
+              <div class="person-preview__info">
+                <div class="person-preview__name">Анна Орлова</div>
+                <div class="person-preview__contacts">
+                  <div class="person-preview__contacts-item">skype:&nbsp;<span class="underline">anna.ingosinvest</span>
+                    <div class="person-preview__actions"><span class="js-start-manager-chat btn-bordered btn-sm">Начать чат с менеджером</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-dismiss="modal" class="modal-close"></div>
           </div>
         </div>
         <aside class="page-sidebar">
