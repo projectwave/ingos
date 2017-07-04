@@ -2,17 +2,19 @@ extends assets/jade/layouts/global/index
 
 block content
 	.main-content-area
-		.main-content-section
+		.main-content-section.purchase-container
 			.section-title
 				| Открытие индивидуального инвестиционного счета
 
 			include assets/jade/partials/tables/iis-opening-strategy-data
 
+			hr
+
 			form.iis-opening-agreement
-				.form-preamble
+				.form-row
 					| Я, Ковалев Сергей Алексеевич:
 
-				.form-row
+				.form-row._large-indent
 					.form-list
 						.form-list__item
 							input(type='checkbox' id='form-iis-opning-agreement-1')
@@ -28,13 +30,15 @@ block content
 							label(for='form-iis-opning-agreement-2')
 								| Подтверждаю достоверность предоставленных данных и подтверждаю свое желание заключить договор ДУ на открытие ИИС.
 
-				.form-row
-					p Для завершения процедуры подачи заявки на Ваш телефон будет отправлен подтверждающий код, который необходимо ввести ниже:
+				hr
 
-				.form-row
-					.btn-secondary.js-hide-on-click.js-toggle-next-el Получить код
+				.form-row._align-center.js-phone-code-container
+					.form-row--get-phone-code
+						p._b-indent Для завершения процедуры подачи заявки на Ваш телефон будет отправлен подтверждающий код, который необходимо ввести ниже:
 
-					.hidden-container
+						.btn-secondary.js-show-sms-verification Получить код
+
+					.form-row--sms-verification-container
 						include assets/jade/partials/forms/sms-verification
 
 		include assets/jade/partials/cards-list

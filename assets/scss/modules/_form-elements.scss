@@ -1,16 +1,66 @@
 $form-row-margin: 21px;
-$form-list-item-margin: 13px;
-$input-font-size: 14px;
+$form-list-item-margin: 0 0 13px 35px;
+$input-font-size: 15px;
 
 // TODO separate modifiers
 
 .form-row {
   position: relative;
   margin-bottom: $form-row-margin;
+  @include clearfix();
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  ._b-indent {
+    margin-bottom: $form-row-margin;
+  }
+  ._l-indent {
+    margin-left: 30px;
+  }
+
+  &._large-indent {
+    margin-bottom: 28px;
+  }
+
+  &._align-center {
+    text-align: center;
+    padding-left: 125px;
+    padding-right: 125px;
+  }
+
+  &._show-phone-code {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  &--sms-verification-container {
+    display: none;
+
+    ._show-phone-code & {
+      display: block;
+    }
+  }
+
+  &--get-phone-code {
+    ._show-phone-code & {
+      display: none;
+    }
+  }
 }
 
 .form-item {
   position: relative;
+
+  &._label {
+    width: 260px;
+    padding: 19px 20px 0 0;
+    float: left;
+  }
+  &._after-label {
+    width: calc(100% - 260px);
+    float: left;
+  }
 }
 
 .form-row--phone {
@@ -21,7 +71,7 @@ $input-font-size: 14px;
 .form-row--cabinet-connection-login {
   display: table;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   .form-row__title {
     display: table-row;
   }
@@ -44,7 +94,8 @@ $input-font-size: 14px;
 .form-row--password-strength {
   width: 358px;
   font-size: 14px;
-  margin-bottom: 44px;
+  margin-bottom: 30px;
+  margin-top: -10px;
   .form-item {
     width: 50%;
   }
@@ -64,12 +115,12 @@ $input-font-size: 14px;
 .form-item--number {
   width: 53%;
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top;
   padding-right: 3%;
+  padding-top: 9px;
   font-size: 13px;
   .form-item__title {
     font-size: 15px;
-    margin-bottom: 6px;
   }
   .form-item__note {
     display: inline;
@@ -85,11 +136,17 @@ $input-font-size: 14px;
   font-size: $input-font-size;
   color: #2f2f2f;
   border: 1px solid #dcdedf;
-  background: #f9f9fa;
+  background: $bg-light-gray;
   border-radius: $border-radius;
   &:focus {
     outline: none;
     border-color: $form-control-focus;
+  }
+  &._small {
+    width: 359px;
+  }
+  &._smallest {
+    width: 98px;
   }
 }
 
@@ -98,13 +155,24 @@ $input-font-size: 14px;
 }
 
 textarea.form-control {
-  padding: 7px 13px;
+  font-family: $base-font-family;
+  padding: 19px;
   resize: none;
+  width: 457px;
+  height: 102px;
 }
 
 .form-controls-group {
   display: table;
   width: 100%;
+
+  &._selects-group {
+    width: 300px;
+
+    &._double {
+      width: 202px;
+    }
+  }
 }
 
 .form-controls-group__item {
@@ -125,7 +193,19 @@ textarea.form-control {
   &:last-child {
     .form-control {
       border-radius: 0 $border-radius $border-radius 0;
+
+      ._triple & {
+        left: -2px;
+      }
     }
+  }
+
+  ._double & {
+    width: 50%;
+  }
+
+  ._triple & {
+    width: 33.3%;
   }
 }
 
@@ -137,43 +217,49 @@ textarea.form-control {
 .form-row--user-agreements {
   padding: 0 10px 14px;
   margin-bottom: 26px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid $border-color-separator;
 }
 
 
 .form-row--sms-verification {
-  max-width: 360px;
-  margin: 0 auto 44px;
-  .section-subtitle {
-    line-height: 1.3;
-    margin-bottom: 38px;
-  }
+  width: 100%;
+  display: table;
 
-  .form-item {
+  &__item {
+    width: 40%;
     display: table-cell;
-    padding-left: 5%;
-    padding-right: 5%;
     vertical-align: top;
-  }
+    padding: 0 15px;
+    text-align: left;
 
-  .form-control {
-    min-width: 160px;
-  }
+    &-password {
+      width: 157px;
+      float: right;
 
-  .form-item--input {
-    width: 60%;
-    padding-left: 0;
-  }
+      .form-row__title {
+        display: block;
+      }
+      .form-control {
+        margin-top: 5px;
+      }
+    }
 
-  .form-item--submit {
-    padding-right: 0;
+    & .form-submit {
+      margin-top: 5px;
+    }
   }
 }
 
 .form-row--verification-troubleshooting {
   font-size: 14px;
   .links-group {
-    min-width: 360px;
+    min-width: 100%;
+
+    &__item {
+      width: 50%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 }
 
@@ -209,7 +295,7 @@ textarea.form-control {
 }
 
 .form-list__item {
-  margin-bottom: $form-list-item-margin;
+  margin: $form-list-item-margin;
 }
 
 .form-note {
@@ -220,20 +306,20 @@ textarea.form-control {
 // Styled checkboxes
 /* Base for label styling */
 
-[type="checkbox"] {
+[type="checkbox"],
+[type="radio"]{
   &:not(:checked), &:checked {
     position: absolute;
     left: -9999px;
   }
   &:not(:checked) + label, &:checked + label {
     position: relative;
-    padding-left: 1.95em;
     cursor: pointer;
   }
   &:not(:checked) + label:before, &:checked + label:before {
     content: '';
     position: absolute;
-    left: 0;
+    left: -35px;
     top: 0;
     width: 14px;
     height: 14px;
@@ -245,7 +331,7 @@ textarea.form-control {
     content: '✔';
     position: absolute;
     top: 3px;
-    left: 3px;
+    left: -32px;
     font-size: 14px;
     line-height: 0.8;
     color: $brand-color;
@@ -281,6 +367,23 @@ textarea.form-control {
   }
 }
 
+[type="radio"]{
+  &:not(:checked) + label:before, &:checked + label:before {
+    border-radius: $border-radius-round;
+    top: -1px;
+  }
+  &:not(:checked) + label:after, &:checked + label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: -31px;
+    width: 8px;
+    height: 8px;
+    background: $bg-button;
+    border-radius: $border-radius-round;
+  }
+}
+
 .parsley-errors-list {
   position: relative;
   left: 0;
@@ -290,6 +393,8 @@ textarea.form-control {
 
 .password-strength-scale {
   overflow: hidden;
+  position: relative;
+  top: -2px;
 }
 
 .password-strength-scale__degree {
@@ -298,8 +403,7 @@ textarea.form-control {
   margin-right: 0.5%;
   float: left;
   height: 3px;
-  background: $main-bg-color;
-  border: 1px solid cadetblue;
+  background: $bg-gray;
   &:first-child {
     margin-left: 0;
   }
@@ -310,28 +414,28 @@ textarea.form-control {
   .is30,
   .is30 & {
     &:nth-child(-n+2) {
-      background: cadetblue;
+      background: $form-control-focus;
     }
   }
 
   .is40 &,
   .is50 &{
     &:nth-child(-n+3) {
-      background: cadetblue;
+      background: $form-control-focus;
     }
   }
 
   .is60 &,
   .is70 & {
     &:nth-child(-n+4) {
-      background: cadetblue;
+      background: $form-control-focus;
     }
   }
 
   .is80 &,
   .is100 & {
     &:nth-child(-n+5) {
-      background: cadetblue;
+      background: $form-control-focus;
     }
   }
 }
@@ -361,11 +465,11 @@ textarea.form-control {
 
 
 
-$selectric-main-color:      #DDD !default;                                              // Color used in border
-$selectric-secondary-color: #BBB !default;                                              // Color used in button
-$selectric-text-color:      #444 !default;                                              // Color used in label
-$selectric-bg-color:        #F8F8F8 !default;                                           // Background color
-$selectric-btn-bg-color:    #F8f8f8 !default;                                           // Button background color
+$selectric-main-color:      $border-color-separator !default;                                              // Color used in border
+$selectric-secondary-color: #2c2c2c !default;                                           // Color used in button
+$selectric-text-color:      #2f2f2f !default;                                           // Color used in label
+$selectric-bg-color:        #f9f9fa !default;                                           // Background color
+$selectric-btn-bg-color:    #f9f9fa !default;                                           // Button background color
 $selectric-height:          40px !default;                                              // Outer height
 $selectric-spacing:         10px !default;                                              // Label left padding
 $selectric-border-width:    1px !default;                                               // Outer border width
@@ -383,9 +487,9 @@ $selectric-font-size:       12px !default;                                      
 }
 
 .selectric {
-  border: 1px solid $border-color;
+  border: 1px solid $border-color-separator;
   border-radius: $border-radius;
-  background: $main-bg-color;
+  background: $selectric-bg-color;
   position: relative;
   overflow: hidden;
 
@@ -407,7 +511,7 @@ $selectric-font-size:       12px !default;                                      
     right: 0;
     top: 0;
     width: $selectric-inner-height;
-    height: $selectric-inner-height;
+    height: 100%;
     line-height: $selectric-inner-height;
     background-color: $selectric-btn-bg-color;
     color: $selectric-secondary-color;
@@ -429,6 +533,25 @@ $selectric-font-size:       12px !default;                                      
       border-top-color: $selectric-secondary-color;
       border-bottom: none;
     }
+  }
+
+  ._selects-group .form-controls-group__item:first-child & {
+    left: 0;
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+
+  ._selects-group .form-controls-group__item:last-child & {
+    border-radius: 0 $border-radius $border-radius 0;
+    left: -1px;
+  }
+
+  ._selects-group._triple .form-controls-group__item:nth-child(2) & {
+    left: -1px;
+    border-radius: 0;
+  }
+
+  ._selects-group._triple .form-controls-group__item:last-child & {
+    left: -2px;
   }
 }
 

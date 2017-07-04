@@ -24,7 +24,7 @@
               <div class="profile-menu__separator"></div><span class="is-active profile-menu__link profile-menu__link--settings"><a href="#">Профиль<span class="line-break">и настройки</span></a>
                 <div class="dropdown-list">
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Пользователь</a></div>
-                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Правила пользования</a></div>
+                  <div class="dropdown-list__item _active"><a href="#" class="dropdown-list__link">Правила пользования</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Ваш персональный менеджер</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">FAQ</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Настройки</a></div>
@@ -39,46 +39,53 @@
     <main class="page-content">
       <div class="page-content__inner">
         <div class="main-content-area">
-          <div class="main-content-section">
+          <div class="main-content-section purchase-container">
             <div class="section-title">Открытие индивидуального инвестиционного счета</div>
-            <table class="iis-opening-strategy-data">
+            <table class="table-unstyled iis-opening-strategy-data">
               <tr>
                 <td>Выбранная стратегия:</td>
-                <td>Сбалансированная</td>
+                <td><strong>Сбалансированная</strong></td>
               </tr>
               <tr>
                 <td>Сумма инвестирования (руб.):</td>
-                <td>250 000, 00</td>
+                <td><strong>250 000, 00</strong></td>
               </tr>
             </table>
+            <hr>
             <form class="iis-opening-payment">
-              <div class="form-row form-row--heading">
-                <div class="form-item">Выберите способ оплаты:</div>
-                <div class="form-item">
-                  <div class="switcher-panel is-active"><a href="#payment-bank-card" class="switcher-panel__item js-inner-tab-link is-active">Оплата банковской картой</a><a href="#payment-bank-transfer" class="switcher-panel__item js-inner-tab-link">Банковский перевод</a></div>
+              <div class="form-row _large-indent">
+                <div class="tab-container__header _small-title">
+                  <div class="tab-container__header-title"><strong>Выберите способ оплаты:</strong></div>
+                  <div class="tab-container__header-actions">
+                    <div class="switcher-panel is-active"><a href="#payment-bank-card" class="switcher-panel__item js-inner-tab-link is-active">Оплата банковской картой</a><a href="#payment-bank-transfer" class="switcher-panel__item js-inner-tab-link">Банковский перевод</a></div>
+                  </div>
                 </div>
               </div>
               <div class="form-row">
-                <div id="payment-bank-card" class="inner-tab-container is-visible">
-                  <div class="form-row"><img src="" alt=""></div>
+                <div id="payment-bank-card" class="inner-tab-container form-with-notes is-visible">
+                  <div class="form-row payment-cards"><img src="assets/img/visa.png" alt=""><img src="assets/img/mastercard.png" alt=""></div>
                   <div class="form-row">
-                    <div class="form-item">
-                      <div class="form-row__title">Номер банковской карты</div>
-                      <input type="text" class="form-control">
+                    <label for="card-code" class="form-row__title">Номер банковской карты</label>
+                    <div class="form-item form-item--note _title">
+                      <input id="card-code" type="text" class="form-control">
                     </div>
-                    <div class="form-item">Введите 16 или 18 цифр с лицевой стороны Вашей карты.</div>
+                    <div class="form-item form-item--note">
+                      <div class="form-note">Введите 16 или 18 цифр с лицевой стороны Вашей карты.</div>
+                    </div>
                   </div>
                   <div class="form-row">
-                    <div class="form-item">
-                      <div class="form-row__title">Имя и фамилия держателя карты:</div>
-                      <input type="text" class="form-control">
+                    <label for="whois-card" class="form-row__title">Имя и фамилия держателя карты:</label>
+                    <div class="form-item form-item--note _title">
+                      <input id="whois-card" type="text" class="form-control">
                     </div>
-                    <div class="form-item">Введите имя и фамилию транслитом, как указано на карте.</div>
+                    <div class="form-item form-item--note">
+                      <div class="form-note">Введите имя и фамилию транслитом, как указано на карте.</div>
+                    </div>
                   </div>
                   <div class="form-row">
                     <div class="form-item">
                       <div class="form-row__title">Срок действия карты:</div>
-                      <div class="form-controls-group">
+                      <div class="form-controls-group _selects-group _double">
                         <div class="form-controls-group__item">
                           <select>
                             <option>10</option>
@@ -94,18 +101,26 @@
                         </div>
                       </div>
                     </div>
-                    <div class="form-item">Введите последние три цифры с обратной стороны карты, находящиеся под магнитной полосой.</div>
+                  </div>
+                  <div class="form-row _large-indent">
+                    <label for="cv" class="form-row__title">CVV2 / CVC2 код:</label>
+                    <div class="form-item form-item--note _title">
+                      <input id="cv" type="text" class="form-control _smallest">
+                    </div>
+                    <div class="form-item form-item--note">
+                      <div class="form-note">Введите последние три цифры с обратной стороны карты, находящиеся под магнитной полосой.</div>
+                    </div>
                   </div>
                   <div class="form-row">
-                    <input type="submit" value="Далее" class="form-submit">
+                    <input type="submit" value="Далее" class="form-submit _large">
                   </div>
                 </div>
                 <div id="payment-bank-transfer" class="inner-tab-container">
                   <div class="form-row">Уважаемый Ковалев Сергей Алексеевич.<br>Благодарим Вас за оформление заявки на приобретение ивестиционных паев.<br>Для приобретения инвестиционных паев Вам необходимо перечислить денежные средства на их оплату.</div>
-                  <div class="form-row">
-                    <table>
+                  <div class="form-row _l-indent">
+                    <table class="table-unstyled">
                       <tr>
-                        <td colspan="2">Назначение платежа для банковского перевода:</td>
+                        <td colspan="2"><strong>Назначение платежа для банковского перевода:</strong></td>
                       </tr>
                       <tr>
                         <td>Получатель</td>
@@ -133,11 +148,11 @@
                       </tr>
                       <tr>
                         <td>Назначение платежа:</td>
-                        <td>Оплата инвестиционных паев ОПИФ фондов «ИИ» от Ковалев Сергей Алексеевич по заявке №57.1275001.040 от 20.04.2016 г.</td>
+                        <td>Оплата инвестиционных паев ОПИФ фондов «ИИ» от<br>Ковалев Сергей Алексеевич по заявке<br>№57.1275001.040 от 20.04.2016 г.</td>
                       </tr>
                     </table>
                   </div>
-                  <div class="form-row"><a href="#" class="btn-secondary">Печать</a></div>
+                  <div class="form-row _l-indent"><a href="#" class="btn-secondary btn-sm _large">Печать</a></div>
                 </div>
               </div>
             </form>
@@ -245,6 +260,7 @@
     <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
     <script type="text/javascript" src="assets/js/vendors/password-strength.js"></script>
     <script type="text/javascript" src="assets/js/vendors/jquery.selectric.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/jquery.uploadfile.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript">
       $(function () {

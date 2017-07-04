@@ -1,5 +1,8 @@
 extends assets/jade/layouts/signing-in/index
 
+block head_end
+	link(rel='stylesheet' href='assets/css/style.css')
+
 block content
 	.page-section
 		.page-section__inner
@@ -51,6 +54,9 @@ block content
 block body_end
 	script(type='text/javascript' src='assets/js/vendors/parsley.js')
 	script(type='text/javascript' src='assets/js/vendors/bootstrap-modal.js')
+	script(type='text/javascript' src='assets/js/vendors/password-strength.js')
+	script(type='text/javascript' src='assets/js/vendors/jquery.selectric.js')
+	script(type='text/javascript' src='assets/js/vendors/jquery.uploadfile.js')
 	script(type='text/javascript' src='assets/js/main.js')
 	script(type='text/javascript').
 		$(function(){

@@ -4,7 +4,7 @@ body {
   font-size: $base-font-size;
   line-height: $lineHeight;
   font-family: $base-font-family;
-  background: #f9f9fa;
+  background: $bg-light-gray;
 }
 
 * {
@@ -13,6 +13,17 @@ body {
 
 a {
   color: $link-color;
+
+  &._red-link{
+    color: $link-accent;
+  }
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid $border-color-separator;
+  margin: 0 0 30px;
+
 }
 
 ol {
@@ -22,6 +33,10 @@ ol {
   li {
     margin-bottom: 8px;
   }
+}
+
+._left-align {
+  text-align: left;
 }
 
 // Sticky Footer

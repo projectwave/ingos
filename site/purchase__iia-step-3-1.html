@@ -24,7 +24,7 @@
               <div class="profile-menu__separator"></div><span class="is-active profile-menu__link profile-menu__link--settings"><a href="#">Профиль<span class="line-break">и настройки</span></a>
                 <div class="dropdown-list">
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Пользователь</a></div>
-                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Правила пользования</a></div>
+                  <div class="dropdown-list__item _active"><a href="#" class="dropdown-list__link">Правила пользования</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Ваш персональный менеджер</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">FAQ</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Настройки</a></div>
@@ -39,21 +39,22 @@
     <main class="page-content">
       <div class="page-content__inner">
         <div class="main-content-area">
-          <div class="main-content-section">
+          <div class="main-content-section purchase-container">
             <div class="section-title">Открытие индивидуального инвестиционного счета</div>
-            <table class="iis-opening-strategy-data">
+            <table class="table-unstyled iis-opening-strategy-data">
               <tr>
                 <td>Выбранная стратегия:</td>
-                <td>Сбалансированная</td>
+                <td><strong>Сбалансированная</strong></td>
               </tr>
               <tr>
                 <td>Сумма инвестирования (руб.):</td>
-                <td>250 000, 00</td>
+                <td><strong>250 000, 00</strong></td>
               </tr>
             </table>
+            <hr>
             <form class="iis-opening-agreement">
-              <div class="form-preamble">Я, Ковалев Сергей Алексеевич:</div>
-              <div class="form-row">
+              <div class="form-row">Я, Ковалев Сергей Алексеевич:</div>
+              <div class="form-row _large-indent">
                 <div class="form-list">
                   <div class="form-list__item">
                     <input type="checkbox" id="form-iis-opning-agreement-1">
@@ -65,21 +66,27 @@
                   </div>
                 </div>
               </div>
-              <div class="form-row">
-                <p>Для завершения процедуры подачи заявки на Ваш телефон будет отправлен подтверждающий код, который необходимо ввести ниже:</p>
-              </div>
-              <div class="form-row">
-                <div class="btn-secondary js-hide-on-click js-toggle-next-el">Получить код</div>
-                <div class="hidden-container">
-                  <div class="form-sms-verification">
+              <hr>
+              <div class="form-row _align-center js-phone-code-container">
+                <div class="form-row--get-phone-code">
+                  <p class="_b-indent">Для завершения процедуры подачи заявки на Ваш телефон будет отправлен подтверждающий код, который необходимо ввести ниже:</p>
+                  <div class="btn-secondary js-show-sms-verification">Получить код</div>
+                </div>
+                <div class="form-row--sms-verification-container">
+                  <div class="form-sms-verification _left-align">
                     <div class="form-title">На ваш мобильный телефон +7 (937) xxx-xx-19 выслано SMS-сообщение с кодом.</div>
                     <div class="form-row form-row--sms-verification">
-                      <label for="verification-sms-code" class="form-row__title">Введите код:</label>
-                      <div class="form-item form-item--input">
-                        <input type="password" required placeholder="•••••" id="verification-sms-code" class="form-control">
+                      <div class="form-row--sms-verification__item">
+                        <div class="form-row--sms-verification__item-password">
+                          <label for="verification-sms-code" class="form-row__title">Введите код:</label>
+                          <input type="password" required placeholder="•••••" id="verification-sms-code" class="form-control">
+                        </div>
                       </div>
-                      <div class="form-item form-item--submit">
-                        <input type="submit" value="Отправить" class="form-submit">
+                      <div class="form-row--sms-verification__item">
+                        <div class="form-item form-item--submit">
+                          <label class="form-row__title">&nbsp;</label>
+                          <input type="submit" value="Отправить" class="form-submit">
+                        </div>
                       </div>
                     </div>
                     <div class="form-row form-row--verification-troubleshooting">
@@ -219,6 +226,7 @@
     <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
     <script type="text/javascript" src="assets/js/vendors/password-strength.js"></script>
     <script type="text/javascript" src="assets/js/vendors/jquery.selectric.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/jquery.uploadfile.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript">
       $(function () {

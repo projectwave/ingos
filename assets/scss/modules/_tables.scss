@@ -40,7 +40,7 @@ $table-font-size: 13px;
   th, td {
     border-right: 0;
     &:nth-child(even) {
-      background: #f9f9fa;
+      background: $bg-light-gray;
     }
   }
 
@@ -116,11 +116,16 @@ $table-font-size: 13px;
 
 .table-unstyled {
   $table-unstyled-padding: 10px;
-  margin-bottom: $content-section-margin - $table-unstyled-padding;
+  margin-bottom: 15px;
   line-height: 1.4;
   th, td {
     border: 0;
     padding: $table-unstyled-padding;
+
+    &:first-child {
+      width: 250px;
+      padding-left: 0;
+    }
   }
 }
 
@@ -253,7 +258,7 @@ $table-font-size: 13px;
 
   .sum {
     border: none;
-    background-color: #f9f9fa;
+    background-color: $bg-light-gray;
   }
 
   .sum_left-border {
@@ -453,7 +458,7 @@ $table-font-size: 13px;
       background-color: #fff;
     }
     td:nth-child(3) {
-      background-color: #f9f9fa;
+      background-color: $bg-light-gray;
     }
   }
 }

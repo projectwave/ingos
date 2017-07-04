@@ -2,14 +2,16 @@ extends assets/jade/layouts/global/index
 
 block content
 	.main-content-area
-		.main-content-section
+		.main-content-section.purchase-container
 			.section-title
 				| Открытие индивидуального инвестиционного счета
 
 			include assets/jade/partials/tables/iis-opening-strategy-data
 
+			hr
+
 			.iis-opening-submit-actions
-				a(href='#').btn-primary Отправить заявку
+				a(href='#').btn-primary._r-indent Отправить заявку
 
 				a(href='#').btn-bordered Открыть онлайн
 

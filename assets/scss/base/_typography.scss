@@ -9,7 +9,8 @@
     text-align: left;
   }
 
-  .tab-container & {
+  .tab-container &,
+  .purchase-container & {
     margin-bottom: 30px;
     font-size: 26px;
     text-align: left;
@@ -19,6 +20,7 @@
 .section-title + .links-list,
 .section-header + .links-list{
   margin-top: $content-section-margin;
+  margin-bottom: 15px;
 }
 
 .section-subtitle {
@@ -54,7 +56,7 @@
 
 .action-link--get-pdf {
   position: relative;
-  padding: 7px 0 7px 38px;
+  padding: 7px 0 7px 45px;
   text-decoration: none;
   cursor: default;
   &::before {

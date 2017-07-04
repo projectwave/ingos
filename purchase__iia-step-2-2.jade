@@ -2,90 +2,97 @@ extends assets/jade/layouts/global/index
 
 block content
 	.main-content-area
-		.main-content-section
+		.main-content-section.purchase-container
 			.section-title
 				| Открытие индивидуального инвестиционного счета
 
 			include assets/jade/partials/tables/iis-opening-strategy-data
 
+			hr
+
 			form.iis-opening-user-data
+				.form-row._large-indent
+					| Просим Вас заполнить персональные данные
+					br
+					| для оформления заявки на присоединение к договору ДУ ИИС.
+
 				.form-row
-					.form-item
+					.form-item._label
 						.form-row__title
 							| Фамилия&nbsp;
 							span.compulsory
 							| :
 
-					.form-item
-						input(type='text' value='Ковалев').form-control
+					.form-item._after-label
+						input(type='text' value='Ковалев').form-control._small
 
 				.form-row
-					.form-item
+					.form-item._label
 						.form-row__title
 							| Имя&nbsp;
 							span.compulsory
 							| :
 
-					.form-item
-						input(type='text' value='Сергей').form-control
+					.form-item._after-label
+						input(type='text' value='Сергей').form-control._small
 
 				.form-row
-					.form-item
+					.form-item._label
 						.form-row__title
 							| Отчество (при наличии):
 
-					.form-item
-						input(type='text' placeholder='Введите ваше отчество').form-control
+					.form-item._after-label
+						input(type='text' placeholder='Введите ваше отчество').form-control._small
 
 				.form-row
-					.form-item
+					.form-item._label
 						.form-row__title
 							| Email
 							span.compulsory
 							| :
 
-					.form-item
-						input(type='email' placeholder='Введите ваш email').form-control
+					.form-item._after-label
+						input(type='email' placeholder='Введите ваш email').form-control._small
 
 				.form-row
-					.form-item
+					.form-item._label
 						.form-row__title
 							| Номер мобильного телефона
 							span.compulsory
 							| :
 
-					.form-item
-						input(type='text' placeholder='Введите ваш номер телефона').form-control
+					.form-item._after-label
+						input(type='text' placeholder='Введите ваш номер телефона').form-control._small
 
 				.form-row
-					.form-item
+					.form-item._label
 						.form-row__title
 							| Серия и № паспорта
 							span.compulsory
 							| :
 
-					.form-item
-						input(type='text' placeholder='Введите серию и номер паспорта').form-control
+					.form-item._after-label
+						input(type='text' placeholder='Введите серию и номер паспорта').form-control._small
 
 				.form-row
-					.form-item
+					.form-item._label
 						.form-row__title
 							| Кем выдан паспорт
 							span.compulsory
 							| :
 
-					.form-item
+					.form-item._after-label
 						textarea(placeholder='Введите так, как это указано в паспорте').form-control
 
 				.form-row
-					.form-item
+					.form-item._label
 						.form-row__title
 							| Дата выдачи
 							span.compulsory
 							| :
 
-					.form-item
-						.form-controls-group
+					.form-item._after-label
+						.form-controls-group._triple._selects-group
 							.form-controls-group__item
 								select
 									option 1
@@ -108,15 +115,15 @@ block content
 									option 1998
 									option 1997
 
-				.form-row
-					.form-item
+				.form-row._large-indent
+					.form-item._label
 						.form-row__title
 							| Код подразделения:
 
-					.form-item
-						input(type='text' placeholder='__-__').form-control
+					.form-item._after-label
+						input(type='text' placeholder='___-___').form-control._smallest
 
 				.form-row
-					input(type='submit' value='Далее')
+					input(type='submit' value='Далее').form-submit._large
 
 		include assets/jade/partials/cards-list

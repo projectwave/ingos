@@ -79,14 +79,14 @@ block content
 						.user-questions-list__item
 							.user-question.is-solved
 								.user-question__info
-									.user-question__name
+									a(href='javascript: void(0);').user-question__name
 										| Изменение рассчетного счета
-
 									.user-question__status
+										| Данный вопрос решен
 
 								.user-question__manager
 									.user-question__manager-icon
-										img(src='' alt='')
+										img(src='assets/img/icon-manager.png' alt='Анна Орлова', width='40')
 
 									.user-question__manager-info
 										.user-question__manager-name
@@ -98,14 +98,15 @@ block content
 						.user-questions-list__item
 							.user-question
 								.user-question__info
-									.user-question__name
+									a(href='javascript: void(0);').user-question__name
 										| Как продать ПИФ?
 
 									.user-question__status
+										| Вопрос ожидает ответа менеджера
 
 								.user-question__manager
 									.user-question__manager-icon
-										img(src='' alt='')
+										img(src='assets/img/icon-manager-1.png' alt='Иван Эстонский', width='40')
 
 									.user-question__manager-info
 										.user-question__manager-name
@@ -123,7 +124,7 @@ block content
 							| Портфель
 
 						.accordion__section
-							.links-list
+							.links-list._no-border
 								.links-list__item
 									span.answer-link.js-toggle-next-el
 										| Что такое паевой инвестиционный фонд?
@@ -135,7 +136,7 @@ block content
 							| Паевые Инвестиционные Фонды
 
 						.accordion__section
-							.links-list
+							.links-list._no-border
 								.links-list__item
 									span.answer-link.js-toggle-next-el
 										| Что такое инвестиционный пай?
@@ -145,6 +146,9 @@ block content
 								.links-list__item
 									span.answer-link.js-toggle-next-el
 										| Что такое СЧА?
+
+									.faq-answer
+										| Стоимость чистых активов паевого инвестиционного фонда (СЧА) определяется как разница между стоимостью активов этого фонда (денежные средства на счетах и в банках, ценные бумаги, накопленный купонный доход и иные разрешенные активы) и величиной обязательств, подлежащих исполнению за счет указанных активов, на момент определения стоимости чистых активов.
 
 			.tab-container#settings
 				.tab-container__section-inner
@@ -216,7 +220,7 @@ block content
 								id='cabinet-data-user-phone').form-control
 
 						.form-row.form-row--submit
-							input(type='submit' value='Сохранить').form-submit
+							input(type='submit' value='Сохранить').btn-secondary
 
 
 		include assets/jade/partials/cards-list

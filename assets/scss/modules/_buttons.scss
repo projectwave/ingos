@@ -15,18 +15,24 @@
   @include button();
   color: $brand-color;
   border: 2px solid $brand-color;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 
 .btn-secondary,
 .btn-flat {
   @include button();
   color: white;
-  background: gray;
+  background: $bg-button;
 }
 
 .btn-sm {
   padding: 8px;
   font-size: $note-font-size;
+
+  &._large {
+    padding: 10px 30px;
+  }
 }
 
 .btn-primary {

@@ -26,7 +26,10 @@ var commonActions = (function (document, $) {
         openModal: '.js-open-modal',
         closeModal: '.js-close-modal',
         datepickerIcon: 'data-range-input__icon',
-        datepickerValue: 'data-range-input__value'
+        datepickerValue: 'data-range-input__value',
+        fileUploader: '#fileUploader',
+        showPhoneCode: '.js-show-sms-verification',
+        PhoneCode: '.js-phone-code-container'
     };
 
     var className = {
@@ -177,6 +180,13 @@ var commonActions = (function (document, $) {
         });
     }
 
+    function _uploadFile() {
+        $(selector.fileUploader).uploadFile({
+            dragDropStr: "<div class='custom-drag-and-drop__text'>Перетащите файлы сюда<br/> <span>или</span></div>",
+            uploadStr:"Выберите файлы"
+        });
+    }
+
     function _onDocumentClick() {
 
     }
@@ -217,7 +227,14 @@ var commonActions = (function (document, $) {
         });
     }
 
+    function _showSmsVerification() {
+        $(selector.showPhoneCode).on('click', function(){
+            $(selector.PhoneCode).addClass('_show-phone-code');
+        });
+    }
+
     function bind() {
+
         //_activateDatepicker();
 
         _maximizeTable();
@@ -245,6 +262,11 @@ var commonActions = (function (document, $) {
         if($('input[data-validate-strength]').length) {
             $('input[data-validate-strength]').passwordStrength();
         }
+
+        _uploadFile();
+
+        _showSmsVerification();
+
 
     }
 

@@ -24,7 +24,7 @@
               <div class="profile-menu__separator"></div><span class="is-active profile-menu__link profile-menu__link--settings"><a href="#">Профиль<span class="line-break">и настройки</span></a>
                 <div class="dropdown-list">
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Пользователь</a></div>
-                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Правила пользования</a></div>
+                  <div class="dropdown-list__item _active"><a href="#" class="dropdown-list__link">Правила пользования</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Ваш персональный менеджер</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">FAQ</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Настройки</a></div>
@@ -39,19 +39,20 @@
     <main class="page-content">
       <div class="page-content__inner">
         <div class="main-content-area">
-          <div class="main-content-section">
+          <div class="main-content-section purchase-container">
             <div class="section-title">Открытие индивидуального инвестиционного счета</div>
-            <table class="iis-opening-strategy-data">
+            <table class="table-unstyled iis-opening-strategy-data">
               <tr>
                 <td>Выбранная стратегия:</td>
-                <td>Сбалансированная</td>
+                <td><strong>Сбалансированная</strong></td>
               </tr>
               <tr>
                 <td>Сумма инвестирования (руб.):</td>
-                <td>250 000, 00</td>
+                <td><strong>250 000, 00</strong></td>
               </tr>
             </table>
-            <div class="iis-opening-submit-actions"><a href="#" class="btn-primary">Отправить заявку</a><a href="#" class="btn-bordered">Открыть онлайн</a>
+            <hr>
+            <div class="iis-opening-submit-actions"><a href="#" class="btn-primary _r-indent">Отправить заявку</a><a href="#" class="btn-bordered">Открыть онлайн</a>
               <!--include assets/jade/partials/forms/sms-verification-->
             </div>
           </div>
@@ -181,6 +182,7 @@
     <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
     <script type="text/javascript" src="assets/js/vendors/password-strength.js"></script>
     <script type="text/javascript" src="assets/js/vendors/jquery.selectric.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/jquery.uploadfile.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript">
       $(function () {

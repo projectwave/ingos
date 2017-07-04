@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="header-row">
+        <div class="header-row__inner">
+          <div class="header__logo">
+            <div class="brand-logo"><img src="assets/img/svg/brand-logo.svg" width="100" height="75" alt="ИНГОССТРАХ Инвестиции"></div>
+          </div>
+          <div class="header__greeting">
+            <div class="header-greeting">Добрый день,&nbsp;<span id="header-greering-username" class="line-break">Сергей Алексеевич!</span></div>
+          </div>
+          <div class="header__profile-menu">
+            <div class="profile-menu"><a href="#" class="profile-menu__link profile-menu__link--media">Медиа</a>
+              <div class="profile-menu__separator"></div><a href="#" class="profile-menu__link profile-menu__link--faq">FAQ</a>
+              <div class="profile-menu__separator"></div><a href="#" class="profile-menu__link profile-menu__link--chat">Онлайн-чат&nbsp;<span class="line-break">с&nbsp;менеджером</span></a>
+              <div class="profile-menu__separator"></div><a href="#" data-notifications-counter="3" class="profile-menu__link profile-menu__link--notifications">Уведомления</a>
+              <div class="profile-menu__separator"></div><span class="is-active profile-menu__link profile-menu__link--settings"><a href="#">Профиль<span class="line-break">и настройки</span></a>
+                <div class="dropdown-list">
+                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Пользователь</a></div>
+                  <div class="dropdown-list__item _active"><a href="#" class="dropdown-list__link">Правила пользования</a></div>
+                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Ваш персональный менеджер</a></div>
+                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">FAQ</a></div>
+                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Настройки</a></div>
+                </div></span>
+              <div class="profile-menu__separator"></div><a href="#" class="profile-menu__link profile-menu__link--exit">Выход</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--.header-row.header-row--decoration-->
+    </header>
+    <main class="page-content">
+      <div class="page-content__inner">
+        <div class="main-content-area">
+          <div class="main-content-section purchase-container">
+            <div class="section-title">Открытие индивидуального инвестиционного счета</div>
+            <table class="table-unstyled iis-opening-strategy-data">
+              <tr>
+                <td>Выбранная стратегия:</td>
+                <td><strong>Сбалансированная</strong></td>
+              </tr>
+              <tr>
+                <td>Сумма инвестирования (руб.):</td>
+                <td><strong>250 000, 00</strong></td>
+              </tr>
+            </table>
+            <hr>
+            <form class="iis-opening-agreement">
+              <div class="form-row">
+                Продолжая оформление заявки о присоединении к договору доверительного управления, Вы подтверждаете
+                достоверность и актуальность сведений, указанных о Вас.
+              </div>
+              <div class="form-row _large-indent">
+                <div class="form-list">
+                  <div class="form-list__item">
+                    <input type="checkbox" id="form-iis-opning-agreement-1">
+                    <label for="form-iis-opning-agreement-1">Подтверждаю, что ознакомлен с&nbsp;<a href="#">условиями доверительного управления ценными бумагами с открытием и ведением индивидуального инвестиционного счета.</a></label>
+                  </div>
+                  <div class="form-list__item">
+                    <input type="checkbox" id="form-iis-opning-agreement-2">
+                    <label for="form-iis-opning-agreement-2">Подтверждаю достоверность предоставленных данных и подтверждаю свое желание заключить договор ДУ на открытие ИИС.</label>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="form-row _align-center js-phone-code-container">
+                <div class="form-row--get-phone-code">
+                  <p class="_b-indent">Для завершения процедуры подачи заявки на Ваш телефон будет отправлен подтверждающий код, который необходимо ввести ниже:</p>
+                  <div class="btn-secondary js-show-sms-verification">Получить код</div>
+                </div>
+                <div class="form-row--sms-verification-container">
+                  <div class="form-sms-verification _left-align">
+                    <div class="form-title">На ваш мобильный телефон +7 (937) xxx-xx-19 выслано SMS-сообщение с кодом.</div>
+                    <div class="form-row form-row--sms-verification">
+                      <div class="form-row--sms-verification__item">
+                        <div class="form-row--sms-verification__item-password">
+                          <label for="verification-sms-code" class="form-row__title">Введите код:</label>
+                          <input type="password" required placeholder="•••••" id="verification-sms-code" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-row--sms-verification__item">
+                        <div class="form-item form-item--submit">
+                          <label class="form-row__title">&nbsp;</label>
+                          <input type="submit" value="Отправить" class="form-submit">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row form-row--verification-troubleshooting">
+                      <div class="links-group">
+                        <div class="links-group__item text-right"><a href="#" class="tooltip-link">Отправить еще раз</a></div>
+                        <div class="links-group__item text-left"><a href="#" class="tooltip-link">СМС не приходит?</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="cards-list cards-list--call-to-action">
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--investment-fund"></div>
+                <div class="card__caption">Паевые Инвестиционные&nbsp;Фонды</div>
+                <div class="card__footer"><a href="#">Отправить заявку</a></div>
+              </div>
+            </div>
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--trust-management"></div>
+                <div class="card__caption">Доверительное<span class="line-break"></span>Управление</div>
+                <div class="card__footer"><a href="#">Отправить заявку</a></div>
+              </div>
+            </div>
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--investment-accs"></div>
+                <div class="card__caption">Индивидуальные Инвестиционные Счета</div>
+                <div class="card__footer"><a href="#">Отправить заявку</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="page-sidebar">
+          <!-- TODO make mixin for smooth look (optional)-->
+          <div class="sliding-menu">
+            <div class="sliding-menu__item">
+              <div class="sliding-menu__item-title js-sliding-menu-title">Портфель
+                <div class="sliding-menu__item-number">№ 134384/20845-1</div>
+              </div>
+              <div class="sliding-menu__list">
+                <div class="sliding-menu__list-item is-active"><a href="#" class="sliding-menu__list-link">Оценка портфеля</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Анализ портфеля</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">История</a></div>
+              </div>
+            </div>
+            <div class="sliding-menu__item">
+              <div class="sliding-menu__item-title js-sliding-menu-title">ПИФы</div>
+              <div class="sliding-menu__list">
+                <div class="sliding-menu__list-item is-active"><a href="#" class="sliding-menu__list-link">Структура и оценка</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Заявки на приобретение</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Операции по ПИФам</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Свободный отчёт</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Документы по ПИФам</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Демо ПИФ</a></div>
+              </div>
+            </div>
+            <div class="sliding-menu__item">
+              <div class="sliding-menu__item-title js-sliding-menu-title">ДУ</div>
+              <div class="sliding-menu__list">
+                <div class="sliding-menu__list-item is-active"><a href="#" class="sliding-menu__list-link">Структура и оценка</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Динамика портфеля</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о купонах</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о вводах/выводах</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о начисленных комиссиях</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация по сделкам</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Документы по ДУ</a></div>
+              </div>
+            </div>
+            <div class="sliding-menu__item">
+              <div class="sliding-menu__item-title js-sliding-menu-title">ИИС</div>
+              <div class="sliding-menu__list">
+                <div class="sliding-menu__list-item is-active"><a href="#" class="sliding-menu__list-link">Структура и оценка</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Динамика портфеля</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о купонах</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о вводах/выводах</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о начисленных комиссиях</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация по сделкам</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Документы по ИИС</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-section"><img alt="" src="assets/img/sidebar-image.jpg" width="240" height="400"></div>
+        </aside>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="footer-row">
+        <div class="footer-row__inner">
+          <div class="footer__nav-area">
+            <div class="footer-nav-section">
+              <div class="footer-nav-title">Профиль</div>
+              <div class="footer-nav">
+                <div class="footer-nav__item"><a href="#">Отчёты</a></div>
+                <div class="footer-nav__item"><a href="#">Уведомления</a></div>
+                <div class="footer-nav__item"><a href="#">Пользователь</a></div>
+                <div class="footer-nav__item"><a href="#">Правила пользования</a></div>
+              </div>
+              <div class="footer-nav">
+                <div class="footer-nav__item"><a href="#">Ваш персональный менеджер</a></div>
+                <div class="footer-nav__item"><a href="#">FAQ</a></div>
+                <div class="footer-nav__item"><a href="#">Контакты</a></div>
+              </div>
+            </div>
+            <div class="footer-nav-section">
+              <div class="footer-nav-title">Инвестиции</div>
+              <div class="footer-nav">
+                <div class="footer-nav__item"><a href="#">Портфель</a></div>
+                <div class="footer-nav__item"><a href="#">ПИФы</a></div>
+                <div class="footer-nav__item"><a href="#">ДУ</a></div>
+                <div class="footer-nav__item"><a href="#">ИИС</a></div>
+                <div class="footer-nav__item"><a href="#"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__feedback-area">
+            <div class="feedback">
+              <div class="feedback__number">8 800 100-48-98</div>
+              <div class="feedback__link"><a href="#" class="js-modal-open-feedback">Заказать звонок</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-row">
+        <div class="footer-row__inner">
+          <div class="footer-copy">АО УК «Ингосстрах-Инвестиции» &copy; 2011-2017, официальный сайт&nbsp;<a href="https://www.ingosinvest.ru/">ingosinvest.ru</a></div>
+        </div>
+      </div>
+    </footer>
+    <!--include ../../partials/modal-popups/-->
+    <script type="text/javascript" src="assets/js/libs/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/parsley.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/password-strength.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/jquery.selectric.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/jquery.uploadfile.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript">
+      $(function () {
+      		commonActions.init();
+      })
+      
+    </script>
+  </body>
+</html>

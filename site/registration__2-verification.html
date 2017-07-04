@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/user-autorization.css">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
-  <body>
+  <body class="sign-in-page">
     <div class="page-wrapper">
       <header class="page-header">
         <div class="header-row">
@@ -49,20 +49,27 @@
                   </div>
                 </div>
               </div>
-              <div class="form-row form-row--sms-verification">
-                <div class="section-subtitle">На ваш мобильный телефон +7 (937) xxx-xx-19<span class="line-break">выслано SMS-сообщение с кодом.</span></div>
-                <label for="verification-sms-code" class="form-row__title">Введите код:</label>
-                <div class="form-item form-item--input">
-                  <input type="password" required placeholder="•••••" id="verification-sms-code" class="form-control">
+              <div class="form-sms-verification _left-align">
+                <div class="form-title">На ваш мобильный телефон +7 (937) xxx-xx-19 выслано SMS-сообщение с кодом.</div>
+                <div class="form-row form-row--sms-verification">
+                  <div class="form-row--sms-verification__item">
+                    <div class="form-row--sms-verification__item-password">
+                      <label for="verification-sms-code" class="form-row__title">Введите код:</label>
+                      <input type="password" required placeholder="•••••" id="verification-sms-code" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-row--sms-verification__item">
+                    <div class="form-item form-item--submit">
+                      <label class="form-row__title">&nbsp;</label>
+                      <input type="submit" value="Отправить" class="form-submit">
+                    </div>
+                  </div>
                 </div>
-                <div class="form-item form-item--submit">
-                  <input type="submit" value="Отправить" class="form-submit">
-                </div>
-              </div>
-              <div class="form-row form-row--verification-troubleshooting">
-                <div class="links-group">
-                  <div class="links-group__item text-right"><a href="#" class="tooltip-link">Отправить еще раз</a></div>
-                  <div class="links-group__item text-left"><a href="#" class="tooltip-link">СМС не приходит?</a></div>
+                <div class="form-row form-row--verification-troubleshooting">
+                  <div class="links-group">
+                    <div class="links-group__item text-right"><a href="#" class="tooltip-link">Отправить еще раз</a></div>
+                    <div class="links-group__item text-left"><a href="#" class="tooltip-link">СМС не приходит?</a></div>
+                  </div>
                 </div>
               </div>
             </form>
@@ -72,6 +79,9 @@
       <script type="text/javascript" src="assets/js/libs/jquery-3.2.1.js"></script>
       <script type="text/javascript" src="assets/js/vendors/parsley.js"></script>
       <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
+      <script type="text/javascript" src="assets/js/vendors/password-strength.js"></script>
+      <script type="text/javascript" src="assets/js/vendors/jquery.selectric.js"></script>
+      <script type="text/javascript" src="assets/js/vendors/jquery.uploadfile.js"></script>
       <script type="text/javascript" src="assets/js/main.js"></script>
       <script type="text/javascript">
         $(function(){

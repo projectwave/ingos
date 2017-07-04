@@ -34,9 +34,21 @@ form {
   .form-item--password-create {
     width: 358px;
   }
+
+  .form-row--password-strength {
+    display: table;
+
+    .form-item {
+      display: table-cell;
+    }
+  }
+}
+.form-item--fl-name {
+  width: 556px;
 }
 
-.form-update-personal-user-data {
+.form-update-personal-user-data,
+.form-with-notes{
   $form-item-padding: 7%;
 
   margin-top: $content-section-margin;
@@ -53,9 +65,17 @@ form {
   }
 
   .form-item--password-create,
-  .form-item--password-note {
+  .form-item--password-note{
     width: 50%;
     float: left;
+  }
+  .form-item--note{
+    width: 60%;
+    float: left;
+
+    &._title {
+      width: 40%;
+    }
   }
 
   .form-row--password-strength {
@@ -73,14 +93,19 @@ form {
     padding-right: $form-item-padding;
   }
 
-  .form-item--password-note {
+  .form-item--password-note,
+  .form-item--note{
     font-size: 14px;
+    display: table;
+    height: 54px;
   }
 
   .form-note {
     text-align: left;
     line-height: 1.4;
     padding-left: $form-item-padding;
+    display: table-cell;
+    vertical-align: middle;
   }
 
   .form-row--submit {

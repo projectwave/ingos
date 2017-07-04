@@ -142,13 +142,18 @@
 }
 
 .links-list__item {
-  padding-right: 15%;
+  padding-right: 30px;
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid $border-color;
-  &:last-child {
+  &:last-child,
+  ._no-border & {
     padding-bottom: 0;
     border-bottom: 0;
+  }
+
+  ._no-border & {
+    border-bottom: 5px;
   }
 }
 
@@ -161,15 +166,34 @@
 
 .faq-answer {
   display: none;
-  margin-top: 15px;
-  margin-bottom: 8px;
-  margin-left: -29px;
+  margin: 15px -20px 8px -29px;
   padding: 24px 29px;
   font-size: 14px;
   line-height: 1.2;
   border: 1px solid $border-color;
-  background: #f9f9fa;
+  background: $bg-light-gray;
   border-radius: $border-radius;
+  position: relative;
+
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid $border-color;
+  }
+  &::after {
+    top: -5px;
+    left: 31px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-bottom: 6px solid $bg-light-gray;
+  }
 }
 
 .faq-answer.is-visible {
@@ -258,7 +282,7 @@ $adventage-bottom-margin: 35px;
 }
 
 .error-page-404 {
-  width: 493px;
+  width: 515px;
   margin: 30px 0 0 187px;
   .section-title {
     text-align: left;
@@ -273,5 +297,13 @@ $adventage-bottom-margin: 35px;
   .links-list-unstyled {
     padding-left: 35px;
     margin-bottom: 15px;
+  }
+}
+
+.payment-cards {
+  text-align: right;
+  img {
+    margin-left: 20px;
+    vertical-align: middle;
   }
 }

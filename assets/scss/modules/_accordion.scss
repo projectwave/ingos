@@ -3,12 +3,12 @@ $accordion-title-padding: 10px;
 .accordion {
   border: 1px solid $border-color;
   border-radius: $border-radius;
-  margin-bottom: $content-section-margin;
+  margin-bottom: 20px;
 }
 
 .accordion__section-title {
   position: relative;
-  padding: 23px 20px 20px 50px;
+  padding: 23px 20px 20px 85px;
   font-size: 18px;
   border-bottom: 1px solid $border-color;
   cursor: pointer;
@@ -19,13 +19,13 @@ $accordion-title-padding: 10px;
     height: 13px;
     position: absolute;
     top: 25px;
-    left: 15px;
+    left: 30px;
     background: url(../img/arrow-down.png);
     background-size: cover;
     transition: transform 0.2s linear;
   }
 
-  &:last-child {
+  &:nth-last-child(2) {
     border-bottom: 0;
   }
 }
@@ -38,7 +38,14 @@ $accordion-title-padding: 10px;
 
 .accordion__section {
   display: none;
-  padding: 20px 20px 20px 50px;
+  padding: 20px 20px 20px 85px;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child {
+    border-bottom: 0;
+    border-top: 1px solid $border-color;
+  }
+
   &.is-visible {
     display: block;
   }
@@ -80,8 +87,14 @@ $accordion-title-padding: 10px;
 }
 
 .accordion-panel__body {
+  padding: 0 30px 0 86px;
   display: none;
+
   &.is-visible {
     display: block;
+  }
+
+  p {
+    margin-bottom: 20px;
   }
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/user-autorization.css">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
-  <body>
+  <body class="sign-in-page">
     <div class="page-wrapper">
       <header class="page-header">
         <div class="header-row">
@@ -36,15 +36,20 @@
           <div class="page-section__inner">
             <div class="section-title">Вход в личный кабинет</div>
             <form method="" action="" class="js-form-validate">
-              <div class="form-sms-verification">
+              <div class="form-sms-verification _left-align">
                 <div class="form-title">На ваш мобильный телефон +7 (937) xxx-xx-19 выслано SMS-сообщение с кодом.</div>
                 <div class="form-row form-row--sms-verification">
-                  <label for="verification-sms-code" class="form-row__title">Введите код:</label>
-                  <div class="form-item form-item--input">
-                    <input type="password" required placeholder="•••••" id="verification-sms-code" class="form-control">
+                  <div class="form-row--sms-verification__item">
+                    <div class="form-row--sms-verification__item-password">
+                      <label for="verification-sms-code" class="form-row__title">Введите код:</label>
+                      <input type="password" required placeholder="•••••" id="verification-sms-code" class="form-control">
+                    </div>
                   </div>
-                  <div class="form-item form-item--submit">
-                    <input type="submit" value="Отправить" class="form-submit">
+                  <div class="form-row--sms-verification__item">
+                    <div class="form-item form-item--submit">
+                      <label class="form-row__title">&nbsp;</label>
+                      <input type="submit" value="Отправить" class="form-submit">
+                    </div>
                   </div>
                 </div>
                 <div class="form-row form-row--verification-troubleshooting">

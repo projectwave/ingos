@@ -9,6 +9,10 @@
 .header-row__inner {
   @extend %container;
 }
+.sign-in-page .header-row__inner {
+  min-height: 1px;
+  background: none;
+}
 
 .header__logo {
   float: left;

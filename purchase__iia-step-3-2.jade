@@ -1,0 +1,39 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section.purchase-container
+			.section-title
+				| Открытие индивидуального инвестиционного счета
+
+			include assets/jade/partials/tables/iis-opening-strategy-data
+
+			hr
+
+			form.iis-opening-agreement
+				.form-row
+					| Продолжая оформление заявки о присоединении к договору доверительного управления, Вы подтверждаете достоверность и актуальность сведений, указанных о Вас.
+
+				.form-row._large-indent
+					.form-list
+						.form-list__item
+							input(type='checkbox' id='form-iis-opning-agreement-1')
+
+							label(for='form-iis-opning-agreement-1')
+								| Подтверждаю, что ознакомлен с&nbsp;
+								a(href='#')
+									| условиями доверительного управления ценными бумагами с открытием и ведением индивидуального инвестиционного счета.
+
+						.form-list__item
+							input(type='checkbox' id='form-iis-opning-agreement-2')
+
+							label(for='form-iis-opning-agreement-2')
+								| Со всеми остальными &nbsp;
+								a(href='#')условиями
+								| &nbsp;ознакомлен(а).
+
+				hr
+
+				include assets/jade/partials/forms/sms-verification
+
+		include assets/jade/partials/cards-list

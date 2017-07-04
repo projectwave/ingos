@@ -1,0 +1,206 @@
+extends assets/jade/layouts/global/index
+
+block content
+    .main-content-area
+        .tabs
+            .tabs__nav
+                a(href='#user').tabs__nav-item
+                    | Пользователь
+
+                a(href='#terms-of-use').tabs__nav-item
+                    | Правила пользования
+
+                a(href='#chat-with-manager').tabs__nav-item
+                    | Ваш персональный&nbsp;менеджер
+
+                a(href='#faq').tabs__nav-item
+                    | FAQ
+
+                a(href='#settings').tabs__nav-item.is-active
+                    | Настройки
+
+            .tab-container#user
+                .tab-container__section-inner
+                    .section-title Реквизиты клиента
+
+                    include assets/jade/partials/tables/profile-client-details
+
+            .tab-container#terms-of-use
+                .tab-container__section-inner
+                    .section-title Правила пользования
+
+                    include assets/jade/partials/icon-links-list
+
+            .tab-container#chat-with-manager
+                .tab-container__header
+                    .tab-container__header-title
+                        .section-title.js-title-to-replace
+                            | Ваш персональный менеджер
+
+                    .tab-container__header-actions
+                        .switcher-panel
+                            a(href='#manager-chat' data-target-title='Ваш персональный менеджер').switcher-panel__item.js-inner-tab-link.is-active
+                                | Чат с менеджером
+
+                            a(href='#user-question' data-target-title='Мои вопросы').switcher-panel__item.js-inner-tab-link
+                                | Мои вопросы
+
+                .inner-tab-container#manager-chat
+                    .chat-manager#chat-manager-area
+                        .chat-manager__preview
+                            .person-preview
+                                .person-preview__image
+                                    img(src='assets/img/icon-manager.png' alt='')
+
+                                .person-preview__info
+                                    .person-preview__name Анна Орлова
+
+                                    .person-preview__contacts
+                                        .person-preview__contacts-item
+                                            | skype:&nbsp;
+                                            span.underline
+                                                | anna.ingosinvest
+
+                                            //.person-preview__actions
+                                                //span.btn-bordered
+                                                    | Начать чат с менеджером
+
+                            .chat-title
+                                | Чат с менеджером:
+
+                        .chat-manager__actions
+                            span(data-target-id='modal-change-personal-manager').link-change.js-open-modal
+                                | поменять менеджера
+
+                    include assets/jade/partials/chat
+
+                .inner-tab-container#user-question
+                    .user-questions-list
+                        .user-questions-list__item
+                            .user-question.is-solved
+                                .user-question__info
+                                    a(href='javascript: void(0);').user-question__name
+                                        | Изменение рассчетного счета
+                                    .user-question__status
+                                        | Данный вопрос решен
+
+                                .user-question__manager
+                                    .user-question__manager-icon
+                                        img(src='assets/img/icon-manager.png' alt='Анна Орлова', width='40')
+
+                                    .user-question__manager-info
+                                        .user-question__manager-name
+                                            | Анна Орлова
+
+                                        .user-question__manager-date
+                                            | 15.11.2016 в 15.12
+
+                        .user-questions-list__item
+                            .user-question
+                                .user-question__info
+                                    a(href='javascript: void(0);').user-question__name
+                                        | Как продать ПИФ?
+
+                                    .user-question__status
+                                        | Вопрос ожидает ответа менеджера
+
+                                .user-question__manager
+                                    .user-question__manager-icon
+                                        img(src='assets/img/icon-manager-1.png' alt='Иван Эстонский', width='40')
+
+                                    .user-question__manager-info
+                                        .user-question__manager-name
+                                            | Иван Эстонский
+
+                                        .user-question__manager-date
+                                            | 15.11.2016 в 15.12
+
+            .tab-container#faq
+                .tab-container__section-inner
+                    .section-title Часто задаваемые вопросы
+
+                    .accordion
+                        .accordion__section-title.js-toggle-next-el
+                            | Портфель
+
+                        .accordion__section
+                            .links-list._no-border
+                                .links-list__item
+                                    span.answer-link.js-toggle-next-el
+                                        | Что такое паевой инвестиционный фонд?
+
+                                    .faq-answer
+                                        | Стоимость чистых активов паевого инвестиционного фонда (СЧА) определяется как разница между стоимостью активов этого фонда (денежные средства на счетах и в банках, ценные бумаги, накопленный купонный доход и иные разрешенные активы) и величиной обязательств, подлежащих исполнению за счет указанных активов, на момент определения стоимости чистых активов.
+
+                        .accordion__section-title.js-toggle-next-el
+                            | Паевые Инвестиционные Фонды
+
+                        .accordion__section
+                            .links-list._no-border
+                                .links-list__item
+                                    span.answer-link.js-toggle-next-el
+                                        | Что такое инвестиционный пай?
+
+                                    .faq-answer
+                                        | Стоимость чистых активов паевого инвестиционного фонда (СЧА) определяется как разница между стоимостью активов этого фонда (денежные средства на счетах и в банках, ценные бумаги, накопленный купонный доход и иные разрешенные активы) и величиной обязательств, подлежащих исполнению за счет указанных активов, на момент определения стоимости чистых активов.
+                                .links-list__item
+                                    span.answer-link.js-toggle-next-el
+                                        | Что такое СЧА?
+
+                                    .faq-answer
+                                        | Стоимость чистых активов паевого инвестиционного фонда (СЧА) определяется как разница между стоимостью активов этого фонда (денежные средства на счетах и в банках, ценные бумаги, накопленный купонный доход и иные разрешенные активы) и величиной обязательств, подлежащих исполнению за счет указанных активов, на момент определения стоимости чистых активов.
+
+            .tab-container#settings.is-visible
+                .tab-container__section-inner
+                    .section-title
+                        | Обновление регистрационных данных
+
+                    form.js-form-validate.form-update-personal-user-data
+
+                        .form-row.form-row--password
+                            label(for='cabinet-data-fl-name').form-row__title
+                                | Ваше Ф.И.О:
+
+                            .form-item.form-item--fl-name
+                                .form-controls-group._triple
+                                    .form-controls-group__item
+                                        input(type='text'
+                                        placeholder='Введите фамилию'
+                                        required
+                                        data-validate-strength
+                                        data-parsley-required-message='Это поле нужно заполнить'
+                                        id='cabinet-data-fl-name').form-control
+
+                                    .form-controls-group__item
+                                        input(type='text'
+                                        placeholder='Введите имя'
+                                        required
+                                        data-parsley-required-message='Это поле нужно заполнить').form-control
+
+                                    .form-controls-group__item
+                                        input(type='text'
+                                        placeholder='Введите отчество'
+                                        required
+                                        data-parsley-required-message='Это поле нужно заполнить').form-control
+
+                        .form-row
+                            p Пожалуйста, загрузите недостающие документы:
+
+                        .form-row
+                            ol
+                                li Идентификационный номер налогоплательщика;
+
+                                li Справка 2 НДФЛ.
+
+                        .form-row
+                            div#fileUploader
+
+                        .form-row.form-row--submit
+                            input(type='submit' value='Сохранить').btn-secondary
+
+
+        include assets/jade/partials/cards-list
+
+    include assets/jade/partials/modal-popups/change-personal-manager
+
+    include assets/jade/partials/modal-popups/change-personal-mananger-accepted

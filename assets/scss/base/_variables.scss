@@ -9,7 +9,7 @@ $container-gutter:          15px;
 $min-width:                 $tablet-breakpoint;
 
 // Colors
-$text-color:                #2f2f2f;
+$text-color:                #2c2c2c;
 $brand-color:               #e21e4b;
 $title-color:               #666666;
 $link-color:                #00529c;
@@ -17,8 +17,14 @@ $link-hover-color:          green;
 $link-accent:               #e21e4b;
 $main-bg-color:             #fff;
 $border-color:              #cccccc;
-$status-positive:           green;
+$border-color-separator:    #dcdedf;
+$status-positive:           #0ca462;
+$status-color:              #8c9196;
 $text-pale:                 gray;
+
+//Background colors
+$bg-light-gray:             #f9f9fa;
+$bg-gray:                   #dcdedf;
 
 // Font Settings
 $base-font-size:            15px;
@@ -38,9 +44,11 @@ $input-height:              54px;
 $input-label-line-height:   $input-height;
 $form-item-padding:         30px;
 $form-control-focus:        #00adeb;
+$bg-button:                 #8c9196;
 
 // Elements decoration
 $border-radius:             4px;
+$border-radius-round:       50%;
 $box-shadow:                0 1px 2px rgba(0,0,0,0.15);
 $transition-time:           .1s;
 
@@ -49,4 +57,4 @@ $content-section-margin:    30px;
 
 $inline-item-spacer:        18px;
 
-$tab-content-padding-h:     20px;
+$tab-content-padding-h:     30px;

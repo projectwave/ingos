@@ -35,6 +35,7 @@
 
   .link-download {
     color: $link-accent;
+    margin-left: 5px;
   }
 }
 
@@ -49,6 +50,14 @@
   text-decoration: none;
   border-radius: $border-radius;
   user-select: none;
+
+  &._large {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  &._r-indent {
+    margin-right: 10px;
+  }
 }
 
 @mixin icon() {

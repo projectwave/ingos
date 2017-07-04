@@ -1,0 +1,86 @@
+.user-questions-list {
+  border-bottom: 1px solid $border-color-separator;
+  margin: 15px $content-section-margin 50px;
+
+  &__item {
+    border-top: 1px solid $border-color-separator;
+    padding: 25px 0;
+  }
+}
+
+.user-question {
+  width: 100%;
+  display: table;
+
+  &__info,
+  &__manager {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__manager {
+    width: 247px;
+  }
+
+  &__info {
+    padding-left: 50px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(../../assets/img/icons/icons_sprite.png) 0 -30px no-repeat;
+      height: 30px;
+      width: 30px;
+      top: 50%;
+      left: 0;
+      margin-top: -15px;
+
+       .is-solved & {
+         background-position: 0 0;
+       }
+    }
+  }
+
+  &__name {
+    color: $text-color;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__status {
+    font-size: $note-font-size;
+    color: $status-color;
+
+    .is-solved & {
+      color: $status-positive;
+    }
+  }
+
+  &__manager {
+    &-icon,
+    &-info {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &-icon {
+      margin-right: 15px;
+        & img {
+          border-radius: $border-radius-round;
+        }
+    }
+
+    &-info {
+      max-width: calc(100% - 50%);
+      font-size: $note-font-size;
+    }
+
+    &-date {
+      color: $status-color;
+    }
+  }
+
+}

@@ -1,17 +1,9 @@
 $chat-message-font-size: 14px;
 
-.chat {
-
-}
-
-.chat__message {
-
-}
-
 .chat-manager {
   display: table;
   width: 100%;
-  padding: 20px $tab-content-padding-h 20px;
+  padding: 20px $tab-content-padding-h 0;
   border-bottom: 1px solid $border-color;
 }
 
@@ -65,7 +57,7 @@ $chat-message-font-size: 14px;
 
 .person-preview__info {
   padding-bottom: 40px;
-  padding-left: 40px;
+  padding-left: 15px;
   display: table-cell;
   vertical-align: top;
   .modal & {
@@ -84,18 +76,23 @@ $chat-message-font-size: 14px;
 .chat-title {
   position: relative;
   top: -22px;
-  left: 140px;
+  left: 115px;
   font-size: 18px;
 }
 
 .chat {
-  padding: 30px 105px;
+  padding: 30px 105px 50px;
 }
 
 .chat__messages-tread {
   height: 310px;
   overflow-x: hidden;
   overflow-y: auto;
+  margin-right: -20px;
+
+  &-container {
+    overflow: hidden;
+  }
 }
 
 .chat__post {
@@ -112,8 +109,9 @@ $chat-message-font-size: 14px;
     position: relative;
     float: right;
     font-size: $chat-message-font-size;
-    top: 10px;
-    right: -81px;
+    color: $text-pale;
+    top: -5px;
+    right: -114px;
   }
   &::after {
     content: "";
@@ -123,7 +121,7 @@ $chat-message-font-size: 14px;
     float: right;
     height: 8px;
     width: 4px;
-    top: 43%;
+    top: 15px;
     right: -4px;
   }
 }
@@ -137,7 +135,7 @@ $chat-message-font-size: 14px;
   background: #f3f4f4;
   position: relative;
   &::before {
-    right: -112px;
+    right: -144px;
   }
   &::after {
     content: "";
@@ -147,7 +145,7 @@ $chat-message-font-size: 14px;
     float: left;
     height: 8px;
     width: 4px;
-    top: 43%;
+    top: 15px;
     left: -4px;
   }
   img {

@@ -2,53 +2,60 @@ extends assets/jade/layouts/global/index
 
 block content
 	.main-content-area
-		.main-content-section
+		.main-content-section.purchase-container
 			.section-title
 				| Открытие индивидуального инвестиционного счета
 
 			include assets/jade/partials/tables/iis-opening-strategy-data
 
+			hr
+
 			form.iis-opening-payment
-				.form-row.form-row--heading
-					.form-item
-						| Выберите способ оплаты:
+				.form-row._large-indent
+					.tab-container__header._small-title
+						.tab-container__header-title
+							strong
+								| Выберите способ оплаты:
 
-					.form-item
-						.switcher-panel.is-active
-							a(href='#payment-bank-card').switcher-panel__item.js-inner-tab-link.is-active
-								| Оплата банковской картой
+						.tab-container__header-actions
+							.switcher-panel.is-active
+								a(href='#payment-bank-card').switcher-panel__item.js-inner-tab-link.is-active
+									| Оплата банковской картой
 
-							a(href='#payment-bank-transfer').switcher-panel__item.js-inner-tab-link
-								| Банковский перевод
+								a(href='#payment-bank-transfer').switcher-panel__item.js-inner-tab-link
+									| Банковский перевод
 
 				.form-row
-					.inner-tab-container#payment-bank-card.is-visible
-						.form-row
-							img(src='' alt='')
+					.inner-tab-container.form-with-notes#payment-bank-card.is-visible
+						.form-row.payment-cards
+							img(src='assets/img/visa.png' alt='')
+							img(src='assets/img/mastercard.png' alt='')
 
 						.form-row
-							.form-item
-								.form-row__title Номер банковской карты
+							label(for='card-code').form-row__title Номер банковской карты
 
-								input(type='text').form-control
+							.form-item.form-item--note._title
+								input(id='card-code', type='text').form-control
 
-							.form-item
-								| Введите 16 или 18 цифр с лицевой стороны Вашей карты.
+							.form-item.form-item--note
+								.form-note
+									| Введите 16 или 18 цифр с лицевой стороны Вашей карты.
 
 						.form-row
-							.form-item
-								.form-row__title Имя и фамилия держателя карты:
+							label(for='whois-card').form-row__title Имя и фамилия держателя карты:
 
-								input(type='text').form-control
+							.form-item.form-item--note._title
+								input(id='whois-card', type='text').form-control
 
-							.form-item
-								| Введите имя и фамилию транслитом, как указано на карте.
+							.form-item.form-item--note
+								.form-note
+									| Введите имя и фамилию транслитом, как указано на карте.
 
 						.form-row
 							.form-item
 								.form-row__title Срок действия карты:
 
-								.form-controls-group
+								.form-controls-group._selects-group._double
 									.form-controls-group__item
 										select
 											option 10
@@ -60,11 +67,18 @@ block content
 											option 2017
 											option 2018
 
-							.form-item
-								| Введите последние три цифры с обратной стороны карты, находящиеся под магнитной полосой.
+						.form-row._large-indent
+							label(for='cv').form-row__title CVV2 / CVC2 код:
+
+							.form-item.form-item--note._title
+								input(id='cv', type='text').form-control._smallest
+
+							.form-item.form-item--note
+								.form-note
+									| Введите последние три цифры с обратной стороны карты, находящиеся под магнитной полосой.
 
 						.form-row
-							input(type='submit' value='Далее').form-submit
+							input(type='submit' value='Далее').form-submit._large
 
 
 					.inner-tab-container#payment-bank-transfer
@@ -75,8 +89,8 @@ block content
 							br
 							| Для приобретения инвестиционных паев Вам необходимо перечислить денежные средства на их оплату.
 
-						.form-row
+						.form-row._l-indent
 							include assets/jade/partials/tables/iis-opening-purpose-of-payment
 
-						.form-row
-							a(href='#').btn-secondary Печать
+						.form-row._l-indent
+							a(href='#').btn-secondary.btn-sm._large Печать

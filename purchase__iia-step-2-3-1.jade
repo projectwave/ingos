@@ -1,0 +1,49 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section.purchase-container
+			.section-title
+				| Открытие индивидуального инвестиционного счета
+
+			include assets/jade/partials/tables/iis-opening-strategy-data
+
+			hr
+
+			form.iis-opening-user-registration-address
+				.form-row._large-indent
+					| Заполните информацию о своем адресе регистрации
+
+				.form-row._large-indent
+					| Если ваши данные не корректны, перейдите на сайт&nbsp;
+					a(href='#')
+						| Госуслуг
+					| &nbsp;для их редактирования.
+
+				.form-row
+					.form-item._label
+						label(for='proxy-address').form-row__title
+							| Адрес регистрации:
+
+					.form-item._after-label
+						textarea(id='proxy-address', placeholder='Введите адрес прописки').form-control
+
+				.form-row
+					.form-item._label
+						label(for='real-address').form-row__title
+							| Адрес проживания:
+
+					.form-item._after-label
+						textarea(id='real-address', placeholder='Введите фактическое место проживания').form-control
+
+				.form-row._large-indent
+					input(type='checkbox' id='form-data-agreement')
+					label(for='form-data-agreement')
+						| Подтверждаю правильность указанных моих персональных данных.
+
+				.form-row
+					a(href='#').btn-bordered._large._r-indent Назад
+
+					a(href='#').form-submit._large Далее
+
+		include assets/jade/partials/cards-list

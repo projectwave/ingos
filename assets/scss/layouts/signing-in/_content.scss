@@ -1,7 +1,26 @@
 .page-wrapper {
-  background: url(../img/company-signature-image.png) no-repeat center 280px $main-bg-color;
+  background: url(../img/bg_body.png) no-repeat center bottom $main-bg-color;
 }
 
 .page-section {
   padding-top: 40px;
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.sign-in-page {
+  .form-sms-verification {
+    width: 380px;
+    margin: 0 auto;
+
+    .form-title {
+      margin-bottom: 22px;
+    }
+
+    .form-row--sms-verification {
+      margin-bottom: 40px;
+    }
+  }
 }

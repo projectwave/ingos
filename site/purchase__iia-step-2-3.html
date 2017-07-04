@@ -24,7 +24,7 @@
               <div class="profile-menu__separator"></div><span class="is-active profile-menu__link profile-menu__link--settings"><a href="#">Профиль<span class="line-break">и настройки</span></a>
                 <div class="dropdown-list">
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Пользователь</a></div>
-                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Правила пользования</a></div>
+                  <div class="dropdown-list__item _active"><a href="#" class="dropdown-list__link">Правила пользования</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Ваш персональный менеджер</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">FAQ</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Настройки</a></div>
@@ -39,37 +39,38 @@
     <main class="page-content">
       <div class="page-content__inner">
         <div class="main-content-area">
-          <div class="main-content-section">
+          <div class="main-content-section purchase-container">
             <div class="section-title">Открытие индивидуального инвестиционного счета</div>
-            <table class="iis-opening-strategy-data">
+            <table class="table-unstyled iis-opening-strategy-data">
               <tr>
                 <td>Выбранная стратегия:</td>
-                <td>Сбалансированная</td>
+                <td><strong>Сбалансированная</strong></td>
               </tr>
               <tr>
                 <td>Сумма инвестирования (руб.):</td>
-                <td>250 000, 00</td>
+                <td><strong>250 000, 00</strong></td>
               </tr>
             </table>
+            <hr>
             <form class="iis-opening-user-registration-address">
-              <div class="form-preamble">Заполните информацию о своем адресе регистрации</div>
+              <div class="form-row _large-indent">Заполните информацию о своем адресе регистрации</div>
               <div class="form-row">
-                <div class="form-item">
-                  <div class="form-row__title">Адрес регистрации:</div>
+                <div class="form-item _label">
+                  <label for="proxy-address" class="form-row__title">Адрес регистрации:</label>
                 </div>
-                <div class="form-item">
-                  <textarea placeholder="Введите адрес прописки" class="form-control"></textarea>
+                <div class="form-item _after-label">
+                  <textarea id="proxy-address" placeholder="Введите адрес прописки" class="form-control"></textarea>
                 </div>
               </div>
               <div class="form-row">
-                <div class="form-item">
-                  <div class="form-row__title">Адрес проживания:</div>
+                <div class="form-item _label">
+                  <label for="real-address" class="form-row__title">Адрес проживания:</label>
                 </div>
-                <div class="form-item">
-                  <textarea placeholder="Введите фактическое место проживания" class="form-control"></textarea>
+                <div class="form-item _after-label">
+                  <textarea id="real-address" placeholder="Введите фактическое место проживания" class="form-control"></textarea>
                 </div>
               </div>
-              <div class="form-row"><a href="#" class="btn-bordered">Назад</a><a href="#" class="form-submit">Далее</a></div>
+              <div class="form-row"><a href="#" class="btn-bordered _large _r-indent">Назад</a><a href="#" class="form-submit _large">Далее</a></div>
             </form>
           </div>
           <div class="cards-list cards-list--call-to-action">
@@ -198,6 +199,7 @@
     <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
     <script type="text/javascript" src="assets/js/vendors/password-strength.js"></script>
     <script type="text/javascript" src="assets/js/vendors/jquery.selectric.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/jquery.uploadfile.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript">
       $(function () {

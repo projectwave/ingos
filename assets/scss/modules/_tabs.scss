@@ -46,6 +46,10 @@
   display: table;
   width: 100%;
   padding: 18px $tab-content-padding-h 15px;
+
+  &._small-title {
+    padding: 0;
+  }
 }
 
 .tab-container__header-title {
@@ -68,6 +72,7 @@
 
 .inner-tab-container {
   display: none;
+  overflow: hidden;
 }
 
 .inner-tab-container.is-visible {

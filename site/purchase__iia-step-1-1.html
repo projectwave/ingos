@@ -24,7 +24,7 @@
               <div class="profile-menu__separator"></div><span class="is-active profile-menu__link profile-menu__link--settings"><a href="#">Профиль<span class="line-break">и настройки</span></a>
                 <div class="dropdown-list">
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Пользователь</a></div>
-                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Правила пользования</a></div>
+                  <div class="dropdown-list__item _active"><a href="#" class="dropdown-list__link">Правила пользования</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Ваш персональный менеджер</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">FAQ</a></div>
                   <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Настройки</a></div>
@@ -39,7 +39,7 @@
     <main class="page-content">
       <div class="page-content__inner">
         <div class="main-content-area">
-          <div class="main-content-section">
+          <div class="main-content-section purchase-container">
             <div class="section-title">Открытие индивидуального инвестиционного счета</div>
             <form class="form-strategy-planning">
               <div class="form-row form-row--risks">
@@ -48,10 +48,44 @@
                     <div class="title">Определите свой риск-портфель&nbsp;<span class="title__note">(не является обязательным)</span></div>
                     <p>Определение оптимального соотношения риска и доходности для размещаемых Вами средств с учетом Вашей склонности к риску, инвестиционных целей, а также возможных планов и сроков</p>
                   </div>
-                  <div class="accordion-panel__body"> Укажите ваш возраст</div>
+                  <div class="accordion-panel__body">
+                    <div class="steps">
+                      <div class="steps__item _done"> Шаг 1</div>
+                      <div class="steps__item"> Шаг 2</div>
+                      <div class="steps__item"> Шаг 3</div>
+                      <div class="steps__item"> Шаг 4</div>
+                      <div class="steps__item"> Шаг 5</div>
+                      <div class="steps__item"> Шаг 6</div>
+                      <div class="steps__item"> Шаг 7</div>
+                      <div class="steps__item"> Шаг 8</div>
+                      <div class="steps__item"> Шаг 9</div>
+                      <div class="steps__item"> Шаг 10</div>
+                      <div class="steps__item"> Шаг 11</div>
+                      <div class="steps__item"> Итог</div>
+                    </div>
+                    <p>Укажите ваш возраст</p>
+                    <div class="form-list">
+                      <div class="form-list__item">
+                        <input type="radio" checked="checked" name="your-old" id="your-old-1">
+                        <label for="your-old-1">Менее 25 лет</label>
+                      </div>
+                      <div class="form-list__item">
+                        <input type="radio" name="your-old" id="your-old-2">
+                        <label for="your-old-2">26–35 лет</label>
+                      </div>
+                      <div class="form-list__item">
+                        <input type="radio" name="your-old" id="your-old-3">
+                        <label for="your-old-3">36–50 лет</label>
+                      </div>
+                      <div class="form-list__item">
+                        <input type="radio" name="your-old" id="your-old-4">
+                        <label for="your-old-4">Более 50 лет</label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="form-row form-row--contains-selects">
+              <div class="form-row _large-indent form-row--contains-selects">
                 <div class="form-fieldset">
                   <div class="form-row">
                     <label for="fsp-strategy-select" class="form-row__title">Выберите стратегию:</label>
@@ -67,10 +101,10 @@
                 </div>
                 <div class="form-fieldset">
                   <p>Рекомендовано при инвестировании от 250 000&nbsp;руб. в&nbsp;год. При использовании данной стратегии, лучше воспользоваться освобождением от налога на полученный доход.</p>
-                  <p class="form-outgoing-link"><a href="#">Подробнее о стратегиях</a></p>
+                  <p class="form-outgoing-link"><a href="#" class="_red-link">Подробнее о стратегиях</a></p>
                 </div>
               </div>
-              <div class="form-row">
+              <div class="form-row _large-indent">
                 <div class="form-list">
                   <div class="form-list__item">
                     <input type="radio" checked="checked" name="iia-opening-agreement-status" id="iia-opening-agreement-status-1">
@@ -83,7 +117,7 @@
                 </div>
               </div>
               <div class="form-row">
-                <input type="submit" value="Далее" class="form-submit">
+                <input type="submit" value="Далее" class="form-submit _large">
               </div>
             </form>
           </div>
@@ -190,6 +224,7 @@
     <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
     <script type="text/javascript" src="assets/js/vendors/password-strength.js"></script>
     <script type="text/javascript" src="assets/js/vendors/jquery.selectric.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/jquery.uploadfile.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript">
       $(function () {

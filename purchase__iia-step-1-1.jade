@@ -2,7 +2,7 @@ extends assets/jade/layouts/global/index
 
 block content
 	.main-content-area
-		.main-content-section
+		.main-content-section.purchase-container
 			.section-title
 				| Открытие индивидуального инвестиционного счета
 
@@ -17,9 +17,48 @@ block content
 							p Определение оптимального соотношения риска и доходности для размещаемых Вами средств с учетом Вашей склонности к риску, инвестиционных целей, а также возможных планов и сроков
 
 						.accordion-panel__body
-							|  Укажите ваш возраст
+							.steps
+								.steps__item._done  Шаг 1
+								.steps__item  Шаг 2
+								.steps__item  Шаг 3
+								.steps__item  Шаг 4
+								.steps__item  Шаг 5
+								.steps__item  Шаг 6
+								.steps__item  Шаг 7
+								.steps__item  Шаг 8
+								.steps__item  Шаг 9
+								.steps__item  Шаг 10
+								.steps__item  Шаг 11
+								.steps__item  Итог
 
-				.form-row.form-row--contains-selects
+							p Укажите ваш возраст
+
+							.form-list
+								.form-list__item
+									input(type='radio' checked='checked' name='your-old' id='your-old-1')
+
+									label(for='your-old-1')
+										| Менее 25 лет
+
+								.form-list__item
+									input(type='radio' name='your-old' id='your-old-2')
+
+									label(for='your-old-2')
+										| 26–35 лет
+
+								.form-list__item
+									input(type='radio' name='your-old' id='your-old-3')
+
+									label(for='your-old-3')
+										| 36–50 лет
+
+								.form-list__item
+									input(type='radio' name='your-old' id='your-old-4')
+
+									label(for='your-old-4')
+										| Более 50 лет
+
+				.form-row._large-indent.form-row--contains-selects
 					.form-fieldset
 						.form-row
 							label(for='fsp-strategy-select').form-row__title Выберите стратегию:
@@ -38,9 +77,9 @@ block content
 						p Рекомендовано при инвестировании от 250 000&nbsp;руб. в&nbsp;год. При использовании данной стратегии, лучше воспользоваться освобождением от налога на полученный доход.
 
 						p.form-outgoing-link
-							a(href='#') Подробнее о стратегиях
+							a(href='#')._red-link Подробнее о стратегиях
 
-				.form-row
+				.form-row._large-indent
 					.form-list
 						.form-list__item
 							input(type='radio' checked='checked' name='iia-opening-agreement-status' id='iia-opening-agreement-status-1')
@@ -55,4 +94,4 @@ block content
 								| На дату подачи настоящего заявления у меня действует договор на ведение индивидуального инвестиционного счета.
 
 				.form-row
-					input(type='submit' value='Далее').form-submit
+					input(type='submit' value='Далее').form-submit._large

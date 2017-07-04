@@ -1,0 +1,56 @@
+.steps {
+  overflow: hidden;
+  padding: 20px 0 15px;
+
+  &__item {
+    width: 78px;
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid $border-color-separator;
+    border-radius: $border-radius;
+    padding: 9px 0 8px;
+    margin: 0 20px 10px 0;
+    float: left;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(../../assets/img/icons/steps.png) 0 0 no-repeat;
+      height: 11px;
+      width: 22px;
+      top: 50%;
+      right: -22px;
+      margin-top: -6px;
+      z-index: 1;
+    }
+    &:last-child,
+    &:nth-child(7n+7){
+      &::after {
+        display: none;
+      }
+    }
+
+    &._done {
+      background: $bg-button;
+      border-color: $bg-button;
+      color: #fff;
+
+      &::after {
+        background-position: -22px 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        background: url(../../assets/img/icons/steps.png) -44px 0 no-repeat;
+        height: 11px;
+        width: 22px;
+        top: 50%;
+        left: -22px;
+        margin-top: -6px;
+        z-index: 1;
+      }
+    }
+  }
+}

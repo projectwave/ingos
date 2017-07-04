@@ -1,0 +1,134 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section.purchase-container
+			.section-title
+				| Открытие индивидуального инвестиционного счета
+
+			include assets/jade/partials/tables/iis-opening-strategy-data
+
+			hr
+
+			form.iis-opening-user-data
+				.form-row
+					| Просим Вас заполнить персональные данные
+					br
+					| для оформления заявки на присоединение к договору ДУ ИИС.
+
+				.form-row._large-indent
+					| Если ваши данные не корректны, перейдите на сайт&nbsp;
+					a(href='#')Госуслуг
+					| &nbsp;для их редактирования.
+
+				.form-row
+					.form-item._label
+						.form-row__title
+							| Фамилия&nbsp;
+							span.compulsory
+							| :
+
+					.form-item._after-label
+						input(type='text' value='Ковалев').form-control._small
+
+				.form-row
+					.form-item._label
+						.form-row__title
+							| Имя&nbsp;
+							span.compulsory
+							| :
+
+					.form-item._after-label
+						input(type='text' value='Сергей').form-control._small
+
+				.form-row
+					.form-item._label
+						.form-row__title
+							| Отчество (при наличии):
+
+					.form-item._after-label
+						input(type='text' placeholder='Введите ваше отчество').form-control._small
+
+				.form-row
+					.form-item._label
+						.form-row__title
+							| Email
+							span.compulsory
+							| :
+
+					.form-item._after-label
+						input(type='email' placeholder='Введите ваш email').form-control._small
+
+				.form-row
+					.form-item._label
+						.form-row__title
+							| Номер мобильного телефона
+							span.compulsory
+							| :
+
+					.form-item._after-label
+						input(type='text' placeholder='Введите ваш номер телефона').form-control._small
+
+				.form-row
+					.form-item._label
+						.form-row__title
+							| Серия и № паспорта
+							span.compulsory
+							| :
+
+					.form-item._after-label
+						input(type='text' placeholder='Введите серию и номер паспорта').form-control._small
+
+				.form-row
+					.form-item._label
+						.form-row__title
+							| Кем выдан паспорт
+							span.compulsory
+							| :
+
+					.form-item._after-label
+						textarea(placeholder='Введите так, как это указано в паспорте').form-control
+
+				.form-row
+					.form-item._label
+						.form-row__title
+							| Дата выдачи
+							span.compulsory
+							| :
+
+					.form-item._after-label
+						.form-controls-group._triple._selects-group
+							.form-controls-group__item
+								select
+									option 1
+									option 2
+									option 3
+									option 4
+									option 21
+
+							.form-controls-group__item
+								select
+									option 05
+									option 06
+									option 07
+									option 08
+									option 09
+
+							.form-controls-group__item
+								select
+									option 1999
+									option 1998
+									option 1997
+
+				.form-row._large-indent
+					.form-item._label
+						.form-row__title
+							| Код подразделения:
+
+					.form-item._after-label
+						input(type='text' placeholder='___-___').form-control._smallest
+
+				.form-row
+					input(type='submit' value='Далее').form-submit._large
+
+		include assets/jade/partials/cards-list
