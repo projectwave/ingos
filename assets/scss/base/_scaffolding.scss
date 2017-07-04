@@ -17,6 +17,11 @@ a {
   &._red-link{
     color: $link-accent;
   }
+
+  &:hover {
+    text-decoration: none;
+  }
+
 }
 
 hr {

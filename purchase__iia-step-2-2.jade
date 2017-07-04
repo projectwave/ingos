@@ -10,7 +10,7 @@ block content
 
 			hr
 
-			form.iis-opening-user-data
+			form(method='' action='').iis-opening-user-data.js-form-validate
 				.form-row._large-indent
 					| Просим Вас заполнить персональные данные
 					br
@@ -24,7 +24,10 @@ block content
 							| :
 
 					.form-item._after-label
-						input(type='text' value='Ковалев').form-control._small
+						input(type='text'
+						required
+						data-parsley-required-message='Это поле нужно заполнить'
+						value='Ковалев').form-control._small
 
 				.form-row
 					.form-item._label
@@ -34,7 +37,10 @@ block content
 							| :
 
 					.form-item._after-label
-						input(type='text' value='Сергей').form-control._small
+						input(type='text'
+						required
+						data-parsley-required-message='Это поле нужно заполнить'
+						value='Сергей').form-control._small
 
 				.form-row
 					.form-item._label
@@ -52,7 +58,10 @@ block content
 							| :
 
 					.form-item._after-label
-						input(type='email' placeholder='Введите ваш email').form-control._small
+						input(type='email'
+						required
+						data-parsley-required-message='Это поле нужно заполнить'
+						placeholder='Введите ваш email').form-control._small
 
 				.form-row
 					.form-item._label
@@ -62,7 +71,10 @@ block content
 							| :
 
 					.form-item._after-label
-						input(type='text' placeholder='Введите ваш номер телефона').form-control._small
+						input(type='text'
+						required
+						data-parsley-required-message='Это поле нужно заполнить'
+						placeholder='Введите ваш номер телефона').form-control._small
 
 				.form-row
 					.form-item._label
@@ -121,7 +133,10 @@ block content
 							| Код подразделения:
 
 					.form-item._after-label
-						input(type='text' placeholder='___-___').form-control._smallest
+						input(type='text'
+						required
+						data-parsley-required-message='Это поле нужно заполнить'
+						placeholder='___-___').form-control._smallest
 
 				.form-row
 					input(type='submit' value='Далее').form-submit._large

@@ -52,14 +52,14 @@
               </tr>
             </table>
             <hr>
-            <form class="iis-opening-user-data">
+            <form method="" action="" class="iis-opening-user-data js-form-validate">
               <div class="form-row _large-indent">Просим Вас заполнить персональные данные<br>для оформления заявки на присоединение к договору ДУ ИИС.</div>
               <div class="form-row">
                 <div class="form-item _label">
                   <div class="form-row__title">Фамилия&nbsp;<span class="compulsory"></span>:</div>
                 </div>
                 <div class="form-item _after-label">
-                  <input type="text" value="Ковалев" class="form-control _small">
+                  <input type="text" required data-parsley-required-message="Это поле нужно заполнить" value="Ковалев" class="form-control _small">
                 </div>
               </div>
               <div class="form-row">
@@ -67,7 +67,7 @@
                   <div class="form-row__title">Имя&nbsp;<span class="compulsory"></span>:</div>
                 </div>
                 <div class="form-item _after-label">
-                  <input type="text" value="Сергей" class="form-control _small">
+                  <input type="text" required data-parsley-required-message="Это поле нужно заполнить" value="Сергей" class="form-control _small">
                 </div>
               </div>
               <div class="form-row">
@@ -83,7 +83,7 @@
                   <div class="form-row__title">Email<span class="compulsory"></span>:</div>
                 </div>
                 <div class="form-item _after-label">
-                  <input type="email" placeholder="Введите ваш email" class="form-control _small">
+                  <input type="email" required data-parsley-required-message="Это поле нужно заполнить" placeholder="Введите ваш email" class="form-control _small">
                 </div>
               </div>
               <div class="form-row">
@@ -91,7 +91,7 @@
                   <div class="form-row__title">Номер мобильного телефона<span class="compulsory"></span>:</div>
                 </div>
                 <div class="form-item _after-label">
-                  <input type="text" placeholder="Введите ваш номер телефона" class="form-control _small">
+                  <input type="text" required data-parsley-required-message="Это поле нужно заполнить" placeholder="Введите ваш номер телефона" class="form-control _small">
                 </div>
               </div>
               <div class="form-row">
@@ -149,7 +149,7 @@
                   <div class="form-row__title">Код подразделения:</div>
                 </div>
                 <div class="form-item _after-label">
-                  <input type="text" placeholder="___-___" class="form-control _smallest">
+                  <input type="text" required data-parsley-required-message="Это поле нужно заполнить" placeholder="___-___" class="form-control _smallest">
                 </div>
               </div>
               <div class="form-row">

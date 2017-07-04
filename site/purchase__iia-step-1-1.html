@@ -41,7 +41,7 @@
         <div class="main-content-area">
           <div class="main-content-section purchase-container">
             <div class="section-title">Открытие индивидуального инвестиционного счета</div>
-            <form class="form-strategy-planning">
+            <form class="form-strategy-planning js-form-validate">
               <div class="form-row form-row--risks">
                 <div class="accordion-panel">
                   <div class="accordion-panel__heading js-toggle-next-el">
@@ -96,7 +96,7 @@
                   </div>
                   <div class="form-row">
                     <div class="form-row__title">Укажите сумму (руб.):</div>
-                    <input type="text" class="form-control">
+                    <input type="text" required data-parsley-required-message="Это поле нужно заполнить" class="form-control">
                   </div>
                 </div>
                 <div class="form-fieldset">

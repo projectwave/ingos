@@ -10,7 +10,7 @@ block content
 
 			hr
 
-			form.iis-opening-payment
+			form(method='' action='').iis-opening-payment.js-form-validate
 				.form-row._large-indent
 					.tab-container__header._small-title
 						.tab-container__header-title
@@ -35,7 +35,10 @@ block content
 							label(for='card-code').form-row__title Номер банковской карты
 
 							.form-item.form-item--note._title
-								input(id='card-code', type='text').form-control
+								input(type='text'
+								required
+								data-parsley-required-message='Это поле нужно заполнить'
+								id='card-code').form-control
 
 							.form-item.form-item--note
 								.form-note
@@ -45,7 +48,10 @@ block content
 							label(for='whois-card').form-row__title Имя и фамилия держателя карты:
 
 							.form-item.form-item--note._title
-								input(id='whois-card', type='text').form-control
+								input(type='text'
+								required
+								data-parsley-required-message='Это поле нужно заполнить'
+								id='whois-card').form-control
 
 							.form-item.form-item--note
 								.form-note

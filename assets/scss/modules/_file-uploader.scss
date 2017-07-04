@@ -89,6 +89,19 @@
   font-size: 13px;
   padding: 10px 20px;
   margin-top: 13px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #a1a7ad;
+  }
+  &:focus {
+    outline: none;
+    background-color: #6e767d;
+  }
+
+  input {
+    cursor: pointer;
+  }
 }
 .custom-drag-and-drop__text {
   display: table-header-group;

@@ -6,7 +6,7 @@ block content
 			.section-title
 				| Открытие индивидуального инвестиционного счета
 
-			form.form-strategy-planning
+			form.form-strategy-planning.js-form-validate
 				.form-row.form-row--risks
 					.accordion-panel
 						.accordion-panel__heading.js-toggle-next-el
@@ -71,7 +71,9 @@ block content
 						.form-row
 							.form-row__title Укажите сумму (руб.):
 
-							input(type='text').form-control
+							input(type='text'
+							required
+							data-parsley-required-message='Это поле нужно заполнить').form-control
 
 					.form-fieldset
 						p Рекомендовано при инвестировании от 250 000&nbsp;руб. в&nbsp;год. При использовании данной стратегии, лучше воспользоваться освобождением от налога на полученный доход.

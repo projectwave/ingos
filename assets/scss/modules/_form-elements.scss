@@ -110,6 +110,10 @@ $input-font-size: 15px;
   display: inline-block;
   padding-bottom: 3px;
   padding-left: 3px;
+
+  &._block {
+    display: block;
+  }
 }
 
 .form-item--number {

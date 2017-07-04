@@ -52,7 +52,7 @@
               </tr>
             </table>
             <hr>
-            <form class="iis-opening-payment">
+            <form method="" action="" class="iis-opening-payment js-form-validate">
               <div class="form-row _large-indent">
                 <div class="tab-container__header _small-title">
                   <div class="tab-container__header-title"><strong>Выберите способ оплаты:</strong></div>
@@ -67,7 +67,7 @@
                   <div class="form-row">
                     <label for="card-code" class="form-row__title">Номер банковской карты</label>
                     <div class="form-item form-item--note _title">
-                      <input id="card-code" type="text" class="form-control">
+                      <input type="text" required data-parsley-required-message="Это поле нужно заполнить" id="card-code" class="form-control">
                     </div>
                     <div class="form-item form-item--note">
                       <div class="form-note">Введите 16 или 18 цифр с лицевой стороны Вашей карты.</div>
@@ -76,7 +76,7 @@
                   <div class="form-row">
                     <label for="whois-card" class="form-row__title">Имя и фамилия держателя карты:</label>
                     <div class="form-item form-item--note _title">
-                      <input id="whois-card" type="text" class="form-control">
+                      <input type="text" required data-parsley-required-message="Это поле нужно заполнить" id="whois-card" class="form-control">
                     </div>
                     <div class="form-item form-item--note">
                       <div class="form-note">Введите имя и фамилию транслитом, как указано на карте.</div>

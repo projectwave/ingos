@@ -17,6 +17,17 @@
   border: 2px solid $brand-color;
   padding-top: 17px;
   padding-bottom: 17px;
+  &:hover {
+    background-color: #f92a51;
+    border-color: #f92a51;
+    color: #fff;
+  }
+  &:focus {
+    outline: none;
+    background-color: #c21244;
+    border-color: #c21244;
+    color: #fff;
+  }
 }
 
 .btn-secondary,
@@ -24,6 +35,13 @@
   @include button();
   color: white;
   background: $bg-button;
+  &:hover {
+    background-color: #a1a7ad;
+  }
+  &:focus {
+    outline: none;
+    background-color: #6e767d;
+  }
 }
 
 .btn-sm {
