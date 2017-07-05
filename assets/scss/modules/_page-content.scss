@@ -306,3 +306,28 @@ $adventage-bottom-margin: 35px;
     vertical-align: middle;
   }
 }
+
+.about-demo {
+  @include clearfix();
+
+  &__info {
+    display: block;
+    overflow: hidden;
+    padding-top: 10px;
+
+    p {
+      line-height: 20px;
+      margin-bottom: 25px;
+
+      &.accent-note {
+        font-size: 17px;
+        font-weight: bold;
+        padding-top: 15px;
+      }
+    }
+  }
+  &__image {
+    margin-left: 40px;
+    float: right;
+  }
+}

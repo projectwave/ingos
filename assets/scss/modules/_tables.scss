@@ -73,6 +73,14 @@ $table-font-size: 13px;
     }
   }
 }
+.table-center {
+  tr td,
+  tr th {
+    &:first-child {
+      text-align: center;
+    }
+  }
+}
 
 .price-inline__dot-value--percent {
   font-size: 13px;
@@ -408,8 +416,10 @@ $table-font-size: 13px;
 
 .table--unit-trust-bids {
   table-layout: fixed;
+  border-collapse: inherit;
   td {
     text-align: center;
+    border-top: 0;
     &:last-child {
       position: relative;
     }
@@ -422,6 +432,9 @@ $table-font-size: 13px;
         width: 230px;
       }
     }
+  }
+  ._no-border {
+    border-bottom: none;
   }
 }
 

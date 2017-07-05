@@ -21,6 +21,10 @@
 .section-header + .links-list{
   margin-top: $content-section-margin;
   margin-bottom: 15px;
+
+  &._single {
+    margin-bottom: 0;
+  }
 }
 
 .section-subtitle {

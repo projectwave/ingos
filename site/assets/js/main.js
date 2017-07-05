@@ -187,6 +187,86 @@ var commonActions = (function (document, $) {
         });
     }
 
+    function _highCharts(){
+        Highcharts.setOptions({
+            lang: {
+                loading: 'Загрузка...',
+                months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                weekdays: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+                shortMonths: ['ЯНВ', 'ФЕВ', 'МАРТ', 'АПР', 'МАЙ', 'ИЮН', 'ИЮЛ', 'АВГ', 'СЕНТ', 'ОКТ', 'НОЯБ', 'ДЕК'],
+                exportButtonTitle: "Экспорт",
+                printButtonTitle: "Печать",
+                rangeSelectorFrom: "С",
+                rangeSelectorTo: "По",
+                rangeSelectorZoom: "Период",
+                downloadPNG: 'Скачать PNG',
+                downloadJPEG: 'Скачать JPEG',
+                downloadPDF: 'Скачать PDF',
+                downloadSVG: 'Скачать SVG',
+                printChart: 'Напечатать график'
+            }
+        });
+
+        Highcharts.chart('unit-trust-detalization', {
+            chart: {
+                type: 'spline',
+                spacingLeft: 0
+            },
+            title: false,
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    day: '%d <br> %b'
+                },
+                tickWidth: 0,
+                labels: {
+                    overflow: 'justify',
+                    style: {
+                        color: '#8c9196'
+                    },
+                    y: 25
+                }
+            },
+            yAxis: {
+                title: false,
+                tickWidth: 0,
+                lineWidth: 1,
+                minorGridLineWidth: 0,
+                gridLineWidth: 0,
+                alternateGridColor: null,
+                labels: {
+                    style: {
+                        color: '#8c9196'
+                    }
+                }
+            },
+            tooltip: {
+                valueSuffix: '$'
+            },
+            plotOptions: {
+                spline: {
+                    lineWidth: 3,
+                    marker: {
+                        enabled: false
+                    },
+                    pointStart: Date.UTC(2015, 4, 15),
+                    pointInterval: 24 * 3600 * 1000 // one day
+                }
+            },
+            series: [{
+                name: 'Опиф',
+                color: '#00adeb',
+                data: [29.9, 71.5, 106.4, 129.2, 144.0]
+            }, {
+                name: 'Индекс облигаций ММВБ',
+                color: '#ff6961',
+                data: [9.9, 1.5, 16.4, 29.2, 14.0]
+            }],
+            legend: {align: 'top', verticalAlign: 'top', x: 65, y: -10, borderWidth: 0}
+
+        });
+    }
+
     function _onDocumentClick() {
 
     }
@@ -267,6 +347,7 @@ var commonActions = (function (document, $) {
 
         _showSmsVerification();
 
+        _highCharts();
 
     }
 

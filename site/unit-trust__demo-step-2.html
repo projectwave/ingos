@@ -41,8 +41,30 @@
         <div class="main-content-area">
           <div class="main-content-section">
             <div class="section-title">Открытие Демо-ПИФ</div>
-            <form>
-              <!--include assets/jade/partials/forms/sms-verification-->
+            <form action="" method="">
+              <div class="form-sms-verification _left-align">
+                <div class="form-title">На ваш мобильный телефон +7 (937) xxx-xx-19 выслано SMS-сообщение с кодом.</div>
+                <div class="form-row form-row--sms-verification">
+                  <div class="form-row--sms-verification__item">
+                    <div class="form-row--sms-verification__item-password">
+                      <label for="verification-sms-code" class="form-row__title">Введите код:</label>
+                      <input type="password" required placeholder="•••••" id="verification-sms-code" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-row--sms-verification__item">
+                    <div class="form-item form-item--submit">
+                      <label class="form-row__title _block">&nbsp;</label>
+                      <input type="submit" value="Отправить" class="form-submit">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row form-row--verification-troubleshooting">
+                  <div class="links-group">
+                    <div class="links-group__item text-right"><a href="#" class="tooltip-link">Отправить еще раз</a></div>
+                    <div class="links-group__item text-left"><a href="#" class="tooltip-link">СМС не приходит?</a></div>
+                  </div>
+                </div>
+              </div>
             </form>
           </div>
           <div class="cards-list cards-list--call-to-action">
@@ -167,6 +189,7 @@
     </footer>
     <!--include ../../partials/modal-popups/-->
     <script type="text/javascript" src="assets/js/libs/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/highcharts.js"></script>
     <script type="text/javascript" src="assets/js/vendors/parsley.js"></script>
     <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
     <script type="text/javascript" src="assets/js/vendors/password-strength.js"></script>

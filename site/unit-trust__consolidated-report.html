@@ -40,61 +40,80 @@
       <div class="page-content__inner">
         <div class="main-content-area">
           <div class="main-content-section">
-            <div class="filter">
-              <div class="filter__column">
+            <div class="section-header">
+              <div class="section-header__column">Дата оценки</div>
+              <div class="section-header__column">
                 <div class="period-range">
-                  <div class="period-range__title">Период</div>
-                  <div class="period-range__input">
-                    <div class="data-range-input">
-                      <div class="data-range-input__value">
-                        1 сентября 2016
-                        -
-                        31 сентября 2016
-                      </div>
-                      <div class="data-range-input__icon"></div>
-                    </div>
+                  <div class="data-range-input">
+                    <div class="data-range-input__value">16 октября 2016</div>
+                    <div class="data-range-input__icon"></div>
                   </div>
                 </div>
-              </div>
-              <div class="filter__column">
-                <div class="switcher-panel"><a href="#" class="switcher-panel__item">День</a><a href="#" class="switcher-panel__item">Неделя</a><a href="#" class="switcher-panel__item">Месяц</a><a href="#" class="switcher-panel__item">Квартал</a><a href="#" class="switcher-panel__item">Год</a></div>
               </div>
             </div>
             <div class="table-heading">
               <div class="table-heading__title">
-                <div class="section-title">Операции по ПИФ-ам</div>
+                <div class="section-title">Свободный отчет</div>
               </div>
               <div class="table-heading__actions">
                 <div class="fullscreen-link">таблицу на весь экран</div>
               </div>
             </div>
-            <table class="table">
-              <thead>
+            <div class="table-wrapper">
+              <table class="table table--unit-trust-bids table-center">
                 <tr>
-                  <th>Дата проведения операции</th>
-                  <th>Тип операции</th>
-                  <th>Количество<span class="line-break">паев, шт.</span></th>
-                  <th>Цена одного<span class="line-break">пая, руб.</span></th>
-                  <th>Сумма&nbsp;операции,<span class="line-break"> руб.</span></th>
-                  <th>Фонд на паи которого произведен обмен</th>
-                  <th>Количество паев при&nbsp;операции обмена</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td colspan="7" class="table-row-title">Наименование ПИФа:&nbsp;<strong>«Ингосстрах. Облигации»</strong></td>
+                  <th>Количество<span class="line-break">купленных</span><span class="line-break">паев, шт.</span></th>
+                  <th>Количество<span class="line-break">проданных</span><span class="line-break">паев, шт.</span></th>
+                  <th>Садьдо шт.</th>
+                  <th>Поступило<span class="line-break">в ПИФ, руб.</span></th>
+                  <th>Стоимость<span class="line-break">погашенных</span><span class="line-break">паев, руб.</span></th>
+                  <th>Текущая стоимость оставшихся паев, руб.</th>
+                  <th>Сальдо, руб.</th>
                 </tr>
                 <tr>
-                  <td>10.08.2014</td>
-                  <td>Приобретение</td>
-                  <td><span class="price-inline">177<span class="price-inline__dot-value">6593382</span></span></td>
-                  <td><span class="price-inline">1 125<span class="price-inline__dot-value">75</span></span></td>
-                  <td><span class="price-inline">-200 000<span class="price-inline__dot-value">00</span></span></td>
-                  <td></td>
-                  <td></td>
+                  <td colspan="7" class="_no-border"><strong>Паевый инвестиционный фонд: «Ингосстрах. Еврооблигации»</strong></td>
                 </tr>
-              </tbody>
-            </table>
+                <tr>
+                  <td>344.4756487</td>
+                  <td>-250<span class="price-inline__dot-value">0000000</span></td>
+                  <td>94<span class="price-inline__dot-value">4756487</span></td>
+                  <td>-400 000<span class="price-inline__dot-value">00</span></td>
+                  <td>281 723<span class="price-inline__dot-value">24</span></td>
+                  <td>-167 835<span class="price-inline__dot-value">99</span></td>
+                  <td>-286 112<span class="price-inline__dot-value">75</span></td>
+                </tr>
+                <tr>
+                  <td colspan="7" class="_no-border"><strong>Паевый инвестиционный фонд: «Ингосстрах. Денежный рынок»</strong></td>
+                </tr>
+                <tr>
+                  <td>344.4756487</td>
+                  <td>-250<span class="price-inline__dot-value">0000000</span></td>
+                  <td>94<span class="price-inline__dot-value">4756487</span></td>
+                  <td>-400 000<span class="price-inline__dot-value">00</span></td>
+                  <td>281 723<span class="price-inline__dot-value">24</span></td>
+                  <td>-167 835<span class="price-inline__dot-value">99</span></td>
+                  <td>-286 112<span class="price-inline__dot-value">75</span></td>
+                </tr>
+                <tr>
+                  <td colspan="7" class="_no-border"><strong>Паевый инвестиционный фонд: «Ингосстрах. Товарно-сырьевой рынок»</strong></td>
+                </tr>
+                <tr>
+                  <td>344.4756487</td>
+                  <td>-250<span class="price-inline__dot-value">0000000</span></td>
+                  <td>94<span class="price-inline__dot-value">4756487</span></td>
+                  <td>-400 000<span class="price-inline__dot-value">00</span></td>
+                  <td>281 723<span class="price-inline__dot-value">24</span></td>
+                  <td>-167 835<span class="price-inline__dot-value">99</span></td>
+                  <td>-286 112<span class="price-inline__dot-value">75</span></td>
+                </tr>
+              </table>
+            </div>
+            <div class="download-area">
+              <div class="download-file-list">
+                <div class="download-file-list__item"><span class="action-link action-link--get-pdf">Скачать в PDF формате</span></div>
+                <div class="download-file-list__item"><span class="action-link action-link--get-excel">Скачать в формате Excel</span></div>
+              </div>
+            </div>
           </div>
           <div class="cards-list cards-list--call-to-action">
             <div class="cards-list__item">
@@ -218,6 +237,7 @@
     </footer>
     <!--include ../../partials/modal-popups/-->
     <script type="text/javascript" src="assets/js/libs/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/highcharts.js"></script>
     <script type="text/javascript" src="assets/js/vendors/parsley.js"></script>
     <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
     <script type="text/javascript" src="assets/js/vendors/password-strength.js"></script>
@@ -230,5 +250,6 @@
       })
       
     </script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
   </body>
 </html>
