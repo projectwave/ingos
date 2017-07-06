@@ -210,6 +210,10 @@
     }
   }
 
+  &._large-indent {
+    margin-bottom: $content-section-margin + 15px;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -217,12 +221,18 @@
 
 .download-file-list {
   text-align: right;
+  @include clearfix();
 }
 
 .download-file-list__item {
   display: inline-block;
   vertical-align: top;
   margin-left: 22px;
+
+  &._button {
+    margin: -11px 0 0;
+    float: left;
+  }
 }
 
 .detailed-info {

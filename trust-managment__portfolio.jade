@@ -1,0 +1,100 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+
+			.tabs._inside-main-content
+				.tabs__nav
+					a(href='#global-porfolio').tabs__nav-item.is-active
+						| Общий портфель
+
+					a(href='#porfolio-one').tabs__nav-item
+						| Портфель по договору №111
+
+					a(href='#porfolio-two').tabs__nav-item
+						| Портфель по договору №112
+
+				.tab-container#global-porfolio.is-visible
+					.tab-container__section-inner
+
+						.section-header
+							.section-header__column
+								| Дата оценки
+
+							.section-header__column
+								.period-range
+									.data-range-input
+										.data-range-input__value
+											| 16 октября 2016
+
+										.data-range-input__icon
+
+						.section-title._no-b-indent Инвестиционный портфель ДУ
+
+						.chart-pie
+							.chart-pie__container#trust-managment-portfolio
+
+							.chart-pie__info-container
+								.chart-pie__info._title
+									.chart-pie__info-title
+										| Общая оценка:
+									.chart-pie__info-value
+										| 1 512 980,06 руб
+
+								.chart-pie__info._with-percents
+									.chart-pie__info-title
+										| 86,78%
+										a(href='#')
+											| Облигации
+
+									.chart-pie__info-value
+										| 903 174,44 руб
+									.chart-pie__percents
+										.chart-pie__percents-value(style="background-color: #ff6961; width: 86.78%;")
+
+								.chart-pie__info._with-percents
+									.chart-pie__info-title
+										| 12,21%
+										a(href='#')
+											| Прочие вложения
+
+									.chart-pie__info-value
+										| 484 525,04 руб
+									.chart-pie__percents
+										.chart-pie__percents-value(style="background-color: #b6e329; width: 12.21%;")
+
+								.chart-pie__info._with-percents
+									.chart-pie__info-title
+										| 1,01%
+										a(href='#')
+											| Денежные средства у брокера
+
+									.chart-pie__info-value
+										| 125 280,58 руб
+									.chart-pie__percents
+										.chart-pie__percents-value(style="background-color: #1b7cd0; width: 1.01%;")
+
+						.table-heading
+							.table-heading__actions
+								.fullscreen-link
+									| таблицу на весь экран
+
+						.table-wrapper
+							include assets/jade/partials/tables/management-structure
+
+						.download-area
+							include assets/jade/partials/download-file-with-list
+
+				.tab-container#porfolio-one
+					.tab-container__section-inner
+						.section-title Портфель по договору 1
+
+				.tab-container#porfolio-two
+					.tab-container__section-inner
+						.section-title Портфель по договору 2
+
+		include assets/jade/partials/cards-list
+
+block body_end
+	script(type="text/javascript" src="assets/js/script.js")

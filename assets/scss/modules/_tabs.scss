@@ -1,6 +1,13 @@
 .tabs {
   @include section-decorated();
   @include clearfix();
+
+  &._inside-main-content {
+    margin: -30px -30px -65px;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
 }
 
 .tabs__nav {

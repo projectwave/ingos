@@ -40,69 +40,104 @@
       <div class="page-content__inner">
         <div class="main-content-area">
           <div class="main-content-section">
-            <div class="filter">
-              <div class="filter__column">
-                <div class="period-range">
-                  <div class="period-range__title">Период</div>
-                  <div class="period-range__input">
-                    <div class="data-range-input">
-                      <div class="data-range-input__value">
-                        1 сентября 2016
-                        -
-                        31 сентября 2016
+            <div class="tabs _inside-main-content">
+              <div class="tabs__nav"><a href="#briefcase" class="tabs__nav-item is-active">Общий портфель</a><a href="#briefcase_111" class="tabs__nav-item">Портфель по договору №111</a><a href="#briefcase_112" class="tabs__nav-item">Портфель по договору №112</a></div>
+              <div id="briefcase" class="tab-container is-visible">
+                <div class="tab-container__section-inner">
+                  <div class="filter">
+                    <div class="filter__column">
+                      <div class="period-range">
+                        <div class="period-range__title">Период</div>
+                        <div class="period-range__input">
+                          <div class="data-range-input">
+                            <div class="data-range-input__value">
+                              1 сентября 2016
+                              -
+                              31 сентября 2016
+                            </div>
+                            <div class="data-range-input__icon"></div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="data-range-input__icon"></div>
+                    </div>
+                    <div class="filter__column">
+                      <div class="switcher-panel"><a href="#" class="switcher-panel__item">День</a><a href="#" class="switcher-panel__item is-active">Неделя</a><a href="#" class="switcher-panel__item">Месяц</a><a href="#" class="switcher-panel__item">Квартал</a><a href="#" class="switcher-panel__item">Год</a></div>
+                    </div>
+                  </div>
+                  <div class="section-title">Информация по сделкам</div>
+                  <div class="table-heading">
+                    <div class="table-heading__actions">
+                      <div class="fullscreen-link">таблицу на весь экран</div>
+                    </div>
+                  </div>
+                  <div class="table-wrapper">
+                    <table class="table table--iia-management-dealings">
+                      <thead>
+                        <tr>
+                          <th>Вид сделки</th>
+                          <th>Эмитент<span class="line-break title-second-line">Контрагент</span></th>
+                          <th>№ гос. регистрации</th>
+                          <th>Дата сделки</th>
+                          <th>Дата оплаты</th>
+                          <th>Дата поставки</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Продажа</td>
+                          <td>VTB Eurasia Limited<span class="line-break title-second-line">Atonline Limited</span></td>
+                          <td>XS000000000</td>
+                          <td>01.11.2016</td>
+                          <td>02.11.2016</td>
+                          <td>01.11.2016</td>
+                        </tr>
+                        <tr>
+                          <td>Покупка</td>
+                          <td>
+                            Нота 2Y Quanto Autocall-
+                            Phoenix Note on VXX<span class="line-break title-second-line">Veles International Limited</span>
+                          </td>
+                          <td>1-01-04715-А</td>
+                          <td>11.08.2016</td>
+                          <td>12.08.2016</td>
+                          <td>12.08.2016</td>
+                        </tr>
+                        <tr>
+                          <td>Покупка</td>
+                          <td>Элемент Лизинг БО-04<span class="line-break title-second-line">ЗАО «ФБ ММВБ»</span></td>
+                          <td>4B02-04-36193-R</td>
+                          <td>14.07.2016</td>
+                          <td>14.07.2016</td>
+                          <td>14.07.2016</td>
+                        </tr>
+                        <tr>
+                          <td>Покупка</td>
+                          <td>МТС-АОО<span class="line-break title-second-line">ЗАО «ФБ ММВБ»</span></td>
+                          <td>1-01-04715-А</td>
+                          <td>22.06.2016</td>
+                          <td>24.06.2016</td>
+                          <td>24.06.2016</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="download-area">
+                    <div class="download-file-list">
+                      <div class="download-file-list__item"><span class="action-link action-link--get-pdf">Скачать в PDF формате</span></div>
+                      <div class="download-file-list__item"><span class="action-link action-link--get-excel">Скачать в формате Excel</span></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="filter__column">
-                <div class="switcher-panel"><a href="#" class="switcher-panel__item">День</a><a href="#" class="switcher-panel__item">Неделя</a><a href="#" class="switcher-panel__item">Месяц</a><a href="#" class="switcher-panel__item">Квартал</a><a href="#" class="switcher-panel__item">Год</a></div>
+              <div id="briefcase_111" class="tab-container">
+                <div class="tab-container__section-inner">
+                  <div class="section-title">Портфель по договору 1</div>
+                </div>
               </div>
-            </div>
-            <div class="section-title">Доверительное управление</div>
-            <div class="table-heading">
-              <div class="table-heading__title">
-                <div class="title">Информация о пришедших купонах, RUB</div>
-              </div>
-              <div class="table-heading__actions">
-                <div class="fullscreen-link">таблицу на весь экран</div>
-              </div>
-            </div>
-            <table class="table table--incoming-coupons">
-              <tr>
-                <th></th>
-                <th>Начисление</th>
-              </tr>
-              <tr>
-                <td>Комиссия брокера (посредника)</td>
-                <td><span class="price-inline">333<span class="price-inline__dot-value">51</span></span> (в том числе НДС&nbsp;<span>50<span class="price-inline__dot-value">87</span>) RUB</span></td>
-              </tr>
-              <tr>
-                <td>Комиссия биржи (торговой системы)</td>
-                <td><span class="price-inline">264<span class="price-inline__dot-value">14</span></span>(в том числе НДС&nbsp;<span class="price-inline">40<span class="price-inline__dot-value">29</span>) RUB</span></td>
-              </tr>
-              <tr>
-                <td>Комиссия депозитария (регистратора)</td>
-                <td class="column-2"><span class="price-inline">3 324<span class="price-inline__dot-value">76</span></span> (в том числе НДС&nbsp;<span class="price-inline">507<span class="price-inline__dot-value">17</span>) RUB</span></td>
-              </tr>
-              <tr>
-                <td>Комиссия банка</td>
-                <td><span class="price-inline">1 412<span class="price-inline__dot-value">87</span></span> (в том числе НДС&nbsp;<span class="price-inline">215<span class="price-inline__dot-value">52</span>) RUB</span></td>
-              </tr>
-              <tr>
-                <td>Вознаграждение доверительного управляющего за управление</td>
-                <td><span class="price-inline">28 687<span class="price-inline__dot-value">20</span></span> (в том числе НДС&nbsp;<span class="price-inline">24 376<span class="price-inline__dot-value">01</span>) RUB</span></td>
-              </tr>
-              <tr>
-                <td>Расчеты с бюджетом по НДФЛ</td>
-                <td><span class="price-inline">4 331<span class="price-inline__dot-value">00</span></span></td>
-              </tr>
-            </table>
-            <div class="download-area">
-              <div class="download-file-list">
-                <div class="download-file-list__item"><span class="action-link action-link--get-pdf">Скачать в PDF формате</span></div>
-                <div class="download-file-list__item"><span class="action-link action-link--get-excel">Скачать в формате Excel</span></div>
+              <div id="briefcase_112" class="tab-container">
+                <div class="tab-container__section-inner">
+                  <div class="section-title">Портфель по договору 2</div>
+                </div>
               </div>
             </div>
           </div>

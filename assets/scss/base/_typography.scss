@@ -3,6 +3,13 @@
   text-align: center;
   margin-bottom: 10px;
 
+  &._no-b-indent {
+    margin-bottom: 0 !important;
+  }
+  &._sm-b-indent {
+    margin-bottom: 10px !important;
+  }
+
   .main-content-section &,
   .tab-container & {
     font-size: 25px;

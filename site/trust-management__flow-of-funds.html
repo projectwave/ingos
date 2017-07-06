@@ -39,70 +39,122 @@
     <main class="page-content">
       <div class="page-content__inner">
         <div class="main-content-area">
-          <div class="main-content-section">
-            <div class="table-heading">
-              <div class="section-title">Информация по сделкам</div>
-              <div class="table-heading__actions">
-                <div class="fullscreen-link">таблицу на весь экран</div>
+          <div class="tabs">
+            <div class="tabs__nav"><a href="#briefcase" class="tabs__nav-item is-active">Общий портфель</a><a href="#briefcase_111" class="tabs__nav-item">Портфель по договору №111</a><a href="#briefcase_112" class="tabs__nav-item">Портфель по договору №112</a></div>
+          </div>
+          <div id="briefcase" class="tab-container is-visible">
+            <div class="tab-container__section-inner">
+              <div class="section-header">
+                <div class="section-header__column">Дата оценки</div>
+                <div class="section-header__column">
+                  <div class="period-range">
+                    <div class="data-range-input">
+                      <div class="data-range-input__value">1 октября 2016</div>
+                      <div class="data-range-input__icon"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section-title _sm-b-indent">Информация о движении денежных средств</div>
+              <div class="table-heading">
+                <div class="table-heading__actions">
+                  <div class="fullscreen-link">таблицу на весь экран</div>
+                </div>
+              </div>
+              <div class="table-wrapper">
+                <table class="table table--management-flow-of-funds table-center">
+                  <tr>
+                    <th>Дата операции</th>
+                    <th>Тип</th>
+                    <th>Валюта</th>
+                    <th>Сумма<span class="line-break">операции</span></th>
+                  </tr>
+                  <tr>
+                    <td>30.09.2016</td>
+                    <td>Ввод ДС</td>
+                    <td>RUB</td>
+                    <td><span class="price-inline">90 000<span class="price-inline__dot-value">00</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>29.09.2016</td>
+                    <td>Ввод ДС</td>
+                    <td>RUB</td>
+                    <td><span class="price-inline">68 000<span class="price-inline__dot-value">00</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>28.09.2016</td>
+                    <td>Ввод ДС</td>
+                    <td>USD</td>
+                    <td><span class="price-inline">20 000<span class="price-inline__dot-value">00</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>27.09.2016</td>
+                    <td>Ввод ДС</td>
+                    <td>RUB</td>
+                    <td><span class="price-inline">150 000<span class="price-inline__dot-value">00</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>26.09.2016</td>
+                    <td>Ввод ДС</td>
+                    <td>RUB</td>
+                    <td><span class="price-inline">300 000<span class="price-inline__dot-value">00</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>04.09.2016</td>
+                    <td>Ввод ДС</td>
+                    <td>RUB</td>
+                    <td><span class="price-inline">- 50 000<span class="price-inline__dot-value">00</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>03.09.2016</td>
+                    <td>Ввод ДС</td>
+                    <td>RUB</td>
+                    <td><span class="price-inline">77 543<span class="price-inline__dot-value">00</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>07.08.2016</td>
+                    <td>Ввод ДС</td>
+                    <td>RUB</td>
+                    <td><span class="price-inline">50 000<span class="price-inline__dot-value">00</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>11.07.2016</td>
+                    <td>Ввод ДС</td>
+                    <td>RUB</td>
+                    <td><span class="price-inline">50 000<span class="price-inline__dot-value">00</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>14.06.2016</td>
+                    <td>Ввод ДС</td>
+                    <td>RUB</td>
+                    <td><span class="price-inline">- 150 000<span class="price-inline__dot-value">00</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>18.05.2016</td>
+                    <td>Ввод ДС</td>
+                    <td>RUB</td>
+                    <td><span class="price-inline">- 125 000<span class="price-inline__dot-value">00</span></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="total">Итого:</span></td>
+                    <td colspan="2"></td>
+                    <td><span class="price-inline">480 543<span class="price-inline__dot-value">00</span></span></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="download-area">
+                <div class="download-file-list">
+                  <div class="download-file-list__item"><span class="action-link action-link--get-pdf">Скачать в PDF формате</span></div>
+                  <div class="download-file-list__item"><span class="action-link action-link--get-excel">Скачать в формате Excel</span></div>
+                </div>
               </div>
             </div>
-            <div class="table-wrapper">
-              <table class="table table--iia-management-dealings">
-                <thead>
-                  <tr>
-                    <th>Вид сделки</th>
-                    <th>Эмитент<span class="line-break title-second-line">Контрагент</span></th>
-                    <th>№ гос. регистрации</th>
-                    <th>Дата сделки</th>
-                    <th>Дата оплаты</th>
-                    <th>Дата поставки</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Продажа</td>
-                    <td>VTB Eurasia Limited<span class="line-break title-second-line">Atonline Limited</span></td>
-                    <td>XS000000000</td>
-                    <td>01.11.2016</td>
-                    <td>02.11.2016</td>
-                    <td>01.11.2016</td>
-                  </tr>
-                  <tr>
-                    <td>Покупка</td>
-                    <td>
-                      Нота 2Y Quanto Autocall-
-                      Phoenix Note on VXX<span class="line-break title-second-line">Veles International Limited</span>
-                    </td>
-                    <td>1-01-04715-А</td>
-                    <td>11.08.2016</td>
-                    <td>12.08.2016</td>
-                    <td>12.08.2016</td>
-                  </tr>
-                  <tr>
-                    <td>Покупка</td>
-                    <td>Элемент Лизинг БО-04<span class="line-break title-second-line">ЗАО «ФБ ММВБ»</span></td>
-                    <td>4B02-04-36193-R</td>
-                    <td>14.07.2016</td>
-                    <td>14.07.2016</td>
-                    <td>14.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td>Покупка</td>
-                    <td>МТС-АОО<span class="line-break title-second-line">ЗАО «ФБ ММВБ»</span></td>
-                    <td>1-01-04715-А</td>
-                    <td>22.06.2016</td>
-                    <td>24.06.2016</td>
-                    <td>24.06.2016</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="download-area">
-              <div class="download-file-list">
-                <div class="download-file-list__item"><span class="action-link action-link--get-pdf">Скачать в PDF формате</span></div>
-                <div class="download-file-list__item"><span class="action-link action-link--get-excel">Скачать в формате Excel</span></div>
-              </div>
-            </div>
+          </div>
+          <div id="briefcase_111" class="tab-container">
+            <div class="tab-container__section-inner"></div>
+          </div>
+          <div id="briefcase_112" class="tab-container">
+            <div class="tab-container__section-inner"></div>
           </div>
           <div class="cards-list cards-list--call-to-action">
             <div class="cards-list__item">

@@ -40,108 +40,89 @@
       <div class="page-content__inner">
         <div class="main-content-area">
           <div class="main-content-section">
-            <div class="filter">
-              <div class="filter__column">
-                <div class="period-range">
-                  <div class="period-range__title">Период</div>
-                  <div class="period-range__input">
-                    <div class="data-range-input">
-                      <div class="data-range-input__value">
-                        1 сентября 2016
-                        -
-                        31 сентября 2016
-                      </div>
-                      <div class="data-range-input__icon"></div>
+            <div class="tabs _inside-main-content">
+              <div class="tabs__nav"><a href="#briefcase" class="tabs__nav-item is-active">Общий портфель</a><a href="#briefcase_111" class="tabs__nav-item">Портфель по договору №111</a><a href="#briefcase_112" class="tabs__nav-item">Портфель по договору №112</a></div>
+              <div id="briefcase" class="tab-container is-visible">
+                <div class="tab-container__section-inner">
+                  <div class="section-title">Информация о начисленных комиссиях</div>
+                  <div class="table-heading">
+                    <div class="table-heading__actions">
+                      <div class="fullscreen-link">таблицу на весь экран</div>
+                    </div>
+                  </div>
+                  <div class="table-wrapper">
+                    <table class="table table--incoming-coupons">
+                      <tr>
+                        <th></th>
+                        <th>Начисление</th>
+                      </tr>
+                      <tr>
+                        <td>Комиссия брокера (посредника)</td>
+                        <td><span class="price-inline">333<span class="price-inline__dot-value">51</span></span> (в том числе НДС&nbsp;<span>50<span class="price-inline__dot-value">87</span>) RUB</span></td>
+                      </tr>
+                      <tr>
+                        <td>Комиссия биржи (торговой системы)</td>
+                        <td><span class="price-inline">264<span class="price-inline__dot-value">14</span></span>(в том числе НДС&nbsp;<span class="price-inline">40<span class="price-inline__dot-value">29</span>) RUB</span></td>
+                      </tr>
+                      <tr>
+                        <td>Комиссия депозитария (регистратора)</td>
+                        <td class="column-2"><span class="price-inline">3 324<span class="price-inline__dot-value">76</span></span> (в том числе НДС&nbsp;<span class="price-inline">507<span class="price-inline__dot-value">17</span>) RUB</span></td>
+                      </tr>
+                      <tr>
+                        <td>Комиссия банка</td>
+                        <td><span class="price-inline">1 412<span class="price-inline__dot-value">87</span></span> (в том числе НДС&nbsp;<span class="price-inline">215<span class="price-inline__dot-value">52</span>) RUB</span></td>
+                      </tr>
+                      <tr>
+                        <td>Вознаграждение доверительного управляющего за управление</td>
+                        <td><span class="price-inline">28 687<span class="price-inline__dot-value">20</span></span> (в том числе НДС&nbsp;<span class="price-inline">24 376<span class="price-inline__dot-value">01</span>) RUB</span></td>
+                      </tr>
+                      <tr>
+                        <td>Расчеты с бюджетом по НДФЛ</td>
+                        <td><span class="price-inline">4 331<span class="price-inline__dot-value">00</span></span></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="download-area">
+                    <div class="download-file-list">
+                      <div class="download-file-list__item"><span class="action-link action-link--get-pdf">Скачать в PDF формате</span></div>
+                      <div class="download-file-list__item"><span class="action-link action-link--get-excel">Скачать в формате Excel</span></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="filter__column">
-                <div class="switcher-panel"><a href="#" class="switcher-panel__item">День</a><a href="#" class="switcher-panel__item">Неделя</a><a href="#" class="switcher-panel__item">Месяц</a><a href="#" class="switcher-panel__item">Квартал</a><a href="#" class="switcher-panel__item">Год</a></div>
+              <div id="briefcase_111" class="tab-container">
+                <div class="tab-container__section-inner">
+                  <div class="section-title">Портфель по договору 1</div>
+                </div>
+              </div>
+              <div id="briefcase_112" class="tab-container">
+                <div class="tab-container__section-inner">
+                  <div class="section-title">Портфель по договору 2</div>
+                </div>
               </div>
             </div>
-            <div class="section-title">Информация о вводах и выводах</div>
-            <div class="table-heading">
-              <div class="table-heading__title"></div>
-              <div class="table-heading__actions">
-                <div class="fullscreen-link">таблицу на весь экран</div>
+          </div>
+          <div class="cards-list cards-list--call-to-action">
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--investment-fund"></div>
+                <div class="card__caption">Паевые Инвестиционные&nbsp;Фонды</div>
+                <div class="card__footer"><a href="#">Отправить заявку</a></div>
               </div>
             </div>
-            <div class="table-wrapper">
-              <table class="table table--trust-management-inputs-outputs">
-                <tr>
-                  <th>Дата операции</th>
-                  <th>Тип</th>
-                  <th>Валюта</th>
-                  <th>Сумма<span class="line-break">операции</span></th>
-                </tr>
-                <tr>
-                  <td>30.09.2016</td>
-                  <td>Вывод ДС</td>
-                  <td>USD</td>
-                  <td><span class="price-inline">300 000<span class="price-inline__dot-value">00</span></span></td>
-                </tr>
-                <tr>
-                  <td>29.09.2016</td>
-                  <td>Вывод ДС</td>
-                  <td>USD</td>
-                  <td><span class="price-inline">150 000<span class="price-inline__dot-value">00</span></span></td>
-                </tr>
-                <tr>
-                  <td>28.09.2016</td>
-                  <td>Вывод ДС</td>
-                  <td>USD</td>
-                  <td><span class="price-inline">20 000<span class="price-inline__dot-value">00</span></span></td>
-                </tr>
-                <tr>
-                  <td>27.09.2016</td>
-                  <td>Вывод ДС</td>
-                  <td>USD</td>
-                  <td><span class="price-inline">68 000<span class="price-inline__dot-value">00</span></span></td>
-                </tr>
-                <tr>
-                  <td>26.09.2016</td>
-                  <td>Вывод ДС</td>
-                  <td>EUR</td>
-                  <td><span class="price-inline">90 000<span class="price-inline__dot-value">00</span></span></td>
-                </tr>
-                <tr>
-                  <td>07.09.2016</td>
-                  <td>Вывод ДС</td>
-                  <td>USD</td>
-                  <td><span class="price-inline">77 543<span class="price-inline__dot-value">00</span></span></td>
-                </tr>
-                <tr>
-                  <td>04.09.2016</td>
-                  <td>Вывод ДС</td>
-                  <td>EUR</td>
-                  <td><span class="price-inline">- 50 000<span class="price-inline__dot-value">00</span></span></td>
-                </tr>
-                <tr>
-                  <td>03.09.2016</td>
-                  <td>Вывод ДС</td>
-                  <td>USD</td>
-                  <td><span class="price-inline">50 000<span class="price-inline__dot-value">00</span></span></td>
-                </tr>
-                <tr>
-                  <td>11.07.2016</td>
-                  <td>Вывод ДС</td>
-                  <td>USD</td>
-                  <td><span class="price-inline">50 000<span class="price-inline__dot-value">00</span></span></td>
-                </tr>
-                <tr>
-                  <td>14.06.2016</td>
-                  <td>Вывод ДС</td>
-                  <td>USD</td>
-                  <td><span class="price-inline">- 150 000<span class="price-inline__dot-value">00</span></span></td>
-                </tr>
-                <tr>
-                  <td>18.05.2016</td>
-                  <td>Вывод ДС</td>
-                  <td>USD</td>
-                  <td><span class="price-inline">- 125 000<span class="price-inline__dot-value">00</span></span></td>
-                </tr>
-              </table>
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--trust-management"></div>
+                <div class="card__caption">Доверительное<span class="line-break"></span>Управление</div>
+                <div class="card__footer"><a href="#">Отправить заявку</a></div>
+              </div>
+            </div>
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--investment-accs"></div>
+                <div class="card__caption">Индивидуальные Инвестиционные Счета</div>
+                <div class="card__footer"><a href="#">Отправить заявку</a></div>
+              </div>
             </div>
           </div>
         </div>
