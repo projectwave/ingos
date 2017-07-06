@@ -253,6 +253,14 @@ var commonActions = (function (document, $) {
                         },
                         pointStart: Date.UTC(2015, 4, 15),
                         pointInterval: 24 * 3600 * 1000 // one day
+                    },
+                    series: {
+                        marker: {
+                            fillColor: '#FFFFFF',
+                            lineWidth: 2,
+                            lineColor: null,
+                            symbol: 'circle'
+                        }
                     }
                 },
                 series: [{
@@ -304,9 +312,9 @@ var commonActions = (function (document, $) {
                     name: 'Browser share',
                     innerSize: 220,
                     data: [
-                        ['Firefox',   59.69],
-                        ['IE',       32.03],
-                        ['Chrome', 8.28],
+                        ['Ингосстрах. Облигации',   59.69],
+                        ['Ингосстрах. Еврооблигации',       32.03],
+                        ['Ингосстрах. Риэл Эстейт', 8.28],
                     ],
                     states: {
                         hover: {
@@ -316,6 +324,113 @@ var commonActions = (function (document, $) {
                 }]
             });
         };
+
+        if($('#trust-managment-portfolio').length){
+
+            Highcharts.chart('trust-managment-portfolio', {
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: 0,
+                    plotShadow: false,
+                    spacingTop: -10,
+                    spacingBottom: -10,
+                    spacingLeft: -10,
+                    spacingRight: -10
+                },
+                title: {
+                    text: '<span class="chart-pie__title">Общая оценка</span><br> <span class="chart-pie__value">1 122 980,06 руб</span>',
+                    align: 'center',
+                    verticalAlign: 'middle',
+                    y: -5
+                },
+                tooltip: false,
+                plotOptions: {
+                    pie: {
+                        borderWidth: 0,
+                        dataLabels: {
+                            enabled: false,
+                        },
+                        size: '100%',
+                        startAngle: -200,
+                        endAngle: 160
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'Browser share',
+                    innerSize: 220,
+                    data: [
+                        ['Облигации',   86.78],
+                        ['Прочие вложения', 12.21],
+                        ['Денежные средства у брокера', 1.01],
+                    ],
+                    states: {
+                        hover: {
+                            enabled: false
+                        }
+                    }
+                }]
+            });
+        };
+
+        if($('#trust-managment-portfolio-dunamics').length){
+            Highcharts.chart('trust-managment-portfolio-dunamics', {
+                chart: {
+                    type: 'line',
+                    spacingLeft: 0
+                },
+                title: false,
+                xAxis: {
+                    categories: [
+                        '1 <br> ЯНВ <br> 2011',
+                        '1 <br> ЯНВ <br> 2012',
+                        '1 <br> ЯНВ <br> 2013',
+                        '1 <br> ЯНВ <br> 2014',
+                        '1 <br> ЯНВ <br> 2015',
+                        '1 <br> ЯНВ <br> 2016',
+                        '1 <br> ЯНВ <br> 2017'
+                    ],
+                    tickWidth: 0,
+                },
+
+                yAxis: {
+                    title: false,
+                    tickWidth: 0,
+                    lineWidth: 0,
+                    minorGridLineWidth: 0,
+                    gridLineWidth: 0,
+                    alternateGridColor: null,
+                    labels: false
+                },
+                tooltip: {
+                    formatter: function () {
+                        return 'ТЕК. ОЦЕНКА: <b>' + this.y + '</b>';
+                    }
+                },
+                plotOptions: {
+                    spline: {
+                        lineWidth: 3,
+                        marker: {
+                            enabled: false
+                        }
+                    },
+                    series: {
+                        marker: {
+                            fillColor: '#FFFFFF',
+                            lineWidth: 2,
+                            lineColor: null,
+                            symbol: 'circle'
+                        }
+                    }
+                },
+                series: [{
+                    color: '#00adeb',
+                    data: [3, 4, 3, 5, 4, 10, 8]
+                }],
+                legend: false
+
+            });
+        }
     }
 
     function _onDocumentClick() {
