@@ -187,8 +187,9 @@ var commonActions = (function (document, $) {
         });
     }
 
-    function _highCharts(){
+    function _highCharts() {
         Highcharts.setOptions({
+            colors: ['#ff6961', '#b6e329', '#1b7cd0', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
             lang: {
                 loading: 'Загрузка...',
                 months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
@@ -207,64 +208,114 @@ var commonActions = (function (document, $) {
             }
         });
 
-        Highcharts.chart('unit-trust-detalization', {
-            chart: {
-                type: 'spline',
-                spacingLeft: 0
-            },
-            title: false,
-            xAxis: {
-                type: 'datetime',
-                dateTimeLabelFormats: {
-                    day: '%d <br> %b'
+        if($('#unit-trust-detalization').length){
+            Highcharts.chart('unit-trust-detalization', {
+                chart: {
+                    type: 'spline',
+                    spacingLeft: 0
                 },
-                tickWidth: 0,
-                labels: {
-                    overflow: 'justify',
-                    style: {
-                        color: '#8c9196'
-                    },
-                    y: 25
-                }
-            },
-            yAxis: {
                 title: false,
-                tickWidth: 0,
-                lineWidth: 1,
-                minorGridLineWidth: 0,
-                gridLineWidth: 0,
-                alternateGridColor: null,
-                labels: {
-                    style: {
-                        color: '#8c9196'
-                    }
-                }
-            },
-            tooltip: {
-                valueSuffix: '$'
-            },
-            plotOptions: {
-                spline: {
-                    lineWidth: 3,
-                    marker: {
-                        enabled: false
+                xAxis: {
+                    type: 'datetime',
+                    dateTimeLabelFormats: {
+                        day: '%d <br> %b'
                     },
-                    pointStart: Date.UTC(2015, 4, 15),
-                    pointInterval: 24 * 3600 * 1000 // one day
-                }
-            },
-            series: [{
-                name: 'Опиф',
-                color: '#00adeb',
-                data: [29.9, 71.5, 106.4, 129.2, 144.0]
-            }, {
-                name: 'Индекс облигаций ММВБ',
-                color: '#ff6961',
-                data: [9.9, 1.5, 16.4, 29.2, 14.0]
-            }],
-            legend: {align: 'top', verticalAlign: 'top', x: 65, y: -10, borderWidth: 0}
+                    tickWidth: 0,
+                    labels: {
+                        overflow: 'justify',
+                        style: {
+                            color: '#8c9196'
+                        },
+                        y: 25
+                    }
+                },
+                yAxis: {
+                    title: false,
+                    tickWidth: 0,
+                    lineWidth: 1,
+                    minorGridLineWidth: 0,
+                    gridLineWidth: 0,
+                    alternateGridColor: null,
+                    labels: {
+                        style: {
+                            color: '#8c9196'
+                        }
+                    }
+                },
+                tooltip: {
+                    valueSuffix: '$'
+                },
+                plotOptions: {
+                    spline: {
+                        lineWidth: 3,
+                        marker: {
+                            enabled: false
+                        },
+                        pointStart: Date.UTC(2015, 4, 15),
+                        pointInterval: 24 * 3600 * 1000 // one day
+                    }
+                },
+                series: [{
+                    name: 'Опиф',
+                    color: '#00adeb',
+                    data: [29.9, 71.5, 106.4, 129.2, 144.0]
+                }, {
+                    name: 'Индекс облигаций ММВБ',
+                    color: '#ff6961',
+                    data: [9.9, 1.5, 16.4, 29.2, 14.0]
+                }],
+                legend: {align: 'top', verticalAlign: 'top', x: 65, y: -10, borderWidth: 0}
 
-        });
+            });
+        }
+
+        if($('#unit-trust-portfolio').length){
+
+            Highcharts.chart('unit-trust-portfolio', {
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: 0,
+                    plotShadow: false,
+                    spacingTop: -10,
+                    spacingBottom: -10,
+                    spacingLeft: -10,
+                    spacingRight: -10
+                },
+                title: {
+                    text: '<span class="chart-pie__title">Общая оценка</span><br> <span class="chart-pie__value">1 122 980,06 руб</span>',
+                    align: 'center',
+                    verticalAlign: 'middle',
+                    y: -5
+                },
+                tooltip: false,
+                plotOptions: {
+                    pie: {
+                        borderWidth: 0,
+                        dataLabels: {
+                            enabled: false,
+                        },
+                        size: '100%',
+                        startAngle: -200,
+                        endAngle: 160
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'Browser share',
+                    innerSize: 220,
+                    data: [
+                        ['Firefox',   59.69],
+                        ['IE',       32.03],
+                        ['Chrome', 8.28],
+                    ],
+                    states: {
+                        hover: {
+                            enabled: false
+                        }
+                    }
+                }]
+            });
+        };
     }
 
     function _onDocumentClick() {

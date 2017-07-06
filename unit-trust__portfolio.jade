@@ -1,0 +1,77 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.section-header
+				.section-header__column
+					| Дата оценки
+
+				.section-header__column
+					.period-range
+						.data-range-input
+							.data-range-input__value
+								| 16 октября 2016
+
+							.data-range-input__icon
+
+			.section-title Инвестиционный портфель ПИФ
+
+			.chart-pie
+				.chart-pie__container#unit-trust-portfolio
+
+				.chart-pie__info-container
+					.chart-pie__info._title
+						.chart-pie__info-title
+							| Общая оценка:
+						.chart-pie__info-value
+							| 1 512 980,06 руб
+
+					.chart-pie__info._with-percents
+						.chart-pie__info-title
+							| 59,69%
+							a(href='#')
+								| Ингосстрах. Облигации
+
+						.chart-pie__info-value
+							| 903 174,44 руб
+						.chart-pie__percents
+							.chart-pie__percents-value(style="background-color: #ff6961; width: 59.69%;")
+
+					.chart-pie__info._with-percents
+						.chart-pie__info-title
+							| 32,03%
+							a(href='#')
+								| Ингосстрах. Еврооблигации
+
+						.chart-pie__info-value
+							| 484 525,04 руб
+						.chart-pie__percents
+							.chart-pie__percents-value(style="background-color: #b6e329; width: 32.03%;")
+
+					.chart-pie__info._with-percents
+						.chart-pie__info-title
+							| 8,28%
+							a(href='#')
+								| Ингосстрах. Риэл Эстейт
+
+						.chart-pie__info-value
+							| 125 280,58 руб
+						.chart-pie__percents
+							.chart-pie__percents-value(style="background-color: #1b7cd0; width: 8.28%;")
+
+			.table-heading
+				.table-heading__actions
+					.fullscreen-link
+						| таблицу на весь экран
+
+			.table-wrapper
+				include assets/jade/partials/tables/unit-trust-portfolio
+
+			.download-area
+				include assets/jade/partials/download-file
+
+		include assets/jade/partials/cards-list
+
+block body_end
+	script(type="text/javascript" src="assets/js/script.js")
