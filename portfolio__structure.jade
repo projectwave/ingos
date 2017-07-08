@@ -1,0 +1,102 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+
+			.filter
+				.filter__column
+					.period-range
+						.period-range__title Состояние портеля на:
+
+						.period-range__input
+							.data-range-input
+								.data-range-input__value
+									| 16 октября 2016
+
+								.data-range-input__icon
+
+				.filter__column
+					.switcher-panel
+						a(href='#').switcher-panel__item.is-active
+							| Рубли
+
+						a(href='#').switcher-panel__item
+							| Доллары
+
+			.section-title._no-b-indent Портфель
+
+			.chart-pie
+				.chart-pie__container#portfolio-structure
+
+				.chart-pie__info-container
+					.chart-pie__info._title
+						.chart-pie__info-title
+							| Общая оценка портфеля:
+						.chart-pie__info-value
+							| 3 952 289,00 руб
+
+					.chart-pie__info._with-percents
+						.chart-pie__info-title
+							| 47,43%
+							a(href='#')
+								| Линейная P&G
+
+						.chart-pie__info-value
+							| $ 50,000.00
+						.chart-pie__percents
+							.chart-pie__percents-value(style="background-color: #ff6961; width: 47.43%;")
+
+					.chart-pie__info._with-percents
+						.chart-pie__info-title
+							| 25,49%
+							a(href='#')
+								| ИИС Рыночная
+
+						.chart-pie__info-value
+							| 320 000,00 руб
+						.chart-pie__percents
+							.chart-pie__percents-value(style="background-color: #b6e329; width: 25.49%;")
+
+					.chart-pie__info._with-percents
+						.chart-pie__info-title
+							| 19,91%
+							a(href='#')
+								| Линейная Apple
+
+						.chart-pie__info-value
+							| 250 000,00 руб
+						.chart-pie__percents
+							.chart-pie__percents-value(style="background-color: #1b7cd0; width: 19.91%;")
+
+					.chart-pie__info._with-percents
+						.chart-pie__info-title
+							| 4,38%
+							a(href='#')
+								| ИИС Рыночная
+
+						.chart-pie__info-value
+							| 125 280,58 руб
+						.chart-pie__percents
+							.chart-pie__percents-value(style="background-color: #da62cc; width: 4.38%;")
+
+					.chart-pie__info._with-percents
+						.chart-pie__info-title
+							| 2,79%
+							a(href='#')
+								| Открытие – Облигации
+
+						.chart-pie__info-value
+							| 55 000,00 руб
+						.chart-pie__percents
+							.chart-pie__percents-value(style="background-color: #00adeb; width: 2.79%;")
+
+					.chart-pie__info._add-assets
+						a(href='#').chart-pie__add-assets
+							i.icon-add
+							| Добавить иные активы
+
+		include assets/jade/partials/cards-list
+
+block body_end
+	script(type="text/javascript" src="assets/js/script.js")

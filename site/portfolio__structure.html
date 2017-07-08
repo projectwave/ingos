@@ -40,24 +40,66 @@
       <div class="page-content__inner">
         <div class="main-content-area">
           <div class="main-content-section">
-            <div class="section-header">
-              <div class="section-header__column">
-                <div class="section-title">Документы по ДУ</div>
+            <div class="filter">
+              <div class="filter__column">
+                <div class="period-range">
+                  <div class="period-range__title">Состояние портеля на:</div>
+                  <div class="period-range__input">
+                    <div class="data-range-input">
+                      <div class="data-range-input__value">16 октября 2016</div>
+                      <div class="data-range-input__icon"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="section-header__column"><span class="content-nav">2017<a href="#" class="content-nav__prev"></a><a href="#" class="content-nav__next"></a></span></div>
+              <div class="filter__column">
+                <div class="switcher-panel"><a href="#" class="switcher-panel__item is-active">Рубли</a><a href="#" class="switcher-panel__item">Доллары</a></div>
+              </div>
             </div>
-            <div class="links-list">
-              <div class="links-list__item">
-                <div class="action-link action-link--get-pdf"><a href="#">Анкета Управляющей компании</a>&nbsp;<a href="#" class="link-download">скачать</a></div>
-              </div>
-              <div class="links-list__item">
-                <div class="action-link action-link--get-pdf"><a href="#">Заявление об открытии лицевого счета (для физического лица)</a>&nbsp;<a href="#" class="link-download">скачать</a></div>
-              </div>
-              <div class="links-list__item">
-                <div class="action-link action-link--get-pdf"><a href="#">Редакция Договора доверительного управления (стандартная форма присоединения), действующая с 20.05.2016 на текущий день</a>&nbsp;<a href="#" class="link-download">скачать</a></div>
-              </div>
-              <div class="links-list__item">
-                <div class="action-link action-link--get-pdf"><a href="#">Сводный отчет за период</a>&nbsp;<a href="#" class="link-download">скачать</a></div>
+            <div class="section-title _no-b-indent">Портфель</div>
+            <div class="chart-pie">
+              <div id="portfolio-structure" class="chart-pie__container"></div>
+              <div class="chart-pie__info-container">
+                <div class="chart-pie__info _title">
+                  <div class="chart-pie__info-title">Общая оценка портфеля:</div>
+                  <div class="chart-pie__info-value">3 952 289,00 руб</div>
+                </div>
+                <div class="chart-pie__info _with-percents">
+                  <div class="chart-pie__info-title">47,43%<a href="#">Линейная P&G</a></div>
+                  <div class="chart-pie__info-value">$ 50,000.00</div>
+                  <div class="chart-pie__percents">
+                    <div style="background-color: #ff6961; width: 47.43%;" class="chart-pie__percents-value"></div>
+                  </div>
+                </div>
+                <div class="chart-pie__info _with-percents">
+                  <div class="chart-pie__info-title">25,49%<a href="#">ИИС Рыночная</a></div>
+                  <div class="chart-pie__info-value">320 000,00 руб</div>
+                  <div class="chart-pie__percents">
+                    <div style="background-color: #b6e329; width: 25.49%;" class="chart-pie__percents-value"></div>
+                  </div>
+                </div>
+                <div class="chart-pie__info _with-percents">
+                  <div class="chart-pie__info-title">19,91%<a href="#">Линейная Apple</a></div>
+                  <div class="chart-pie__info-value">250 000,00 руб</div>
+                  <div class="chart-pie__percents">
+                    <div style="background-color: #1b7cd0; width: 19.91%;" class="chart-pie__percents-value"></div>
+                  </div>
+                </div>
+                <div class="chart-pie__info _with-percents">
+                  <div class="chart-pie__info-title">4,38%<a href="#">ИИС Рыночная</a></div>
+                  <div class="chart-pie__info-value">125 280,58 руб</div>
+                  <div class="chart-pie__percents">
+                    <div style="background-color: #da62cc; width: 4.38%;" class="chart-pie__percents-value"></div>
+                  </div>
+                </div>
+                <div class="chart-pie__info _with-percents">
+                  <div class="chart-pie__info-title">2,79%<a href="#">Открытие – Облигации</a></div>
+                  <div class="chart-pie__info-value">55 000,00 руб</div>
+                  <div class="chart-pie__percents">
+                    <div style="background-color: #00adeb; width: 2.79%;" class="chart-pie__percents-value"></div>
+                  </div>
+                </div>
+                <div class="chart-pie__info _add-assets"><a href="#" class="chart-pie__add-assets"><i class="icon-add"></i>Добавить иные активы</a></div>
               </div>
             </div>
           </div>
@@ -197,5 +239,6 @@
       })
       
     </script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
   </body>
 </html>

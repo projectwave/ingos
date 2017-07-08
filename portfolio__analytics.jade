@@ -1,0 +1,63 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.tabs._inside-main-content
+				.tabs__nav._no-flex
+					a(href='#geography').tabs__nav-item.is-active
+						| География
+
+					a(href='#industry').tabs__nav-item
+						| Отрасли
+
+					a(href='#assets-classes').tabs__nav-item
+						| Классы активов
+
+					a(href='#issuers').tabs__nav-item
+						| Эмитенты
+
+					a(href='#currency').tabs__nav-item
+						| Валюта
+
+				.tab-container#geography
+					.tab-container__section-inner
+						.section-title Портфель по договору 1
+
+						.chart-container
+
+				.tab-container#industry
+					.tab-container__section-inner
+						.section-title Диверсификация портфеля по отраслям
+
+						.chart-container._no-b-indent._height-auto#industry-chart
+
+				.tab-container#assets-classes
+					.tab-container__section-inner
+						.section-title Диверсификация портфеля по классам активов
+
+						.chart-container._no-b-indent._height-auto#assets-classes-chart
+
+				.tab-container#issuers.is-visible
+					.tab-container__section-inner
+						.section-title Диверсификация портфеля по эмитентам
+
+						.section-subtitle
+							| На графике показаны 10 наиболее крупных по объему позиций.
+							<br>
+							| Объем позиции указан в выбранной вами валюте.
+
+						.chart-container._no-b-indent._height-auto#issuers-chart
+
+				.tab-container#currency
+					.tab-container__section-inner
+						.section-title Диверсификация портфеля по валютам
+
+						.section-subtitle
+							| На графике показан Ваш портфель в разрезе валют открытых позиций.
+							<br>
+							| Суммы приведены к выбранной Вами валюте.
+
+						.chart-container._no-b-indent._height-auto#currency-chart
+
+		include assets/jade/partials/cards-list

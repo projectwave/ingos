@@ -40,24 +40,47 @@
       <div class="page-content__inner">
         <div class="main-content-area">
           <div class="main-content-section">
-            <div class="section-header">
-              <div class="section-header__column">
-                <div class="section-title">Документы по ДУ</div>
+            <div class="tabs _inside-main-content">
+              <div class="tabs__nav _no-flex"><a href="#geography" class="tabs__nav-item is-active">География</a><a href="#industry" class="tabs__nav-item">Отрасли</a><a href="#assets-classes" class="tabs__nav-item">Классы активов</a><a href="#issuers" class="tabs__nav-item">Эмитенты</a><a href="#currency" class="tabs__nav-item">Валюта</a></div>
+              <div id="geography" class="tab-container">
+                <div class="tab-container__section-inner">
+                  <div class="section-title">Портфель по договору 1</div>
+                  <div class="chart-container"></div>
+                </div>
               </div>
-              <div class="section-header__column"><span class="content-nav">2017<a href="#" class="content-nav__prev"></a><a href="#" class="content-nav__next"></a></span></div>
-            </div>
-            <div class="links-list">
-              <div class="links-list__item">
-                <div class="action-link action-link--get-pdf"><a href="#">Анкета Управляющей компании</a>&nbsp;<a href="#" class="link-download">скачать</a></div>
+              <div id="industry" class="tab-container">
+                <div class="tab-container__section-inner">
+                  <div class="section-title">Диверсификация портфеля по отраслям</div>
+                  <div id="industry-chart" class="chart-container _no-b-indent _height-auto"></div>
+                </div>
               </div>
-              <div class="links-list__item">
-                <div class="action-link action-link--get-pdf"><a href="#">Заявление об открытии лицевого счета (для физического лица)</a>&nbsp;<a href="#" class="link-download">скачать</a></div>
+              <div id="assets-classes" class="tab-container">
+                <div class="tab-container__section-inner">
+                  <div class="section-title">Диверсификация портфеля по классам активов</div>
+                  <div id="assets-classes-chart" class="chart-container _no-b-indent _height-auto"></div>
+                </div>
               </div>
-              <div class="links-list__item">
-                <div class="action-link action-link--get-pdf"><a href="#">Редакция Договора доверительного управления (стандартная форма присоединения), действующая с 20.05.2016 на текущий день</a>&nbsp;<a href="#" class="link-download">скачать</a></div>
+              <div id="issuers" class="tab-container is-visible">
+                <div class="tab-container__section-inner">
+                  <div class="section-title">Диверсификация портфеля по эмитентам</div>
+                  <div class="section-subtitle">
+                    На графике показаны 10 наиболее крупных по объему позиций.
+                    <br>
+                    Объем позиции указан в выбранной вами валюте.
+                  </div>
+                  <div id="issuers-chart" class="chart-container _no-b-indent _height-auto"></div>
+                </div>
               </div>
-              <div class="links-list__item">
-                <div class="action-link action-link--get-pdf"><a href="#">Сводный отчет за период</a>&nbsp;<a href="#" class="link-download">скачать</a></div>
+              <div id="currency" class="tab-container">
+                <div class="tab-container__section-inner">
+                  <div class="section-title">Диверсификация портфеля по валютам</div>
+                  <div class="section-subtitle">
+                    На графике показан Ваш портфель в разрезе валют открытых позиций.
+                    <br>
+                    Суммы приведены к выбранной Вами валюте.
+                  </div>
+                  <div id="currency-chart" class="chart-container _no-b-indent _height-auto"></div>
+                </div>
               </div>
             </div>
           </div>

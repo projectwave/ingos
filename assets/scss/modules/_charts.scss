@@ -1,6 +1,13 @@
 .chart-container {
   margin: 25px 0;
   height: 350px;
+
+  &._no-b-indent {
+    margin-bottom: 0;
+  }
+  &._height-auto {
+    height: auto;
+  }
 }
 .chart-pie {
   @include clearfix();
@@ -25,15 +32,18 @@
   &__info {
     display: table;
     width: 100%;
-    margin-bottom: 27px;
+    margin-bottom: 23px;
 
     &._with-percents {
       position: relative;
-      padding-bottom: 13px;
+      padding-bottom: 10px;
     }
 
     &._title {
-      margin-bottom: 45px;
+      margin-bottom: 40px;
+    }
+    &._add-assets {
+      padding-top: 10px;
     }
 
     &-container {
@@ -78,7 +88,35 @@
       left: 0;
     }
   }
+
+  &__add-assets {
+    font-weight: bold;
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 .highcharts-credits {
   display: none;
+}
+.charts-column__data {
+  width: 360px;
+  display: table;
+  color: #2c2c2c;
+  font-size: 15px;
+
+  &-item {
+    display: table-cell;
+    vertical-align: middle;
+
+    &._count {
+      font-weight: bold;
+      text-align: right;
+      font-size: 12px;
+      padding-right: 30px;
+    }
+  }
 }
