@@ -443,7 +443,7 @@ $(function () {
 
     /* issuers chart */
     var issuersData = [
-        ["МинФин России", 1728.99],
+        ["МинФин России", 1628.99],
         ["ОАО «Силовые машины»", 267.1],
         ["Правительство Москвы в лице Департамента финансов г. Москвы", 263.82],
         ["ПАО «Магнит»", 258.95],
@@ -501,4 +501,102 @@ $(function () {
         }]
 
     });
+
+
+    // Load the data from a Google Spreadsheet
+    // https://docs.google.com/a/highsoft.com/spreadsheet/pub?hl=en_GB&hl=en_GB&key=0AoIaUO7wH1HwdFJHaFI4eUJDYlVna3k5TlpuXzZubHc&output=html
+    Highcharts.data({
+
+        googleSpreadsheetKey: '0AoIaUO7wH1HwdFJHaFI4eUJDYlVna3k5TlpuXzZubHc',
+
+        // custom handler when the spreadsheet is parsed
+        parsed: function (columns) {
+
+            // Read the columns into the data array
+            var data = [];
+            $.each(columns[0], function (i, code) {
+                data.push({
+                    code: code.toUpperCase(),
+                    value: parseFloat(columns[2][i]),
+                    name: columns[1][i]
+                });
+            });
+
+            // Initiate the chart
+            $('#geography-chart').highcharts('Map', {
+                chart: {
+                    spacingLeft: -10,
+                    spacingRight: -10,
+                    height: 450
+                },
+                title: false,
+                mapNavigation: {
+                    enabled: false
+                },
+                legend: {
+                    align: 'left',
+                    verticalAlign: 'bottom',
+                    floating: true,
+                    layout: 'vertical',
+                    valueDecimals: 0,
+                    itemMarginTop: 18,
+                    symbolRadius: 0,
+                    symbolWidth: 35,
+                    symbolHeight: 30,
+                    useHTML: true,
+                    y: 20
+                },
+
+                colorAxis: {
+                    dataClasses: [{
+                        from: 0,
+                        to: 3,
+                        color: '#b9eafc'
+                    }, {
+                        from: 3,
+                        to: 10,
+                        color: '#acdff6'
+                    }, {
+                        from: 10,
+                        to: 30,
+                        color: '#74cdf6'
+                    }, {
+                        from: 30,
+                        to: 100,
+                        color: '#44c4f9'
+                    }, {
+                        from: 100,
+                        to: 300,
+                        color: '#30b8f6'
+                    }, {
+                        from: 300,
+                        to: 1500,
+                        color: '#00adeb'
+                    }]
+                },
+
+                series: [{
+                    data: data,
+                    mapData: Highcharts.maps['custom/world'],
+                    joinBy: ['iso-a2', 'code'],
+                    animation: true,
+                    name: 'ЗАНЧЕНИЕ',
+                    color: '#b9eafc',
+                    borderColor: '#ffffff',
+                    states: {
+                        hover: {
+                            color: '#00adeb'
+                        }
+                    }
+                }]
+            });
+        },
+        error: function () {
+            $('#geography-chart').html('<div class="loading">' +
+                '<i class="icon-frown icon-large"></i> ' +
+                'Проблемы с загрузкой данных' +
+                '</div>');
+        }
+    });
+
 })

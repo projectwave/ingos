@@ -20,11 +20,20 @@ block content
 					a(href='#currency').tabs__nav-item
 						| Валюта
 
-				.tab-container#geography
+				.tab-container.is-visible#geography
 					.tab-container__section-inner
-						.section-title Портфель по договору 1
+						.section-title._sm-b-indent Диверсификация портфеля по географии
 
-						.chart-container
+						.section-subtitle
+							| На карте показано географическое распределение ценных бумаг
+							br
+							| (производных финансовых инструментов) изменение рыночной стоимости которых,
+							br
+							| оказывает влияние на стоимость Вашего портфеля.
+
+						.chart-container._no-b-indent._height-auto#geography-chart
+							.loading
+								| Загрузка карты...
 
 				.tab-container#industry
 					.tab-container__section-inner
@@ -38,24 +47,24 @@ block content
 
 						.chart-container._no-b-indent._height-auto#assets-classes-chart
 
-				.tab-container#issuers.is-visible
+				.tab-container#issuers
 					.tab-container__section-inner
-						.section-title Диверсификация портфеля по эмитентам
+						.section-title._sm-b-indent Диверсификация портфеля по эмитентам
 
 						.section-subtitle
 							| На графике показаны 10 наиболее крупных по объему позиций.
-							<br>
+							br
 							| Объем позиции указан в выбранной вами валюте.
 
 						.chart-container._no-b-indent._height-auto#issuers-chart
 
 				.tab-container#currency
 					.tab-container__section-inner
-						.section-title Диверсификация портфеля по валютам
+						.section-title._sm-b-indent Диверсификация портфеля по валютам
 
 						.section-subtitle
 							| На графике показан Ваш портфель в разрезе валют открытых позиций.
-							<br>
+							br
 							| Суммы приведены к выбранной Вами валюте.
 
 						.chart-container._no-b-indent._height-auto#currency-chart
