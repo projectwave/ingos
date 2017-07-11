@@ -1,0 +1,47 @@
+extends assets/jade/layouts/global/index
+
+block content
+	.main-content-area
+		.main-content-section
+			.section-header
+				.section-header__column
+					.section-title._b-indent Расторнуть договор ИИС
+
+					.section-subtitle.form-row
+						strong
+							| Уведомление об отказе от договора
+
+			.form-row._large-indent
+				p
+					| Согласно ст. 450.1. Гражданского кодекса Российской Федерации и пунта 4.3.2 Условий. Я Ковалев Сергей Алексеевич, настоящим уведомляю об одностороннем отказе от Договора доверительного управления ценными бумагами с открытием
+					| и ведением индивидуального инвестиционного счета № 134384/20845-1
+					| от 12.03.2013 (Далее - Договор).
+			form(action='', method='').js-form-validate
+				.form-row._large-indent
+					.form-list
+						.form-list__item
+							input(type='radio' checked='checked' name='iia-agreement' id='form-iia-agreement-1')
+
+							label(for='form-iia-agreement-1')
+								| Настоящим подтверждаю, что договор прекращается без перевода активов, учтенных на индивидуальном инвестиционном счете, другому профессиональному участнику рынка ценных бумаг.
+								| Последствия прекращения Договора до истечения 3 (трех) лет с даты его заключения, без перевода всех активов, учитываемых на индивидуальном инвестиционном счете, на другой индивидуальный инвестиционный счет, установленные подпунктом 4 пунта 3 статьи 219.1 Налогового кодекса РФ,
+								| мне известны и понятны.
+
+						.form-list__item
+							input(type='radio' name='iia-agreement' id='form-iia-agreement-2')
+
+							label(for='form-iia-agreement-2')
+								| Настоящим подтверждаю, что договор прекращается с переводом активов, учтенных на индивидуальном инвестиционном счете, другому профессиональному участнику рынка ценных бумаг.
+
+				.form-row._large-indent._left-indent
+					label.form-row__title
+							| Перевод активов участнику рынка ценных бумаг:
+
+					.form-item
+						input(type='text'
+						required
+						data-parsley-required-message='Это поле нужно заполнить'
+						placeholder='Введите наименование').form-control._m-small
+
+				.form-row._left-indent
+					input(type='submit' value='Далее').form-submit._large

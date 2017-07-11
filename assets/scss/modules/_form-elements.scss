@@ -12,6 +12,10 @@ $input-font-size: 15px;
     margin-bottom: 0;
   }
 
+  &._title {
+    font-size: 17px;
+  }
+
   ._b-indent {
     margin-bottom: $form-row-margin;
   }
@@ -21,6 +25,12 @@ $input-font-size: 15px;
 
   &._large-indent {
     margin-bottom: 28px;
+  }
+  &._small-indent {
+    margin-bottom: 10px;
+  }
+  &._left-indent {
+    margin-left: 35px;
   }
 
   &._align-center {
@@ -56,6 +66,10 @@ $input-font-size: 15px;
     width: 260px;
     padding: 19px 20px 0 0;
     float: left;
+
+    &._no-b-indent {
+      padding-top: 0;
+    }
   }
   &._after-label {
     width: calc(100% - 260px);
@@ -148,6 +162,9 @@ $input-font-size: 15px;
   }
   &._small {
     width: 359px;
+  }
+  &._m-small {
+    width: 265px;
   }
   &._smallest {
     width: 98px;

@@ -9,6 +9,9 @@
   &._sm-b-indent {
     margin-bottom: 10px !important;
   }
+  &._b-indent {
+    margin-bottom: 30px !important;
+  }
 
   .main-content-section &,
   .tab-container & {
@@ -167,6 +170,23 @@
   &.is-active {
     color: $link-accent;
     text-decoration: none;
+  }
+}
+.dissolve-link {
+  position: relative;
+  font-size: 15px;
+  color: $text-color;
+  float: right;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -26px;
+    display: block;
+    width: 16px;
+    height: 20px;
+    background: url(../../assets/img/icons/icons_sprite.png) 0 -60px no-repeat;
   }
 }
 

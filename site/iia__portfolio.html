@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="header-row">
+        <div class="header-row__inner">
+          <div class="header__logo">
+            <div class="brand-logo"><img src="assets/img/svg/brand-logo.svg" width="100" height="75" alt="ИНГОССТРАХ Инвестиции"></div>
+          </div>
+          <div class="header__greeting">
+            <div class="header-greeting">Добрый день,&nbsp;<span id="header-greering-username" class="line-break">Сергей Алексеевич!</span></div>
+          </div>
+          <div class="header__profile-menu">
+            <div class="profile-menu"><a href="#" class="profile-menu__link profile-menu__link--media">Медиа</a>
+              <div class="profile-menu__separator"></div><a href="#" class="profile-menu__link profile-menu__link--faq">FAQ</a>
+              <div class="profile-menu__separator"></div><a href="#" class="profile-menu__link profile-menu__link--chat">Онлайн-чат&nbsp;<span class="line-break">с&nbsp;менеджером</span></a>
+              <div class="profile-menu__separator"></div><a href="#" data-notifications-counter="3" class="profile-menu__link profile-menu__link--notifications">Уведомления</a>
+              <div class="profile-menu__separator"></div><span class="is-active profile-menu__link profile-menu__link--settings"><a href="#">Профиль<span class="line-break">и настройки</span></a>
+                <div class="dropdown-list">
+                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Пользователь</a></div>
+                  <div class="dropdown-list__item _active"><a href="#" class="dropdown-list__link">Правила пользования</a></div>
+                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Ваш персональный менеджер</a></div>
+                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">FAQ</a></div>
+                  <div class="dropdown-list__item"><a href="#" class="dropdown-list__link">Настройки</a></div>
+                </div></span>
+              <div class="profile-menu__separator"></div><a href="#" class="profile-menu__link profile-menu__link--exit">Выход</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--.header-row.header-row--decoration-->
+    </header>
+    <main class="page-content">
+      <div class="page-content__inner">
+        <div class="main-content-area">
+          <div class="main-content-section">
+            <div class="section-header">
+              <div class="section-header__column">Дата оценки</div>
+              <div class="section-header__column">
+                <div class="period-range">
+                  <div class="data-range-input">
+                    <div class="data-range-input__value">16 октября 2016</div>
+                    <div class="data-range-input__icon"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-title _no-b-indent">Портфель ИИС<a href="" class="dissolve-link">Расторгнуть договор ИИС</a></div>
+            <div class="chart-pie">
+              <div id="trust-managment-portfolio" class="chart-pie__container"></div>
+              <div class="chart-pie__info-container">
+                <div class="chart-pie__info _title">
+                  <div class="chart-pie__info-title">Общая оценка:</div>
+                  <div class="chart-pie__info-value">1 512 980,06 руб</div>
+                </div>
+                <div class="chart-pie__info _with-percents">
+                  <div class="chart-pie__info-title">86,78%<a href="#">Облигации</a></div>
+                  <div class="chart-pie__info-value">903 174,44 руб</div>
+                  <div class="chart-pie__percents">
+                    <div style="background-color: #ff6961; width: 86.78%;" class="chart-pie__percents-value"></div>
+                  </div>
+                </div>
+                <div class="chart-pie__info _with-percents">
+                  <div class="chart-pie__info-title">12,21%<a href="#">Прочие вложения</a></div>
+                  <div class="chart-pie__info-value">484 525,04 руб</div>
+                  <div class="chart-pie__percents">
+                    <div style="background-color: #b6e329; width: 12.21%;" class="chart-pie__percents-value"></div>
+                  </div>
+                </div>
+                <div class="chart-pie__info _with-percents">
+                  <div class="chart-pie__info-title">1,01%<a href="#">Денежные средства у брокера</a></div>
+                  <div class="chart-pie__info-value">125 280,58 руб</div>
+                  <div class="chart-pie__percents">
+                    <div style="background-color: #1b7cd0; width: 1.01%;" class="chart-pie__percents-value"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-heading">
+              <div class="table-heading__actions">
+                <div class="fullscreen-link">таблицу на весь экран</div>
+              </div>
+            </div>
+            <div class="table-wrapper">
+              <table class="table table-management-structure _portfolio">
+                <thead>
+                  <tr>
+                    <th>Финансовый инструмент</th>
+                    <th>ISIN</th>
+                    <th>Код финансового инструмента</th>
+                    <th>Тип вложения</th>
+                    <th>Количество</th>
+                    <th>Балансовая стоимость, руб.<span></span></th>
+                    <th>в том числе переоценка, руб.</th>
+                    <th>Процент от всего по бал. ст-ти</th>
+                    <th>Дата котировки</th>
+                    <th>Текущая оценка 1 бумаги RUR<span></span></th>
+                    <th>Текущая оценка RUR<span></span></th>
+                    <th>Процент от всего по оценке</th>
+                    <th>Дата погашения (оферты)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="title">4B02-01-36193-R Элемент Лизинг БО-04</td>
+                    <td>RU000A0JWCN6</td>
+                    <td>Элемент Лизинг БО-04</td>
+                    <td>Облигация</td>
+                    <td>1563</td>
+                    <td><span class="price-inline title">1 548 615<span class="price-inline__dot-value title">95</span></span></td>
+                    <td>–</td>
+                    <td><span class="price-inline">5<span class="price-inline__dot-value price-inline__dot-value--percent">59%</span></span></td>
+                    <td>01.12.2016</td>
+                    <td><span class="price-inline">994<span class="price-inline__dot-value">90</span></span></td>
+                    <td><span class="price-inline">1 555 028<span class="price-inline__dot-value">70</span></span></td>
+                    <td><span class="price-inline">4<span class="price-inline__dot-value price-inline__dot-value--percent">78%</span></span></td>
+                    <td class="title">11.04.2017</td>
+                  </tr>
+                  <tr>
+                    <td class="title">4B02-01-36193-R Элемент Лизинг БО-04; НКД</td>
+                    <td>RU000A0JWCN6</td>
+                    <td>Элемент Лизинг БО-04</td>
+                    <td>Купон</td>
+                    <td>–</td>
+                    <td>–</td>
+                    <td>–</td>
+                    <td><span class="price-inline">0<span class="price-inline__dot-value price-inline__dot-value--percent">00%</span></span></td>
+                    <td>01.12.2016</td>
+                    <td><span class="price-inline">23<span class="price-inline__dot-value">04</span></span></td>
+                    <td><span class="price-inline">36 011<span class="price-inline__dot-value">52</span></span></td>
+                    <td><span class="price-inline">0<span class="price-inline__dot-value price-inline__dot-value--percent">11%</span></span></td>
+                    <td class="title">03.01.2017</td>
+                  </tr>
+                  <tr>
+                    <td colspan="5" class="sum sum_left-border">
+                      по всем облигациям предприятий и организаций (кроме
+                      ипотечных)
+                    </td>
+                    <td class="sum"><span class="price-inline">27 323 050<span class="price-inline__dot-value price-inline__dot-value--sum">62</span></span></td>
+                    <td class="sum"></td>
+                    <td class="sum"><span class="price-inline">98<span class="price-inline__dot-value price-inline__dot-value--percent">58%</span></span></td>
+                    <td class="sum"></td>
+                    <td class="sum"></td>
+                    <td class="sum"><span class="price-inline">32 114 130<span class="price-inline__dot-value">50</span></span></td>
+                    <td class="sum"><span class="price-inline">98<span class="price-inline__dot-value price-inline__dot-value--percent">78%</span></span></td>
+                    <td class="sum sum_right-border"></td>
+                  </tr>
+                  <tr>
+                    <td class="title">Деньги у брокера, р/с 30601810100001016021 (RUB)</td>
+                    <td></td>
+                    <td></td>
+                    <td>Деньги</td>
+                    <td><span class="price-inline">95<span class="price-inline__dot-value">25</span></span></td>
+                    <td><span class="price-inline title">95<span class="price-inline__dot-value title">25</span></span></td>
+                    <td></td>
+                    <td><span class="price-inline">0<span class="price-inline__dot-value price-inline__dot-value--percent">00%</span></span></td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="price-inline">95<span class="price-inline__dot-value">25</span></span></td>
+                    <td><span class="price-inline">0<span class="price-inline__dot-value price-inline__dot-value--percent">00%</span></span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="5" class="sum sum_left-border">по всем денежным стредствам у брокера</td>
+                    <td class="sum"><span class="price-inline">95<span class="price-inline__dot-value price-inline__dot-value--sum">25</span></span></td>
+                    <td class="sum"></td>
+                    <td class="sum"><span class="price-inline">0<span class="price-inline__dot-value price-inline__dot-value--percent">00%</span></span></td>
+                    <td class="sum"></td>
+                    <td class="sum"></td>
+                    <td class="sum"><span class="price-inline">95<span class="price-inline__dot-value">25</span></span></td>
+                    <td class="sum"><span class="price-inline">0<span class="price-inline__dot-value price-inline__dot-value--percent">00%</span></span></td>
+                    <td class="sum sum_right-border"></td>
+                  </tr>
+                  <tr>
+                    <td class="title">р/с 40701810600010000025 (RUB) в Банк СОЮЗ (АО)</td>
+                    <td></td>
+                    <td></td>
+                    <td>Деньги</td>
+                    <td><span class="price-inline">5 892<span class="price-inline__dot-value">80</span></span></td>
+                    <td><span class="price-inline title">382 707<span class="price-inline__dot-value title">31</span></span></td>
+                    <td></td>
+                    <td><span class="price-inline">1<span class="price-inline__dot-value price-inline__dot-value--percent">38%</span></span></td>
+                    <td>01.12.2016</td>
+                    <td></td>
+                    <td><span class="price-inline">384 435<span class="price-inline__dot-value">66</span></span></td>
+                    <td><span class="price-inline">1<span class="price-inline__dot-value price-inline__dot-value--percent">18%</span></span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="5" class="sum sum_left-border">по всем прочим вложениям</td>
+                    <td class="sum"><span class="price-inline">393 224<span class="price-inline__dot-value price-inline__dot-value--sum">56</span></span></td>
+                    <td class="sum"></td>
+                    <td class="sum"><span class="price-inline">1<span class="price-inline__dot-value price-inline__dot-value--percent">42%</span></span></td>
+                    <td class="sum"></td>
+                    <td class="sum"></td>
+                    <td class="sum"><span class="price-inline">394 952<span class="price-inline__dot-value price-inline__dot-value--sum">91</span></span></td>
+                    <td class="sum"><span class="price-inline">1<span class="price-inline__dot-value price-inline__dot-value--percent">21%</span></span></td>
+                    <td class="sum sum_right-border"></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td class="sum sum_left-border sum_top-bottom-border"></td>
+                    <td colspan="2" class="sum sum_top-bottom-border total">по всем вложениям:</td>
+                    <td colspan="2" class="sum sum_top-bottom-border total"></td>
+                    <td class="sum sum_top-bottom-border"><span class="price-inline">27 716 370<span class="price-inline__dot-value price-inline__dot-value--sum">43</span></span></td>
+                    <td class="sum sum_top-bottom-border"></td>
+                    <td class="sum sum_top-bottom-border"><span class="price-inline">100<span class="price-inline__dot-value price-inline__dot-value--percent">00%</span></span></td>
+                    <td class="sum sum_top-bottom-border"></td>
+                    <td class="sum sum_top-bottom-border"></td>
+                    <td class="sum sum_top-bottom-border"><span class="price-inline">32 509 178<span class="price-inline__dot-value price-inline__dot-value--sum">66</span></span></td>
+                    <td class="sum sum_top-bottom-border"><span class="price-inline">100<span class="price-inline__dot-value price-inline__dot-value--percent">00%</span></span></td>
+                    <td class="sum sum_right-border sum_top-bottom-border"></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <div class="table-notices">
+              <p>Средневзвешенная доходность с начала года на 20.07.2016 (по оценке): - 6.07%</p>
+              <p><span class="_asterisc">*&nbsp;</span>— Балансовая стоимость приведена с учетом накопленных процентов и дисконтов.<br><span class="_asterisc">**&nbsp;</span>— Оценка долговых обязательств (в случае отсутствия котировок) произведена с учетом срока
+                их обращения с момента постановки на баланс.
+              </p>
+            </div>
+            <div class="download-area">
+              <div class="download-file-list">
+                <div class="download-file-list__item _button"><a href="#" class="btn-bordered">Показать динамику портфеля</a></div>
+                <div class="download-file-list__item"><span class="action-link action-link--get-pdf">Скачать в PDF формате</span></div>
+                <div class="download-file-list__item"><span class="action-link action-link--get-excel">Скачать в формате Excel</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="cards-list cards-list--call-to-action">
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--investment-fund"></div>
+                <div class="card__caption">Паевые Инвестиционные&nbsp;Фонды</div>
+                <div class="card__footer"><a href="#">Отправить заявку</a></div>
+              </div>
+            </div>
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--trust-management"></div>
+                <div class="card__caption">Доверительное<span class="line-break"></span>Управление</div>
+                <div class="card__footer"><a href="#">Отправить заявку</a></div>
+              </div>
+            </div>
+            <div class="cards-list__item">
+              <div class="card">
+                <div class="card__icon card__icon--investment-accs"></div>
+                <div class="card__caption">Индивидуальные Инвестиционные Счета</div>
+                <div class="card__footer"><a href="#">Отправить заявку</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="page-sidebar">
+          <!-- TODO make mixin for smooth look (optional)-->
+          <div class="sliding-menu">
+            <div class="sliding-menu__item">
+              <div class="sliding-menu__item-title js-sliding-menu-title">Портфель
+                <div class="sliding-menu__item-number">№ 134384/20845-1</div>
+              </div>
+              <div class="sliding-menu__list">
+                <div class="sliding-menu__list-item is-active"><a href="#" class="sliding-menu__list-link">Оценка портфеля</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Анализ портфеля</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">История</a></div>
+              </div>
+            </div>
+            <div class="sliding-menu__item">
+              <div class="sliding-menu__item-title js-sliding-menu-title">ПИФы</div>
+              <div class="sliding-menu__list">
+                <div class="sliding-menu__list-item is-active"><a href="#" class="sliding-menu__list-link">Структура и оценка</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Заявки на приобретение</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Операции по ПИФам</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Свободный отчёт</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Документы по ПИФам</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Демо ПИФ</a></div>
+              </div>
+            </div>
+            <div class="sliding-menu__item">
+              <div class="sliding-menu__item-title js-sliding-menu-title">ДУ</div>
+              <div class="sliding-menu__list">
+                <div class="sliding-menu__list-item is-active"><a href="#" class="sliding-menu__list-link">Структура и оценка</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Динамика портфеля</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о купонах</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о вводах/выводах</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о начисленных комиссиях</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация по сделкам</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Документы по ДУ</a></div>
+              </div>
+            </div>
+            <div class="sliding-menu__item">
+              <div class="sliding-menu__item-title js-sliding-menu-title">ИИС</div>
+              <div class="sliding-menu__list">
+                <div class="sliding-menu__list-item is-active"><a href="#" class="sliding-menu__list-link">Структура и оценка</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Динамика портфеля</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о купонах</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о вводах/выводах</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация о начисленных комиссиях</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Информация по сделкам</a></div>
+                <div class="sliding-menu__list-item"><a href="#" class="sliding-menu__list-link">Документы по ИИС</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-section"><img alt="" src="assets/img/sidebar-image.jpg" width="240" height="400"></div>
+        </aside>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="footer-row">
+        <div class="footer-row__inner">
+          <div class="footer__nav-area">
+            <div class="footer-nav-section">
+              <div class="footer-nav-title">Профиль</div>
+              <div class="footer-nav">
+                <div class="footer-nav__item"><a href="#">Отчёты</a></div>
+                <div class="footer-nav__item"><a href="#">Уведомления</a></div>
+                <div class="footer-nav__item"><a href="#">Пользователь</a></div>
+                <div class="footer-nav__item"><a href="#">Правила пользования</a></div>
+              </div>
+              <div class="footer-nav">
+                <div class="footer-nav__item"><a href="#">Ваш персональный менеджер</a></div>
+                <div class="footer-nav__item"><a href="#">FAQ</a></div>
+                <div class="footer-nav__item"><a href="#">Контакты</a></div>
+              </div>
+            </div>
+            <div class="footer-nav-section">
+              <div class="footer-nav-title">Инвестиции</div>
+              <div class="footer-nav">
+                <div class="footer-nav__item"><a href="#">Портфель</a></div>
+                <div class="footer-nav__item"><a href="#">ПИФы</a></div>
+                <div class="footer-nav__item"><a href="#">ДУ</a></div>
+                <div class="footer-nav__item"><a href="#">ИИС</a></div>
+                <div class="footer-nav__item"><a href="#"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__feedback-area">
+            <div class="feedback">
+              <div class="feedback__number">8 800 100-48-98</div>
+              <div class="feedback__link"><a href="#" class="js-modal-open-feedback">Заказать звонок</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-row">
+        <div class="footer-row__inner">
+          <div class="footer-copy">АО УК «Ингосстрах-Инвестиции» &copy; 2011-2017, официальный сайт&nbsp;<a href="https://www.ingosinvest.ru/">ingosinvest.ru</a></div>
+        </div>
+      </div>
+    </footer>
+    <!--include ../../partials/modal-popups/-->
+    <script type="text/javascript" src="assets/js/libs/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/highcharts.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/highmaps/highmaps.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/highmaps/highmaps.maps.data.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/highmaps/highmaps.mapdata.world.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/charts.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/parsley.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/password-strength.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/jquery.selectric.js"></script>
+    <script type="text/javascript" src="assets/js/vendors/jquery.uploadfile.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript">
+      $(function () {
+      		commonActions.init();
+      })
+      
+    </script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+</html>

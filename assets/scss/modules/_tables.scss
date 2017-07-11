@@ -162,9 +162,14 @@ $table-font-size: 13px;
 }
 
 .table-management-structure {
+  width: 1625px;
   border-spacing: 0;
   border-collapse: collapse;
   font-size: $table-font-size;
+
+  &._portfolio {
+    width: 1550px;
+  }
 
   th, td {
     border: 1px solid $border-color;
@@ -472,6 +477,18 @@ $table-font-size: 13px;
     }
     td:nth-child(3) {
       background-color: $bg-light-gray;
+    }
+  }
+}
+
+.table-notices {
+  margin-bottom: 45px;
+
+  p {
+    margin-bottom: 19px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
