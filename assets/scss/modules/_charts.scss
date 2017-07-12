@@ -124,3 +124,24 @@
   top: 12px !important;
   font-family: "MuseoSans" !important;
 }
+
+.tooltip {
+  &-container {
+    width: 210px;
+  }
+  &-col {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 5px 5px 0;
+    float: left;
+  }
+  &-title {
+    display: block;
+    color: $text-gray;
+  }
+  &-value {
+    &._green {
+      color: $status-positive;
+    }
+  }
+}

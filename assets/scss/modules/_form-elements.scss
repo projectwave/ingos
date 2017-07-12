@@ -196,6 +196,24 @@ textarea.form-control {
   }
 }
 
+.select-title {
+  float: left;
+}
+.select-with-title {
+  width: 164px;
+  height: 33px;
+  text-align: center;
+  margin-top: -8px;
+  float: right;
+
+  & .selectric .label {
+    font-size: 13px;
+    line-height: 33px;
+    height: 33px;
+    padding-right: 19px;
+  }
+}
+
 .form-controls-group__item {
   display: table-cell;
   position: relative;

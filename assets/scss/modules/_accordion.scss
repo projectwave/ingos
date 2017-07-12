@@ -90,6 +90,10 @@ $accordion-title-padding: 10px;
   padding: 0 30px 0 86px;
   display: none;
 
+  &._no-paddings {
+    padding: 0;
+  }
+
   &.is-visible {
     display: block;
   }

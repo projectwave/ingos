@@ -7,11 +7,11 @@ block content
 				.section-header__column
 					.section-title Медиа
 
-				.section-header__column
+				.section-header__column._with-select
 					form.form-years-archive-filter
-						.form-row
-							.form-row__title Архив по годам:
+						.select-title Архив по годам:
 
+						.select-with-title
 							select
 								option 2016
 								option 2015
@@ -21,11 +21,13 @@ block content
 			.media-list
 				.media-list__item
 					.media-preview
-						.media-preview__viewport
-							img(src='' alt='')
-
-							.media-preview__video-length-label 08:20
-
+						video(preload='auto', width='386', height='219', poster='assets/img/video_preload.jpg', data-setup='{}', controls ).vjs-default-skin.video-js
+							source(src='https://vjs.zencdn.net/v/oceans.mp4' type='video/mp4')
+							source(src='https://vjs.zencdn.net/v/oceans.webm' type='video/webm')
+							p.vjs-no-js
+								| To view this video please enable JavaScript, and consider upgrading to a web browser that
+								a(href='http://videojs.com/html5-video-support/' target='_blank')
+									| supports HTML5 video
 						.media-preview__caption
 							| Личные финансы с Натальей Смирновой. Выпуск 18.
 							span.line-break
@@ -33,36 +35,44 @@ block content
 
 				.media-list__item
 					.media-preview
-						.media-preview__viewport
-							img(src='' alt='')
-
-							.media-preview__video-length-label 09:15
-
+						video(preload='auto', width='386', height='219', poster='assets/img/video_preload.jpg', data-setup='{}', controls ).vjs-default-skin.video-js
+							source(src='https://vjs.zencdn.net/v/oceans.mp4' type='video/mp4')
+							source(src='https://vjs.zencdn.net/v/oceans.webm' type='video/webm')
+							p.vjs-no-js
+								| To view this video please enable JavaScript, and consider upgrading to a web browser that
+								a(href='http://videojs.com/html5-video-support/' target='_blank')
+									| supports HTML5 video
 						.media-preview__caption
-							| Личные финансы с Натальей Смирновой. Выпуск 17.
+							| Личные финансы с Натальей Смирновой. Выпуск 18.
 							span.line-break
-								| Пожизненный источник дохода
+								| Паевый инвестиционный фонд (ПИФ)
 
 				.media-list__item
 					.media-preview
-						.media-preview__viewport
-							img(src='' alt='')
-
-							.media-preview__video-length-label 08:20
-
+						video(preload='auto', width='386', height='219', poster='assets/img/video_preload.jpg', data-setup='{}', controls ).vjs-default-skin.video-js
+							source(src='https://vjs.zencdn.net/v/oceans.mp4' type='video/mp4')
+							source(src='https://vjs.zencdn.net/v/oceans.webm' type='video/webm')
+							p.vjs-no-js
+								| To view this video please enable JavaScript, and consider upgrading to a web browser that
+								a(href='http://videojs.com/html5-video-support/' target='_blank')
+									| supports HTML5 video
 						.media-preview__caption
-							| Личные финансы с Натальей Смирновой. Выпуск 18. Паевый инвестиционный фонд (ПИФ)
+							| Личные финансы с Натальей Смирновой. Выпуск 18.
+							span.line-break
+								| Паевый инвестиционный фонд (ПИФ)
 
 				.media-list__item
 					.media-preview
-						.media-preview__viewport
-							img(src='' alt='')
-
-							.media-preview__video-length-label 09:15
-
+						video(width='386', height='219', poster='assets/img/video_preload.jpg', data-setup='{}', controls ).vjs-default-skin.video-js
+							source(src='https://vjs.zencdn.net/v/oceans.mp4' type='video/mp4')
+							source(src='https://vjs.zencdn.net/v/oceans.webm' type='video/webm')
+							p.vjs-no-js
+								| To view this video please enable JavaScript, and consider upgrading to a web browser that
+								a(href='http://videojs.com/html5-video-support/' target='_blank')
+									| supports HTML5 video
 						.media-preview__caption
-							| Личные финансы с Натальей Смирновой. Выпуск 17.
+							| Личные финансы с Натальей Смирновой. Выпуск 18.
 							span.line-break
-								| Пожизненный источник доходаы
+								| Паевый инвестиционный фонд (ПИФ)
 
 		include assets/jade/partials/cards-list
