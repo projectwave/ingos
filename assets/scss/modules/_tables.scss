@@ -13,7 +13,7 @@ $table-font-size: 13px;
   @extend .table-decorated;
   font-size: $table-font-size;
   th {
-    font-family: $base-font-family-light;
+    font-weight: bold;
   }
 
   th, td {

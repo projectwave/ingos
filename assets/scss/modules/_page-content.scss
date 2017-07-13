@@ -91,11 +91,19 @@
     background-size: contain;
   }
 }
+.content-nav__prev:hover,
+.content-nav__next:hover {
+  opacity: 0.65;
+}
 
 .period-range {
   display: inline-table;
   vertical-align: top;
   width: auto;
+
+  &._r-indent {
+    margin-right: 27px;
+  }
 }
 
 .period-range__title {

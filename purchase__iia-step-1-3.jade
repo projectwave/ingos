@@ -30,9 +30,10 @@ block content
 						.form-row
 							.form-row__title Укажите сумму (руб.):
 
-							input(type='text'
+							input(type='number'
+							min='0'
 							required
-							data-parsley-required-message='Это поле нужно заполнить').form-control
+							data-parsley-required-message='Это поле нужно заполнить').form-control._number
 
 					.form-fieldset
 						p Рекомендовано при инвестировании от 250 000&nbsp;руб. в&nbsp;год. При использовании данной стратегии, лучше воспользоваться освобождением от налога на полученный доход.

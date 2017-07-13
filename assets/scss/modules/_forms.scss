@@ -10,6 +10,10 @@ form {
 .form-cabinet-connection-verification {
   max-width: 770px;
   margin: 33px auto 72px;
+
+  .sign-in-page & {
+    margin-bottom: 0;
+  }
 }
 
 .form-sms-verification {

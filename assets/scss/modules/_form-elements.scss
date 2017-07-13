@@ -2,7 +2,10 @@ $form-row-margin: 21px;
 $form-list-item-margin: 0 0 13px 35px;
 $input-font-size: 15px;
 
-// TODO separate modifiers
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
 
 .form-row {
   position: relative;
@@ -168,6 +171,9 @@ $input-font-size: 15px;
   }
   &._smallest {
     width: 98px;
+  }
+  &._number {
+    padding-right: 10px;
   }
 }
 
