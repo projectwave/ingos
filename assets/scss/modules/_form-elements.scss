@@ -690,14 +690,17 @@ $selectric-font-size:       12px !default;                                      
   position: absolute;
   top: 100%;
   left: 0;
+  margin-top: 10px;
+  border-radius: $border-radius;
   background: $selectric-bg-color;
-  border: 1px solid darken($selectric-main-color, 10%);
+  border: 1px solid $border-color-separator;
   z-index: -1;
-  box-shadow: 0 0 10px -6px;
+  overflow: hidden;
 
   .selectric-scroll {
     height: 100%;
     overflow: auto;
+    margin-right: -20px;
   }
 
   .selectric-above & {
@@ -716,23 +719,23 @@ $selectric-font-size:       12px !default;                                      
 
   li {
     display: block;
-    padding: 10px;
-    color: #666;
+    padding: 10px 19px;
+    color: #000;
     cursor: pointer;
 
     &.selected {
-      background: #E0E0E0;
-      color: #444;
+      background: #efefef;
+      color: #000;
     }
 
     &.highlighted {
-      background: #D0D0D0;
-      color: #444;
+      background: #dcdedf;
+      color: #000;
     }
 
     &:hover {
-      background: #D5D5D5;
-      color: #444;
+      background: #efefef;
+      color: #000;
     }
   }
 
