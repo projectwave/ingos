@@ -135,7 +135,9 @@ block content
 					.form-item._after-label
 						input(type='text'
 						required
-						data-parsley-required-message='Это поле нужно заполнить'
+						pattern='.{7,}'
+						data-parsley-error-message='Введите значаение формата XXX-XXX'
+						data-mask='000-000'
 						placeholder='___-___').form-control._smallest
 
 				.form-row

@@ -1,0 +1,148 @@
+.datepicker {
+  width: 358px;
+  background: #fff;
+  border: 1px solid $border-color-separator;
+  border-radius: $border-radius;
+  overflow: hidden;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: 1000;
+  display: none;
+
+  &._show {
+    display: block;
+  }
+}
+
+.datepicker__date-start,
+.datepicker__date-end {
+  background: #f9f9fa;
+  border-bottom: 1px solid $border-color-separator;
+  padding: 12px 20px 12px 63px;
+  position: relative;
+  font-size: 14px;
+}
+
+.datepicker__date-end {
+  border-bottom: none;
+}
+
+.datepicker__date-start::before,
+.datepicker__date-end::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #00adeb;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 31px;
+  margin-top: -6px;
+  box-sizing: border-box;
+}
+
+.datepicker__date-start::before {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border: 3px solid #00adeb;
+}
+
+.datepicker__container {
+  padding: 5px 20px 20px;
+}
+
+.datepicker__date-container,
+.datepicker__mounth-container {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+.datepicker__week-days {
+  display: table-header-group;
+}
+
+.datepicker__days {
+  display: table-row-group;
+}
+
+.datepicker__week-day,
+.datepicker__day,
+.datepicker__mounth-prev,
+.datepicker__mounth-next,
+.datepicker__mounth-current {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 7px 2px;
+  font-size: 14px;
+}
+
+.datepicker__days-row {
+  display: table-row;
+}
+
+.datepicker__day-info {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  &._start {
+    border: 3px solid #00adeb;
+    background: #fff;
+    line-height: 26px;
+  }
+  &._end {
+    background: #00adeb;
+    color: #fff;
+  }
+}
+
+.datepicker__buttons-container {
+  text-align: right;
+  padding-top: 15px;
+}
+
+.datepicker__mounth-container {
+  margin-bottom: 10px;
+}
+
+.datepicker__mounth-prev {
+  width: 40px;
+}
+
+.datepicker__mounth-next {
+  width: 40px;
+  transform: rotate(-180deg);
+}
+
+.datepicker__mounth-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 5px;
+  &:hover {
+    opacity: 0.35;
+  }
+  &::before,
+  &::after{
+    content: "";
+    width: 10px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 17px;
+    left: 10px;
+    transform: rotate(45deg);
+  }
+  &::after {
+    top: 11px;
+    transform: rotate(-45deg);
+  }
+}

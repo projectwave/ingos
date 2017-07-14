@@ -34,26 +34,23 @@
       <main class="page-content">
         <section class="page-section">
           <div class="page-section__inner">
-            <div class="section-title">Вход в личный кабинет</div>
-            <form method="" action="" class="form-autorisation js-form-validate">
-              <div class="form-row form-row--items">
-                <div class="form-item">
-                  <label for="autorisation-login" class="form-item__title">Логин:</label>
-                  <input type="text" required placeholder="Введите логин" id="autorisation-login" class="form-control">
-                </div>
-                <div class="form-item form-item--password">
-                  <label for="autorisation-login" class="form-item__title">Пароль:<a href="#" class="link-remind-pass">Забыли пароль?</a></label>
-                  <input type="password" required placeholder="•••••" id="autorisation-password" class="form-control">
-                </div>
-                <div class="form-item form-item--submit">
-                  <input type="submit" value="Войти" class="form-submit">
-                </div>
-              </div>
-              <div class="form-row form-row--note">
-                <div class="form-note">Если вы клиент АО УК «Ингосстрах-Инвестиции», введите логин (обычно это ваш email) и пароль.<span class="line-break">Если вы еще не зарегестрированы &mdash;&nbsp;<a href="#">подключите личный кабинет</a>.</span></div>
-              </div>
-            </form>
-            <div class="gray-note _top-indent">
+            <div class="section-title">Возможности</div>
+            <div class="section-info">
+              <p class="_align-center">Личный кабинет – это очень удобный, простой и доступный способ получения<br>информации о своем инвестиционном портфеле!</p>
+            </div><img src="assets/img/img_features.png" alt="" class="_img-features">
+            <div class="section-info">
+              <h3>Круглосуточно посредством Личного кабинета вы можете:</h3>
+            </div>
+            <div class="about-cabinet"><img src="assets/img/img_features_chart.png" alt="" class="about-cabinet__img">
+              <ul class="about-cabinet__info">
+                <li class="about-cabinet__info-item"><span class="about-cabinet__info-number">01</span>Посмотреть актуальную информацию не только по агрегированному портфелю, но и отдельно по Паевым фондам, Фолио и Доверительному управлению, а также стоимость, динамику и структуру активов на текущую дату или за определенный период.</li>
+                <li class="about-cabinet__info-item"><span class="about-cabinet__info-number">02</span>Анализировать собственный портфель по географическому, отраслевому, валютному, эмитентному и другим признакам.</li>
+                <li class="about-cabinet__info-item"><span class="about-cabinet__info-number">03</span>Просматривать историю операций по любому продукту за любой период.</li>
+                <li class="about-cabinet__info-item"><span class="about-cabinet__info-number">04</span>Получать различные виды отчетности – как регламентированные стандартные, так и заказные.</li>
+                <li class="about-cabinet__info-item"><span class="about-cabinet__info-number">05</span>Возможность оперативно связаться с инвестиционным консультантом, а также получать важные сообщения в Личном кабинете.</li>
+              </ul>
+            </div>
+            <div class="gray-note">
               АО УК «Ингосстрах-Инвестиции». Лицензия ФКЦБ России № 21-000-1-00020 от 25.08.1997 г. на осуществление деятельности
               по управлению инвестиционными фондами, паевыми инвестиционными фондами и негосударственными пенсионными фондами,
               без ограничения срока действия. Лицензия ФСФР России № 077-08203-001000 от 23.12.2004 г. на осуществление деятельности
@@ -69,8 +66,8 @@
       <script type="text/javascript" src="assets/js/vendors/bootstrap-modal.js"></script>
       <script type="text/javascript" src="assets/js/main.js"></script>
       <script type="text/javascript">
-        $(function(){
-        	commonActions.init();
+        $(function () {
+            commonActions.init();
         })
       </script>
       <footer class="page-footer"></footer>

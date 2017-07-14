@@ -29,7 +29,9 @@ var commonActions = (function (document, $) {
         datepickerValue: 'data-range-input__value',
         fileUploader: '#fileUploader',
         showPhoneCode: '.js-show-sms-verification',
-        PhoneCode: '.js-phone-code-container'
+        PhoneCode: '.js-phone-code-container',
+        showDatepicker: '.js-show-datepicker',
+        Datepicker: '.js-datepicker'
     };
 
     var className = {
@@ -60,14 +62,31 @@ var commonActions = (function (document, $) {
         });
     }
 
-    function _activateDatepicker() {
-        $('input[name="daterange"]').daterangepicker({
-            timePicker: true,
-            locale: {
-                format: 'DD-MM-YYYY'
-            },
-            startDate: '2013-01-01',
-            endDate: '2013-12-31'
+    function _showDatepicker() {
+        $(selector.showDatepicker).on('click', function(){
+
+            var datepickerIcon = $(this),
+                datePicker = $(selector.Datepicker),
+                topIconPos = datepickerIcon.offset().top,
+                leftIconPos = datepickerIcon.offset().left,
+                bottomIconPos = topIconPos + datepickerIcon.outerHeight() + 16,
+                rightIconPos = leftIconPos + datepickerIcon.outerWidth() + 5,
+                datepickerWidth = datePicker.outerWidth();
+
+            datePicker.css('top', bottomIconPos);
+            datePicker.css('left', rightIconPos - datepickerWidth);
+            datePicker.toggleClass('_show');
+        });
+
+        $(document).mouseup(function(e)
+        {
+            var datePicker = $(selector.Datepicker),
+            datePickerIcon = $(selector.showDatepicker)
+
+            if (!datePicker.is(e.target) && !datePickerIcon.is(e.target) && datePicker.has(e.target).length === 0)
+            {
+                datePicker.removeClass('_show')
+            }
         });
     }
 
@@ -181,10 +200,12 @@ var commonActions = (function (document, $) {
     }
 
     function _uploadFile() {
-        $(selector.fileUploader).uploadFile({
-            dragDropStr: "<div class='custom-drag-and-drop__text'>Перетащите файлы сюда<br/> <span>или</span></div>",
-            uploadStr:"Выберите файлы"
-        });
+        if($(selector.fileUploader).length) {
+            $(selector.fileUploader).uploadFile({
+                dragDropStr: "<div class='custom-drag-and-drop__text'>Перетащите файлы сюда<br/> <span>или</span></div>",
+                uploadStr: "Выберите файлы"
+            });
+        }
     }
 
     function _formControlHacks() {
@@ -231,7 +252,7 @@ var commonActions = (function (document, $) {
 
     function bind() {
 
-        //_activateDatepicker();
+        _showDatepicker();
 
         _maximizeTable();
 

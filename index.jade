@@ -216,6 +216,9 @@ block content
 							.form-item
 								input(type='text'
 								required
+								pattern='.{18,}'
+								data-parsley-error-message='Введите значаение формата +7 (XXX) XXX-XX-XX'
+								data-mask='+7 (000) 000-00-00'
 								placeholder='+7 (937) 542-54-19'
 								id='cabinet-data-user-phone').form-control
 

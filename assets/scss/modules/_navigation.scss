@@ -7,15 +7,24 @@
 .header-nav__item {
   float: left;
   font-size: 15px;
+  padding: 31px 19px;
 }
 
 .header-nav__link {
   display: block;
-  padding: 31px 19px;
   color: $text-color;
   text-decoration: none;
+  font-weight: bold;
   &:hover {
     color: $brand-color;
+  }
+
+  .is-active & {
+    border: 2px solid $brand-color;
+    color: $brand-color;
+    padding: 5px 20px;
+    border-radius: 20px;
+    margin-top: -8px;
   }
 }
 
@@ -63,6 +72,7 @@ $sliding-menu-padding: 30px;
   border-left: 2px solid transparent;
   padding-top: 8px;
   padding-bottom: 8px;
+  padding-right: 8px;
   &.is-active {
     border-color: $link-accent;
   }
