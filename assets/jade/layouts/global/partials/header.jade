@@ -7,9 +7,8 @@ header.page-header
 
 			.header__greeting
 				.header-greeting
-					| Добрый день,&nbsp;
-					span#header-greering-username.line-break
-						| Сергей Алексеевич!
+					a(href='#').profile-menu__link.profile-menu__link--color-mode.js-show-color-mode-panel
+						| Версия для слабовидящих
 
 			.header__profile-menu
 				.profile-menu
@@ -66,5 +65,8 @@ header.page-header
 
 					a(href='#').profile-menu__link.profile-menu__link--exit
 						| Выход
+
+	.header-logged-user
+		| Добрый день, Сергей Алексеевич!
 
 	//.header-row.header-row--decoration

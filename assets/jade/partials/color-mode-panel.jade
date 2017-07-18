@@ -1,0 +1,72 @@
+.color-mode-panel.js-color-mode-panel
+    .color-mode-panel__container
+        .color-mode-panel__content
+            .color-mode-panel__row
+                .color-mode-panel__col
+                    .color-mode-panel__col-title
+                        | Цветовая тема:
+                    .color-mode-panel__col-info
+                        .theme-chooser
+                            input(type='radio' value='color-scheme-default' checked='checked' name='color-scheme-mode' id='color-scheme-default')
+                            label(for='color-scheme-default')
+                                | По умолчанию
+
+                        .theme-chooser
+                            input(type='radio' value='color-scheme-contrast' name='color-scheme-mode' id='color-scheme-contrast')
+                            label(for='color-scheme-contrast')
+                                | Контрастная
+
+                        .theme-chooser
+                            input(type='radio' value='color-scheme-inverted' name='color-scheme-mode' id='color-scheme-inverted')
+                            label(for='color-scheme-inverted')
+                                | Инверсия
+
+                .color-mode-panel__col
+                    .color-mode-panel__col-title
+                        | Шрифт:
+                    .color-mode-panel__col-info
+                        .theme-chooser
+                            input(type='radio' value='font-default' checked='checked' name='font-mode' id='font-default')
+                            label(for='font-default')
+                                | По умолчанию
+
+                        .theme-chooser
+                            input(type='radio' value='font-contrast' name='font-mode' id='font-contrast')
+                            label(for='font-contrast')
+                                | Контрастный
+
+                        .theme-chooser
+                            input(type='radio' value='font-inverted' name='font-mode' id='font-inverted')
+                            label(for='font-inverted')
+                                | С засечками
+
+            .color-mode-panel__row
+                .color-mode-panel__col
+                    .color-mode-panel__col-title
+                        | Изображения:
+                    .color-mode-panel__col-info
+                        .image-chooser
+                            input(type='radio' value='image-show' checked='checked' name='image-mode' id='image-show')
+                            label(for='image-show')
+                                | Показывать
+
+                        .image-chooser
+                            input(type='radio' value='image-hide' name='image-mode' id='image-hide')
+                            label(for='image-hide')
+                                | Скрывать
+
+                .color-mode-panel__col
+                    .color-mode-panel__col-title
+                        | Размер шрифта:
+                    .color-mode-panel__col-info
+                        .font-chooser
+                            .font-chooser__button._minus.js-font-chooser-minus(data-min-font-size='16')
+                            .font-chooser__value.js-font-chooser-value
+                                | 16pt
+                            .font-chooser__button._plus.js-font-chooser-plus(data-max-font-size='18')
+
+            .color-mode-panel__row._save
+                input(type='button' value='Сохранить').btn-black.js-close-color-mode-panel.js-save-color-mode
+
+
+        .color-mode-panel__icon-close.js-close-color-mode-panel

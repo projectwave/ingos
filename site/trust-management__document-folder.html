@@ -14,7 +14,7 @@
             <div class="brand-logo"><img src="assets/img/svg/brand-logo.svg" width="100" height="75" alt="ИНГОССТРАХ Инвестиции"></div>
           </div>
           <div class="header__greeting">
-            <div class="header-greeting">Добрый день,&nbsp;<span id="header-greering-username" class="line-break">Сергей Алексеевич!</span></div>
+            <div class="header-greeting"><a href="#" class="profile-menu__link profile-menu__link--color-mode js-show-color-mode-panel">Версия для слабовидящих</a></div>
           </div>
           <div class="header__profile-menu">
             <div class="profile-menu"><a href="#" class="profile-menu__link profile-menu__link--media">Медиа</a>
@@ -34,6 +34,7 @@
           </div>
         </div>
       </div>
+      <div class="header-logged-user">Добрый день, Сергей Алексеевич!</div>
       <!--.header-row.header-row--decoration-->
     </header>
     <main class="page-content">
@@ -242,6 +243,77 @@
           </div>
         </div>
         <div class="datepicker__buttons-container"><a href="#" class="btn-primary btn-sm _large">Выбрать</a></div>
+      </div>
+    </div>
+    <div class="color-mode-panel js-color-mode-panel">
+      <div class="color-mode-panel__container">
+        <div class="color-mode-panel__content">
+          <div class="color-mode-panel__row">
+            <div class="color-mode-panel__col">
+              <div class="color-mode-panel__col-title">Цветовая тема:</div>
+              <div class="color-mode-panel__col-info">
+                <div class="theme-chooser">
+                  <input type="radio" value="color-scheme-default" checked="checked" name="color-scheme-mode" id="color-scheme-default">
+                  <label for="color-scheme-default">По умолчанию</label>
+                </div>
+                <div class="theme-chooser">
+                  <input type="radio" value="color-scheme-contrast" name="color-scheme-mode" id="color-scheme-contrast">
+                  <label for="color-scheme-contrast">Контрастная</label>
+                </div>
+                <div class="theme-chooser">
+                  <input type="radio" value="color-scheme-inverted" name="color-scheme-mode" id="color-scheme-inverted">
+                  <label for="color-scheme-inverted">Инверсия</label>
+                </div>
+              </div>
+            </div>
+            <div class="color-mode-panel__col">
+              <div class="color-mode-panel__col-title">Шрифт:</div>
+              <div class="color-mode-panel__col-info">
+                <div class="theme-chooser">
+                  <input type="radio" value="font-default" checked="checked" name="font-mode" id="font-default">
+                  <label for="font-default">По умолчанию</label>
+                </div>
+                <div class="theme-chooser">
+                  <input type="radio" value="font-contrast" name="font-mode" id="font-contrast">
+                  <label for="font-contrast">Контрастный</label>
+                </div>
+                <div class="theme-chooser">
+                  <input type="radio" value="font-inverted" name="font-mode" id="font-inverted">
+                  <label for="font-inverted">С засечками</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="color-mode-panel__row">
+            <div class="color-mode-panel__col">
+              <div class="color-mode-panel__col-title">Изображения:</div>
+              <div class="color-mode-panel__col-info">
+                <div class="image-chooser">
+                  <input type="radio" value="image-show" checked="checked" name="image-mode" id="image-show">
+                  <label for="image-show">Показывать</label>
+                </div>
+                <div class="image-chooser">
+                  <input type="radio" value="image-hide" name="image-mode" id="image-hide">
+                  <label for="image-hide">Скрывать</label>
+                </div>
+              </div>
+            </div>
+            <div class="color-mode-panel__col">
+              <div class="color-mode-panel__col-title">Размер шрифта:</div>
+              <div class="color-mode-panel__col-info">
+                <div class="font-chooser">
+                  <div data-min-font-size="16" class="font-chooser__button _minus js-font-chooser-minus"></div>
+                  <div class="font-chooser__value js-font-chooser-value">16pt</div>
+                  <div data-max-font-size="18" class="font-chooser__button _plus js-font-chooser-plus"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="color-mode-panel__row _save">
+            <input type="button" value="Сохранить" class="btn-black js-close-color-mode-panel js-save-color-mode">
+          </div>
+        </div>
+        <div class="color-mode-panel__icon-close js-close-color-mode-panel"></div>
       </div>
     </div>
     <script type="text/javascript" src="assets/js/libs/jquery-3.2.1.js"></script>

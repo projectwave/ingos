@@ -1,0 +1,351 @@
+.color-mode-panel {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  display: none;
+  color: #000;
+
+  &._show {
+    display: block;
+  }
+
+  &__container {
+    background: #fff;
+    padding: 0 30px;
+    position: relative;
+  }
+
+  &__icon-close {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 16px;
+      height: 3px;
+      background: #000;
+      position: absolute;
+      top: 5px;
+      left: -1px;
+      border-radius: 4px;
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__content {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  &__row {
+    border-bottom: 2px solid $border-color-separator;
+    padding: 30px 0;
+    @include clearfix();
+
+    &._save {
+      border-bottom: none;
+      text-align: center;
+    }
+  }
+
+  &__col {
+    width: 50%;
+    float: left;
+
+    &-title {
+      width: 195px;
+      font-size: 17px;
+      margin-left: 112px;
+      padding: 10px 15px 0 0;
+      float: left;
+    }
+
+    &-info {
+      width: 260px;
+      float: left;
+    }
+  }
+}
+
+.theme-chooser {
+  @include clearfix();
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  [type="radio"]+label:before,
+  [type="radio"]+label:after {
+    display: none;
+  }
+
+  [type="radio"]:checked+label:before {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    display: block;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+    z-index: -1;
+  }
+
+  label {
+    min-width: 165px;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    font-size: 17px;
+    text-align: center;
+    padding: 9px 5px;
+    display: inline-block;
+    z-index: 2;
+  }
+}
+
+.image-chooser {
+  [type="radio"] + label:before,
+  [type="radio"] + label:after {
+    left: -49px;
+    top: -7px;
+  }
+  [type="radio"] + label:before {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #000;
+  }
+  [type="radio"] + label:after {
+    width: 16px;
+    height: 16px;
+    background: #000;
+    left: -41px;
+    top: 1px;
+  }
+
+  label {
+    font-size: 17px;
+    display: inline-block;
+    margin: 10px 0 10px 49px;
+  }
+
+  &:last-child {
+    label{
+      margin-bottom: 0;
+    }
+  }
+}
+.font-chooser {
+  &__button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    cursor: pointer;
+    position: relative;
+
+    &::before,
+    &::after{
+      content: "";
+      width: 16px;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -1px 0 0 -8px;
+
+    }
+    &::after {
+      display: none;
+      transform: rotate(90deg);
+    }
+    &._plus {
+      &::after {
+        display: block;
+      }
+    }
+
+    &:hover {
+      background: #8c9196;
+      border-color: #8c9196;
+
+      &::before,
+      &::after{
+        background: #fff;
+      }
+    }
+  }
+  &__value {
+    width: 85px;
+    height: 40px;
+    line-height: 42px;
+    text-align: center;
+  }
+  &__button,
+  &__value {
+    float: left;
+  }
+}
+
+._image-hide {
+  img,
+  .person-preview__image,
+  .cards-list .card__icon,
+  .advantage__icon,
+  .about-demo__image{
+    display: none !important;
+  }
+  .brand-logo img {
+    display: block !important;
+  }
+  .person-preview__info,
+  .advantage__title{
+    padding-left: 0;
+  }
+}
+
+._color-scheme-inverted {
+  html, body {
+    background: #282828 !important;
+    color: #fff !important;
+  }
+  .header-row__inner,
+  .tabs,
+  .tab-container,
+  .sliding-menu,
+  .sidebar-section,
+  .cards-list,
+  .main-content-section,
+  .dropdown-list,
+  .datepicker,
+  .modal-dialog{
+    background-color: #1e1e1e !important;
+  }
+  .highcharts-background {
+    fill: #1e1e1e !important;
+  }
+  a,
+  .btn-bordered,
+  .data-range-input{
+    color: #fff000 !important;
+  }
+  .switcher-panel__item.is-active,
+  .switcher-panel__item:hover,
+  .sliding-menu__list-item.is-active,
+  .tabs__nav-item.is-active,
+  .dropdown-list__item:hover,
+  .dropdown-list__item._active{
+    background: #0000e0;
+  }
+  .switcher-panel__item,
+  .btn-bordered,
+  .btn-secondary,
+  .btn-primary,
+  .dropdown-list__item,
+  .data-range-input{
+    background: none;
+    border-color: #fff000 !important;
+  }
+  .datepicker,
+  .datepicker__date-start, .datepicker__date-end{
+    border-color: #fff000 !important;
+  }
+  .datepicker__day-info._start,
+  .datepicker__date-start,
+  .datepicker__date-end{
+    background: none;
+  }
+  .datepicker__mounth-btn::before,
+  .datepicker__mounth-btn::after {
+    background: #fff;
+  }
+  .btn-secondary,
+  .btn-primary{
+    border: 2px solid #fff000 !important;
+    color: #fff000 !important;
+  }
+
+  .chat__post::after,
+  .dropdown-list__item:first-child::before{
+    display: none !important;
+  }
+  .chat__post,
+  .chat__textarea{
+    background: none!important;
+    border: 1px solid #fff;
+  }
+
+  .footer-row:first-child .footer-row__inner,
+  .cards-list__item,
+  .tabs__nav,
+  .sliding-menu__item,
+  .table tr th,
+  .table tr td,
+  .links-list__item{
+    border-color: #464646 !important;
+  }
+
+  .sliding-menu__list-item.is-active,
+  .tabs__nav-item.is-active{
+    border-color: transparent !important;
+  }
+
+  .brand-logo {
+    width: 100px;
+    height: 75px;
+    background: url(../../assets/img/logo_white.png) no-repeat;
+
+    img {
+      display: none;
+    }
+  }
+  .header-row {
+    position: relative;
+
+    &::before {
+      width: 1170px;
+      height: 100%;
+      top: 0;
+      left: calc(50% - 585px);
+      position: absolute;
+      background: rgba(0,0,0, 0.65);
+      content: "";
+    }
+  }
+  .header__logo {
+    position: relative;
+  }
+
+  .table-decorated th:nth-child(even),
+  .table th:nth-child(even),
+  .table-decorated td:nth-child(even),
+  .table td:nth-child(even),
+  .table--management-flow-of-funds tr:last-child td:nth-child(3),
+  .table-management-structure .sum{
+    background: #353535 !important;
+  }
+
+  .select-with-title .selectric .label {
+    color: #000;
+  }
+  .charts-column__data-item,
+  .highcharts-legend-item span {
+    color: #fff !important;
+  }
+  .highcharts-title {
+    fill: #fff !important;
+  }
+
+}

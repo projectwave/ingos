@@ -43,6 +43,20 @@
     background-color: #6e767d;
   }
 }
+.btn-black {
+  @include button();
+  background: #000;
+  color: #fff;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  &:hover {
+    background-color: #8c9196;
+  }
+  &:focus {
+    outline: none;
+    background-color: #6a6a6a;
+  }
+}
 
 .btn-sm {
   padding: 8px;

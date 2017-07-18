@@ -247,6 +247,18 @@ $sliding-menu-padding: 30px;
   }
 }
 
+.profile-menu__link--color-mode {
+  padding-left: 40px;
+  &::before {
+    width: 32px;
+    height: 18px;
+    top: 50%;
+    margin-top: -9px;
+    background: url(../img/icons/icon-color-mode.png) no-repeat top center;
+    background-size: cover;
+  }
+}
+
 // Switcher panel
 .switcher-panel {
   display: inline-table;

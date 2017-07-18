@@ -1,6 +1,6 @@
 .page-header {
   margin-bottom: 30px;
-  //background: url(../img/bg-signature-image.jpg) bottom center no-repeat $main-bg-color;
+  position: relative;
 }
 
 
@@ -40,5 +40,12 @@
 
 .header-greeting {
   font-size: $note-font-size;
+}
+
+.header-logged-user {
+  position: absolute;
+  bottom: 15px;
+  left: calc(((100% - 1170px)/2) + 20px);
+  color: #fff;
 }
 
