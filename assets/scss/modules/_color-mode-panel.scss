@@ -216,6 +216,237 @@
   }
 }
 
+._font-serif {
+  body,
+  .link-change,
+  .tabs__nav-item,
+  .footer-nav-title,
+  .chat__input-area textarea,
+  .chat__input-area input,
+  .fullscreen-link,
+  .action-link,
+  .chart-pie,
+  .form-submit,
+  .btn-secondary,
+  .btn-flat{
+    font-family: Georgia;
+  }
+  .tabs__nav-item {
+    font-weight: bold;
+  }
+  .section-title,
+  .sliding-menu__item-title{
+    font-weight: 700;
+  }
+  .datepicker__day-info {
+    line-height: 27px;
+
+    &._start {
+      line-height: 22px;
+    }
+  }
+  .fullscreen-link {
+    line-height: 18px;
+    margin-bottom: 7px;
+  }
+}
+
+._17pt {
+  body,
+  table,
+  table th,
+  .sliding-menu__list,
+  .datepicker__date-start,
+  .datepicker__date-end,
+  .datepicker__week-day,
+  .datepicker__day,
+  .datepicker__mounth-prev,
+  .datepicker__mounth-next,
+  .datepicker__mounth-current,
+  .btn-sm,
+  .action-link,
+  .cards-list__item,
+  .feedback__link,
+  .chart-pie__title,
+  .advantage__title,
+  .fullscreen-link,
+  .footer-copy,
+  .link-download,
+  .chat__post-message,
+  .chat__textarea,
+  .person-preview__contacts,
+  .btn-primary,
+  .btn-bordered,
+  .form-submit,
+  .btn-secondary,
+  .btn-flat,
+  .faq-answer,
+  .answer-link,
+  .media-preview__caption,
+  .select-with-title .selectric .label,
+  .selectric-items ul,
+  .selectric-items li,
+  .charts-column__data,
+  .ajax-file-upload,
+  .form-row--verification-troubleshooting{
+    font-size: 16px;
+  }
+  .advantage__caption,
+  .data-range-input__value,
+  .switcher-panel__item,
+  .profile-menu__link,
+  .user-question__manager-info,
+  .user-question__status,
+  .sliding-menu__item-number,
+  .custom-drag-and-drop__text span,
+  .steps__item,
+  .accordion-panel__heading .title__note,
+  .form-update-personal-user-data .form-item--password-note,
+  .form-update-personal-user-data .form-item--note,
+  .form-with-notes .form-item--password-note,
+  .form-with-notes .form-item--note{
+    font-size: 15px;
+  }
+  .tabs__nav-item {
+    font-size: 13px;
+  }
+  .price-inline__dot-value {
+    font-size: 12px;
+  }
+}
+
+._18pt {
+  body,
+  table,
+  table th,
+  .sliding-menu__list,
+  .datepicker__date-start,
+  .datepicker__date-end,
+  .datepicker__week-day,
+  .datepicker__day,
+  .datepicker__mounth-prev,
+  .datepicker__mounth-next,
+  .datepicker__mounth-current,
+  .btn-sm,
+  .action-link,
+  .cards-list__item,
+  .feedback__link,
+  .chart-pie__title,
+  .advantage__title,
+  .fullscreen-link,
+  .footer-copy,
+  .link-download,
+  .chat__post-message,
+  .chat__textarea,
+  .person-preview__contacts,
+  .btn-primary,
+  .btn-bordered,
+  .form-submit,
+  .btn-secondary,
+  .btn-flat,
+  .faq-answer,
+  .answer-link,
+  .media-preview__caption,
+  .select-with-title .selectric .label,
+  .selectric-items ul,
+  .selectric-items li,
+  .charts-column__data,
+  .ajax-file-upload,
+  .form-row--verification-troubleshooting{
+    font-size: 17px;
+  }
+  .advantage__caption,
+  .data-range-input__value,
+  .switcher-panel__item,
+  .profile-menu__link,
+  .user-question__manager-info,
+  .user-question__status,
+  .sliding-menu__item-number,
+  .custom-drag-and-drop__text span,
+  .steps__item,
+  .accordion-panel__heading .title__note,
+  .form-update-personal-user-data .form-item--password-note,
+  .form-update-personal-user-data .form-item--note,
+  .form-with-notes .form-item--password-note,
+  .form-with-notes .form-item--note{
+    font-size: 16px;
+  }
+  .tabs__nav-item {
+    font-size: 14px;
+  }
+  .price-inline__dot-value {
+    font-size: 13px;
+  }
+}
+
+._17pt,
+._18pt{
+  table {
+    table-layout: auto;
+  }
+  .main-content-section .section-title,
+  .main-content-section .modal__title,
+  .tab-container .section-title, .tab-container .modal__title {
+    font-size: 27px;
+  }
+  .footer-nav-section {
+    margin-right: 40px;
+  }
+  .advantages-list__item {
+    margin-right: 62px;
+  }
+}
+
+._color-scheme-contrast {
+  a,
+  .btn-bordered,
+  .data-range-input,
+  .dropdown-list__link:hover,
+  ._active .dropdown-list__link,
+  .profile-menu__link--notifications::after,
+  .sliding-menu__item-title,
+  .fullscreen-link,
+  .action-link{
+    color: #0000e0 !important;
+  }
+  .switcher-panel__item.is-active,
+  .switcher-panel__item:hover,
+  .sliding-menu__list-item.is-active,
+  .tabs__nav-item.is-active,
+  .dropdown-list__item:hover,
+  .dropdown-list__item._active,
+  .profile-menu__link--notifications::after{
+    background: #fff000;
+  }
+  .sliding-menu__list-item.is-active,
+  .tabs__nav-item.is-active{
+    border-color: transparent !important;
+  }
+  .switcher-panel__item,
+  .btn-bordered,
+  .btn-secondary,
+  .btn-primary,
+  .dropdown-list__item,
+  .data-range-input,
+  .icon-add{
+    background: none;
+    border-color: #0000e0 !important;
+  }
+  .datepicker,
+  .datepicker__date-start, .datepicker__date-end{
+    border-color: #0000e0 !important;
+  }
+  .icon-add::before,
+  .icon-add::after {
+    background: #0000e0 !important;
+  }
+  .btn-secondary,
+  .btn-primary {
+    border: 2px solid #0000e0 !important;
+    color: #0000e0 !important;
+  }
+}
+
 ._color-scheme-inverted {
   html, body {
     background: #282828 !important;
